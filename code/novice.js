@@ -1,12 +1,11 @@
-/* Novice anaesthetist syllabus — rendering, filtering and progress tracking.
- * No build step and no dependencies. Opens directly from the file system. */
+/* Novice section (up to the IAC): syllabus, worked GA, IAC clusters, glossary and checklist.
+ * Registers its views with the router in core.js. */
 (function () {
   'use strict';
 
   const S = window.SITE;
-  const STORE_KEY = 'nas-progress-v1';
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const STORE_KEY = App.KEYS.novice;
+  const { $, $$ } = App;
 
   /* Short paraphrase of each cluster's Key Capabilities (IAC Workbook v1.2). */
   const CLUSTER_CAPS = {
@@ -71,7 +70,8 @@
     const eDone = allEla.filter(c => progress.ela[c]).length;
     const meter = (label, a, b) => el('span', { class: 'meter', title: `${a} of ${b}` },
       label, ' ', el('span', { class: 'bar', 'aria-hidden': 'true' }, el('span', { style: `width:${b ? (100 * a / b) : 0}%` })), ` ${a}/${b}`);
-    $('#progress-summary').replaceChildren(meter('Topics', tDone, topics.length), meter('e-LfH', eDone, allEla.length));
+    const box = $('#novice-progress');
+    if (box) box.replaceChildren(meter('Topics covered', tDone, topics.length), meter('e-LfH sessions', eDone, allEla.length));
   }
 
   /* ---------- journey ---------- */
@@ -282,40 +282,6 @@
       el('table', { class: 'cl' }, head.cloneNode(true), d.groups.map(groupBody)))));
   }
 
-  /* ---------- routing ---------- */
-  const VIEWS = ['start', 'journey', 'syllabus', 'iac', 'resources', 'glossary', 'about', 'checklist'];
-  function route() {
-    const [view, arg] = (location.hash.slice(1) || 'start').split('/');
-    const v = VIEWS.includes(view) ? view : 'start';
-    VIEWS.forEach(name => { $(`#view-${name}`).hidden = name !== v; });
-    const tab = v === 'checklist' ? 'syllabus' : v;
-    $$('.tabs a').forEach(a => { if (a.dataset.view !== tab) a.removeAttribute('aria-current'); else a.setAttribute('aria-current', 'page'); });
-    if (v === 'journey') renderJourney();
-    if (v === 'iac') { renderIac(); $$('#view-iac .card p, #view-iac .card li, #view-iac > p').forEach(markTerms); }
-    if (v === 'glossary') renderGlossary($('#gq').value);
-    if (v === 'checklist') renderChecklist();
-    if (v === 'start') $$('#view-start .card li, #view-start .card p').forEach(markTerms);
-    hideTerm();
-    if (v === 'syllabus') {
-      if (arg && topicById[arg]) {
-        // Make sure the linked topic is visible, then scroll to it.
-        filter.q = ''; filter.clusters.clear(); filter.onlyFirst = false; filter.hideDone = false;
-        $('#q').value = ''; $('#only-first').checked = false; $('#hide-done').checked = false;
-        renderClusterChips();
-        renderSyllabus();
-        const card = document.getElementById(`topic-${arg}`);
-        if (card) {
-          card.scrollIntoView({ block: 'start' });
-          card.classList.add('flash');
-          setTimeout(() => card.classList.remove('flash'), 1800);
-        }
-        return;
-      }
-      renderSyllabus();
-    }
-    window.scrollTo(0, 0);
-  }
-
   /* ---------- events ---------- */
   function onChange(e) {
     const t = e.target;
@@ -350,63 +316,46 @@
     $('#hide-done').addEventListener('change', e => { filter.hideDone = e.target.checked; renderSyllabus(); });
   }
 
-  function wireProgressTools() {
-    const msg = text => { $('#progress-msg').textContent = text; };
-    $('#export-progress').addEventListener('click', () => {
-      const blob = new Blob([JSON.stringify(progress, null, 2)], { type: 'application/json' });
-      const a = el('a', { href: URL.createObjectURL(blob), download: 'novice-syllabus-progress.json' });
-      document.body.append(a); a.click(); a.remove();
-      msg('Progress exported.');
-    });
-    $('#import-progress').addEventListener('change', async e => {
-      const f = e.target.files[0];
-      if (!f) return;
-      try {
-        const p = JSON.parse(await f.text());
-        if (typeof p !== 'object' || !p) throw new Error('bad file');
-        progress = { topics: p.topics || {}, ela: p.ela || {} };
-        save(); renderSummary(); msg('Progress imported.');
-      } catch (err) { msg('That file could not be read as progress data.'); }
-      e.target.value = '';
-    });
-    let armed = false;
-    $('#reset-progress').addEventListener('click', e => {
-      if (!armed) { armed = true; e.target.textContent = 'Click again to confirm'; setTimeout(() => { armed = false; e.target.textContent = 'Clear all ticks'; }, 4000); return; }
-      progress = { topics: {}, ela: {} }; save(); renderSummary(); armed = false;
-      e.target.textContent = 'Clear all ticks'; msg('All ticks cleared.');
-    });
-  }
+  /* ---------- routes ---------- */
+  const T = { tab: 'novice' };
+  App.on('novice', () => { location.replace('#start'); return { view: 'start', ...T }; });
+  App.on('start', () => { $$('#view-start .card li, #view-start .card p').forEach(markTerms); renderSummary(); return { view: 'start', ...T, title: 'Novice: start here' }; });
+  App.on('journey', () => { renderJourney(); return { view: 'journey', ...T, title: 'A GA step by step' }; });
+  App.on('iac', () => { renderIac(); $$('#view-iac .card p, #view-iac .card li, #view-iac > p').forEach(markTerms); return { view: 'iac', ...T, title: 'The IAC' }; });
+  App.on('glossary', () => { renderGlossary($('#gq').value); return { view: 'glossary', ...T, title: 'Glossary' }; });
+  App.on('checklist', () => { renderChecklist(); return { view: 'checklist', ...T, title: 'Novice checklist' }; });
+  App.on('syllabus', args => {
+    const arg = args[0];
+    hideTerm();
+    if (arg && topicById[arg]) {
+      filter.q = ''; filter.clusters.clear(); filter.onlyFirst = false; filter.hideDone = false;
+      $('#q').value = ''; $('#only-first').checked = false; $('#hide-done').checked = false;
+      renderClusterChips();
+      renderSyllabus();
+      return {
+        view: 'syllabus', ...T, current: '#syllabus', title: topicById[arg].title,
+        after: () => {
+          const card = document.getElementById(`topic-${arg}`);
+          if (card) { card.scrollIntoView({ block: 'start' }); card.classList.add('flash'); setTimeout(() => card.classList.remove('flash'), 1800); }
+        },
+      };
+    }
+    renderSyllabus();
+    return { view: 'syllabus', ...T, current: '#syllabus', title: 'Novice syllabus' };
+  });
 
-  /* ---------- theme (light unless the viewer picks dark) ---------- */
-  function wireTheme() {
-    const btn = $('#theme-toggle');
-    const apply = t => {
-      if (t === 'dark') document.documentElement.dataset.theme = 'dark';
-      else delete document.documentElement.dataset.theme;
-      btn.textContent = t === 'dark' ? 'Light mode' : 'Dark mode';
-    };
-    let theme = 'light';
-    try { theme = localStorage.getItem('nas-theme') || 'light'; } catch (e) { /* ignore */ }
-    apply(theme);
-    btn.addEventListener('click', () => {
-      theme = theme === 'dark' ? 'light' : 'dark';
-      apply(theme);
-      try { localStorage.setItem('nas-theme', theme); } catch (e) { /* ignore */ }
-    });
-  }
-
-  /* ---------- start ---------- */
-  wireTheme();
-  load();
-  fillStaticLinks();
-  renderSummary();
-  renderClusterChips();
-  wireFilters();
-  wireProgressTools();
-  renderFurther();
-  $('#gq').addEventListener('input', e => renderGlossary(e.target.value));
-  $('#print-btn').addEventListener('click', () => window.print());
-  document.addEventListener('change', onChange);
-  window.addEventListener('hashchange', route);
-  route();
+  App.inits.push(() => {
+    load();
+    // progress panel on the novice start page
+    const hero = $('#view-start .hero');
+    if (hero && !$('#novice-progress')) hero.after(App.el('div', { class: 'card progress-card' }, App.el('h2', null, 'Your novice progress'), App.el('div', { id: 'novice-progress', class: 'meters' })));
+    renderClusterChips();
+    wireFilters();
+    renderFurther();
+    $('#gq').addEventListener('input', e => renderGlossary(e.target.value));
+    $('#print-btn').addEventListener('click', () => window.print());
+    document.addEventListener('change', onChange);
+  });
+  // expose for the resources page and home dashboard
+  App.novice = { topics, allEla, get progress() { return progress; }, markTerms, renderFurther };
 })();
