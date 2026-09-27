@@ -10,6 +10,12 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-27 (later) — Visual redesign
+- Mark: "content is great, it's got all the aesthetic charm of a github repo". Asked for a modern, clean, slick look.
+- Researched current docs/SaaS sites. The new design is docs-style: a sticky blurred top bar, a grouped left sidebar (a drawer on phones), ⌘K / "/" command-palette search, an "On this page" rail, card-based home with a gradient hero, and Geist / Geist Mono / Instrument Serif fonts. Light and dark themes. `code/styles.css` was fully rewritten. " · " lists in content now render as tag chips (`md.mjs`).
+- Mark's screenshot showed text cut off at the right edge. Couldn't reproduce this at 390/913/1100/1400/2241 px; probably the screenshot crop.
+- **Next step:** Mark reviews the look; then Dr Brooks's content review as before.
+
 ### 2026-09-28 (later) — Build complete, repo renamed, pushed
 - Added 21 station packs (11 CASE, 10 FCPE); the link checker now covers all content links (170 OK, 0 broken); the deploy workflow builds and validates content; browser QA passed (all routes, a full Final mock, station views, 390 px width via iframe, dark mode).
 - Updated README, code/README, AGENTS, STATUS, TODO and SOURCES (S21–S24).

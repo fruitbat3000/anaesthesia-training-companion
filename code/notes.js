@@ -96,7 +96,9 @@
     const body = el('div', { class: 'prose note-body', html: htmlMap[n.id] || '' });
     if (App.novice) App.novice.markTerms(body);
 
+    const noteToc = App.toc(body);
     const aside = el('aside', { class: 'note-aside' },
+      noteToc,
       el('div', { class: 'card' },
         el('h3', null, 'Syllabus codes'),
         el('div', { class: 'code-chips' }, n.codes.map(c => el('a', { class: 'code-chip', href: `#notes/coverage/${n.exam}?code=${c}`, title: 'Show on the coverage map' }, c))),

@@ -9,56 +9,55 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f5fae'/%3E%3Cpath d='M5 17h5l3-7 5 13 3-6h6' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 12h4l2-5 4 10 2-5h6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        <span class="brand-text">Anaesthesia Training Companion<small>Yorkshire &amp; Humber · first day to CCT</small></span>
-      </a>
-      <div class="header-tools">
-        <div class="site-search" role="search">
-          <label class="sr-only" for="site-q">Search the site</label>
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input type="search" id="site-q" placeholder="Search notes, topics, stations…" autocomplete="off">
-          <div class="search-pop" id="search-pop" hidden></div>
-        </div>
-        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Dark mode">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
+  <div class="app">
+  <header class="topbar">
+    <button type="button" class="icon-btn menu-btn" id="menu-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <a class="brand" href="#home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 12h4l2-5 4 10 2-5h6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-text">Anaesthesia Training Companion<small>Yorkshire &amp; Humber · first day to CCT</small></span>
+    </a>
+    <button type="button" class="search-trigger" id="search-trigger" aria-haspopup="dialog">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="search-label">Search notes, topics, stations…</span>
+      <kbd>/</kbd>
+    </button>
+    <div class="topbar-actions">
+      <a class="topbar-link" href="#exams">FRCA 2027</a>
+      <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
-    <nav class="wrap tabs" aria-label="Main sections" id="main-tabs">
-      <a href="#home" data-tab="home">Home</a>
-      <a href="#start" data-tab="novice">Novice</a>
-      <a href="#stage/1" data-tab="stage1">Stage 1</a>
-      <a href="#stage/2" data-tab="stage2">Stage 2</a>
-      <a href="#stage/3" data-tab="stage3">Stage 3</a>
-      <a href="#exams" data-tab="exams">Exams</a>
-      <a href="#notes" data-tab="notes">Revision notes</a>
-      <a href="#questions" data-tab="questions">Questions</a>
-      <a href="#stations" data-tab="stations">Stations</a>
-      <a href="#resources" data-tab="resources">Resources</a>
-    </nav>
-    <nav class="subtabs" aria-label="Section pages" id="sub-tabs" hidden><div class="wrap" id="sub-tabs-inner"></div></nav>
   </header>
 
-  <div class="wrap">
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <nav id="side-nav"></nav>
+    <div class="sidebar-foot">
+      <p><a href="#about">About &amp; credits</a> · <a href="#disclaimer">Disclaimer</a></p>
+      <p class="small">Draft for clinical review</p>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <div class="main-col">
     <div class="disclaimer-banner" id="disclaimer-banner" hidden role="note">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M12 3 2 20h20L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       <p><strong>Educational material only — not medical advice.</strong> Draft content awaiting clinical review. Always follow local policy and check doses against the BNF. <a href="#disclaimer">Full disclaimer</a></p>
       <button type="button" class="btn small" id="disclaimer-ok">I understand</button>
     </div>
-  </div>
 
-  <main id="main" class="wrap">
+  <main id="main">
 
     <!-- HOME -->
     <section class="view" id="view-home" hidden></section>
@@ -345,14 +344,28 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner">
+    <div class="footer-inner">
       <div>
-        <p><strong>Anaesthesia Training Companion</strong> · Draft for review · Not an official RCoA, e-LfH or NHS resource.</p>
-        <p>Educational material only, not medical advice. Check doses against the BNF and local policy. <a href="#disclaimer">Disclaimer</a></p>
+        <p class="footer-brand">Anaesthesia Training Companion</p>
+        <p>Draft for review · not an official RCoA, e-LfH or NHS resource. Educational material only, not medical advice — check doses against the BNF and local policy.</p>
       </div>
-      <p class="footer-links"><a href="#about">About &amp; credits</a> · <a href="#exams">FRCA 2027 changes</a> · <a data-link="feedbackNew" target="_blank" rel="noopener">Send feedback</a> · Links checked <span data-checked></span></p>
+      <p class="footer-links"><a href="#about">About &amp; credits</a><a href="#disclaimer">Disclaimer</a><a href="#exams">FRCA 2027 changes</a><a data-link="feedbackNew" target="_blank" rel="noopener">Send feedback</a><span>Links checked <span data-checked></span></span></p>
     </div>
   </footer>
+  </div>
+  </div>
+
+  <div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Search">
+    <div class="palette-box">
+      <div class="palette-input">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <label class="sr-only" for="site-q">Search the site</label>
+        <input type="search" id="site-q" placeholder="Search notes, topics, stations, guides…" autocomplete="off">
+        <kbd>esc</kbd>
+      </div>
+      <div class="palette-results" id="search-pop"></div>
+    </div>
+  </div>
 
   <script src="data.js"></script>
   <script src="content/index.js"></script>

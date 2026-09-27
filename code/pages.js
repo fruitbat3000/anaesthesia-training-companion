@@ -66,13 +66,18 @@
     const body = el('div', { class: 'prose', html: p.html });
     renderWidgets(body);
     App.fillStaticLinks(body);
-    box.replaceChildren(
-      el('header', { class: 'page-head' },
-        el('h1', null, p.title),
-        p.lede ? el('p', { class: 'lede', html: p.lede }) : null,
-        p.updated ? el('p', { class: 'small' }, `Checked against official sources: ${p.updated}`) : null),
-      body,
-      el('p', { class: 'page-foot' }, App.reportLink('Page', id, p.title)));
+    const eyebrow = id === 'exams' || id.startsWith('exams-') ? 'FRCA examinations' : id.startsWith('stage-') ? 'Training pathway' : ['guidelines', 'portfolio', 'wellbeing', 'resources-more'].includes(id) ? 'Resources' : id === 'stations-how' ? 'Station practice' : 'Guide';
+    const rail = App.toc(body);
+    box.replaceChildren(el('div', { class: 'doc-layout' + (rail ? ' has-rail' : '') },
+      el('div', { class: 'doc-main' },
+        el('header', { class: 'page-head' },
+          el('p', { class: 'eyebrow' }, eyebrow),
+          el('h1', null, p.title),
+          p.lede ? el('p', { class: 'lede', html: p.lede }) : null,
+          p.updated ? el('p', { class: 'meta-line' }, el('span', { class: 'dot-ok' }), `Checked against official sources · ${p.updated}`) : null),
+        body,
+        el('p', { class: 'page-foot' }, App.reportLink('Page', id, p.title))),
+      rail ? el('aside', { class: 'doc-rail' }, rail) : null));
     return p;
   }
 
@@ -123,7 +128,7 @@
     $('#view-home').replaceChildren(
       el('section', { class: 'home-hero' },
         el('p', { class: 'eyebrow' }, 'Yorkshire & Humber School of Anaesthesia'),
-        el('h1', null, 'From your first day in theatre to your CCT'),
+        el('h1', null, 'From your first day in theatre ', el('em', null, 'to your CCT')),
         el('p', { class: 'lede' }, 'The RCoA curriculum by stage, a guide to the FRCA (including the new exam formats from July 2027), revision notes mapped to the syllabus, practice questions and exam-station practice, in one place.'),
         el('div', { class: 'hero-actions' },
           el('a', { class: 'btn', href: '#questions' }, 'Practise questions'),
@@ -149,7 +154,7 @@
         tile(I.st, 'Station practice', '9-minute CASE and FCPE scenarios with examiner prompts, key features and a feedback form.', '#stations', `${C.stations.length} stations`),
         tile(I.ex, 'Exams hub', 'Formats, dates, the transition year, a study plan and a directory of question banks.', '#exams', 'Updated September 2026')),
 
-      el('div', { class: 'grid-2' },
+      el('div', { class: 'grid-2 home-cards' },
         el('div', { class: 'card' },
           el('h2', null, 'Pick up where you left off'),
           el('ul', { class: 'linklist' },

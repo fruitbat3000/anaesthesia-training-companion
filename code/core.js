@@ -87,7 +87,20 @@
       el('span', { class: 'meter-num' }, `${value}/${max}`));
   }
 
-  /* ---------- sub-navigation per section ---------- */
+  /* ---------- sidebar navigation ---------- */
+  const I = {
+    home: '<path d="M4 11.5 12 5l8 6.5V19a1 1 0 0 1-1 1h-4v-5h-6v5H5a1 1 0 0 1-1-1z"/>',
+    novice: '<path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18 12h3M16.3 7.7l2.1-2.1"/><circle cx="12" cy="14" r="5"/>',
+    stage: '<path d="M4 19h16M6 16V9M12 16V5M18 16v-4"/>',
+    exams: '<path d="M4 7l8-3 8 3-8 3z"/><path d="M7 8.5V13c0 1.5 2.2 3 5 3s5-1.5 5-3V8.5"/>',
+    notes: '<path d="M6 4h9l3 3v13H6z"/><path d="M9 11h6M9 15h6M9 7h3"/>',
+    questions: '<circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.4 2.4 0 1 1 3.3 2.2c-.6.3-.9.8-.9 1.4v.3M12 16.8v.1"/>',
+    stations: '<circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 2M10 3h4"/>',
+    resources: '<path d="M5 4h4v16H5zM10 4h4v16h-4zM15.5 4.5l3.8 1 -3.6 14.5-3.8-1z"/>',
+    info: '<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8v.1"/>',
+  };
+  const icon = k => `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[k]}</svg>`;
+
   const SUBNAV = {
     novice: [['#start', 'Start here'], ['#journey', 'A GA step by step'], ['#syllabus', 'Syllabus'], ['#iac', 'The IAC'], ['#glossary', 'Glossary'], ['#checklist', 'Printable checklist']],
     exams: [['#exams', 'Overview'], ['#exams/primary', 'Primary FRCA'], ['#exams/final', 'Final FRCA'], ['#exams/transition', 'Which format will I sit?'], ['#exams/plan', 'Study plan'], ['#exams/banks', 'Question banks'], ['#exams/trainers', 'For trainers']],
@@ -95,19 +108,62 @@
     questions: [['#questions', 'Practise'], ['#questions/mock', 'Mock papers'], ['#questions/stats', 'My progress']],
     stations: [['#stations', 'All stations'], ['#stations/how', 'How to use them']],
     resources: [['#resources', 'Key resources'], ['#resources/guidelines', 'Guidelines library'], ['#resources/portfolio', 'Portfolio & ARCP'], ['#resources/wellbeing', 'Wellbeing & flexibility']],
-    stage1: null, stage2: null, stage3: null, home: null,
   };
+  const NAV = [
+    { items: [['home', '#home', 'Home', 'home']] },
+    { label: 'Training', items: [['novice', '#start', 'Novice (IAC)', 'novice'], ['stage1', '#stage/1', 'Stage 1 · CT1–3', 'stage'], ['stage2', '#stage/2', 'Stage 2 · ST4–5', 'stage'], ['stage3', '#stage/3', 'Stage 3 · ST6–7', 'stage']] },
+    { label: 'FRCA', items: [['exams', '#exams', 'Exams hub', 'exams']] },
+    { label: 'Study', items: [['notes', '#notes', 'Revision notes', 'notes'], ['questions', '#questions', 'Question bank', 'questions'], ['stations', '#stations', 'Station practice', 'stations']] },
+    { label: 'More', items: [['resources', '#resources', 'Resources', 'resources'], ['about', '#about', 'About', 'info']] },
+  ];
 
   function setNav(tab, current) {
-    $$('#main-tabs a').forEach(a => { if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    const items = SUBNAV[tab];
-    const bar = $('#sub-tabs');
-    if (!items) { bar.hidden = true; return; }
-    bar.hidden = false;
-    $('#sub-tabs-inner').replaceChildren(...items.map(([href, label]) =>
-      el('a', { href, 'aria-current': href === current ? 'page' : null }, label)));
-    const active = $('#sub-tabs-inner [aria-current]');
-    if (active) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    const nav = $('#side-nav');
+    if (!nav) return;
+    nav.replaceChildren(...NAV.map(group => el('div', { class: 'nav-group' },
+      group.label ? el('p', { class: 'nav-label' }, group.label) : null,
+      el('ul', null, group.items.map(([key, href, label, ic]) => {
+        const active = key === tab;
+        const kids = active && SUBNAV[key];
+        return el('li', { class: active ? 'active' : null },
+          el('a', { href, class: 'nav-link', 'aria-current': active && !kids ? 'page' : null, html: `${icon(ic)}<span>${label}</span>` }),
+          kids ? el('ul', { class: 'nav-sub' }, kids.map(([h, l]) => el('li', null, el('a', { href: h, 'aria-current': h === current ? 'page' : null }, l)))) : null);
+      })))));
+  }
+
+  /* ---------- mobile drawer ---------- */
+  function closeDrawer() {
+    document.body.classList.remove('drawer-open');
+    const s = $('#scrim'); if (s) s.hidden = true;
+    const b = $('#menu-toggle'); if (b) b.setAttribute('aria-expanded', 'false');
+  }
+  function wireDrawer() {
+    const b = $('#menu-toggle');
+    if (!b) return;
+    b.addEventListener('click', () => {
+      const open = !document.body.classList.contains('drawer-open');
+      document.body.classList.toggle('drawer-open', open);
+      $('#scrim').hidden = !open;
+      b.setAttribute('aria-expanded', String(open));
+    });
+    $('#scrim').addEventListener('click', closeDrawer);
+    $('#side-nav').addEventListener('click', e => { if (e.target.closest('a')) closeDrawer(); });
+  }
+
+  /* ---------- "On this page" contents ---------- */
+  function toc(root, title) {
+    const heads = $$('h2[id]', root);
+    if (heads.length < 3) return null;
+    const list = el('ol', null, heads.map(h => el('li', null, el('a', { href: '#', 'data-target': h.id, onclick: e => { e.preventDefault(); h.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }, h.textContent))));
+    const box = el('nav', { class: 'toc', 'aria-label': 'On this page' }, el('p', { class: 'toc-title' }, title || 'On this page'), list);
+    if ('IntersectionObserver' in window) {
+      const links = Object.fromEntries($$('a', list).map(a => [a.dataset.target, a]));
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(en => { if (en.isIntersecting) { $$('a', list).forEach(a => a.classList.remove('on')); links[en.target.id] && links[en.target.id].classList.add('on'); } });
+      }, { rootMargin: '-80px 0px -70% 0px' });
+      heads.forEach(h => obs.observe(h));
+    }
+    return box;
   }
 
   /* ---------- router ---------- */
@@ -122,10 +178,12 @@
     const params = new URLSearchParams(query || '');
     const handler = routes[name] || routes.home;
     hideSearch();
+    closeDrawer();
     const res = handler(args, params) || {};
     show(res.view || name);
     setNav(res.tab || name, res.current || '#' + pathPart);
     document.title = (res.title ? res.title + ' · ' : '') + 'Anaesthesia Training Companion';
+    document.body.dataset.view = res.view || name;
     if (!res.keepScroll) window.scrollTo(0, 0);
     if (res.after) res.after();
   }
@@ -181,29 +239,61 @@
     scored.sort((a, b) => b[0] - a[0]);
     return scored.slice(0, limit || 400).map(x => x[1]);
   }
-  function hideSearch() { const p = $('#search-pop'); if (p) p.hidden = true; }
+  function hideSearch() { const p = $('#palette'); if (p && !p.hidden) { p.hidden = true; document.body.classList.remove('palette-open'); } }
+  function openSearch() {
+    const p = $('#palette');
+    p.hidden = false;
+    document.body.classList.add('palette-open');
+    const input = $('#site-q');
+    input.value = '';
+    renderHits('');
+    setTimeout(() => input.focus(), 10);
+  }
+  let hitIndex = 0;
+  function renderHits(q) {
+    const pop = $('#search-pop');
+    hitIndex = 0;
+    if (q.trim().length < 2) {
+      pop.replaceChildren(el('div', { class: 'palette-hint' },
+        el('p', { class: 'palette-hint-title' }, 'Jump to'),
+        el('div', { class: 'palette-quick' }, [['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#questions/mock', 'Mock papers'], ['#stations', 'Station practice'], ['#exams', 'FRCA 2027 changes'], ['#start', 'Novice start']].map(([h, l]) => el('a', { href: h }, l)))));
+      return;
+    }
+    const res = search(q, 10);
+    pop.replaceChildren(...(res.length ? res.map((r, i) => el('a', { href: r.href, class: 'search-hit' + (i === 0 ? ' sel' : '') },
+      el('span', { class: 'hit-type' }, r.type), el('span', { class: 'hit-title' }, r.title), r.sub ? el('span', { class: 'hit-sub' }, r.sub) : null))
+      : [el('p', { class: 'palette-empty' }, `No matches for “${q}”.`)]),
+    el('a', { href: `#search?q=${encodeURIComponent(q)}`, class: 'search-all' }, `See all results for “${q}” →`));
+  }
   function wireSearch() {
     const input = $('#site-q');
-    const pop = $('#search-pop');
+    const palette = $('#palette');
     let t;
-    input.addEventListener('input', () => {
-      clearTimeout(t);
-      t = setTimeout(() => {
-        const q = input.value.trim();
-        if (q.length < 2) { pop.hidden = true; return; }
-        const res = search(q, 8);
-        pop.replaceChildren(...(res.length ? res.map(r => el('a', { href: r.href, class: 'search-hit' }, el('span', { class: 'hit-type' }, r.type), el('span', { class: 'hit-title' }, r.title), r.sub ? el('span', { class: 'hit-sub' }, r.sub) : null)) : [el('p', { class: 'small', style: 'padding:.6rem .8rem;margin:0' }, 'No matches.')]),
-          el('a', { href: `#search?q=${encodeURIComponent(q)}`, class: 'search-all' }, `See all results for “${q}”`));
-        pop.hidden = false;
-      }, 120);
-    });
+    $('#search-trigger').addEventListener('click', openSearch);
+    input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => renderHits(input.value), 90); });
     input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') { location.hash = `#search?q=${encodeURIComponent(input.value.trim())}`; input.blur(); }
-      if (e.key === 'Escape') { hideSearch(); input.blur(); }
+      const hits = $$('#search-pop .search-hit');
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (!hits.length) return;
+        hits[hitIndex] && hits[hitIndex].classList.remove('sel');
+        hitIndex = (hitIndex + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length;
+        hits[hitIndex].classList.add('sel');
+        hits[hitIndex].scrollIntoView({ block: 'nearest' });
+      }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const sel = hits[hitIndex];
+        location.hash = sel ? sel.getAttribute('href') : `#search?q=${encodeURIComponent(input.value.trim())}`;
+        hideSearch();
+      }
+      if (e.key === 'Escape') hideSearch();
     });
-    document.addEventListener('click', e => { if (!e.target.closest('.site-search')) hideSearch(); else if (e.target.closest('a')) { hideSearch(); input.value = ''; } });
+    palette.addEventListener('click', e => { if (e.target === palette || e.target.closest('a')) hideSearch(); });
     document.addEventListener('keydown', e => {
-      if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); input.focus(); }
+      const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
+      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing)) { e.preventDefault(); openSearch(); }
+      if (e.key === 'Escape') { hideSearch(); closeDrawer(); }
     });
   }
   on('search', (args, params) => {
@@ -268,7 +358,7 @@
   /* ---------- public API ---------- */
   window.App = {
     S, C, $, $$, el, ext, html, store, KEYS, loadPart, statusBadge, refList, elaList, feedbackUrl, reportLink, toast, pct, meter,
-    on, route, fillStaticLinks, search,
+    on, route, fillStaticLinks, search, toc,
     pageHref: id => {
       if (id === 'exams') return '#exams';
       if (id.startsWith('exams-')) return '#exams/' + id.slice(6);
@@ -281,6 +371,7 @@
       wireTheme();
       wireDisclaimer();
       wireSearch();
+      wireDrawer();
       fillStaticLinks();
       wireProgressTools();
       (App.inits || []).forEach(f => f());

@@ -146,7 +146,14 @@ export function markdown(src) {
       para.push(lines[i].trim());
       i++;
     }
-    out.push(`<p>${inline(para.join(' '))}</p>`);
+    const text = para.join(' ');
+    const parts = text.split(' · ');
+    if (parts.length >= 3 && parts.every(t => t.length <= 70 && !/[.:;]\s/.test(t))) {
+      // "A · B · C" lists render as tag chips
+      out.push(`<ul class="md-tags">${parts.map(t => `<li>${inline(t.trim())}</li>`).join('')}</ul>`);
+    } else {
+      out.push(`<p>${inline(text)}</p>`);
+    }
   }
   return out.join('\n');
 }
