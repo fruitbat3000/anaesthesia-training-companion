@@ -3,7 +3,7 @@ title: Context-sensitive half-time and TCI
 subject: pharmacology
 codes: 1_GA_G3_35, 1_GA_G3_36, 1_GA_G3_37, 1_GA_G3_38, 1_GA_S_1
 refs: csht1992, tiva2018
-related:
+related: pk-basics, iv-induction-agents, opioids
 summary: Why offset after an infusion depends on how long it has run, why remifentanil is different, and how target-controlled infusion pumps use models.
 order: 30
 ---
