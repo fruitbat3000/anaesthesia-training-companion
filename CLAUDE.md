@@ -10,6 +10,12 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-27 — Research for an all-stages site (Claude Code, Mark's Mac)
+- Mark asked to widen the scope to all stages, add question banks for the Primary and Final, read the RCoA trainer briefing on the new exam format, and write our own "FRCA in a box"-style notes. He asked for a research-and-proposal pass only, with nothing built.
+- Key findings: new FRCA formats from July 2027 (Primary AKT + CASE, Final AKT + FCPE; S13). The RCoA Trainer Support Pack (June 2026; S14). No official CASE/FCPE sample stations yet. Curriculum v1.5 live since 17 Aug 2026 (S16). The e-LA exam archive has free Primary/Final question sets and Revision Guides (S17).
+- The RCoA blocks curl/WebFetch even for PDFs now. Method: on an rcoa.ac.uk page, load pdf.js from cdn.jsdelivr.net (allowed by their CSP), fetch the PDF same-origin, write the text into an `<article>`, then use get_page_text.
+- Wrote `proposals/2026-09-27-all-stages.md`. **Next step (restart here):** get Mark's decisions on section 7 of that proposal, record them in `DECISIONS.md`, then start phase 1.
+
 ### 2026-09-23 — Project scaffolded (Claude Code, Mark's Mac)
 - Created from shared-project-template via `new-project.sh`. Class 0. Removed ARCHIVE-NOTE, HANDOVER, variants.
 - Scope confirmed by Mark: a website signposting the RCoA curriculum to year-1 trainees; nothing sensitive.
