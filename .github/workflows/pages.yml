@@ -1,4 +1,4 @@
-# Publish the static site in code/ to GitHub Pages on every push to main.
+# Build the revision content, then publish the static site in code/ to GitHub Pages on every push to main.
 name: Deploy site to GitHub Pages
 
 on:
@@ -23,6 +23,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Validate and compile content/ into code/content/ (fails the deploy on broken syllabus codes,
+      # references or question formatting)
+      - name: Build revision content
+        run: node scripts/build-content.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -46,7 +46,7 @@ The e-LA intermediate modules are in the [e-LfH Specialty Training catalogue](ht
 
 ## Specialist society curriculum resources
 
-The RCoA signposts society resources that help you evidence Stage 2 key capabilities: the [Association of Paediatric Anaesthetists (APA) trainee hub](https://www.apagbi.org.uk/trainee-hub/overview), the [Neuro Anaesthesia and Critical Care Society](https://naccs.org.uk/resource/contents/), and [RA-UK's 2021 curriculum resources](https://www.ra-uk.org/index.php/education/rcoa-2021-curriculum).
+The RCoA signposts society resources that help you evidence Stage 2 key capabilities: the [Association of Paediatric Anaesthetists (APA) trainee hub](https://www.apagbi.org.uk/trainee-hub/overview), the [Neuro Anaesthesia and Critical Care Society](https://naccs.org.uk/), and [RA-UK's 2021 curriculum resources](https://www.ra-uk.org/index.php/education/rcoa-2021-curriculum).
 
 ## The Final FRCA
 

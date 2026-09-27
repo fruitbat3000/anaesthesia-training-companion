@@ -17,8 +17,16 @@ const ctx = { window: {} };
 vm.runInNewContext(src, ctx);
 const S = ctx.window.SITE;
 
+// Revision content (references, guide pages, notes and stations) compiled by build-content.mjs
+const contentCtx = { window: {} };
+for (const f of ['index.js', 'notes-primary.js', 'notes-final.js', 'stations.js']) {
+  vm.runInNewContext(readFileSync(new URL(`../code/content/${f}`, import.meta.url), 'utf8'), contentCtx);
+}
+const CONTENT = contentCtx.window.CONTENT;
+const PARTS = contentCtx.window.CONTENT_PARTS || {};
+
 const UA = 'Mozilla/5.0 (compatible; novice-syllabus-link-check; +https://github.com/fruitbat3000/novice-anaesthetist-syllabus)';
-const BOT_BLOCKED = [/(^|\.)rcoa\.ac\.uk$/, /yorksandhumberdeanery\.nhs\.uk$/, /^doi\.org$/, /onlinelibrary\.wiley\.com$/, /journals\.lww\.com$/];
+const BOT_BLOCKED = [/(^|\.)rcoa\.ac\.uk$/, /yorksandhumberdeanery\.nhs\.uk$/, /^doi\.org$/, /onlinelibrary\.wiley\.com$/, /journals\.lww\.com$/, /(^|\.)bnf\.nice\.org\.uk$/, /(^|\.)apagbi\.org\.uk$/, /(^|\.)ficm\.ac\.uk$/, /(^|\.)das\.uk\.com$/, /(^|\.)cpoc\.org\.uk$/];
 // e-LfH sessions whose page titles carry no session code
 const NO_CODE = { '01_12_01': 'Airway Maintenance: Facemask', '01_13_01': 'Venous Access' };
 
@@ -81,6 +89,29 @@ for (const [key, url] of Object.entries(S.links)) {
   if (key === 'feedbackNew' || url.includes('portal.e-lfh.org.uk/Catalogue/')) continue;
   tasks.push(() => checkPlain(key, url));
 }
+// External links in the revision content that are not already in data.js
+const seen = new Set(Object.values(S.links));
+const contentLinks = new Map();
+for (const [id, r] of Object.entries(CONTENT.refs)) contentLinks.set(r.u, `ref ${id}`);
+const htmlBlobs = [
+  ...Object.values(CONTENT.pages).map(p => [`page ${p.id}`, p.html]),
+  ...Object.entries(PARTS['notes-primary'] || {}).map(([k, v]) => [`note ${k}`, v]),
+  ...Object.entries(PARTS['notes-final'] || {}).map(([k, v]) => [`note ${k}`, v]),
+  ...Object.entries(PARTS.stations || {}).map(([k, v]) => [`station ${k}`, Object.values(v).join(' ')]),
+];
+for (const [where, html] of htmlBlobs) {
+  for (const m of String(html).matchAll(/href="(https?:[^"]+)"/g)) {
+    const url = m[1].replace(/&amp;/g, '&');
+    if (!contentLinks.has(url)) contentLinks.set(url, where);
+  }
+}
+for (const [url, where] of contentLinks) {
+  if (seen.has(url)) continue;
+  seen.add(url);
+  // top-level catalogue sections: a plain page check (the child-component API only suits leaf sections)
+  tasks.push(() => checkPlain(where, url));
+}
+
 await pool(tasks);
 
 const today = new Date().toISOString().slice(0, 10);
