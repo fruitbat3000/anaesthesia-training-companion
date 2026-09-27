@@ -54,8 +54,8 @@ window.SITE = {
     litflEcg: 'https://litfl.com/ecg-library/',
 
     // Feedback goes to GitHub issues on the project repo
-    repo: 'https://github.com/fruitbat3000/novice-anaesthetist-syllabus',
-    feedbackNew: 'https://github.com/fruitbat3000/novice-anaesthetist-syllabus/issues/new?labels=feedback&title=Feedback%3A%20',
+    repo: 'https://github.com/fruitbat3000/anaesthesia-training-companion',
+    feedbackNew: 'https://github.com/fruitbat3000/anaesthesia-training-companion/issues/new?labels=feedback&title=Feedback%3A%20',
   },
 
   /* Further resources beyond e-LfH, grouped for the Resources page.

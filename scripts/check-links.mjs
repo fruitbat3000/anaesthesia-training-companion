@@ -25,7 +25,7 @@ for (const f of ['index.js', 'notes-primary.js', 'notes-final.js', 'stations.js'
 const CONTENT = contentCtx.window.CONTENT;
 const PARTS = contentCtx.window.CONTENT_PARTS || {};
 
-const UA = 'Mozilla/5.0 (compatible; novice-syllabus-link-check; +https://github.com/fruitbat3000/novice-anaesthetist-syllabus)';
+const UA = 'Mozilla/5.0 (compatible; anaesthesia-training-companion-link-check; +https://github.com/fruitbat3000/anaesthesia-training-companion)';
 const BOT_BLOCKED = [/(^|\.)rcoa\.ac\.uk$/, /yorksandhumberdeanery\.nhs\.uk$/, /^doi\.org$/, /onlinelibrary\.wiley\.com$/, /journals\.lww\.com$/, /(^|\.)bnf\.nice\.org\.uk$/, /(^|\.)apagbi\.org\.uk$/, /(^|\.)ficm\.ac\.uk$/, /(^|\.)das\.uk\.com$/, /(^|\.)cpoc\.org\.uk$/];
 // e-LfH sessions whose page titles carry no session code
 const NO_CODE = { '01_12_01': 'Airway Maintenance: Facemask', '01_13_01': 'Venous Access' };

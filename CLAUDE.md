@@ -10,6 +10,12 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-28 (later) — Build complete, repo renamed, pushed
+- Added 21 station packs (11 CASE, 10 FCPE); the link checker now covers all content links (170 OK, 0 broken); the deploy workflow builds and validates content; browser QA passed (all routes, a full Final mock, station views, 390 px width via iframe, dark mode).
+- Updated README, code/README, AGENTS, STATUS, TODO and SOURCES (S21–S24).
+- **Repo renamed** to `fruitbat3000/anaesthesia-training-companion`; the site is at https://fruitbat3000.github.io/anaesthesia-training-companion/ (old URL dead). The local folder is still `novice-anaesthetist-syllabus` (renaming it would break the Claude memory path).
+- **Next step (restart here):** Mark shares the new link with Dr Brooks and reviewers; set up clinical QC (see TODO "Now").
+
 ### 2026-09-28 — Build in progress (checkpoint for context compaction)
 - **Done and committed:** the new app (code/core.js, novice.js, pages.js, notes.js, qbank.js, stations.js, styles.css, index.html), the content pipeline (scripts/build-content.mjs + scripts/lib/md.mjs → code/content/*.js), refs.json (80 checked references), 16 guide pages (exams hub ×7, stages 1–3, portfolio, guidelines, wellbeing, resources-more, disclaimer, stations-how), **131 Primary notes (610/610 syllabus codes)**, **60 Final notes (436/436 Stage 2 codes)**, **249 Primary + 124 Final SBAs** (Final: GA 58, POM 15, RA 12, other 39 — a full mock is possible), 1 sample station (case-remi-tiva).
 - Build: `node scripts/build-content.mjs` (validates codes, refs and question format). Local test: `cd code && python3 -m http.server 8765`.
