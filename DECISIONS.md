@@ -4,6 +4,24 @@ Accepted decisions, newest first. One entry per decision. A decision here **over
 
 ---
 
+## 2026-09-27 — Widen to all stages; build notes, question bank and station practice
+
+**Decision (Mark, answering section 7 of `proposals/2026-09-27-all-stages.md`):**
+1. **Audience:** all stages of anaesthetic training (novice to CCT), still focused on the Yorkshire & Humber school "for now". Content is mostly national, with a Yorkshire layer.
+2. **Name/URL:** rename the site and the repo. Mark will send fresh links (to Dr Brooks and others) after the build.
+3. **Review model:** build everything now, "looking super pro", and do quality control in due course. Every note, question and station carries a review status (draft until a clinician signs it off), shown discreetly.
+4. **Doses and numbers:** allowed in revision material when referenced. The site must carry a clear disclaimer: educational material only, not medical advice, no liability, and doses to be checked against the BNF and local policy.
+5. **Scope of work:** all phases (stage pages, exams hub, revision notes for the Primary and Final, SBA question bank, CASE/FCPE station practice, stage 3 detail).
+6. **Dr Brooks** will review once it is built.
+
+**Context:** Mark gave "full authority" to build the most useful training resource possible.
+
+**Consequences:** This **supersedes** the 2026-09-23 scope decision (novice period up to the IAC) and relaxes the "no doses" note in S12 for revision material (the glossary stays dose-free). The site should stay out of search engines (`noindex`) until QC is done, because the repo and Pages site are public. Content is written as original material. Nothing is copied from textbooks, commercial banks or RCoA sample questions.
+
+**Status:** accepted
+
+---
+
 ## 2026-09-23 — Tone and credits
 
 **Decision:** The site reads as neutral professional guidance, not in Dr Brooks's voice. Contributors are credited **only** in the Credit card on the About page: Dr Alistair Brooks (source guide, adapted with permission, including the glossary) and Dr Mark Stubbington (compiled and maintains the site). There are no inline attributions ("Dr Brooks's advice…", "(Brooks)" tags) and no footer credit.

@@ -10,6 +10,11 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-27 (later) — Build started, paused at usage limit
+- Mark's decisions (recorded in `DECISIONS.md`): Yorkshire for now; rename the site and repo (send fresh links afterwards); build everything, QC later; referenced doses allowed, with a disclaimer; do all phases; Dr Brooks reviews once it's built.
+- Done: syllabus code lists in `content/syllabus/` (Primary v2.2 has **610** codes, not 324; Stage 2 has 436 codes). `scripts/lib/md.mjs` (mini Markdown converter) and `scripts/build-content.mjs` (validates and compiles content into `code/content/*.js`). Neither has been run yet: `content/refs.json` and all content still need writing.
+- **Restart here.** Planned design: content in `content/{pages,notes/primary,notes/final,questions,stations}`. Question blocks start `@@ id` with fields stem/A–E/answer/explain/subject/domain/codes/note/refs. Stations need sections Candidate instructions / Scenario / Examiner prompts / Key features / Domains assessed. Verify references via the Crossref API (DOIs) and curl. Then rebuild the UI shell: stage switcher (Novice, Stage 1–3), Exams hub, Notes library + coverage page, question bank (practice, timed mocks to the AKT blueprint, stats), station practice (candidate/examiner modes, timers), a disclaimer banner and page, and `noindex`. Keep the old `#start/#journey/#syllabus/#iac` routes working. Name: "Anaesthesia Training Companion"; repo rename to `anaesthesia-training-companion` at the end, then give Mark the fresh links.
+
 ### 2026-09-27 — Research for an all-stages site (Claude Code, Mark's Mac)
 - Mark asked to widen the scope to all stages, add question banks for the Primary and Final, read the RCoA trainer briefing on the new exam format, and write our own "FRCA in a box"-style notes. He asked for a research-and-proposal pass only, with nothing built.
 - Key findings: new FRCA formats from July 2027 (Primary AKT + CASE, Final AKT + FCPE; S13). The RCoA Trainer Support Pack (June 2026; S14). No official CASE/FCPE sample stations yet. Curriculum v1.5 live since 17 Aug 2026 (S16). The e-LA exam archive has free Primary/Final question sets and Revision Guides (S17).
