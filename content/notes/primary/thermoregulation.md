@@ -3,7 +3,7 @@ title: Temperature regulation and perioperative hypothermia
 subject: physiology
 codes: 1_GA_G2_81, 1_GA_F2_4, 1_GA_F2_5, 1_GA_F1_2, 1_GA_F1_3, 1_GA_N_9
 refs: cg65, deranged
-related: temperature-measurement, heat-humidity
+related: temperature-measurement, vapours-humidity
 summary: The hypothalamic control of temperature, how anaesthesia causes hypothermia, its consequences, and prevention.
 order: 57
 ---
