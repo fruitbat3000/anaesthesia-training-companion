@@ -24,7 +24,7 @@ Increases the risk of **perioperative respiratory adverse events** (laryngospasm
 - **Induction:** IV (with topical anaesthesia) or **inhalational with sevoflurane** (in oxygen ± N~2~O). Beware of laryngospasm in light planes.
 - **Equipment:** appropriately sized masks, airways, SGAs (by weight), tracheal tubes (cuffed tubes now common; check leak or cuff pressure), T-piece (Mapleson F) for small children, warming.
 - **Drugs by weight**, with double-checking: for example atropine 20 µg/kg, suxamethonium 1–2 mg/kg (higher in infants), paracetamol and NSAIDs by weight (check BNF for Children), fluids 10 mL/kg boluses.
-- **Analgesia:** paracetamol, NSAIDs, opioids by weight, and regional techniques such as the **caudal block** (e.g. levobupivacaine 0.25% 0.5–1 mL/kg depending on the height needed; within the maximum dose), penile block, ilioinguinal block, and wound infiltration.
+- **Analgesia:** paracetamol, NSAIDs, opioids by weight, and regional techniques such as the **caudal block** (e.g. levobupivacaine 0.2%, 0.5–1 mL/kg depending on the height needed, keeping within the maximum dose — see the BNF for Children and local guidance), penile block, ilioinguinal block, and wound infiltration.
 - **PONV:** common after age 3; ondansetron and dexamethasone.
 - **Emergence:** sevoflurane agitation (exclude pain, hypoxia, full bladder); dexmedetomidine or clonidine can reduce it.
 

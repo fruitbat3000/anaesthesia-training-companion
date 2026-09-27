@@ -10,6 +10,11 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-28 — Build in progress (checkpoint for context compaction)
+- **Done and committed:** the new app (code/core.js, novice.js, pages.js, notes.js, qbank.js, stations.js, styles.css, index.html), the content pipeline (scripts/build-content.mjs + scripts/lib/md.mjs → code/content/*.js), refs.json (80 checked references), 16 guide pages (exams hub ×7, stages 1–3, portfolio, guidelines, wellbeing, resources-more, disclaimer, stations-how), **131 Primary notes (610/610 syllabus codes)**, **60 Final notes (436/436 Stage 2 codes)**, **249 Primary + 124 Final SBAs** (Final: GA 58, POM 15, RA 12, other 39 — a full mock is possible), 1 sample station (case-remi-tiva).
+- Build: `node scripts/build-content.mjs` (validates codes, refs and question format). Local test: `cd code && python3 -m http.server 8765`.
+- **Remaining (restart here):** (1) station packs (~20: CASE ×10, FCPE ×10) in content/stations with sections Candidate instructions / Scenario / Examiner prompts / Key features / Domains assessed / What good looks like / Learning points; (2) extend scripts/check-links.mjs to cover content/refs.json and page links, and add the build step to .github/workflows/pages.yml; (3) browser QA (phone width, mock papers, coverage page, dark mode); (4) update README/AGENTS/STATUS/TODO/SOURCES (S16 count, new S21+ refs incl. ARCP checklist v4.0 media/27791, curriculum v1.5 changes doc media/53486); (5) rename repo to `anaesthesia-training-companion` via gh, update links (S.links.repo, UA string), push, and give Mark the new Pages URL.
+
 ### 2026-09-27 (later) — Build started, paused at usage limit
 - Mark's decisions (recorded in `DECISIONS.md`): Yorkshire for now; rename the site and repo (send fresh links afterwards); build everything, QC later; referenced doses allowed, with a disclaimer; do all phases; Dr Brooks reviews once it's built.
 - Done: syllabus code lists in `content/syllabus/` (Primary v2.2 has **610** codes, not 324; Stage 2 has 436 codes). `scripts/lib/md.mjs` (mini Markdown converter) and `scripts/build-content.mjs` (validates and compiles content into `code/content/*.js`). Neither has been run yet: `content/refs.json` and all content still need writing.
