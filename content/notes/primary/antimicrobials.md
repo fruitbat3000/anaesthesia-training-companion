@@ -3,7 +3,7 @@ title: Antimicrobials, prophylaxis and infection control
 subject: pharmacology
 codes: 1_GA_G3_81, 1_POM_J_1, 1_POM_J_2, 1_POM_J_3, 1_POM_J_4, 1_POM_J_5, 1_POM_J_6, 1_POM_J_7, 1_GA_H_1, 1_GA_B_4
 refs: bnf, ng51
-related: sepsis-critical-illness, decontamination
+related: sepsis-critical-illness, infusion-decontamination
 summary: Antibiotic classes and mechanisms, interactions relevant to anaesthesia, surgical prophylaxis, stewardship, and preventing healthcare-associated infection.
 order: 53
 ---

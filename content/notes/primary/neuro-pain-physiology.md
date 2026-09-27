@@ -1,7 +1,7 @@
 ---
 title: Physiology of pain
 subject: physiology
-codes: 1_GA_G2_70, 1_GA_G1_11, 1_GA_G1_12, 1_PA_A_1, 1_PA_D_2
+codes: 1_GA_G2_70, 1_GA_G1_11, 1_GA_G1_12, 1_PA_A_1, 1_PA_D_2, 1_GA_G2_69
 refs: deranged, ng193
 related: opioids, paracetamol-nsaids, local-anaesthetics
 summary: Nociceptors and primary afferents, the dorsal horn, ascending and descending pathways, and the mechanisms of sensitisation and chronic pain.

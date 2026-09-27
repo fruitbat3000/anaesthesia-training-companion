@@ -3,7 +3,7 @@ title: Intracranial pressure, cerebral blood flow and CSF
 subject: physiology
 codes: 1_GA_G2_66, 1_GA_G2_16, 1_GA_G1_14, 1_GA_E_24, 1_GA_N_4
 refs: deranged, ng232
-related: cvs-special-circulations, neuro-anatomy-cns
+related: cvs-special-circulations, anat-head-neck-eye
 summary: The Monro–Kellie doctrine, the ICP–volume curve, cerebral perfusion pressure and autoregulation, and the production and circulation of CSF.
 order: 32
 ---

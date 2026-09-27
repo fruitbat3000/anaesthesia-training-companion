@@ -1,7 +1,7 @@
 ---
 title: Blood groups, transfusion and transfusion reactions
 subject: physiology
-codes: 1_GA_G2_22, 1_GA_G2_23, 1_GA_E_19, 1_GA_G3_65
+codes: 1_GA_G2_22, 1_GA_G2_23, 1_GA_E_19, 1_GA_G3_65, 1_POM_Q_1, 1_POM_Q_2
 refs: ng24, bsh
 related: blood-rbc-hb, procoagulants-blood-products
 summary: ABO and Rhesus systems, compatibility testing, components and their storage, and recognising and managing transfusion reactions.
@@ -45,6 +45,8 @@ Changes in stored red cells: rising K^+^, falling pH and 2,3-DPG, microaggregate
 - **TRALI:** acute lung injury within 6 hours, from donor antibodies against recipient leucocytes.
 - **Bacterial contamination** (platelets), **delayed haemolytic reaction** (days to weeks), **transfusion-associated graft-versus-host disease** (prevented by irradiation in at-risk patients).
 - **Massive transfusion:** hypothermia, hypocalcaemia, hyperkalaemia, dilutional coagulopathy, acidosis.
+- **Transfusion-transmitted infection** (HIV, hepatitis B and C, HTLV, syphilis, bacterial contamination, and the theoretical risk of variant CJD) is now very rare in the UK because of donor selection, testing and leucodepletion.
+- **Safe transfusion practice:** positive patient identification at every step (sampling, collection, administration), bedside checks against the prescription and the compatibility label, observations before, 15 minutes into and after each unit, and completion within 4 hours of leaving controlled storage.
 - Serious hazards are reported to the UK haemovigilance scheme (SHOT) and MHRA (SABRE).
 
 > [!exam] In the exam

@@ -341,3 +341,214 @@ D: Invasive arterial pressure
 E: Oesophageal Doppler
 answer: A
 explain: The 2021 standards recommend **processed EEG (depth of anaesthesia) monitoring** when TIVA is used with neuromuscular blockade, because the usual clinical signs of awareness are masked and there is no end-tidal agent concentration to guide dosing.
+
+@@ pm-abg-003
+subject: measurement
+codes: 1_ICM_F_1, 1_GA_G2_8
+note: abg-interpretation
+stem: A 45-year-old with severe diarrhoea has pH 7.28, PaCO~2~ 3.8 kPa, HCO~3~^−^ 14 mmol/L, Na^+^ 138 mmol/L, Cl^−^ 114 mmol/L.
+
+What is the anion gap (without potassium) and the likely disorder?
+A: 10 mmol/L; normal anion gap metabolic acidosis
+B: 10 mmol/L; respiratory acidosis
+C: 24 mmol/L; raised anion gap metabolic acidosis
+D: 38 mmol/L; lactic acidosis
+E: 124 mmol/L; hyperchloraemic alkalosis
+answer: A
+explain: Anion gap = 138 − (114 + 14) = **10 mmol/L** (normal). Low bicarbonate with high chloride and a normal gap: **hyperchloraemic (normal anion gap) metabolic acidosis** from gastrointestinal bicarbonate loss, with respiratory compensation.
+
+@@ pm-abg-004
+subject: measurement
+codes: 1_ICM_F_1
+note: abg-interpretation
+stem: An arterial sample is left at room temperature for an hour with an air bubble in the syringe before analysis.
+
+Which pattern of error is most likely?
+A: PaO~2~ falsely low and PaCO~2~ falsely high only
+B: PaO~2~ moves towards the partial pressure in room air; PaCO~2~ falls
+C: pH falsely high due to lactate production
+D: No change, because blood gases are stable
+E: Potassium falls
+answer: B
+explain: An **air bubble** equilibrates with the sample: PO~2~ moves towards about 20 kPa (so a low PaO~2~ rises and a very high PaO~2~ falls) and PCO~2~ falls towards zero. Delay also allows ongoing cell metabolism (lowering PO~2~ and pH). Samples should be analysed promptly without air.
+
+@@ pm-ecg-003
+subject: measurement
+codes: 1_GA_G2_43, 1_RT_B_1
+note: ecg-interpretation
+stem: A patient on a potassium-sparing diuretic with acute kidney injury has an ECG showing tall peaked T waves, a prolonged PR interval and widening QRS complexes.
+
+What is the most urgent treatment?
+A: Calcium gluconate or chloride IV
+B: Furosemide IV
+C: Oral calcium resonium
+D: Salbutamol nebuliser alone
+E: Sodium bicarbonate orally
+answer: A
+explain: ECG changes of **hyperkalaemia** require immediate **IV calcium** to stabilise the myocardium (it does not lower potassium). Then shift potassium into cells (insulin–glucose, salbutamol) and remove it (dialysis, binders), and treat the cause.
+
+@@ pm-ecg-004
+subject: measurement
+codes: 1_GA_F1_12
+note: ecg-interpretation
+stem: Which ECG lead combination is most commonly used in theatre to detect both arrhythmias and lateral left ventricular ischaemia?
+A: aVR and V1
+B: I and aVL
+C: II and V5
+D: III and aVF
+E: V1 and V2
+answer: C
+explain: **Lead II** shows P waves well (rhythm) and inferior changes; **V5** (or CM5) detects most **lateral** ischaemia. Combined, they detect the majority of intraoperative ischaemic episodes.
+
+@@ pm-img-003
+subject: measurement
+codes: 1_GA_G1_6
+note: imaging-interpretation
+stem: A supine chest radiograph of a ventilated trauma patient shows an unusually deep, lucent costophrenic angle on the left.
+
+What does this suggest?
+A: Left lower lobe collapse
+B: Left pleural effusion
+C: Left pneumothorax
+D: Pneumoperitoneum
+E: Right main bronchus intubation
+answer: C
+explain: The **deep sulcus sign**: on a **supine** film, air collects anteriorly and inferiorly, deepening the costophrenic angle — a sign of **pneumothorax** that may be missed because the classic apical lung edge is absent.
+
+@@ pm-meas-003
+subject: measurement
+codes: 1_GA_F3_1
+note: measurement-principles
+stem: A pressure transducer reads consistently 5 mmHg higher than a reference standard across its whole range.
+
+Which term best describes this error?
+A: Drift of gain
+B: Hysteresis
+C: Imprecision
+D: Non-linearity
+E: Offset (zero) error, a lack of accuracy
+answer: E
+explain: A constant difference across the range is an **offset (zero) error** — the device may be **precise** (repeatable) but **inaccurate**. Re-zeroing corrects it. A gain error would increase with the size of the reading.
+
+@@ pm-spo2-003
+subject: measurement
+codes: 1_GA_F3_9
+note: pulse-oximetry
+stem: A patient receives an intravenous injection of methylene blue for methaemoglobinaemia.
+
+What happens to the pulse oximeter reading over the following minutes?
+A: It falls transiently
+B: It is unaffected
+C: It reads exactly 85%
+D: It rises to 100%
+E: It stops displaying a pulse
+answer: A
+explain: Methylene blue absorbs light strongly at around **660 nm**, which the oximeter interprets as deoxyhaemoglobin, so SpO~2~ **falls transiently** without true desaturation.
+
+@@ pm-co2-003
+subject: measurement
+codes: 1_GA_F3_8
+note: capnography
+stem: After intubation, a capnograph shows a normal square waveform, but the end-tidal CO~2~ is 3.0 kPa while the arterial PaCO~2~ is 7.5 kPa.
+
+Which condition best explains the large gradient?
+A: Bronchospasm with a normal-shaped waveform
+B: Hypoventilation
+C: Increased alveolar dead space, for example from low cardiac output
+D: Rebreathing
+E: Sampling line disconnection
+answer: C
+explain: The PaCO~2~–ETCO~2~ gap reflects **alveolar dead space** (ventilated but poorly perfused alveoli dilute the expired CO~2~). Low cardiac output, pulmonary embolism, hypovolaemia and high airway pressures widen it.
+
+@@ pm-temp-002
+subject: measurement
+codes: 1_GA_F3_3
+note: temperature-measurement
+stem: Which site gives the best continuous estimate of core temperature during a laparotomy under general anaesthesia?
+A: Axilla
+B: Distal oesophagus
+C: Forehead skin strip
+D: Rectum
+E: Tympanic membrane measured once at the start
+answer: B
+explain: The **distal oesophagus** (lower third, near the heart and great vessels) tracks core temperature closely during anaesthesia. The rectum and bladder lag; skin and axillary sites underestimate.
+
+@@ pm-co-003
+subject: measurement
+codes: 1_GA_F3_12
+note: cardiac-output-measurement
+stem: What does an oesophageal Doppler monitor measure directly to estimate stroke volume?
+A: Aortic diameter
+B: Blood velocity in the descending aorta over time (stroke distance)
+C: Left ventricular end-diastolic volume
+D: Pulmonary artery temperature change
+E: Thoracic electrical impedance
+answer: B
+explain: The probe measures **blood velocity in the descending thoracic aorta**; the area under the velocity–time curve (**stroke distance**) is multiplied by an estimated aortic cross-sectional area (from a nomogram) and corrected for the fraction of output reaching the descending aorta.
+
+@@ pm-gas-003
+subject: measurement
+codes: 1_GA_F3_15
+note: gas-analysis
+stem: Why can infrared analysers measure carbon dioxide, nitrous oxide and volatile agents but not oxygen?
+A: Oxygen is paramagnetic
+B: Oxygen is too dilute
+C: Only molecules containing two or more different atoms absorb infrared radiation
+D: Oxygen absorbs ultraviolet light instead
+E: Oxygen reacts with the sample chamber
+answer: C
+explain: Infrared absorption needs a molecule with **two or more dissimilar atoms** (a changing dipole on vibration). O~2~ (and N~2~) are diatomic molecules of a single element, so they do not absorb infrared.
+
+@@ pm-bp-003
+subject: measurement
+codes: 1_GA_F3_7
+note: pressure-measurement
+stem: What is the purpose of the Wheatstone bridge in an invasive pressure transducer?
+A: To convert small changes in strain-gauge resistance into a measurable voltage
+B: To damp the pressure waveform
+C: To earth the patient
+D: To flush the arterial line
+E: To heat the transducer
+answer: A
+explain: The diaphragm stretches a **strain gauge**, changing its resistance; the **Wheatstone bridge** detects this small change very sensitively as an output voltage, which is amplified and displayed.
+
+@@ pm-nm-003
+subject: measurement
+codes: 1_GA_F3_17
+note: nm-monitoring
+stem: Which muscle's response to nerve stimulation most closely reflects the onset of neuromuscular block at the larynx?
+A: Adductor pollicis
+B: Corrugator supercilii
+C: Flexor hallucis brevis
+D: First dorsal interosseous
+E: Orbicularis oculi
+answer: B
+explain: **Corrugator supercilii** (facial nerve stimulation) behaves similarly to the relatively resistant laryngeal and diaphragmatic muscles, so it better reflects intubating conditions. The adductor pollicis is more sensitive and recovers later — it is the standard site for confirming recovery.
+
+@@ pm-pft-003
+subject: measurement
+codes: 1_GA_F3_16
+note: flow-volume-pft
+stem: Spirometry shows FEV~1~ 1.2 L (40% predicted) and FVC 3.0 L (80% predicted).
+
+What pattern is this?
+A: Mixed restrictive and obstructive
+B: Normal
+C: Obstructive
+D: Restrictive
+E: Upper airway obstruction
+answer: C
+explain: FEV~1~/FVC = 1.2/3.0 = **0.4**, well below 0.7: an **obstructive** pattern (e.g. COPD or asthma). Restrictive patterns reduce both with a normal or high ratio.
+
+@@ pm-img-004
+subject: measurement
+codes: 1_GA_M_2
+note: imaging-interpretation
+stem: Under the Ionising Radiation (Medical Exposure) Regulations, which role is responsible for justifying a medical exposure?
+A: Employer
+B: Operator
+C: Practitioner
+D: Radiation protection supervisor
+E: Referrer
+answer: C
+explain: The **practitioner** justifies each exposure (weighing benefit and risk). The **referrer** provides clinical information requesting it, and the **operator** carries out the practical aspects.
