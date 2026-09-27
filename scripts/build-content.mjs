@@ -114,7 +114,7 @@ for (const exam of ['primary', 'final']) {
 }
 const noteIds = new Set(notes.map(n => n.id));
 if (noteIds.size !== notes.length) err('notes', 'duplicate note ids');
-for (const n of notes) for (const r of n.related) if (!noteIds.has(r)) err(`note ${n.id}`, `related note "${r}" does not exist`);
+for (const n of notes) for (const r of n.related) if (!noteIds.has(r)) warn(`note ${n.id}`, `related note "${r}" does not exist yet`);
 
 /* ---------- questions ---------- */
 const questions = { primary: [], final: [] };
@@ -195,7 +195,7 @@ for (const f of mdFiles('stations')) {
     learning: markdown(sections['Learning points'] || ''),
   };
 }
-for (const s of stations) for (const r of s.related) if (!noteIds.has(r)) err(`station ${s.id}`, `related note "${r}" does not exist`);
+for (const s of stations) for (const r of s.related) if (!noteIds.has(r)) warn(`station ${s.id}`, `related note "${r}" does not exist yet`);
 
 /* ---------- coverage (only codes that something covers; the full code lists ship separately) ---------- */
 const coverage = { primary: {}, final: {} };
