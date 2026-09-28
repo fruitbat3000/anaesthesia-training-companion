@@ -16,6 +16,7 @@ Claude-specific working instructions **and** the running session history. Durabl
 - Mistake: one early Crossref test request included Mark's email as the polite-pool `mailto`; removed at once and told Mark. Do not send it to outside services.
 - GPAS chapters 1, 2, 5–19 (`content/gpas.json`, S32): links taken from the live RCoA index (they don't follow one pattern); shown on unit guides, SIAs and the guidelines page.
 - IACOA workbook read (S33); Stage 1 obstetrics guide now has EPA 3 and 4, timing, level 3 entrustment and sign-off steps.
+- Session closed here. **Next step (restart here):** Mark shares the site with the working group, settles the licence with Dr Brooks and asks about YAIRN hosting. For Claude: the remaining work is in `TODO.md` ("From the working group emails" and "Soon"), starting with the 47 notes without BJA Education pointers, the installable-app (PWA) option and the contributor guide.
 
 ### 2026-09-28 (afternoon) — Working group emails; syllabus maps
 - Mark shared the working-group email thread (Dr Brooks, the LTHT College Tutor, a Mid Yorkshire resident with web experience). Gap analysis recorded in TODO. Names and roles are in Claude memory only; the repo refers to people by role.
