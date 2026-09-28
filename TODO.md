@@ -7,6 +7,16 @@ Outstanding work and open questions. Completed items move out. Scope is fixed in
 - [ ] **Clinical QC:** recruit reviewers (e.g. recent FRCA passers for first checks, consultants for sign-off, possibly via YAIRN Exam Resources). Suggested order: disclaimer and exams hub → the most-used Primary notes and questions → Final → stations. Mark each checked item `status: reviewed` and credit reviewers on the About page.
 - [ ] Priority checks for accuracy: every numerical dose and threshold (LA maxima, lipid regimen, caudal volumes, obstetric and paediatric doses, anticoagulant timings, transfusion targets), and the DAS 2025 wording (written from principles; the DAS website was down on 2026-09-28 so the guideline text itself was not read).
 
+## From the working group emails (25–26 Sep 2026)
+- [ ] **Readable syllabus map for revision tracking:** the coverage map shows RCoA codes only (descriptors are RCoA copyright). Add plain-English topic headings per syllabus section, with notes, questions and a self-rated confidence (red/amber/green) per area. Ask the RCoA whether descriptors may be reproduced.
+- [ ] **Installable app:** add a web app manifest and service worker (offline use, home-screen install). No backend.
+- [ ] **Decide:** cross-device sync. It needs accounts and would store trainee data, which breaks security class 0. Recommend: keep browser-only storage plus export/import.
+- [ ] **Licence** for the public repo (for example MIT for code, CC BY-NC-SA for content). Mark and Dr Brooks to decide.
+- [ ] **Contributor guide** (CONTRIBUTING.md): how to run it, how to add notes and questions, how review status works, for a web-developer contributor.
+- [ ] **Regional hosting:** agree with the school/regional educators (via the LTHT College Tutor) whether to link, embed or host a copy; custom domain; remove `noindex` after sign-off.
+- [ ] **Dr Brooks's historical Primary/Final navigation material** and his visual/navigation ideas: get them and compare with the site.
+- [ ] **Local Yorkshire layer** from the College Tutor: IAC and IACOA programmes, teaching, contacts.
+
 ## Soon
 - [ ] Read the RCoA IACOA workbook (EPAs 3 & 4) when the RCoA site allows it (blocked by Cloudflare on 2026-09-28) and add the EPA 3 and 4 titles to the Stage 1 obstetrics guide.
 - [ ] Clinical QC of the 20 unit guides and a spot-check of the capability paraphrases against the RCoA pages.
