@@ -56,7 +56,7 @@ Education and training · Management and professional and regulatory requirement
 
 ### Choosing and evidencing an SIA
 
-Each SIA has its own learning outcomes and examples of evidence in the [RCoA SIA learning syllabus](https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/introduction). Discuss your choices with your TPD early: SIA posts are finite and planned across the school.
+Each SIA has its own outcomes and capabilities: see [all 26 SIAs on this site](#stage/3/sias), as tickable checklists with study links, or the [RCoA SIA learning syllabus](https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/introduction). Discuss your choices with your TPD early: SIA posts are finite and planned across the school.
 
 ## Subspecialties and dual training
 

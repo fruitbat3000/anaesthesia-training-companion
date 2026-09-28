@@ -4,6 +4,8 @@
 //   content/notes/{primary,final}/*.md → revision notes
 //   content/questions/*.md      → single-best-answer questions (blocks starting "@@ id")
 //   content/stations/*.md       → CASE / FCPE station practice packs
+//   content/capabilities/*.md   → RCoA stage key capabilities and SIAs (paraphrased), with links
+//   content/units/*.md          → clinical unit guides for each stage
 //   content/refs.json           → verified references, cited by id
 //   content/syllabus/*-codes.txt → RCoA syllabus codes used for validation and coverage
 //
@@ -197,6 +199,94 @@ for (const f of mdFiles('stations')) {
 }
 for (const s of stations) for (const r of s.related) if (!noteIds.has(r)) warn(`station ${s.id}`, `related note "${r}" does not exist yet`);
 
+/* ---------- stage capabilities and SIAs (content/capabilities/*.md) ----------
+ * Front matter: stage, source, checked. Then an intro paragraph, then one block per domain:
+ *   ## id | generic|clinical|sia | Name
+ *   rcoa: <url>   outcome: <text>
+ *   ### Optional group heading
+ *   - A [2b]: capability text          (the [level] is optional)
+ *   evidence: item · item               notes: id, id   stations: id, id   ela: 05b, icm
+ */
+const ELA = {
+  '01': ['e-LA Module 01', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_9983&programmeId=14'],
+  '03': ['e-LA Module 03', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_41657&programmeId=14'],
+  '04a': ['e-LA Module 04a', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_7975&programmeId=14'],
+  '04b': ['e-LA Module 04b', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8723&programmeId=14'],
+  '04c': ['e-LA Module 04c', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_7976&programmeId=14'],
+  '05a': ['e-LA Module 05a', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8724&programmeId=14'],
+  '05b': ['e-LA Module 05b', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8725&programmeId=14'],
+  '07a': ['e-LA Module 07a', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_8727&programmeId=14'],
+  '07b': ['e-LA Module 07b', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_9553&programmeId=14'],
+  '07c': ['e-LA Module 07c', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_9558&programmeId=14'],
+  '07d': ['e-LA Module 07d', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_8729&programmeId=14'],
+  '07e': ['e-LA Module 07e', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_8730&programmeId=14'],
+  '07f': ['e-LA Module 07f', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_34003&programmeId=14'],
+  '08': ['e-LA Module 08', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_8747&programmeId=14'],
+  '09': ['e-LA Module 09', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_10007&programmeId=14'],
+  '11': ['e-LA Module 11', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_33984&programmeId=14'],
+  '12': ['e-LA Module 12', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_33997&programmeId=14'],
+  '13': ['e-LA Module 13', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_34048&programmeId=14'],
+  '14': ['e-LA Module 14', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_34065&programmeId=14'],
+  icm: ['e-ICM programme', 'https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_34610&programmeId=34610'],
+};
+const stationIds = new Set(stations.map(s => s.id));
+const capabilities = {};
+for (const f of mdFiles('capabilities')) {
+  const [fm, body] = frontMatter(readFileSync(C(f), 'utf8'));
+  const key = basename(f, '.md');
+  const [intro, ...blocks] = body.split(/^## /m);
+  const domains = blocks.map(b => {
+    const lines = b.split('\n');
+    const [id, kind, name] = lines[0].split('|').map(x => x.trim());
+    if (!['generic', 'clinical', 'sia'].includes(kind)) err(f, `domain ${id}: kind must be generic, clinical or sia`);
+    const d = { id, kind, name, groups: [], evidence: [], notes: [], stations: [], ela: [], rcoa: '', outcome: '', about: '', length: '', group: '' };
+    let group = null;
+    for (const raw of lines.slice(1)) {
+      const l = raw.trim();
+      if (!l) continue;
+      let m;
+      if ((m = l.match(/^### (.+)$/))) { group = { name: m[1], caps: [] }; d.groups.push(group); }
+      else if ((m = l.match(/^- ([A-Z]{1,2}\d?)(?: \[([^\]]+)\])?: (.+)$/))) {
+        if (!group) { group = { name: '', caps: [] }; d.groups.push(group); }
+        group.caps.push({ k: m[1], level: m[2] || '', text: inline(m[3]) });
+      }
+      else if ((m = l.match(/^(rcoa|outcome|evidence|notes|stations|ela|about|length|group):\s*(.*)$/))) {
+        const [, field, v] = m;
+        if (field === 'evidence') d.evidence = v.split(' · ').map(x => inline(x.trim()));
+        else if (['notes', 'stations', 'ela'].includes(field)) d[field] = list(v);
+        else d[field] = field === 'rcoa' ? v : inline(v);
+      }
+      else err(f, `domain ${id}: cannot parse "${l.slice(0, 60)}"`);
+    }
+    for (const n of d.notes) if (!noteIds.has(n)) err(f, `domain ${id}: unknown note "${n}"`);
+    for (const s of d.stations) if (!stationIds.has(s)) err(f, `domain ${id}: unknown station "${s}"`);
+    d.ela = d.ela.map(e => { if (!ELA[e]) err(f, `domain ${id}: unknown e-LA module "${e}"`); return ELA[e] || [e, '']; });
+    if (!d.rcoa) err(f, `domain ${id}: missing rcoa link`);
+    const keys = d.groups.flatMap(g => g.caps.map(c => c.k));
+    if (new Set(keys).size !== keys.length) err(f, `domain ${id}: duplicate capability letter`);
+    return d;
+  });
+  capabilities[key] = { key, stage: fm.stage || '', source: fm.source || '', checked: fm.checked || '', intro: markdown(intro.trim()), domains };
+}
+
+/* ---------- unit guides (content/units/*.md): front matter stage, order, title, lede, short ---------- */
+const units = [];
+for (const f of mdFiles('units')) {
+  const [fm, body] = frontMatter(readFileSync(C(f), 'utf8'));
+  const id = basename(f, '.md');
+  if (!fm.title || !fm.stage) err(f, 'missing title or stage');
+  for (const m of body.matchAll(/\{\{caps ([\w-]+) ([\w-]+)(?: ([\w,]+))?\}\}/g)) {
+    const d = capabilities[m[1]] && capabilities[m[1]].domains.find(x => x.id === m[2]);
+    if (!d) { err(f, `caps widget: unknown ${m[1]} ${m[2]}`); continue; }
+    const keys = new Set(d.groups.flatMap(g => g.caps.map(c => c.k)));
+    for (const k of (m[3] || '').split(',').filter(Boolean)) if (!keys.has(k)) err(f, `caps widget: ${m[1]} ${m[2]} has no capability ${k}`);
+  }
+  for (const m of body.matchAll(/\(#notes\/([\w-]+)\)/g)) if (!noteIds.has(m[1])) err(f, `unknown note link ${m[1]}`);
+  for (const m of body.matchAll(/\(#stations\/([\w-]+)\)/g)) if (!stationIds.has(m[1])) err(f, `unknown station link ${m[1]}`);
+  units.push({ id, stage: fm.stage, order: +fm.order || 99, title: fm.title, short: fm.short || fm.title, lede: fm.lede ? inline(fm.lede) : '', html: markdown(body), updated: fm.updated || '' });
+}
+units.sort((a, b) => a.stage.localeCompare(b.stage) || a.order - b.order);
+
 /* ---------- coverage (only codes that something covers; the full code lists ship separately) ---------- */
 const coverage = { primary: {}, final: {} };
 const examOf = c => (CODES.primary.has(c) ? 'primary' : 'final');
@@ -218,6 +308,8 @@ const summary = [
   `notes ${notes.length} (primary ${notes.filter(n => n.exam === 'primary').length}, final ${notes.filter(n => n.exam === 'final').length})`,
   `questions ${questions.primary.length + questions.final.length} (primary ${questions.primary.length}, final ${questions.final.length})`,
   `stations ${stations.length}`,
+  `capabilities ${Object.values(capabilities).map(c => `${c.key} ${c.domains.reduce((a, d) => a + d.groups.reduce((b, g) => b + g.caps.length, 0), 0)}`).join(', ')}`,
+  `units ${units.length}`,
   `refs ${Object.keys(refs).length}`,
   `coverage primary ${coveredCodes('primary')}/${CODES.primary.size}, stage 2 ${coveredCodes('final')}/${CODES.final.size}`,
 ].join(' · ');
@@ -254,6 +346,8 @@ writeFileSync(join(OUT, 'index.js'), js('window.CONTENT', {
   pages,
   notes,
   stations,
+  capabilities,
+  units,
   questions: { primary: qMeta('primary'), final: qMeta('final') },
   refs,
   coverage,

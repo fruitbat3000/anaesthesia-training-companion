@@ -39,7 +39,7 @@
     set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* ignore */ } },
     remove(key) { try { localStorage.removeItem(key); } catch (e) { /* ignore */ } },
   };
-  const KEYS = { novice: 'nas-progress-v1', notes: 'atc-notes-v1', qbank: 'atc-qbank-v1', sessions: 'atc-sessions-v1', stations: 'atc-stations-v1' };
+  const KEYS = { novice: 'nas-progress-v1', notes: 'atc-notes-v1', qbank: 'atc-qbank-v1', sessions: 'atc-sessions-v1', stations: 'atc-stations-v1', caps: 'atc-caps-v1' };
 
   /* ---------- lazy content loading (script injection works on file://) ---------- */
   const loading = {};
@@ -113,16 +113,19 @@
       'Syllabus', ['#syllabus', 'All topics'], ['#syllabus/d-basic-sciences', 'Basic sciences'], ['#syllabus/d-medicine-and-surgery', 'Medicine and surgery'], ['#syllabus/d-generic-anaesthesia', 'Generic anaesthesia'], ['#syllabus/d-critical-incidents-and-emergencies', 'Critical incidents'],
       'Sign-off', ['#iac', 'The IAC'], ['#checklist', 'Printable checklist'],
       'Reference', ['#glossary', 'Glossary']],
-    stage1: ['This stage', ['#stage/1', 'Overview'], ['#stage/1/year-by-year', 'Year by year'], ['#stage/1/the-stage-1-certificate', 'The Stage 1 certificate'],
-      'Clinical training', ['#stage/1/clinical-blocks-in-stage-1', 'Clinical blocks'], ['#stage/1/finding-the-e-learning', 'e-Learning'],
+    stage1: ['This stage', ['#stage/1', 'Overview'], ['#stage/1/year-by-year', 'Year by year and ARCP'], ['#stage/1/the-stage-1-certificate', 'The Stage 1 certificate'],
+      'Curriculum', ['#stage/1/capabilities', 'Key capabilities'], ['#stage/1/checklist', 'Printable checklist'],
+      'Clinical training', ['#stage/1/units', 'Unit guides'], ['#stage/1/clinical-blocks-in-stage-1', 'Blocks and e-learning'],
       'Primary FRCA', ['#stage/1/the-primary-frca', 'The exam'], ['#stage/1/revision-notes-by-paper', 'Revision notes by paper'],
       'Local', ['#stage/1/in-yorkshire-and-humber', 'Yorkshire and Humber']],
-    stage2: ['This stage', ['#stage/2', 'Overview'], ['#stage/2/year-by-year', 'Year by year'], ['#stage/2/the-stage-2-certificate', 'The Stage 2 certificate'],
-      'Clinical training', ['#stage/2/the-discrete-areas-of-practice', 'Discrete areas of practice'], ['#stage/2/other-units', 'Other units'], ['#stage/2/finding-the-e-learning', 'e-Learning'],
+    stage2: ['This stage', ['#stage/2', 'Overview'], ['#stage/2/year-by-year', 'Year by year and ARCP'], ['#stage/2/the-stage-2-certificate', 'The Stage 2 certificate'],
+      'Curriculum', ['#stage/2/capabilities', 'Key capabilities'], ['#stage/2/checklist', 'Printable checklist'],
+      'Clinical training', ['#stage/2/units', 'Unit guides'], ['#stage/2/the-units-of-stage-2', 'Units and e-learning'],
       'Final FRCA', ['#stage/2/the-final-frca', 'The exam'], ['#stage/2/revision-notes-by-topic', 'Revision notes by topic'],
       'Local', ['#stage/2/in-yorkshire-and-humber', 'Yorkshire and Humber']],
-    stage3: ['This stage', ['#stage/3', 'Overview'], ['#stage/3/year-by-year', 'Year by year'], ['#stage/3/from-certificate-to-cct', 'Certificate to CCT'],
-      'Special Interest Areas', ['#stage/3/the-sias-on-offer', 'SIAs on offer'], ['#stage/3/choosing-and-evidencing-an-sia', 'Choosing an SIA'],
+    stage3: ['This stage', ['#stage/3', 'Overview'], ['#stage/3/year-by-year', 'Year by year and ARCP'], ['#stage/3/from-certificate-to-cct', 'Certificate to CCT'],
+      'Curriculum', ['#stage/3/capabilities', 'Key capabilities'], ['#stage/3/checklist', 'Printable checklist'],
+      'Special Interest Areas', ['#stage/3/sias', 'All SIAs'], ['#stage/3/choosing-and-evidencing-an-sia', 'Choosing an SIA'],
       'Beyond the core', ['#stage/3/subspecialties', 'Subspecialties'], ['#stage/3/dual-training-and-acting-up', 'Dual training and acting up'], ['#stage/3/preparing-for-consultant-practice', 'Consultant practice'],
       'Local', ['#stage/3/in-yorkshire-and-humber', 'Yorkshire and Humber']],
     exams: [['#exams', 'Overview'], ['#exams/primary', 'Primary FRCA'], ['#exams/final', 'Final FRCA'], ['#exams/transition', 'Which format will I sit?'], ['#exams/plan', 'Study plan'], ['#exams/banks', 'Question banks'], ['#exams/trainers', 'For trainers']],
@@ -258,6 +261,13 @@
     C.stations.forEach(s => index.push({ type: s.exam === 'case' ? 'CASE station' : 'FCPE station', title: s.title, sub: s.arena, href: `#stations/${s.id}`, hay: `${s.title} ${s.summary} ${s.arena} ${s.domain} ${s.group}`.toLowerCase() }));
     Object.values(C.pages).forEach(p => index.push({ type: 'Guide', title: p.title, sub: '', href: App.pageHref(p.id), hay: `${p.title} ${p.html.replace(/<[^>]+>/g, ' ')}`.toLowerCase() }));
     S.domains.forEach(d => d.groups.forEach(g => g.topics.forEach(t => index.push({ type: 'Novice topic', title: t.title, sub: g.name, href: `#syllabus/${t.id}`, hay: `${t.title} ${t.note || ''} ${g.name}`.toLowerCase() }))));
+    const strip = h => h.replace(/<[^>]+>/g, ' ');
+    (C.units || []).forEach(u => index.push({ type: 'Unit guide', title: u.title, sub: `Stage ${u.stage}`, href: `#stage/${u.stage}/unit/${u.id}`, hay: `${u.title} ${strip(u.lede)} ${strip(u.html)}`.toLowerCase() }));
+    Object.values(C.capabilities || {}).forEach(set => set.domains.forEach(d => {
+      const sia = set.key === 'sias';
+      index.push({ type: sia ? 'SIA' : `Stage ${set.stage} domain`, title: d.name, sub: strip(d.outcome).slice(0, 90), href: sia ? `#stage/3/sia/${d.id}` : `#stage/${set.stage}/capabilities/${d.id}`,
+        hay: `${d.name} ${strip(d.outcome)} ${d.groups.map(g => g.name + ' ' + g.caps.map(c => strip(c.text)).join(' ')).join(' ')}`.toLowerCase() });
+    }));
     S.glossary.forEach(g => index.push({ type: 'Glossary', title: g.term, sub: g.def.slice(0, 80), href: '#glossary', hay: `${g.term} ${g.def}`.toLowerCase() }));
     return index;
   }
@@ -293,7 +303,7 @@
     if (q.trim().length < 2) {
       pop.replaceChildren(el('div', { class: 'palette-hint' },
         el('p', { class: 'palette-hint-title' }, 'Jump to'),
-        el('div', { class: 'palette-quick' }, [['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#questions/mock', 'Mock papers'], ['#stations', 'Station practice'], ['#exams', 'FRCA 2027 changes'], ['#start', 'Novice start']].map(([h, l]) => el('a', { href: h }, l)))));
+        el('div', { class: 'palette-quick' }, [['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#questions/mock', 'Mock papers'], ['#stations', 'Station practice'], ['#exams', 'FRCA 2027 changes'], ['#start', 'Novice start'], ['#stage/1/capabilities', 'Stage 1 capabilities'], ['#stage/2/units', 'Stage 2 unit guides'], ['#stage/3/sias', 'SIAs']].map(([h, l]) => el('a', { href: h }, l)))));
       return;
     }
     const res = search(q, 10);

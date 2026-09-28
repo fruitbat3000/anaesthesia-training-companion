@@ -813,3 +813,72 @@ body[data-stage] .deeper-link:not(.deeper-q) { background: color-mix(in srgb, va
 a.nav-progress-row { display: block; color: inherit; text-decoration: none !important; border-radius: 6px; }
 a.nav-progress-row:hover .nav-progress-top span:first-child { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
 .nav-progress-foot { margin: .55rem 0 0; font-size: .74rem; color: var(--muted); }
+
+/* ---------- stage capabilities, unit guides and SIAs ---------- */
+.stage-hub { margin: 0 0 2.4rem; }
+.stage-hub .tile { border-top: 3px solid var(--stage, var(--brand)); }
+.stage-hub .tile-meta { color: var(--stage, var(--brand)); font-weight: 600; }
+.cap-summary { padding: 1.2rem 1.35rem; }
+.cap-summary-top { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.cap-summary-top .small { margin: 0; }
+.cap-summary-n { margin: 0; font-size: 1.05rem; color: var(--muted); }
+.cap-summary-n span { font-size: 2rem; font-weight: 750; letter-spacing: -.04em; color: var(--text); margin-right: .2rem; }
+.cap-summary-bar { flex: 1; min-width: 180px; }
+.cap-summary-bar .bar { width: 100%; height: 8px; }
+.cap-domains { display: grid; gap: 1.2rem; margin-top: 1.2rem; }
+.cap-domain { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.3rem 1.4rem 1rem; box-shadow: var(--shadow-sm); scroll-margin-top: calc(var(--topbar-h) + 16px); }
+.cap-domain.kind-generic { border-left: 3px solid color-mix(in srgb, var(--violet) 55%, var(--line)); }
+.cap-domain.kind-clinical { border-left: 3px solid var(--stage, var(--brand)); }
+.cap-head { display: flex; justify-content: space-between; gap: 1.2rem; align-items: flex-start; }
+.cap-head h2 { font-size: 1.2rem; margin: 0 0 .35rem; scroll-margin-top: calc(var(--topbar-h) + 16px); }
+.cap-outcome { margin: 0; color: var(--text-2); font-size: .95rem; max-width: 68ch; }
+.cap-count { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: .35rem; min-width: 96px; }
+.cap-count-n { font: 600 .82rem/1 var(--mono); color: var(--muted); }
+.cap-count .bar { width: 96px; }
+.cap-meta { display: flex; gap: .4rem; margin: .7rem 0 0; }
+.cap-group h4 { margin: 1.2rem 0 .35rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.cap-list { list-style: none; padding: 0; margin: .6rem 0 0; display: grid; gap: 2px; }
+.cap { display: flex; align-items: flex-start; gap: .7rem; margin: 0; padding: .5rem .6rem; border-radius: 10px; transition: background .12s; }
+.cap:hover { background: var(--surface-2); }
+.cap input { flex: none; width: 18px; height: 18px; margin-top: .15rem; accent-color: var(--green); cursor: pointer; }
+.cap label { flex: 1; display: flex; gap: .65rem; cursor: pointer; font-size: .95rem; line-height: 1.5; color: var(--text); }
+.cap-k { flex: none; min-width: 1.9rem; height: 1.45rem; padding: 0 .3rem; border-radius: 6px; display: inline-grid; place-items: center; font: 600 .72rem/1 var(--mono); background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); margin-top: .05rem; }
+.cap.is-done .cap-text { color: var(--muted); }
+.cap.is-done .cap-k { background: var(--green-soft); color: var(--green); border-color: transparent; }
+.cap-level { flex: none; margin-top: .1rem; font: 600 .68rem/1 var(--mono); padding: .3rem .45rem; border-radius: 6px; background: color-mix(in srgb, var(--stage, var(--brand)) 10%, var(--surface)); color: color-mix(in srgb, var(--stage, var(--brand)) 85%, var(--text)); cursor: help; white-space: nowrap; }
+.cap-evidence { margin: 1rem 0 0; border-top: 1px solid var(--line); padding-top: .7rem; }
+.cap-evidence summary { cursor: pointer; font-weight: 600; font-size: .9rem; color: var(--text-2); }
+.cap-evidence ul { margin: .6rem 0 .2rem; font-size: .9rem; color: var(--text-2); }
+.cap-study { margin-left: 0; }
+.cap-study .small { margin-left: .2rem; }
+.deeper-link.deeper-st { background: var(--teal-soft); color: var(--teal); }
+.deeper-link.deeper-ela { background: var(--amber-soft); color: var(--amber); }
+.cap-foot { margin: .8rem 0 0; font-size: .84rem; text-align: right; }
+.cap-inline { margin: 1.2rem 0 1.6rem; padding: .9rem 1rem .6rem; border-radius: var(--r-lg); border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow-xs); }
+.cap-inline-title { margin: 0 0 .2rem; font-size: .84rem; display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.cap-inline .cap-list { margin: .3rem 0 0; }
+.cap-inline .cap label { font-size: .93rem; }
+.prose .cap-inline li { max-width: none; }
+.unit-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); margin: 1rem 0 1.5rem; }
+.unit-card { display: flex; flex-direction: column; gap: .45rem; padding: 1.15rem 1.2rem 1.1rem; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--stage, var(--brand)); color: var(--text); text-decoration: none !important; box-shadow: var(--shadow-sm); transition: transform .15s, box-shadow .15s; }
+.unit-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.unit-card-title { font-weight: 650; font-size: 1.04rem; letter-spacing: -.012em; }
+.unit-card-lede { font-size: .88rem; color: var(--muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.unit-card-go { margin-top: auto; padding-top: .3rem; font-size: .85rem; font-weight: 600; color: var(--stage, var(--brand)); }
+.unit-card-meta { margin-top: auto; display: flex; align-items: center; gap: .6rem; padding-top: .4rem; }
+.unit-card-meta .bar { flex: 1; }
+.sia-group .section-h { font-size: 1.1rem; }
+@media (max-width: 640px) {
+  .cap-head { flex-direction: column; }
+  .cap-count { align-items: flex-start; }
+  .cap-level { display: none; }
+  .cap-domain { padding: 1.1rem 1rem .9rem; }
+}
+@media print {
+  .cap-domain, .cap-inline { box-shadow: none; break-inside: auto; }
+  .cap input { accent-color: #000; }
+}
+.stage-hub .tile-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: .8rem; }
+@media (min-width: 900px) { .stage-hub .tile-grid { grid-template-columns: 1fr 1fr; } }
+.stage-hub .tile { padding: 1rem 1.15rem; gap: .3rem; }
+.prose .stage-hub { max-width: none; margin: 0 0 2.2rem; }

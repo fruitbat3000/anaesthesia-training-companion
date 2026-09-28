@@ -1,0 +1,147 @@
+## Link check 2026-09-28
+
+188 links OK, 0 problem(s), 135 to check by hand.
+
+### Problems
+
+None.
+
+### Check by hand (these sites block automated checks)
+
+- rcoaNoviceGuide: https://www.rcoa.ac.uk/documents/novice-guide
+- rcoaNoviceCurriculum: https://www.rcoa.ac.uk/documents/novice-guide/curriculum
+- rcoaNoviceElearning: https://www.rcoa.ac.uk/documents/novice-guide/e-learning
+- rcoaTypicalDay: https://www.rcoa.ac.uk/documents/novice-guide/typical-day-novice
+- rcoaLLP: https://www.rcoa.ac.uk/documents/novice-guide/lifelong-learning-platform
+- rcoaWellbeing: https://www.rcoa.ac.uk/documents/novice-guide/wellbeing-support
+- rcoaKeyContacts: https://www.rcoa.ac.uk/documents/novice-guide/key-contacts-training
+- rcoaFaqs: https://www.rcoa.ac.uk/documents/novice-guide/faqs
+- iacWorkbook: https://www.rcoa.ac.uk/sites/default/files/documents/2022-09/EPA-1-2-2022%20v1.2.pdf
+- ela1Workbook: https://www.rcoa.ac.uk/media/10031
+- das: https://das.uk.com/guidelines
+- yhSchool: https://www.yorksandhumberdeanery.nhs.uk/anaesthesia
+- yhInduction: https://www.yorksandhumberdeanery.nhs.uk/anaesthesia/school-information/induction
+- yhSourcesOfHelp: https://www.yorksandhumberdeanery.nhs.uk/anaesthesia/school-information/sources-help
+- monitoring2021: https://doi.org/10.1111/anae.15501
+- asaStatus: https://doi.org/10.1097/ao9.0000000000000002
+- rcoaRisk: https://www.rcoa.ac.uk/patients/patient-information-resources/anaesthesia-risk
+- rcoaYouAndYourAnaesthetic: https://www.rcoa.ac.uk/patients/patient-information-resources/patient-information-leaflets-video-resources/you-your-anaesthetic
+- naps: https://www.rcoa.ac.uk/research/research-projects/national-audit-projects-naps
+- nap4: https://www.rcoa.ac.uk/research/research-projects/national-audit-projects-naps/nap4-major-complications-airway-management
+- nap5: https://www.rcoa.ac.uk/research/research-projects/national-audit-projects-naps/nap5-accidental-awareness-during-general
+- nap6: https://www.rcoa.ac.uk/research/research-projects/national-audit-projects-naps/nap6-perioperative-anaphylaxis
+- nap7: https://www.rcoa.ac.uk/research/research-projects/national-audit-projects-naps/nap7-perioperative-cardiac-arrest
+- ref das2025: https://doi.org/10.1016/j.bja.2025.10.006
+- ref das2015: https://doi.org/10.1093/bja/aew278
+- ref dasobs: https://doi.org/10.1093/bja/aev296
+- ref dasext: https://doi.org/10.1111/j.1365-2044.2012.07075.x
+- ref icuintub: https://doi.org/10.1016/j.bja.2017.10.021
+- ref mh2020: https://doi.org/10.1111/anae.15317
+- ref hip2020: https://doi.org/10.1111/anae.15291
+- ref neuraxmon: https://doi.org/10.1111/anae.14993
+- ref tiva2018: https://doi.org/10.1111/anae.14428
+- ref nap6a: https://doi.org/10.1016/j.bja.2018.04.014
+- ref nap6b: https://doi.org/10.1016/j.bja.2018.04.015
+- ref nap5: https://doi.org/10.1111/anae.12826
+- ref racoag: https://doi.org/10.1111/anae.12359
+- ref ponv4: https://doi.org/10.1213/ANE.0000000000004833
+- ref ssc2021: https://doi.org/10.1097/CCM.0000000000005337
+- ref sepsis3: https://doi.org/10.1001/jama.2016.0287
+- ref esc2022: https://doi.org/10.1093/eurheartj/ehac270
+- ref rcri: https://doi.org/10.1161/01.cir.100.10.1043
+- ref csht1992: https://doi.org/10.1097/00000542-199203000-00003
+- ref consent2017: https://doi.org/10.1111/anae.13762
+- ref braintransfer: https://doi.org/10.1111/anae.14866
+- ref last-asra: https://doi.org/10.1097/aap.0000000000000720
+- ref diabetes2015: https://doi.org/10.1111/anae.13233
+- ref pbm-bjaed: https://doi.org/10.1093/bjaed/mkw061
+- ref postopanaemia: https://doi.org/10.1111/anae.14358
+- ref paedfast: https://doi.org/10.1111/pan.13370
+- ref vhapph: https://doi.org/10.1111/anae.15662
+- ref bnf: https://bnf.nice.org.uk/
+- ref rcoa-exams2027: https://www.rcoa.ac.uk/examinations/2027-launch-new-frca-exams
+- ref rcoa-tsp: https://www.rcoa.ac.uk/sites/default/files/documents/2026-06/TrainerSupportPack2026%20-%20For%20Website.pdf
+- ref rcoa-primary-syllabus: https://www.rcoa.ac.uk/sites/default/files/documents/2026-01/Primary-FRCA-Syllabus.pdf
+- ref rcoa-stage2-syllabus: https://www.rcoa.ac.uk/documents/cct-anaesthetics-stage-2-training/introduction
+- ref steroids2020: https://doi.org/10.1111/anae.14963
+- ref htn2016: https://doi.org/10.1111/anae.13348
+- ref diabetes2025: https://doi.org/10.1093/bjs/znaf291
+- page exams-banks: https://www.rcoa.ac.uk/sites/default/files/documents/2025-11/Primary%20AKT%20Sample%20SBAs.pdf
+- page exams-banks: https://www.rcoa.ac.uk/sites/default/files/documents/2025-11/Final%20AKT%20Sample%20SBAs.pdf
+- page exams-trainers: https://www.rcoa.ac.uk/examinations/2027-launch-new-frca-exams/resources-trainers
+- page exams-transition: https://www.rcoa.ac.uk/examinations/2027-launch-new-frca-exams/new-exam-format-faqs
+- page portfolio: https://www.rcoa.ac.uk/training-careers/training-hub/2021-anaesthetics-curriculum/2021-curriculum-v15-guidance-resources
+- page portfolio: https://www.rcoa.ac.uk/training-careers/training-hub
+- page resources-more: https://www.apagbi.org.uk/trainee-hub/overview
+- page stage-3: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/introduction
+- page wellbeing: https://www.rcoa.ac.uk/training-careers/training-hub/flexibility-training
+- capabilities sias/pain-medicine: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/pain-medicine
+- capabilities sias/acute-inpatient-pain: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/acute-inpatient-pain
+- capabilities sias/additional-intensive-care: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/additional-intensive
+- capabilities sias/cardiac: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-cardiac
+- capabilities sias/neurosurgery: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-neurosurgery
+- capabilities sias/obstetric: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/obstetric-anaesthesia
+- capabilities sias/paediatric: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/paediatric-anaesthesia
+- capabilities sias/bariatric: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-bariatric
+- capabilities sias/complex-orthopaedic: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-complex
+- capabilities sias/hpb: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-hepato
+- capabilities sias/major-general: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-major
+- capabilities sias/ophthalmic: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-ophthalmic
+- capabilities sias/complex-airway: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-patients
+- capabilities sias/plastics-burns: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-plastic
+- capabilities sias/thoracic: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-thoracic
+- capabilities sias/vascular: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-vascular
+- capabilities sias/perioperative-medicine: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/perioperative-medicine
+- capabilities sias/regional: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/regional-anaesthesia
+- capabilities sias/resource-poor: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/anaesthesia-resource
+- capabilities sias/military: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/military-anaesthesia
+- capabilities sias/transfer: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/transfer-medicine
+- capabilities sias/trauma: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/trauma-stabilisation
+- capabilities sias/education: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/education-training
+- capabilities sias/management: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/management-professional
+- capabilities sias/research: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/research-managing-data
+- capabilities sias/quality: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/safety-quality
+- capabilities stage-1/pbc: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/professional-behaviours-communication
+- capabilities stage-1/mprr: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1-unapproved/management-professional-regulatory
+- capabilities stage-1/tw: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1-unapproved/team-working
+- capabilities stage-1/sqi: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1-unapproved/safety-quality-improvement
+- capabilities stage-1/sg: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1-unapproved/safeguarding
+- capabilities stage-1/et: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1-unapproved/education-training
+- capabilities stage-1/rmd: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1-unapproved/research-managing-data
+- capabilities stage-1/pom: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/perioperative-medicine-health-promotion
+- capabilities stage-1/ga: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/general-anaesthesia
+- capabilities stage-1/ra: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/regional-anaesthesia
+- capabilities stage-1/rt: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/resuscitation-transfer
+- capabilities stage-1/ps: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/procedural-sedation
+- capabilities stage-1/pain: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/pain
+- capabilities stage-1/icm: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-1/intensive-care
+- capabilities stage-2/pbc: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/professional-behaviours-communication
+- capabilities stage-2/mprr: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/management-professional-regulatory-requirements
+- capabilities stage-2/tw: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/team-working
+- capabilities stage-2/sqi: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/safety-quality-improvement
+- capabilities stage-2/sg: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/safeguarding
+- capabilities stage-2/et: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/education-training
+- capabilities stage-2/rmd: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/research-managing-data
+- capabilities stage-2/pom: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/perioperative-medicine-health-promotion
+- capabilities stage-2/ga: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/general-anaesthesia
+- capabilities stage-2/ra: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/regional-anaesthesia
+- capabilities stage-2/rt: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/resuscitation-transfer
+- capabilities stage-2/ps: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/procedural-sedation
+- capabilities stage-2/pain: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/pain
+- capabilities stage-2/icm: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-2/intensive-care
+- capabilities stage-3/pbc: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/professional-behaviours-communication
+- capabilities stage-3/mprr: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/management-professional-regulatory-requirements
+- capabilities stage-3/tw: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/team-working
+- capabilities stage-3/sqi: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/safety-quality-improvement
+- capabilities stage-3/sg: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/safeguarding
+- capabilities stage-3/et: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/education-training
+- capabilities stage-3/rmd: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/research-managing-data
+- capabilities stage-3/pom: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/perioperative-medicine-health-promotion
+- capabilities stage-3/ga: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/general-anaesthesia
+- capabilities stage-3/ra: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/regional-anaesthesia
+- capabilities stage-3/rt: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/resuscitation-transfer
+- capabilities stage-3/ps: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/procedural-sedation
+- capabilities stage-3/pain: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/pain
+- capabilities stage-3/icm: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3/intensive-care
+
+To fix an e-LfH problem, find the replacement session in the [e-LA catalogue](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14&programmeId=14), update `code/data.js`, and update the `checked` date. The method is in `SOURCES.md` (S3).

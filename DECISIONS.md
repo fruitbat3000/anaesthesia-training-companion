@@ -4,6 +4,18 @@ Accepted decisions, newest first. One entry per decision. A decision here **over
 
 ---
 
+## 2026-09-28 — Stages 1–3 get the same depth as the Novice section
+
+**Decision (Mark):** "go and make the whole thing as comprehensive, yet clear and easy to navigate as possible." Stages 1–3 should not feel like afterthoughts next to the Novice section, and each stage keeps its home-page colour through the menu and its pages.
+
+**What this means:** each stage has an overview, a tickable checklist of every RCoA key capability (paraphrased from the v1.5 learning syllabus, letters and supervision levels kept), unit guides for each clinical block (Stages 1 and 2), all 26 Special Interest Areas (Stage 3), a printable checklist, and progress in the sidebar. Ticks are a personal record saved in the browser; sign-off remains the HALOs on the LLP.
+
+**Consequences:** RCoA curriculum text is paraphrased, never copied, and every domain links back to the RCoA page (S26–S28). Unit guides are original draft guidance and need clinical QC like the notes.
+
+**Status:** accepted
+
+---
+
 ## 2026-09-27 — Widen to all stages; build notes, question bank and station practice
 
 **Decision (Mark, answering section 7 of `proposals/2026-09-27-all-stages.md`):**

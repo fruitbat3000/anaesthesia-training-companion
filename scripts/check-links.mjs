@@ -98,6 +98,9 @@ const htmlBlobs = [
   ...Object.entries(PARTS['notes-primary'] || {}).map(([k, v]) => [`note ${k}`, v]),
   ...Object.entries(PARTS['notes-final'] || {}).map(([k, v]) => [`note ${k}`, v]),
   ...Object.entries(PARTS.stations || {}).map(([k, v]) => [`station ${k}`, Object.values(v).join(' ')]),
+  ...(CONTENT.units || []).map(u => [`unit ${u.id}`, u.html]),
+  ...Object.values(CONTENT.capabilities || {}).flatMap(c => c.domains.map(d => [`capabilities ${c.key}/${d.id}`,
+    [`href="${d.rcoa}"`, ...d.ela.map(([, url]) => `href="${url}"`)].join(' ')])),
 ];
 for (const [where, html] of htmlBlobs) {
   for (const m of String(html).matchAll(/href="(https?:[^"]+)"/g)) {

@@ -90,7 +90,7 @@
 
   App.on('page', args => { const p = renderPage(args[0]); return { view: 'page', tab: 'home', title: p && p.title }; });
   App.on('disclaimer', () => { const p = renderPage('disclaimer'); return { view: 'page', tab: 'home', title: p && p.title }; });
-  App.on('stage', args => {
+  App.stageOverview = args => {
     const n = ['1', '2', '3'].includes(args[0]) ? args[0] : '1';
     const p = renderPage(`stage-${n}`);
     const section = args[1] && document.getElementById(args[1]);
@@ -102,7 +102,8 @@
         go(); setTimeout(go, 120); document.fonts.ready.then(go);
       } : null,
     };
-  });
+  };
+  App.on('stage', App.stageOverview); // stages.js extends this with the capability, unit and SIA views
   App.on('exams', args => {
     const id = args[0] ? `exams-${args[0]}` : 'exams';
     const p = renderPage(id);

@@ -50,25 +50,25 @@ It needs:
 
 ### The discrete areas of practice
 
-These four must be completed in Stage 2, and can be collated on a Triple C form.
+These four must be completed in Stage 2, and can be collated on a Triple C form. Each area links to its [unit guide](#stage/2/units); the full list is in the [Stage 2 key capabilities](#stage/2/capabilities).
 
 | Area | Examples of what to aim for | e-LA (Specialty Training) |
 |---|---|---|
-| Cardiothoracic | Cardiopulmonary bypass principles; one-lung ventilation; post-cardiac surgery complications | [Module 12](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_33997&programmeId=14) (cardiac), [Module 13](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_34048&programmeId=14) (thoracic) |
-| Neuro | Raised ICP, neurosurgical and neuroradiology cases, spinal surgery, head injury transfer | [Module 14](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_34065&programmeId=14) |
-| Obstetrics | Complex obstetric cases, obstetric haemorrhage, pre-eclampsia, general anaesthesia for caesarean section | [Module 08](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_8747&programmeId=14) |
-| Paediatrics | Children aged 1–5 under direct supervision and over 5 under distant supervision; neonatal principles | [Core Module 04b](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8723&programmeId=14) |
+| [Cardiothoracic](#stage/2/unit/s2-cardiothoracic) | Cardiopulmonary bypass principles; one-lung ventilation; post-cardiac surgery complications | [Module 12](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_33997&programmeId=14) (cardiac), [Module 13](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_34048&programmeId=14) (thoracic) |
+| [Neuro](#stage/2/unit/s2-neuro) | Raised ICP, neurosurgical and neuroradiology cases, spinal surgery, head injury transfer | [Module 14](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_34065&programmeId=14) |
+| [Obstetrics](#stage/2/unit/s2-obstetrics) | Complex obstetric cases, obstetric haemorrhage, pre-eclampsia, general anaesthesia for caesarean section | [Module 08](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_8747&programmeId=14) |
+| [Paediatrics](#stage/2/unit/s2-paediatrics) | Children aged 1–5 under direct supervision and over 5 under distant supervision; neonatal principles | [Core Module 04b](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8723&programmeId=14) |
 
 ### Other units
 
 | Area | Examples of what to aim for | e-LA (Specialty Training) |
 |---|---|---|
-| Vascular and major surgery | Open and endovascular aortic surgery, carotid surgery, HPB, oesophagectomy | [Module 11](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_33984&programmeId=14) (vascular) |
-| Airway, ENT and maxillofacial | Complex and shared airways, tracheostomy, laser | — |
-| Ophthalmic | Regional eye blocks, penetrating eye injury | [Module 09](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_10007&programmeId=14) |
-| Perioperative medicine | Risk assessment, CPET, prehabilitation, frailty, shared decision-making | — |
-| Regional | Upper limb, chest and abdominal wall fascial plane blocks | [Core Module 05b](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8725&programmeId=14) |
-| Intensive care | Organ support, sepsis, end-of-life care, organ donation | [e-ICM programme](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_34610&programmeId=34610) |
+| [Vascular and major surgery](#stage/2/unit/s2-vascular-major) | Open and endovascular aortic surgery, carotid surgery, HPB, oesophagectomy | [Module 11](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_33984&programmeId=14) (vascular) |
+| [Airway, ENT and maxillofacial](#stage/2/unit/s2-airway-ent) | Complex and shared airways, tracheostomy, laser | — |
+| [Ophthalmic](#stage/2/unit/s2-ophthalmic) | Regional eye blocks, penetrating eye injury | [Module 09](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37565_10007&programmeId=14) |
+| [Perioperative medicine](#stage/2/unit/s2-perioperative) | Risk assessment, CPET, prehabilitation, frailty, shared decision-making | — |
+| [Regional](#stage/2/unit/s2-regional) | Upper limb, chest and abdominal wall fascial plane blocks | [Core Module 05b](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8725&programmeId=14) |
+| [Intensive care](#stage/2/unit/s2-intensive-care) | Organ support, sepsis, end-of-life care, organ donation | [e-ICM programme](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_34610&programmeId=34610) |
 
 ### Finding the e-learning
 

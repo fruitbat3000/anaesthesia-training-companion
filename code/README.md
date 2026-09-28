@@ -23,6 +23,7 @@ Then go to http://localhost:8000.
 - `notes.js` — revision notes library, note reader, syllabus coverage map
 - `qbank.js` — question bank: practice sessions, timed mock papers to the AKT blueprint, results, progress
 - `stations.js` — CASE/FCPE station list and runner (candidate/examiner views, timer, mark sheet, summary)
+- `stages.js` — Stages 1–3: key capability checklists, unit guides, Special Interest Areas, printable checklists, the stage hub and sidebar progress
 - `styles.css` — light theme by default with a dark theme; print styles
 - `content/` — generated; do not edit
 
@@ -31,9 +32,11 @@ Then go to http://localhost:8000.
 - **Note:** a Markdown file with front matter `title, subject, codes, refs, related, summary, order, status`. `codes` must be real RCoA syllabus codes (Primary v2.2 or Stage 2); `refs` must be ids in `content/refs.json`. End with an `> [!exam] In the exam` box.
 - **Question:** a block in `content/questions/*.md` starting `@@ id`, with `subject` (Primary) or `subject` + `domain` (Final), `codes`, `note`, `stem`, `A`–`E`, `answer`, `explain`, optional `refs`. Explain every option.
 - **Station:** Markdown with front matter (`exam: case|fcpe`, `arena`, `domain`, `group`, `science`, `skills`) and sections `## Candidate instructions`, `## Scenario`, `## Examiner prompts`, `## Key features` (a bullet list: becomes the checklist), `## Domains assessed`, `## What good looks like`, `## Learning points`.
+- **Capabilities:** `content/capabilities/stage-N.md` and `sias.md`. Each `## id | generic|clinical|sia | Name` block has `rcoa:` (link), `outcome:`, optional `### Group` headings, capability lines `- A [2b]: text` (RCoA letter, optional supervision level), and optional `evidence:` (items separated by " · "), `notes:`, `stations:`, `ela:` (module codes such as `05b`, or `icm`). SIAs also take `group:` and `length:`. Paraphrase the RCoA text; do not copy it.
+- **Unit guide:** `content/units/*.md` with front matter `stage, order, title, short, lede, updated`. `{{caps stage-1 ga Q,R}}` embeds those capabilities as live tick boxes (omit the letters for the whole domain). The build checks every widget and every `#notes/…` and `#stations/…` link.
 - **Review status:** set `status: reviewed` (notes and stations in front matter; questions as a field) once a clinician has checked the item, and add the reviewer's name to the About page credits.
 - The build fails on unknown codes, unknown references, malformed questions or missing station sections.
 
 ## Progress storage
 
-Everything is saved only in the viewer's browser (`localStorage`): novice ticks (`nas-progress-v1`), notes read (`atc-notes-v1`), question history (`atc-qbank-v1`), sessions (`atc-sessions-v1`), station records (`atc-stations-v1`). The About page exports and imports all of them.
+Everything is saved only in the viewer's browser (`localStorage`): novice ticks (`nas-progress-v1`), notes read (`atc-notes-v1`), question history (`atc-qbank-v1`), sessions (`atc-sessions-v1`), station records (`atc-stations-v1`), capability ticks (`atc-caps-v1`). The About page exports and imports all of them.

@@ -21,6 +21,8 @@ A website for anaesthetists in training in the Yorkshire and Humber school, from
 │   ├── notes/final/    # Final FRCA revision notes (60)
 │   ├── questions/      # SBA question files (blocks starting "@@ id")
 │   ├── stations/       # CASE / FCPE station packs
+│   ├── capabilities/   # RCoA key capabilities per stage + SIAs (paraphrased)
+│   ├── units/          # clinical unit guides for Stages 1 and 2
 │   ├── refs.json       # verified references cited by id
 │   └── syllabus/       # RCoA syllabus code lists (codes only)
 ├── code/               # the static website (GitHub Pages)

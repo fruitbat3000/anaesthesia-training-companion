@@ -10,6 +10,14 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-28 (day) — Stages 1–3 brought up to Novice depth
+- Mark: stage menus should expand like Novice, stage colours should run through the menu, the e-LA modules weren't links, and Stages 1–3 felt "tacked on". Then: "make the whole thing as comprehensive, yet clear and easy to navigate as possible."
+- Stage colours (amber/blue/teal/violet) now run through the sidebar and stage pages. Stage menus have subheadings and progress (capabilities, and notes and questions for the stage's exam).
+- e-LA module catalogue links verified in Chrome (S25) and linked from the stage tables.
+- Read all 42 RCoA learning syllabus domain pages (v1.5) and all 26 SIA pages, plus the EPA/IACOA and Triple C assessment guidance (S26–S28). Paraphrased into `content/capabilities/` (598 capabilities in total); new `code/stages.js` gives tickable checklists, a stage hub, 20 unit guides (`content/units/`), SIA pages and printable checklists. Search indexes them; the link checker covers them.
+- The RCoA's Cloudflare started refusing scripted fetches after ~70 page loads; the IACOA workbook PDF could not be read (TODO).
+- Headless Chrome (`--headless=new --screenshot`) works for QA while Mark's browser window is minimised, but only for unscrolled views.
+
 ### 2026-09-28 (morning) — Review fixes: banner, "null", novice integration, stage pages
 - Disclaimer banner didn't hide on "I understand" (CSS `display:flex` beat `[hidden]`); added a global `[hidden]` rule.
 - "null" on the question bank: `replaceChildren()` prints null args; core.js now filters them (as `el()` does).
