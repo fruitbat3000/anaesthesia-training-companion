@@ -85,6 +85,7 @@
 
 /* ---------- base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--topbar-h) + 16px); }
 body {
   margin: 0;
@@ -734,3 +735,50 @@ body.palette-open { overflow: hidden; }
 .prose .stage-grid, .prose .note-grid, .prose .station-grid, .prose .stat-row { max-width: none; }
 .q-nav-grid { padding: 3px; }
 .legend .qn { border-radius: 4px; }
+
+/* sidebar: sub-menu subheadings, counts and the novice progress block */
+.nav-sub .nav-sub-label { margin: .75rem 0 .15rem; padding: 0 .6rem; font-size: .66rem; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); opacity: .85; }
+.nav-sub .nav-sub-label:first-child { margin-top: .2rem; }
+.nav-sub a { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.nav-count { font: 500 .68rem/1 var(--mono); color: var(--muted); padding: .18rem .35rem; border-radius: 5px; background: var(--surface-2); border: 1px solid var(--line); }
+.nav-sub a[aria-current="page"] .nav-count { color: var(--brand); border-color: var(--brand-line); background: var(--surface); }
+.nav-progress { margin: .4rem 0 .6rem 1.55rem; padding: .75rem .8rem .8rem; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-xs); }
+.nav-progress-title { margin: 0 0 .5rem; font-size: .66rem; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+.nav-progress-row + .nav-progress-row { margin-top: .6rem; }
+.nav-progress-top { display: flex; justify-content: space-between; font-size: .8rem; color: var(--text-2); margin-bottom: .3rem; }
+.nav-progress-num { font-family: var(--mono); font-size: .74rem; color: var(--muted); }
+.nav-progress .bar { display: block; width: 100%; height: 5px; }
+
+/* novice topic cards: links on to notes and questions */
+.topic-deeper { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: .7rem 0 0 1.95rem; padding-top: .65rem; border-top: 1px dashed var(--line); }
+.topic-deeper-label { font-size: .68rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: .2rem; }
+.deeper-link { font-size: .82rem; padding: .22rem .6rem; border-radius: 999px; background: var(--brand-soft); color: var(--brand); border: 1px solid transparent; text-decoration: none !important; transition: border-color .12s; }
+.deeper-link:hover { border-color: var(--brand-line); }
+.deeper-link.deeper-q { background: var(--violet-soft); color: var(--violet); }
+.deeper-link.deeper-q::before { content: "? "; font-weight: 700; }
+.domain { scroll-margin-top: calc(var(--topbar-h) + 16px); }
+.view > .pager { margin-top: 3rem; }
+
+/* notes widget on stage pages: one fold per subject */
+.note-folds { display: grid; gap: .5rem; margin: 1rem 0 1.4rem; max-width: none; }
+.note-fold { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-xs); }
+.note-fold summary { display: flex; align-items: center; gap: .8rem; padding: .7rem 1rem; cursor: pointer; list-style: none; font-weight: 600; color: var(--text); }
+.note-fold summary::-webkit-details-marker { display: none; }
+.note-fold summary::after { content: "›"; margin-left: .2rem; font-size: 1.2rem; line-height: 1; color: var(--muted); transition: transform .15s; }
+.note-fold[open] summary::after { transform: rotate(90deg); }
+.note-fold summary:hover { background: var(--surface-2); border-radius: var(--r); }
+.note-fold-name { flex: 1; }
+.note-fold-count { font: 500 .74rem/1 var(--mono); color: var(--muted); }
+.note-fold .chip-list { margin: 0; padding: .2rem 1rem 1rem; }
+.prose .glance { margin: 1.2rem 0 1.8rem; }
+.prose .glance .md-card h3 { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: .35rem; }
+.prose .glance .md-card p { margin: 0; color: var(--text); font-weight: 560; line-height: 1.45; }
+.prose .glance .md-card { padding: .95rem 1.05rem; }
+.domain-meters { display: grid; gap: .6rem 1.4rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.domain-meter { display: flex; flex-direction: column; gap: .35rem; color: var(--text-2); text-decoration: none !important; font-size: .86rem; }
+.domain-meter:hover { color: var(--brand); }
+.domain-meter-top { display: flex; justify-content: space-between; gap: .5rem; }
+.domain-meter .bar { width: 100%; }
+.prose .md-cols.glance { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+@media (min-width: 900px) { .prose .md-cols.glance { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.prose .glance .md-card p { font-size: .92rem; }

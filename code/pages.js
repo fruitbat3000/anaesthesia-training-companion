@@ -21,7 +21,14 @@
       const want = (subjects || '').split(',').filter(Boolean);
       const list = C.notes.filter(n => n.exam === exam && (!want.length || want.includes(n.subject))).sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
       if (!list.length) return el('p', { class: 'small' }, 'Notes for this area are being written.');
-      return el('div', { class: 'chip-list' }, list.map(n => el('a', { class: 'topic-chip', href: `#notes/${n.id}` }, n.title)));
+      // One folding group per subject, so a long list reads as a short index.
+      const groups = Object.keys(C.subjects[exam]).filter(s => list.some(n => n.subject === s));
+      return el('div', { class: 'note-folds' }, groups.map(s => {
+        const items = list.filter(n => n.subject === s);
+        return el('details', { class: 'note-fold' },
+          el('summary', null, el('span', { class: 'note-fold-name' }, C.subjects[exam][s].name), el('span', { class: 'note-fold-count' }, `${items.length} note${items.length === 1 ? '' : 's'}`)),
+          el('div', { class: 'chip-list' }, items.map(n => el('a', { class: 'topic-chip', href: `#notes/${n.id}` }, n.title))));
+      }));
     },
     stations(args) {
       const [exam] = args;

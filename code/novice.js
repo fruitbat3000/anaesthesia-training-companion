@@ -16,6 +16,42 @@
     emerg: 'Rehearse the QRH "unknowns". Demonstrate the failed intubation routine on a manikin, following DAS. Show anaesthetic non-technical skills.',
   };
 
+  /* Primary FRCA revision notes that take each novice topic further (ids in content/notes/primary). */
+  const DEEPER = {
+    'anat-airway': ['anat-airway'], 'anat-resp': ['anat-trachea-lungs'], 'anat-heart': ['anat-heart-vessels'],
+    'phys-cvs': ['cvs-cardiac-output', 'cvs-bp-control'], 'phys-o2': ['resp-o2-transport', 'resp-lung-volumes'],
+    'phys-resp': ['resp-mechanics', 'resp-vq', 'resp-control'], 'phys-nmj': ['neuro-nmj-muscle'], 'phys-ans': ['neuro-ans'],
+    'phys-ga': ['resp-ippv', 'anaesthesia-mechanisms'],
+    'ph-induction': ['iv-induction-agents'], 'ph-volatile': ['inhalational-agents', 'inhalational-uptake'],
+    'ph-analgesia': ['opioids', 'paracetamol-nsaids', 'acute-pain-management'], 'ph-nmb': ['nmb-nondepolarising', 'nmb-suxamethonium', 'nmb-reversal'],
+    'ph-vaso': ['sympathomimetics', 'anticholinergics-cholinergics'], 'ph-antiemetic': ['antiemetics'], 'ph-la': ['local-anaesthetics', 'last-management'],
+    'ph-fluids': ['iv-fluids', 'fluids-osmolality'], 'ph-safety': ['drug-interactions'],
+    'eq-check': ['anaesthetic-machine'], 'eq-gases': ['gas-supply', 'gas-laws'], 'eq-controls': ['vaporisers', 'flow-physics'],
+    'eq-breathing': ['breathing-systems', 'oxygen-delivery-devices'], 'eq-ippv': ['ventilators', 'resp-ippv'],
+    'eq-monitoring': ['monitoring-standards', 'pulse-oximetry', 'pressure-measurement'], 'eq-gasmon': ['capnography', 'gas-analysis'],
+    'eq-nmt': ['nm-monitoring', 'temperature-measurement'], 'eq-electrical': ['electricity-safety', 'diathermy-lasers-fires'],
+    'ms-cvsresp': ['preop-assessment', 'cardiac-drugs'], 'ms-other': ['ageing-obesity', 'diabetes-perioperative', 'anticoagulants'],
+    'ms-highrisk': ['elderly-hip-day-remote', 'paeds-basics'], 'ms-critical': ['sepsis-critical-illness'],
+    'ms-data': ['ecg-interpretation', 'abg-interpretation', 'imaging-interpretation'],
+    'g-aims': ['anaesthesia-mechanisms'], 'g-team': ['safety-human-factors'], 'g-prep': ['anaesthetic-machine'],
+    'g-techniques': ['breathing-systems', 'resp-ippv'], 'g-scope': ['consent-capacity-safeguarding'],
+    'g-visit': ['preop-assessment'], 'g-history': ['preop-assessment'], 'g-airway': ['airway-assessment'],
+    'g-fasting': ['rsi-aspiration', 'preop-assessment'], 'g-asa': ['preop-assessment'], 'g-consent': ['consent-capacity-safeguarding'],
+    'g-iv': ['anat-heart-vessels', 'iv-fluids'], 'g-preox': ['resp-lung-volumes', 'resp-o2-transport'], 'g-ivind': ['iv-induction-agents'],
+    'g-stages': ['anaesthesia-mechanisms'], 'g-rsi': ['rsi-aspiration'],
+    'a-mask': ['anat-airway', 'airway-assessment'], 'a-sad': ['airway-assessment'], 'a-tube': ['anat-airway', 'airway-assessment'],
+    'a-obstruction': ['extubation-recovery'], 'a-failed': ['difficult-airway-cico'],
+    'm-maint': ['inhalational-uptake', 'pk-csht-tci'], 'm-drugs': ['opioids', 'nmb-nondepolarising'], 'm-vent': ['ventilators', 'resp-ippv'],
+    'm-vigilance': ['monitoring-standards', 'critical-incidents'], 'm-fluids': ['iv-fluids', 'fluids-osmolality'],
+    'm-bleeding': ['cvs-bp-control', 'blood-transfusion'], 'm-infection': ['antimicrobials', 'infusion-decontamination'],
+    'e-extubation': ['nmb-reversal', 'extubation-recovery'], 'e-slow': ['extubation-recovery'], 'e-transfer': ['extubation-recovery'],
+    'e-oxygen': ['oxygen-delivery-devices'], 'e-pain': ['acute-pain-management', 'antiemetics'], 'e-ward': ['acute-pain-management'],
+    'o-sedation': ['benzodiazepines-sedation'], 'o-regional': ['local-anaesthetics', 'neuraxial-basics', 'peripheral-blocks'],
+    'c-resp': ['critical-incidents', 'difficult-airway-cico'], 'c-cvs': ['critical-incidents'], 'c-anaphylaxis': ['anaphylaxis-management'],
+    'c-qrh': ['critical-incidents', 'mh-dantrolene'], 'c-nts': ['safety-human-factors'], 'c-als': ['resuscitation-als'],
+  };
+  const slug = s => 'd-' + s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
   /* ---------- progress storage (per browser only) ---------- */
   let progress = { topics: {}, ela: {} };
   function load() {
@@ -71,7 +107,17 @@
     const meter = (label, a, b) => el('span', { class: 'meter', title: `${a} of ${b}` },
       label, ' ', el('span', { class: 'bar', 'aria-hidden': 'true' }, el('span', { style: `width:${b ? (100 * a / b) : 0}%` })), ` ${a}/${b}`);
     const box = $('#novice-progress');
-    if (box) box.replaceChildren(meter('Topics covered', tDone, topics.length), meter('e-LfH sessions', eDone, allEla.length));
+    if (!box) return;
+    const domainRow = d => {
+      const all = d.groups.flatMap(g => g.topics);
+      const done = all.filter(t => progress.topics[t.id]).length;
+      return el('a', { class: 'domain-meter', href: '#syllabus/' + slug(d.name) },
+        el('span', { class: 'domain-meter-top' }, el('span', null, d.name), el('span', { class: 'meter-num' }, `${done}/${all.length}`)),
+        el('span', { class: 'bar', 'aria-hidden': 'true' }, el('span', { style: `width:${all.length ? (100 * done / all.length) : 0}%` })));
+    };
+    box.replaceChildren(
+      el('div', { class: 'meters' }, meter('Topics covered', tDone, topics.length), meter('e-LfH sessions', eDone, allEla.length)),
+      el('div', { class: 'domain-meters' }, S.domains.map(domainRow)));
   }
 
   /* ---------- journey ---------- */
@@ -142,7 +188,21 @@
           tags)),
       t.note ? el('p', { class: 'topic-note' }, t.note) : null,
       res.children.length ? res : null,
+      deeper(t),
       el('p', { class: 'topic-foot' }, ext(feedbackUrl(t), 'Suggest a change', 'suggest')));
+  }
+
+  // Links on to the Primary revision notes and questions for this topic.
+  function deeper(t) {
+    const C = App.C;
+    const notes = (DEEPER[t.id] || []).map(id => C.notes.find(n => n.id === id)).filter(Boolean);
+    if (!notes.length) return null;
+    const byNote = C.questions.primary.byNote || {};
+    const qs = notes.reduce((a, n) => a + (byNote[n.id] || 0), 0);
+    return el('div', { class: 'topic-deeper' },
+      el('span', { class: 'topic-deeper-label' }, 'Go further'),
+      notes.map(n => el('a', { href: `#notes/${n.id}`, class: 'deeper-link' }, n.title)),
+      qs ? el('a', { href: `#questions/topic/${t.id}`, class: 'deeper-link deeper-q' }, `${qs} practice question${qs === 1 ? '' : 's'}`) : null);
   }
 
   function feedbackUrl(t) {
@@ -167,7 +227,7 @@
         shown += list.length;
         return list.length ? el('div', { class: 'group' }, el('h3', null, g.name), list.map(topicCard)) : null;
       }).filter(Boolean);
-      if (groups.length) out.push(el('section', { class: 'domain' },
+      if (groups.length) out.push(el('section', { class: 'domain', id: slug(d.name) },
         el('h2', null, d.name, el('span', { class: 'count' }, `${done}/${domTopics.length} covered`)), groups));
     });
     $('#syllabus-list').replaceChildren(...out);
@@ -287,7 +347,7 @@
     const t = e.target;
     if (t.matches('[data-topic]')) {
       if (t.checked) progress.topics[t.dataset.topic] = true; else delete progress.topics[t.dataset.topic];
-      save(); renderSummary();
+      save(); renderSummary(); App.refreshNav();
       const card = t.closest('.topic');
       card.classList.toggle('is-done', t.checked);
       const h = card.closest('.domain');
@@ -300,7 +360,7 @@
     } else if (t.matches('[data-ela]')) {
       const code = t.dataset.ela;
       if (t.checked) progress.ela[code] = true; else delete progress.ela[code];
-      save(); renderSummary();
+      save(); renderSummary(); App.refreshNav();
       // The same session can appear under several topics; keep them in step.
       $$(`[data-ela="${code}"]`).forEach(cb => { cb.checked = t.checked; cb.closest('li').classList.toggle('done', t.checked); });
     }
@@ -340,15 +400,57 @@
         },
       };
     }
+    const dom = arg && S.domains.find(d => slug(d.name) === arg);
+    if (dom) {
+      filter.q = ''; filter.clusters.clear(); filter.onlyFirst = false; filter.hideDone = false;
+      $('#q').value = ''; $('#only-first').checked = false; $('#hide-done').checked = false;
+      renderClusterChips();
+      renderSyllabus();
+      return { view: 'syllabus', ...T, current: '#syllabus/' + arg, title: dom.name, after: () => { const n = document.getElementById(arg); if (n) n.scrollIntoView({ block: 'start' }); } };
+    }
     renderSyllabus();
     return { view: 'syllabus', ...T, current: '#syllabus', title: 'Novice syllabus' };
   });
 
+  // Sidebar: progress block under the Novice sub-menu, and a count beside each syllabus domain.
+  App.navExtras.novice = () => {
+    const tDone = topics.filter(t => progress.topics[t.id]).length;
+    const eDone = allEla.filter(c => progress.ela[c]).length;
+    const row = (label, a, b) => el('div', { class: 'nav-progress-row' },
+      el('div', { class: 'nav-progress-top' }, el('span', null, label), el('span', { class: 'nav-progress-num' }, `${a}/${b}`)),
+      el('span', { class: 'bar', 'aria-hidden': 'true' }, el('span', { style: `width:${b ? (100 * a / b) : 0}%` })));
+    return el('div', { class: 'nav-progress', 'aria-label': 'Your novice progress' },
+      el('p', { class: 'nav-progress-title' }, 'Your progress'),
+      row('Topics covered', tDone, topics.length),
+      row('e-LfH sessions', eDone, allEla.length));
+  };
+  S.domains.forEach(d => {
+    App.navCounts['#syllabus/' + slug(d.name)] = () => {
+      const all = d.groups.flatMap(g => g.topics);
+      return `${all.filter(t => progress.topics[t.id]).length}/${all.length}`;
+    };
+  });
+
+  // "Next" links through the novice pages, in reading order.
+  const ORDER = [['start', 'Start here'], ['journey', 'A GA step by step'], ['syllabus', 'The novice syllabus'], ['iac', 'The IAC'], ['checklist', 'Printable checklist']];
+  function addPagers() {
+    ORDER.forEach(([id], i) => {
+      const view = $(`#view-${id}`);
+      if (!view || view.querySelector(':scope > .pager')) return;
+      const prev = ORDER[i - 1], next = ORDER[i + 1];
+      view.append(el('nav', { class: 'pager no-print', 'aria-label': 'Novice pages' },
+        prev ? el('a', { class: 'pager-prev', href: '#' + prev[0] }, el('span', { class: 'small' }, '← Previous'), prev[1]) : el('span'),
+        next ? el('a', { class: 'pager-next', href: '#' + next[0] }, el('span', { class: 'small' }, 'Next →'), next[1])
+          : el('a', { class: 'pager-next', href: '#stage/1' }, el('span', { class: 'small' }, 'After the IAC →'), 'Stage 1 (CT1–CT3)')));
+    });
+  }
+
   App.inits.push(() => {
     load();
+    addPagers();
     // progress panel on the novice start page
     const hero = $('#view-start .hero');
-    if (hero && !$('#novice-progress')) hero.after(App.el('div', { class: 'card progress-card' }, App.el('h2', null, 'Your novice progress'), App.el('div', { id: 'novice-progress', class: 'meters' })));
+    if (hero && !$('#novice-progress')) hero.after(App.el('div', { class: 'card progress-card' }, App.el('h2', null, 'Your novice progress'), App.el('div', { id: 'novice-progress' })));
     renderClusterChips();
     wireFilters();
     renderFurther();
@@ -357,5 +459,5 @@
     document.addEventListener('change', onChange);
   });
   // expose for the resources page and home dashboard
-  App.novice = { topics, allEla, get progress() { return progress; }, markTerms, renderFurther };
+  App.novice = { topics, topicById, deeperNotes: id => DEEPER[id] || [], allEla, get progress() { return progress; }, markTerms, renderFurther };
 })();

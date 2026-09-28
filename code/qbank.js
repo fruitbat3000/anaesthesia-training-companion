@@ -376,6 +376,17 @@
       }
       return { ...T, current: '#questions', title: 'Questions' };
     }
+    if (a === 'topic' && args[1] && App.novice && App.novice.topicById[args[1]]) {
+      // Novice syllabus topic: questions from the Primary notes it links to.
+      const t = App.novice.topicById[args[1]];
+      const ids = new Set(App.novice.deeperNotes(t.id));
+      loadBank('primary').then(b => {
+        const qs = b.list.filter(q => ids.has(q.note));
+        if (qs.length) startSession({ exam: 'primary', mode: 'practice', title: `Test yourself: ${t.title}`, qids: shuffle(qs).map(q => q.id), minutes: 0 });
+        else location.replace('#questions');
+      });
+      return { ...T, current: '#questions', title: 'Questions' };
+    }
     renderSetup();
     return { ...T, current: '#questions', title: 'Question bank' };
   });

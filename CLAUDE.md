@@ -10,6 +10,13 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-28 (morning) — Review fixes: banner, "null", novice integration, stage pages
+- Disclaimer banner didn't hide on "I understand" (CSS `display:flex` beat `[hidden]`); added a global `[hidden]` rule.
+- "null" on the question bank: `replaceChildren()` prints null args; core.js now filters them (as `el()` does).
+- Novice: sidebar sub-menu has subheadings (Get started / Syllabus by domain with counts / Sign-off / Reference) and a progress block; start page shows per-domain progress bars; each syllabus topic has "Go further" links to Primary notes and a "Test yourself" question session (`#questions/topic/<id>`, mapping `DEEPER` in novice.js); prev/next pager through the novice pages; page headers match the rest of the site.
+- Stage 1–3 pages: "at a glance" cards (`::: glance`), ### subheadings, notes lists folded by subject, timeline moved to the end. Facts unchanged.
+- QA note: when Mark's Chrome window is minimised, MCP screenshots come out blank; use headless Chrome (`--headless=new --screenshot`) instead.
+
 ### 2026-09-27 (later) — Visual redesign
 - Mark: "content is great, it's got all the aesthetic charm of a github repo". Asked for a modern, clean, slick look.
 - Researched current docs/SaaS sites. The new design is docs-style: a sticky blurred top bar, a grouped left sidebar (a drawer on phones), ⌘K / "/" command-palette search, an "On this page" rail, card-based home with a gradient hero, and Geist / Geist Mono / Instrument Serif fonts. Light and dark themes. `code/styles.css` was fully rewritten. " · " lists in content now render as tag chips (`md.mjs`).

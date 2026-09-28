@@ -1,7 +1,7 @@
 // A deliberately small Markdown converter for the site's own content.
 // Supports: #–#### headings, paragraphs, **bold**, *italic*, `code`, [links](url),
 // - / 1. lists (two levels, by indentation), > blockquotes, > [!note|tip|warn|exam] callouts,
-// | tables |, --- rules, ::: cols / ::: box blocks, and $$ plain formula lines.
+// | tables |, --- rules, ::: cols / ::: glance / ::: card / ::: box blocks, and $$ plain formula lines.
 // Anything else is treated as text and escaped. Output is trusted HTML (we author the input).
 
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -96,6 +96,7 @@ export function markdown(src) {
       i++;
       const inner = markdown(body.join('\n'));
       if (kind === 'cols') out.push(`<div class="md-cols">${inner}</div>`);
+      else if (kind === 'glance') out.push(`<div class="md-cols glance">${inner}</div>`);
       else if (kind === 'card') out.push(`<div class="md-card">${title ? `<h3>${inline(title)}</h3>` : ''}${inner}</div>`);
       else if (kind === 'steps') out.push(`<div class="md-steps">${inner}</div>`);
       else out.push(`<div class="md-box md-${kind}">${title ? `<p class="md-box-title">${inline(title)}</p>` : ''}${inner}</div>`);

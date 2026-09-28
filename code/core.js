@@ -9,6 +9,12 @@
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
+  // replaceChildren() turns null into the text "null"; views pass optional blocks as null, so skip them (as el() does).
+  const nativeReplace = Element.prototype.replaceChildren;
+  Element.prototype.replaceChildren = function (...kids) {
+    return nativeReplace.apply(this, kids.flat(Infinity).filter(c => c != null && c !== false));
+  };
+
   function el(tag, attrs, ...kids) {
     const n = document.createElement(tag);
     if (attrs) for (const [k, v] of Object.entries(attrs)) {
@@ -102,7 +108,11 @@
   const icon = k => `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[k]}</svg>`;
 
   const SUBNAV = {
-    novice: [['#start', 'Start here'], ['#journey', 'A GA step by step'], ['#syllabus', 'Syllabus'], ['#iac', 'The IAC'], ['#glossary', 'Glossary'], ['#checklist', 'Printable checklist']],
+    // A plain string is a subheading.
+    novice: ['Get started', ['#start', 'Start here'], ['#journey', 'A GA step by step'],
+      'Syllabus', ['#syllabus', 'All topics'], ['#syllabus/d-basic-sciences', 'Basic sciences'], ['#syllabus/d-medicine-and-surgery', 'Medicine and surgery'], ['#syllabus/d-generic-anaesthesia', 'Generic anaesthesia'], ['#syllabus/d-critical-incidents-and-emergencies', 'Critical incidents'],
+      'Sign-off', ['#iac', 'The IAC'], ['#checklist', 'Printable checklist'],
+      'Reference', ['#glossary', 'Glossary']],
     exams: [['#exams', 'Overview'], ['#exams/primary', 'Primary FRCA'], ['#exams/final', 'Final FRCA'], ['#exams/transition', 'Which format will I sit?'], ['#exams/plan', 'Study plan'], ['#exams/banks', 'Question banks'], ['#exams/trainers', 'For trainers']],
     notes: [['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#notes/coverage', 'Syllabus coverage']],
     questions: [['#questions', 'Practise'], ['#questions/mock', 'Mock papers'], ['#questions/stats', 'My progress']],
@@ -117,7 +127,14 @@
     { label: 'More', items: [['resources', '#resources', 'Resources', 'resources'], ['about', '#about', 'About', 'info']] },
   ];
 
+  // Sections can add a block under their sub-menu (navExtras[tab] = () => node)
+  // and a count beside a sub-menu link (navCounts[href] = () => '3/19').
+  const navExtras = {};
+  const navCounts = {};
+
+  let navState = [];
   function setNav(tab, current) {
+    navState = [tab, current];
     const nav = $('#side-nav');
     if (!nav) return;
     nav.replaceChildren(...NAV.map(group => el('div', { class: 'nav-group' },
@@ -127,7 +144,10 @@
         const kids = active && SUBNAV[key];
         return el('li', { class: active ? 'active' : null },
           el('a', { href, class: 'nav-link', 'aria-current': active && !kids ? 'page' : null, html: `${icon(ic)}<span>${label}</span>` }),
-          kids ? el('ul', { class: 'nav-sub' }, kids.map(([h, l]) => el('li', null, el('a', { href: h, 'aria-current': h === current ? 'page' : null }, l)))) : null);
+          kids ? el('ul', { class: 'nav-sub' }, kids.map(k => typeof k === 'string'
+            ? el('li', { class: 'nav-sub-label' }, k)
+            : el('li', null, el('a', { href: k[0], 'aria-current': k[0] === current ? 'page' : null }, k[1], navCounts[k[0]] ? el('span', { class: 'nav-count' }, navCounts[k[0]]()) : null)))) : null,
+          active && navExtras[key] ? navExtras[key]() : null);
       })))));
   }
 
@@ -358,7 +378,8 @@
   /* ---------- public API ---------- */
   window.App = {
     S, C, $, $$, el, ext, html, store, KEYS, loadPart, statusBadge, refList, elaList, feedbackUrl, reportLink, toast, pct, meter,
-    on, route, fillStaticLinks, search, toc,
+    on, route, fillStaticLinks, search, toc, navExtras, navCounts,
+    refreshNav: () => setNav(...navState),
     pageHref: id => {
       if (id === 'exams') return '#exams';
       if (id.startsWith('exams-')) return '#exams/' + id.slice(6);
