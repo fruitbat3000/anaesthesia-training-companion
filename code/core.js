@@ -113,6 +113,18 @@
       'Syllabus', ['#syllabus', 'All topics'], ['#syllabus/d-basic-sciences', 'Basic sciences'], ['#syllabus/d-medicine-and-surgery', 'Medicine and surgery'], ['#syllabus/d-generic-anaesthesia', 'Generic anaesthesia'], ['#syllabus/d-critical-incidents-and-emergencies', 'Critical incidents'],
       'Sign-off', ['#iac', 'The IAC'], ['#checklist', 'Printable checklist'],
       'Reference', ['#glossary', 'Glossary']],
+    stage1: ['This stage', ['#stage/1', 'Overview'], ['#stage/1/year-by-year', 'Year by year'], ['#stage/1/the-stage-1-certificate', 'The Stage 1 certificate'],
+      'Clinical training', ['#stage/1/clinical-blocks-in-stage-1', 'Clinical blocks'], ['#stage/1/finding-the-e-learning', 'e-Learning'],
+      'Primary FRCA', ['#stage/1/the-primary-frca', 'The exam'], ['#stage/1/revision-notes-by-paper', 'Revision notes by paper'],
+      'Local', ['#stage/1/in-yorkshire-and-humber', 'Yorkshire and Humber']],
+    stage2: ['This stage', ['#stage/2', 'Overview'], ['#stage/2/year-by-year', 'Year by year'], ['#stage/2/the-stage-2-certificate', 'The Stage 2 certificate'],
+      'Clinical training', ['#stage/2/the-discrete-areas-of-practice', 'Discrete areas of practice'], ['#stage/2/other-units', 'Other units'], ['#stage/2/finding-the-e-learning', 'e-Learning'],
+      'Final FRCA', ['#stage/2/the-final-frca', 'The exam'], ['#stage/2/revision-notes-by-topic', 'Revision notes by topic'],
+      'Local', ['#stage/2/in-yorkshire-and-humber', 'Yorkshire and Humber']],
+    stage3: ['This stage', ['#stage/3', 'Overview'], ['#stage/3/year-by-year', 'Year by year'], ['#stage/3/from-certificate-to-cct', 'Certificate to CCT'],
+      'Special Interest Areas', ['#stage/3/the-sias-on-offer', 'SIAs on offer'], ['#stage/3/choosing-and-evidencing-an-sia', 'Choosing an SIA'],
+      'Beyond the core', ['#stage/3/subspecialties', 'Subspecialties'], ['#stage/3/dual-training-and-acting-up', 'Dual training and acting up'], ['#stage/3/preparing-for-consultant-practice', 'Consultant practice'],
+      'Local', ['#stage/3/in-yorkshire-and-humber', 'Yorkshire and Humber']],
     exams: [['#exams', 'Overview'], ['#exams/primary', 'Primary FRCA'], ['#exams/final', 'Final FRCA'], ['#exams/transition', 'Which format will I sit?'], ['#exams/plan', 'Study plan'], ['#exams/banks', 'Question banks'], ['#exams/trainers', 'For trainers']],
     notes: [['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#notes/coverage', 'Syllabus coverage']],
     questions: [['#questions', 'Practise'], ['#questions/mock', 'Mock papers'], ['#questions/stats', 'My progress']],
@@ -132,6 +144,8 @@
   const navExtras = {};
   const navCounts = {};
 
+  // Each stage of training has its own accent colour (matches the home-page stage cards).
+  const STAGE_OF = { novice: 0, stage1: 1, stage2: 2, stage3: 3 };
   let navState = [];
   function setNav(tab, current) {
     navState = [tab, current];
@@ -142,7 +156,8 @@
       el('ul', null, group.items.map(([key, href, label, ic]) => {
         const active = key === tab;
         const kids = active && SUBNAV[key];
-        return el('li', { class: active ? 'active' : null },
+        const stage = STAGE_OF[key];
+        return el('li', { class: [active ? 'active' : '', stage != null ? `stage-item s${stage}` : ''].join(' ').trim() || null },
           el('a', { href, class: 'nav-link', 'aria-current': active && !kids ? 'page' : null, html: `${icon(ic)}<span>${label}</span>` }),
           kids ? el('ul', { class: 'nav-sub' }, kids.map(k => typeof k === 'string'
             ? el('li', { class: 'nav-sub-label' }, k)
@@ -202,6 +217,8 @@
     const res = handler(args, params) || {};
     show(res.view || name);
     setNav(res.tab || name, res.current || '#' + pathPart);
+    const stage = STAGE_OF[res.tab || name];
+    if (stage != null) document.body.dataset.stage = stage; else delete document.body.dataset.stage;
     document.title = (res.title ? res.title + ' · ' : '') + 'Anaesthesia Training Companion';
     document.body.dataset.view = res.view || name;
     if (!res.keepScroll) window.scrollTo(0, 0);

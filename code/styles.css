@@ -29,6 +29,8 @@
   --green-soft: #e3f5ea;
   --first: #9a4d00;
   --first-soft: #fff1dc;
+  /* stages of training */
+  --s0: #c7780f; --s1: #2853e0; --s2: #0b8f89; --s3: #6b46f0;
 
   --font: "Geist", Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -76,6 +78,7 @@
   --green-soft: #13301f;
   --first: #f3b866;
   --first-soft: #33260f;
+  --s0: #f0ad4e; --s1: #7b9cff; --s2: #45cfc6; --s3: #ae97ff;
   --shadow-xs: none;
   --shadow-sm: 0 0 0 1px rgba(255, 255, 255, .02);
   --shadow: 0 2px 8px -2px rgba(0, 0, 0, .5);
@@ -428,7 +431,7 @@ body.palette-open { overflow: hidden; }
 .stage-card::after { content: ""; position: absolute; inset: auto -30% -60% auto; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--c) 18%, transparent), transparent); transition: transform .3s ease; }
 .stage-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: color-mix(in srgb, var(--c) 40%, var(--line)); }
 .stage-card:hover::after { transform: scale(1.25); }
-.stage-card.s0 { --c: #d98a1c; } .stage-card.s1 { --c: #2853e0; } .stage-card.s2 { --c: #0b8f89; } .stage-card.s3 { --c: #6b46f0; }
+.stage-card.s0 { --c: var(--s0); } .stage-card.s1 { --c: var(--s1); } .stage-card.s2 { --c: var(--s2); } .stage-card.s3 { --c: var(--s3); }
 .stage-years { display: inline-flex; align-self: flex-start; font-family: var(--mono); font-size: .72rem; font-weight: 500; padding: .12rem .5rem; border-radius: 6px; color: var(--c); background: color-mix(in srgb, var(--c) 10%, transparent); }
 .stage-label { font-size: 1.4rem; font-weight: 700; letter-spacing: -.03em; margin-top: .45rem; }
 .stage-text { font-size: .9rem; color: var(--muted); line-height: 1.5; }
@@ -782,3 +785,31 @@ body.palette-open { overflow: hidden; }
 .prose .md-cols.glance { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
 @media (min-width: 900px) { .prose .md-cols.glance { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .prose .glance .md-card p { font-size: .92rem; }
+
+/* ---------- stage colours: menu entries and the pages within each stage ---------- */
+.s0 { --c: var(--s0); } .s1 { --c: var(--s1); } .s2 { --c: var(--s2); } .s3 { --c: var(--s3); }
+.stage-item > .nav-link svg { color: color-mix(in srgb, var(--c) 75%, var(--muted)); }
+.stage-item > .nav-link:hover { background: color-mix(in srgb, var(--c) 7%, transparent); }
+.nav-group li.stage-item.active > .nav-link { background: color-mix(in srgb, var(--c) 8%, var(--surface)); border-color: color-mix(in srgb, var(--c) 28%, var(--line)); }
+.nav-group li.stage-item.active > .nav-link svg { color: var(--c); }
+.nav-group li.stage-item.active > .nav-link::before { content: ""; width: 3px; align-self: stretch; margin: -.1rem 0 -.1rem -.35rem; border-radius: 3px; background: var(--c); }
+.stage-item .nav-sub { border-left-color: color-mix(in srgb, var(--c) 30%, var(--line)); }
+.stage-item .nav-sub a[aria-current="page"] { color: var(--c); background: color-mix(in srgb, var(--c) 10%, transparent); }
+.stage-item .nav-sub a[aria-current="page"]::before { background: var(--c); }
+.stage-item .nav-sub a[aria-current="page"] .nav-count { color: var(--c); border-color: color-mix(in srgb, var(--c) 30%, var(--line)); }
+.stage-item .nav-progress { border-color: color-mix(in srgb, var(--c) 22%, var(--line)); }
+.stage-item .nav-progress .bar > span { background: var(--c); }
+
+body[data-stage="0"] { --stage: var(--s0); } body[data-stage="1"] { --stage: var(--s1); }
+body[data-stage="2"] { --stage: var(--s2); } body[data-stage="3"] { --stage: var(--s3); }
+body[data-stage] main .eyebrow { color: var(--stage); }
+body[data-stage] main .page-head { border-bottom: 0; background: linear-gradient(90deg, var(--stage), color-mix(in srgb, var(--stage) 0%, transparent)) bottom / 100% 2px no-repeat; }
+body[data-stage] .toc a.on { color: var(--stage); border-left-color: var(--stage); }
+body[data-stage] .prose .glance .md-card { border-top: 3px solid var(--stage); }
+body[data-stage] .prose h2::before { content: ""; display: inline-block; width: .5rem; height: .5rem; margin-right: .6rem; border-radius: 2px; vertical-align: .18em; background: var(--stage); }
+body[data-stage] .timeline a { position: relative; }
+body[data-stage] main .bar > span, body[data-stage] .progress-line span { background: var(--stage); }
+body[data-stage] .deeper-link:not(.deeper-q) { background: color-mix(in srgb, var(--stage) 10%, var(--surface)); color: color-mix(in srgb, var(--stage) 85%, var(--text)); }
+a.nav-progress-row { display: block; color: inherit; text-decoration: none !important; border-radius: 6px; }
+a.nav-progress-row:hover .nav-progress-top span:first-child { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+.nav-progress-foot { margin: .55rem 0 0; font-size: .74rem; color: var(--muted); }

@@ -93,7 +93,15 @@
   App.on('stage', args => {
     const n = ['1', '2', '3'].includes(args[0]) ? args[0] : '1';
     const p = renderPage(`stage-${n}`);
-    return { view: 'page', tab: `stage${n}`, title: p && p.title };
+    const section = args[1] && document.getElementById(args[1]);
+    return {
+      view: 'page', tab: `stage${n}`, current: section ? `#stage/${n}/${args[1]}` : `#stage/${n}`, title: p && p.title,
+      // Scroll again once layout settles and web fonts load, as both change the height above the section.
+      after: section ? () => {
+        const go = () => section.scrollIntoView({ block: 'start' });
+        go(); setTimeout(go, 120); document.fonts.ready.then(go);
+      } : null,
+    };
   });
   App.on('exams', args => {
     const id = args[0] ? `exams-${args[0]}` : 'exams';
@@ -107,6 +115,26 @@
     }
     return { view: 'resources', tab: 'resources', current: '#resources', title: 'Resources' };
   });
+
+  /* ---------- sidebar progress for Stages 1 and 2 (their exam's notes and questions) ---------- */
+  function examProgress(exam) {
+    const read = store.get(KEYS.notes, {});
+    const qb = store.get(KEYS.qbank, {});
+    const notes = C.notes.filter(n => n.exam === exam);
+    const notesRead = notes.filter(n => read[n.id] && read[n.id].done).length;
+    const mine = Object.entries(qb).filter(([id, r]) => r.n && (exam === 'final') === id.startsWith('f'));
+    const correct = mine.filter(([, r]) => r.c).length;
+    const row = (label, a, b, href) => el('a', { class: 'nav-progress-row', href },
+      el('div', { class: 'nav-progress-top' }, el('span', null, label), el('span', { class: 'nav-progress-num' }, `${a}/${b}`)),
+      el('span', { class: 'bar', 'aria-hidden': 'true' }, el('span', { style: `width:${b ? (100 * a / b) : 0}%` })));
+    return el('div', { class: 'nav-progress', 'aria-label': 'Your progress' },
+      el('p', { class: 'nav-progress-title' }, `Your ${exam === 'final' ? 'Final' : 'Primary'} progress`),
+      row('Notes read', notesRead, notes.length, `#notes/${exam}`),
+      row('Questions answered', mine.length, C.questions[exam].total, '#questions/stats'),
+      mine.length ? el('p', { class: 'nav-progress-foot' }, `${App.pct(correct, mine.length)}% correct at last attempt`) : null);
+  }
+  App.navExtras.stage1 = () => examProgress('primary');
+  App.navExtras.stage2 = () => examProgress('final');
 
   /* ---------- home ---------- */
   function renderHome() {

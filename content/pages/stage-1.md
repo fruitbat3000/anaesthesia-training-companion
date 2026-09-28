@@ -65,14 +65,14 @@ What to aim for in each area, and the matching e-Learning Anaesthesia (e-LA) mod
 
 | Area | What to aim for | e-Learning Anaesthesia |
 |---|---|---|
-| Novice period | IAC within 3–6 months | [Module 01](#start) |
-| Obstetrics | IACOA; labour analgesia, neuraxial anaesthesia for caesarean section, obstetric emergencies | Module 04a |
-| Paediatrics | Anaesthesia for children aged 5 and over; paediatric resuscitation | Module 04b |
-| Elderly and frail patients | Perioperative care of older people, hip fracture | Module 04c |
-| Intensive care | Recognition and stabilisation of the critically ill; invasive procedures; transfer | Module 03 |
-| Pain | Acute and acute-on-chronic pain, PCA and epidurals | Module 05a |
-| Regional | Spinals, simple ultrasound-guided blocks (including femoral and fascia iliaca), epidurals | Module 05b |
-| Basic sciences | Physiology, pharmacology, physics and clinical measurement for the Primary | Modules 07a–07e |
+| Novice period | IAC within 3–6 months | [Module 01](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_9983&programmeId=14) |
+| Obstetrics | IACOA; labour analgesia, neuraxial anaesthesia for caesarean section, obstetric emergencies | [Module 04a](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_7975&programmeId=14) |
+| Paediatrics | Anaesthesia for children aged 5 and over; paediatric resuscitation | [Module 04b](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8723&programmeId=14) |
+| Elderly and frail patients | Perioperative care of older people, hip fracture | [Module 04c](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_7976&programmeId=14) |
+| Intensive care | Recognition and stabilisation of the critically ill; invasive procedures; transfer | [Module 03](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_41657&programmeId=14) |
+| Pain | Acute and acute-on-chronic pain, PCA and epidurals | [Module 05a](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8724&programmeId=14) |
+| Regional | Spinals, simple ultrasound-guided blocks (including femoral and fascia iliaca), epidurals | [Module 05b](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_37596_8725&programmeId=14) |
+| Basic sciences | Physiology, pharmacology, physics and clinical measurement for the Primary | Modules [07a](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_8727&programmeId=14), [07b](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_9553&programmeId=14), [07c](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_9558&programmeId=14), [07d](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_8729&programmeId=14), [07e](https://portal.e-lfh.org.uk/Catalogue/Index?HierarchyId=0_14_34064_8730&programmeId=14) |
 
 ### Finding the e-learning
 
