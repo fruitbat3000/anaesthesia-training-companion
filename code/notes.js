@@ -107,7 +107,8 @@
         el('a', { class: 'btn', href: `#questions/note/${n.id}` }, 'Start')) : null,
       n.related.length ? el('div', { class: 'card' }, el('h3', null, 'Related notes'),
         el('ul', { class: 'linklist' }, n.related.map(r => C.notes.find(x => x.id === r)).filter(Boolean).map(r => el('li', null, el('a', { href: `#notes/${r.id}` }, r.title))))) : null,
-      n.ela.length ? el('div', { class: 'card' }, el('h3', null, 'e-Learning Anaesthesia'), App.elaList(n.ela)) : null);
+      n.ela.length ? el('div', { class: 'card' }, el('h3', null, 'e-Learning Anaesthesia'), App.elaList(n.ela)) : null,
+      (n.bjaed || []).length ? el('div', { class: 'card' }, el('h3', null, 'BJA Education'), el('p', { class: 'small' }, el('a', { href: '#', onclick: e => { e.preventDefault(); document.getElementById('bjaed').scrollIntoView({ behavior: 'smooth' }); } }, `${n.bjaed.length} review article${n.bjaed.length === 1 ? '' : 's'} for this topic →`))) : null);
 
     box.replaceChildren(
       el('nav', { class: 'crumbs', 'aria-label': 'Breadcrumb' },
@@ -119,6 +120,12 @@
         el('div', { class: 'note-meta' }, App.statusBadge(n.status), el('span', { class: 'small' }, `${Math.max(1, Math.round(n.words / 200))} min read`), readBtn)),
       el('div', { class: 'note-layout' },
         el('article', null, body,
+          (n.bjaed || []).length ? el('section', { class: 'note-refs note-bjaed', id: 'bjaed' },
+            el('h2', null, 'Read next in BJA Education'),
+            el('p', { class: 'small' }, 'Review articles chosen for this topic. Free to RCoA members through My RCoA, and open to everyone 12 months after publication.'),
+            el('ul', { class: 'bjaed-list' }, n.bjaed.map(b => el('li', null,
+              el('a', { class: 'ext', href: `https://doi.org/${b.doi}`, target: '_blank', rel: 'noopener' }, b.t),
+              el('span', { class: 'ref-src' }, ` ${b.a ? b.a + ' ' : ''}BJA Educ ${b.y}${b.v ? `;${b.v}` : ''}${b.p ? `:${b.p}` : ''}`))))) : null,
           n.refs.length ? el('section', { class: 'note-refs' }, el('h2', null, 'References and further reading'), App.refList(n.refs)) : null,
           el('div', { class: 'callout-box warn small-callout' }, el('p', null, 'Educational summary only. Doses and thresholds must be checked against the BNF, current guidelines and local policy before clinical use. ', el('a', { href: '#disclaimer' }, 'Disclaimer.'))),
           el('div', { class: 'pager' },

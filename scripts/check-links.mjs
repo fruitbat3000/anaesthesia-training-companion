@@ -100,6 +100,7 @@ const htmlBlobs = [
   ...Object.entries(PARTS.stations || {}).map(([k, v]) => [`station ${k}`, Object.values(v).join(' ')]),
   ...(CONTENT.units || []).map(u => [`unit ${u.id}`, u.html]),
   ...Object.entries(CONTENT.texts || {}).map(([k, t]) => [`textbook ${k}`, `href="${t.u}"`]),
+  ...Object.entries((CONTENT.gpas || {}).chapters || {}).map(([k, c]) => [`GPAS chapter ${k}`, `href="${c.u}"`]),
   ...Object.values(CONTENT.capabilities || {}).flatMap(c => c.domains.map(d => [`capabilities ${c.key}/${d.id}`,
     [`href="${d.rcoa}"`, ...d.ela.map(([, url]) => `href="${url}"`)].join(' ')])),
 ];
@@ -117,6 +118,23 @@ for (const [url, where] of contentLinks) {
 }
 
 await pool(tasks);
+
+// BJA Education DOIs: doi.org blocks bots, so confirm each DOI is still registered with Crossref,
+// 20 at a time and one request after another (Crossref rate-limits parallel requests).
+const bjaedDois = [...new Set(CONTENT.notes.flatMap(n => (n.bjaed || []).map(b => b.doi)))];
+for (let i = 0; i < bjaedDois.length; i += 20) {
+  const batch = bjaedDois.slice(i, i + 20);
+  const url = `https://api.crossref.org/works?rows=20&select=DOI&filter=${batch.map(d => 'doi:' + d).join(',')}`;
+  const { status, text } = await get(url);
+  let found = [];
+  try { found = JSON.parse(text).message.items.map(x => x.DOI.toLowerCase()); } catch (e) { /* handled below */ }
+  if (status !== 200) { batch.forEach(d => manual.push(`BJA Education ${d}: Crossref returned HTTP ${status || 'error'}`)); continue; }
+  for (const d of batch) {
+    if (found.includes(d.toLowerCase())) ok++;
+    else problems.push(`\`BJA Education\`: DOI ${d} not found on Crossref`);
+  }
+  await new Promise(r => setTimeout(r, 1000));
+}
 
 const today = new Date().toISOString().slice(0, 10);
 const report = [

@@ -1,0 +1,30 @@
+{
+  "_note": "RCoA Guidelines for the Provision of Anaesthesia Services (GPAS). Titles and years from the chapter PDFs supplied by Mark (docs/, not in git); links exactly as given on the RCoA GPAS index page, read in Chrome 2026-09-28 (SOURCES.md S32). The index lists chapters 1, 2 and 5–19.",
+  "index": "https://www.rcoa.ac.uk/safety-standards-quality/guidance-resources/guidelines-provision-anaesthetic-services",
+  "chapters": {
+    "1": { "t": "The Good Department", "y": 2025, "u": "https://www.rcoa.ac.uk/node/13911" },
+    "2": { "t": "Perioperative care of elective and urgent care patients", "y": 2025, "u": "https://www.rcoa.ac.uk/gpas/chapter-2" },
+    "5": { "t": "Emergency anaesthesia services", "y": 2024, "u": "https://www.rcoa.ac.uk/safety-standards-quality/guidance-resources/guidelines-provision-anaesthetic-services/chapter-5" },
+    "6": { "t": "Day surgery", "y": 2025, "u": "https://www.rcoa.ac.uk/node/18556" },
+    "7": { "t": "Anaesthesia services in the non-theatre environment", "y": 2026, "u": "https://www.rcoa.ac.uk/node/18511" },
+    "8": { "t": "Regional anaesthesia services", "y": 2024, "u": "https://www.rcoa.ac.uk/node/22406" },
+    "9": { "t": "Anaesthesia services for an obstetric population", "y": 2025, "u": "https://www.rcoa.ac.uk/gpas/chapter-9" },
+    "10": { "t": "Paediatric anaesthesia services", "y": 2025, "u": "https://www.rcoa.ac.uk/gpas/chapter-10" },
+    "11": { "t": "Inpatient pain management", "y": 2026, "u": "https://www.rcoa.ac.uk/node/21456" },
+    "12": { "t": "ENT, oral maxillofacial and dental surgery", "y": 2024, "u": "https://www.rcoa.ac.uk/node/21501" },
+    "13": { "t": "Ophthalmic anaesthesia services", "y": 2025, "u": "https://www.rcoa.ac.uk/gpas/chapter-13" },
+    "14": { "t": "Neuroanaesthetic services", "y": 2026, "u": "https://www.rcoa.ac.uk/node/18481" },
+    "15": { "t": "Vascular procedures", "y": 2024, "u": "https://www.rcoa.ac.uk/node/21496" },
+    "16": { "t": "Trauma and orthopaedic surgery", "y": 2025, "u": "https://www.rcoa.ac.uk/node/18471" },
+    "17": { "t": "Burn and plastic surgery", "y": 2025, "u": "https://www.rcoa.ac.uk/gpas/chapter-17" },
+    "18": { "t": "Cardiac procedures", "y": 2025, "u": "https://www.rcoa.ac.uk/gpas/chapter-18-2025" },
+    "19": { "t": "Thoracic procedures", "y": 2026, "u": "https://www.rcoa.ac.uk/gpas/chapter-19" }
+  },
+  "units": {
+    "s1-obstetrics": ["9"], "s1-paediatrics": ["10"], "s1-regional": ["8"], "s1-pain": ["11"], "s1-perioperative": ["2", "6", "16"], "s1-sedation-remote": ["7", "5"],
+    "s2-cardiothoracic": ["18", "19"], "s2-neuro": ["14"], "s2-obstetrics": ["9"], "s2-paediatrics": ["10"], "s2-airway-ent": ["12"], "s2-vascular-major": ["15", "5"], "s2-trauma": ["16", "17", "5"], "s2-ophthalmic": ["13"], "s2-regional": ["8"], "s2-perioperative": ["2"], "s2-pain": ["11"], "s2-sedation-remote": ["7", "6"]
+  },
+  "sias": {
+    "cardiac": ["18"], "neurosurgery": ["14"], "obstetric": ["9"], "paediatric": ["10"], "acute-inpatient-pain": ["11"], "pain-medicine": ["11"], "complex-orthopaedic": ["16"], "ophthalmic": ["13"], "complex-airway": ["12"], "plastics-burns": ["17"], "thoracic": ["19"], "vascular": ["15"], "perioperative-medicine": ["2"], "regional": ["8"], "trauma": ["16", "5"], "major-general": ["5"], "management": ["1"]
+  }
+}

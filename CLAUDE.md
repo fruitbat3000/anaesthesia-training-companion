@@ -10,6 +10,13 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-28 (evening) — BJA Education pointers, GPAS, IACOA
+- Mark asked whether to signpost BJA Education from topics (yes) and added GPAS chapters and the IAC/IACOA workbooks to `docs/`.
+- 197 BJA Education articles chosen by hand for 144 notes from Crossref searches (`content/bjaed.json`, S31). Shown as "Read next in BJA Education" on notes and as a count on the syllabus maps; the link check confirms the DOIs via Crossref in batches (parallel requests hit a 429).
+- Mistake: one early Crossref test request included Mark's email as the polite-pool `mailto`; removed at once and told Mark. Do not send it to outside services.
+- GPAS chapters 1, 2, 5–19 (`content/gpas.json`, S32): links taken from the live RCoA index (they don't follow one pattern); shown on unit guides, SIAs and the guidelines page.
+- IACOA workbook read (S33); Stage 1 obstetrics guide now has EPA 3 and 4, timing, level 3 entrustment and sign-off steps.
+
 ### 2026-09-28 (afternoon) — Working group emails; syllabus maps
 - Mark shared the working-group email thread (Dr Brooks, the LTHT College Tutor, a Mid Yorkshire resident with web experience). Gap analysis recorded in TODO. Names and roles are in Claude memory only; the repo refers to people by role.
 - Built readable Primary and Final syllabus maps (`#map/primary`, `#map/final`, `code/syllabus-map.js`, `content/syllabus/map.json`): topics by paper and subject, red/amber/green ratings, a "revise next" list, core textbooks (verified editions, `content/texts.json`, S29) and free resources per subject, plus an RCoA-section view labelled with the paraphrased capability wording.

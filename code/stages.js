@@ -39,6 +39,16 @@
   }, 0);
 
   /* ---------- building blocks ---------- */
+  // RCoA GPAS chapters: what a department should provide, including (section 4) training and education.
+  function gpasBox(list) {
+    if (!list || !list.length) return null;
+    return el('div', { class: 'callout-box key gpas-box' },
+      el('p', { class: 'callout-title' }, 'Service standards (RCoA GPAS)'),
+      el('ul', { class: 'linklist' }, list.map(c => el('li', null,
+        el('a', { class: 'ext', href: c.u, target: '_blank', rel: 'noopener' }, `Chapter ${c.n}: ${c.t}`), ` (${c.y})`))),
+      el('p', { class: 'small' }, 'GPAS sets out what a department should provide for this work. Its "Training and education" section describes what you should expect as a trainee, and service standards come up in FCPE professional stations.'));
+  }
+
   function capItem(key, d, c) {
     const id = capId(key, d.id, c.k);
     const done = !!ticks()[id];
@@ -199,6 +209,7 @@
       el('p', { class: 'crumbs' }, el('a', { href: `#stage/${n}` }, STAGE_NAME[n]), ' / ', el('a', { href: `#stage/${n}/units` }, 'Unit guides')),
       head(n, `${STAGE_NAME[n]} · unit guide`, u.title, u.lede, u.updated ? el('p', { class: 'meta-line' }, el('span', { class: 'dot-ok' }), `Draft guidance · updated ${u.updated}`) : null),
       body,
+      gpasBox(u.gpas),
       el('nav', { class: 'pager', 'aria-label': 'Unit guides' },
         prev ? el('a', { class: 'pager-prev', href: `#stage/${n}/unit/${prev.id}` }, el('span', { class: 'small' }, '← Previous'), prev.short) : el('span'),
         next ? el('a', { class: 'pager-next', href: `#stage/${n}/unit/${next.id}` }, el('span', { class: 'small' }, 'Next →'), next.short) : el('a', { class: 'pager-next', href: `#stage/${n}/capabilities` }, el('span', { class: 'small' }, 'Next →'), 'All key capabilities')),
@@ -258,6 +269,7 @@
       el('p', { class: 'crumbs' }, el('a', { href: '#stage/3' }, 'Stage 3'), ' / ', el('a', { href: '#stage/3/sias' }, 'Special Interest Areas')),
       head(3, `Special Interest Area · ${d.group}`, d.name, null),
       domainCard(S.key, d, { h: 'h2' }),
+      gpasBox(d.gpas),
       el('nav', { class: 'pager', 'aria-label': 'Special Interest Areas' },
         prev ? el('a', { class: 'pager-prev', href: `#stage/3/sia/${prev.id}` }, el('span', { class: 'small' }, '← Previous'), prev.name) : el('span'),
         next ? el('a', { class: 'pager-next', href: `#stage/3/sia/${next.id}` }, el('span', { class: 'small' }, 'Next →'), next.name) : el('span')));

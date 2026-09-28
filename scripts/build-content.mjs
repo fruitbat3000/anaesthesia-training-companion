@@ -302,6 +302,32 @@ const coveredCodes = ex => [...CODES[ex]].filter(c => {
   return Object.keys(coverage.final).some(k => k.startsWith(c + '_') && coverage.final[k].n.length);
 }).length;
 
+/* ---------- BJA Education pointers for notes (content/bjaed.json) ---------- */
+const bjaedSrc = JSON.parse(readFileSync(C('bjaed.json'), 'utf8'));
+for (const [id, dois] of Object.entries(bjaedSrc.notes)) {
+  const n = notes.find(x => x.id === id);
+  if (!n) { err('bjaed.json', `unknown note ${id}`); continue; }
+  n.bjaed = dois.map(d => {
+    const a = bjaedSrc.articles[d];
+    if (!a) { err('bjaed.json', `no metadata for ${d}`); return null; }
+    return { doi: d, t: a.t, a: a.a, y: a.y, v: a.v, p: a.p };
+  }).filter(Boolean);
+}
+const bjaedCount = Object.keys(bjaedSrc.articles).length;
+
+/* ---------- GPAS chapters linked from unit guides and SIAs (content/gpas.json) ---------- */
+const gpas = JSON.parse(readFileSync(C('gpas.json'), 'utf8'));
+delete gpas._note;
+const gpasList = (f, ids) => ids.map(n => { if (!gpas.chapters[n]) err('gpas.json', `${f}: unknown chapter ${n}`); return gpas.chapters[n] && { n, ...gpas.chapters[n] }; }).filter(Boolean);
+for (const [id, ids] of Object.entries(gpas.units)) {
+  const u = units.find(x => x.id === id);
+  if (!u) err('gpas.json', `unknown unit ${id}`); else u.gpas = gpasList(id, ids);
+}
+for (const [id, ids] of Object.entries(gpas.sias)) {
+  const d = capabilities.sias && capabilities.sias.domains.find(x => x.id === id);
+  if (!d) err('gpas.json', `unknown SIA ${id}`); else d.gpas = gpasList(id, ids);
+}
+
 /* ---------- readable syllabus map (content/syllabus/map.json, content/texts.json) ---------- */
 const texts = JSON.parse(readFileSync(C('texts.json'), 'utf8'));
 delete texts._note;
@@ -365,6 +391,7 @@ const summary = [
   `capabilities ${Object.values(capabilities).map(c => `${c.key} ${c.domains.reduce((a, d) => a + d.groups.reduce((b, g) => b + g.caps.length, 0), 0)}`).join(', ')}`,
   `units ${units.length}`,
   `refs ${Object.keys(refs).length}`,
+  `BJA Education ${bjaedCount} articles on ${Object.keys(bjaedSrc.notes).length} notes`,
   `coverage primary ${coveredCodes('primary')}/${CODES.primary.size}, stage 2 ${coveredCodes('final')}/${CODES.final.size}`,
 ].join(' · ');
 
@@ -404,6 +431,7 @@ writeFileSync(join(OUT, 'index.js'), js('window.CONTENT', {
   units,
   syllabusMap,
   texts,
+  gpas: { index: gpas.index, chapters: gpas.chapters },
   questions: { primary: qMeta('primary'), final: qMeta('final') },
   refs,
   coverage,

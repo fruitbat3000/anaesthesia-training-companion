@@ -3,6 +3,12 @@ title: Guidelines library
 lede: Key UK guidelines by topic, with links to the current versions. Always check you are using the latest version and your hospital's local policy.
 updated: 28 September 2026
 ---
+## Service standards: GPAS
+
+The RCoA's *Guidelines for the Provision of Anaesthesia Services* (GPAS) set the standards for how anaesthesia services should be staffed, equipped and run, chapter by chapter. Each chapter's "Training and education" section describes what departments should provide for trainees (for example, a formal assessment before joining the obstetric on-call rota), and GPAS is useful background for FCPE professional and management stations. The [GPAS index](https://www.rcoa.ac.uk/safety-standards-quality/guidance-resources/guidelines-provision-anaesthetic-services) has the current versions.
+
+{{gpas}}
+
 ## Emergencies and crisis resources
 
 | Guideline | Source |

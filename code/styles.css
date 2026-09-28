@@ -948,3 +948,8 @@ a.nav-progress-row:hover .nav-progress-top span:first-child { color: var(--text)
 .rag-btn.rag-r { border-color: color-mix(in srgb, var(--rag-r) 45%, var(--line-strong)); }
 .rag-btn.rag-a { border-color: color-mix(in srgb, var(--rag-a) 50%, var(--line-strong)); }
 .rag-btn.rag-g { border-color: color-mix(in srgb, var(--rag-g) 45%, var(--line-strong)); }
+.bjaed-list { padding-left: 1.2rem; font-size: .93rem; }
+.bjaed-list li { margin: .45rem 0; }
+.note-bjaed { padding: 1rem 1.2rem; border-radius: var(--r-lg); background: color-mix(in srgb, var(--brand-soft) 55%, var(--surface)); border: 1px solid var(--brand-line); }
+.note-bjaed h2 { margin-top: 0; }
+.note-bjaed .small { margin: 0 0 .4rem; }

@@ -1,6 +1,6 @@
 ## Link check 2026-09-28
 
-197 links OK, 0 problem(s), 139 to check by hand.
+394 links OK, 0 problem(s), 157 to check by hand.
 
 ### Problems
 
@@ -71,6 +71,7 @@ None.
 - page exams-banks: https://www.rcoa.ac.uk/sites/default/files/documents/2025-11/Final%20AKT%20Sample%20SBAs.pdf
 - page exams-trainers: https://www.rcoa.ac.uk/examinations/2027-launch-new-frca-exams/resources-trainers
 - page exams-transition: https://www.rcoa.ac.uk/examinations/2027-launch-new-frca-exams/new-exam-format-faqs
+- page guidelines: https://www.rcoa.ac.uk/safety-standards-quality/guidance-resources/guidelines-provision-anaesthetic-services
 - page portfolio: https://www.rcoa.ac.uk/training-careers/training-hub/2021-anaesthetics-curriculum/2021-curriculum-v15-guidance-resources
 - page portfolio: https://www.rcoa.ac.uk/training-careers/training-hub
 - page resources-more: https://www.apagbi.org.uk/trainee-hub/overview
@@ -79,6 +80,23 @@ None.
 - textbook fundamentals: https://www.cambridge.org/9781107612389
 - textbook peck: https://www.cambridge.org/gb/universitypress/subjects/medicine/anesthesia-intensive-care-pain-management/pharmacology-anaesthesia-and-intensive-care-5th-edition
 - textbook cross: https://www.cambridge.org/core/books/physics-pharmacology-and-physiology-for-anaesthetists/938476F6B895BD7A7F1DAE1188E56C43
+- GPAS chapter 1: https://www.rcoa.ac.uk/node/13911
+- GPAS chapter 2: https://www.rcoa.ac.uk/gpas/chapter-2
+- GPAS chapter 5: https://www.rcoa.ac.uk/safety-standards-quality/guidance-resources/guidelines-provision-anaesthetic-services/chapter-5
+- GPAS chapter 6: https://www.rcoa.ac.uk/node/18556
+- GPAS chapter 7: https://www.rcoa.ac.uk/node/18511
+- GPAS chapter 8: https://www.rcoa.ac.uk/node/22406
+- GPAS chapter 9: https://www.rcoa.ac.uk/gpas/chapter-9
+- GPAS chapter 10: https://www.rcoa.ac.uk/gpas/chapter-10
+- GPAS chapter 11: https://www.rcoa.ac.uk/node/21456
+- GPAS chapter 12: https://www.rcoa.ac.uk/node/21501
+- GPAS chapter 13: https://www.rcoa.ac.uk/gpas/chapter-13
+- GPAS chapter 14: https://www.rcoa.ac.uk/node/18481
+- GPAS chapter 15: https://www.rcoa.ac.uk/node/21496
+- GPAS chapter 16: https://www.rcoa.ac.uk/node/18471
+- GPAS chapter 17: https://www.rcoa.ac.uk/gpas/chapter-17
+- GPAS chapter 18: https://www.rcoa.ac.uk/gpas/chapter-18-2025
+- GPAS chapter 19: https://www.rcoa.ac.uk/gpas/chapter-19
 - capabilities sias/pain-medicine: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/pain-medicine
 - capabilities sias/acute-inpatient-pain: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/acute-inpatient-pain
 - capabilities sias/additional-intensive-care: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/additional-intensive

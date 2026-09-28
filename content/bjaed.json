@@ -1,0 +1,2319 @@
+{
+ "_note": "BJA Education articles signposted from each revision note. Chosen by hand from Crossref searches of BJA Education (ISSN 2058-5349, 2016 onwards); metadata from the Crossref record for each DOI, fetched 2026-09-28 (SOURCES.md S31). Free to RCoA members via My RCoA; open to all 12 months after publication.",
+ "notes": {
+  "abg-interpretation": [
+   "10.1016/j.bjae.2023.03.002",
+   "10.1016/j.bjae.2022.06.003"
+  ],
+  "acid-base": [
+   "10.1016/j.bjae.2022.06.003",
+   "10.1016/j.bjae.2023.03.002"
+  ],
+  "acute-pain-management": [
+   "10.1093/bjaed/mkw008",
+   "10.1093/bjaed/mkw049",
+   "10.1016/j.bjae.2023.05.007"
+  ],
+  "ageing-obesity": [
+   "10.1016/j.bjae.2021.03.005",
+   "10.1016/j.bjae.2018.09.001"
+  ],
+  "airway-assessment": [
+   "10.1016/j.bjae.2021.04.004",
+   "10.1016/j.bjae.2024.09.002"
+  ],
+  "anaesthesia-mechanisms": [
+   "10.1016/j.bjae.2020.12.001"
+  ],
+  "anaphylaxis-management": [
+   "10.1016/j.bjae.2019.06.002"
+  ],
+  "immunity-anaphylaxis": [
+   "10.1016/j.bjae.2019.06.002"
+  ],
+  "anat-spine-neuraxis": [
+   "10.1016/j.bjae.2021.12.006"
+  ],
+  "anat-plexuses": [
+   "10.1016/j.bjae.2021.07.007",
+   "10.1016/j.bjae.2024.02.005"
+  ],
+  "antiarrhythmics": [
+   "10.1016/j.bjae.2022.11.001",
+   "10.1016/j.bjae.2022.11.005"
+  ],
+  "anticoagulants": [
+   "10.1016/j.bjae.2018.05.007"
+  ],
+  "cvs-cardiac-ap": [
+   "10.1016/j.bjae.2022.11.001",
+   "10.1016/j.bjae.2023.05.004"
+  ],
+  "cvs-cardiac-cycle": [
+   "10.1016/j.bjae.2023.05.004"
+  ],
+  "benzodiazepines-sedation": [
+   "10.1016/j.bjae.2022.02.006"
+  ],
+  "blood-rbc-hb": [
+   "10.1093/bjaed/mkw061",
+   "10.1016/j.bjae.2023.06.001"
+  ],
+  "blood-transfusion": [
+   "10.1016/j.bjae.2025.10.003"
+  ],
+  "breathing-systems": [
+   "10.1093/bjaed/mkx013"
+  ],
+  "capnography": [
+   "10.1093/bjaed/mkw062"
+  ],
+  "cardiac-drugs": [
+   "10.1016/j.bjae.2024.02.003"
+  ],
+  "cardiac-output-measurement": [
+   "10.1093/bjaed/mkv039"
+  ],
+  "consent-capacity-safeguarding": [
+   "10.1016/j.bjae.2026.03.002"
+  ],
+  "critical-incidents": [
+   "10.1016/j.bjae.2021.03.004"
+  ],
+  "cvs-microcirculation": [
+   "10.1093/bjaed/mkw035"
+  ],
+  "cvs-special-circulations": [
+   "10.1016/j.bjae.2024.03.003",
+   "10.1016/j.bjae.2021.05.004",
+   "10.1016/j.bjae.2022.02.005"
+  ],
+  "neuro-icp-cbf": [
+   "10.1016/j.bjae.2022.02.005",
+   "10.1016/j.bjae.2021.05.004"
+  ],
+  "diabetes-drugs": [
+   "10.1016/j.bjae.2024.04.007"
+  ],
+  "diabetes-perioperative": [
+   "10.1016/j.bjae.2024.04.007",
+   "10.1093/bjaed/mkw056"
+  ],
+  "diathermy-lasers-fires": [
+   "10.1016/j.bjae.2022.11.006",
+   "10.1016/j.bjae.2019.03.007"
+  ],
+  "electricity-safety": [
+   "10.1016/j.bjae.2022.11.006"
+  ],
+  "defibrillation-pacing": [
+   "10.1016/j.bjae.2022.11.006",
+   "10.1093/bjaed/mkw020"
+  ],
+  "difficult-airway-cico": [
+   "10.1016/j.bjae.2019.04.002",
+   "10.1093/bjaed/mkw077"
+  ],
+  "rsi-aspiration": [
+   "10.1016/j.bjae.2022.09.001",
+   "10.1016/j.bjae.2019.09.001"
+  ],
+  "nmb-suxamethonium": [
+   "10.1016/j.bjae.2019.09.001"
+  ],
+  "diuretics": [
+   "10.1016/j.bjae.2022.02.003"
+  ],
+  "pd-receptors": [
+   "10.1016/j.bjae.2021.07.009"
+  ],
+  "drug-interactions": [
+   "10.1016/j.bjae.2021.07.009"
+  ],
+  "elderly-hip-day-remote": [
+   "10.1016/j.bjae.2020.02.003",
+   "10.1016/j.bjae.2021.03.005"
+  ],
+  "endocrine-glands": [
+   "10.1093/bjaed/mkw042"
+  ],
+  "endocrine-stress-glucose": [
+   "10.1016/j.bjae.2020.04.006",
+   "10.1093/bjaed/mkx015"
+  ],
+  "ent-shared-airway": [
+   "10.1016/j.bjae.2017.11.006"
+  ],
+  "extubation-recovery": [
+   "10.1016/j.bjae.2021.07.003",
+   "10.1016/j.bjae.2020.01.007"
+  ],
+  "flow-volume-pft": [
+   "10.1016/j.bjae.2019.02.002",
+   "10.1016/j.bjae.2019.02.001"
+  ],
+  "fluids-osmolality": [
+   "10.1016/j.bjae.2023.03.006"
+  ],
+  "oxygen-delivery-devices": [
+   "10.1093/bjaed/mkw041"
+  ],
+  "inhalational-agents": [
+   "10.1093/bjaceaccp/mkv019"
+  ],
+  "liver-gi": [
+   "10.1016/j.bjae.2025.02.003"
+  ],
+  "antiemetics": [
+   "10.1016/j.bjae.2026.02.001",
+   "10.1016/j.bjae.2025.02.003"
+  ],
+  "local-anaesthetics": [
+   "10.1016/j.bjae.2019.10.002"
+  ],
+  "paracetamol-nsaids": [
+   "10.1016/j.bjae.2023.08.001"
+  ],
+  "mh-dantrolene": [
+   "10.1093/bjaed/mkw079",
+   "10.1016/j.bjae.2021.01.003"
+  ],
+  "monitoring-standards": [
+   "10.1016/j.bjae.2022.07.003"
+  ],
+  "procoagulants-blood-products": [
+   "10.1016/j.bjae.2022.07.003",
+   "10.1016/j.bjae.2024.06.005"
+  ],
+  "neuraxial-basics": [
+   "10.1016/j.bjae.2021.12.006"
+  ],
+  "neuro-ans": [
+   "10.1093/bjaed/mkw011"
+  ],
+  "neuro-nmj-muscle": [
+   "10.1016/j.bjae.2023.12.003"
+  ],
+  "neuro-pain-physiology": [
+   "10.1016/j.bjae.2025.04.008"
+  ],
+  "nm-monitoring": [
+   "10.1016/j.bjae.2023.10.005"
+  ],
+  "nmb-nondepolarising": [
+   "10.1016/j.bjae.2023.10.005"
+  ],
+  "nmb-reversal": [
+   "10.1016/j.bjae.2020.03.008",
+   "10.1016/j.bjae.2023.10.005"
+  ],
+  "nutrition-metabolism": [
+   "10.1016/j.bjae.2018.11.007"
+  ],
+  "obstetric-basics": [
+   "10.1016/j.bjae.2024.01.003",
+   "10.1016/j.bjae.2024.09.006",
+   "10.1016/j.bjae.2019.09.006"
+  ],
+  "opioids": [
+   "10.1016/j.bjae.2023.12.007",
+   "10.1016/j.bjae.2023.05.007",
+   "10.1093/bjaed/mkw049"
+  ],
+  "paeds-basics": [
+   "10.1016/j.bjae.2018.01.003",
+   "10.1016/j.bjae.2022.10.002"
+  ],
+  "peripheral-blocks": [
+   "10.1016/j.bjae.2022.12.002",
+   "10.1016/j.bjae.2025.06.007"
+  ],
+  "pk-basics": [
+   "10.1093/bjaceaccp/mkv021",
+   "10.1016/j.bjae.2018.09.001"
+  ],
+  "pk-csht-tci": [
+   "10.1093/bjaceaccp/mkv021",
+   "10.1093/bjaed/mkw052"
+  ],
+  "pregnancy-physiology": [
+   "10.1016/j.bjae.2026.07.002"
+  ],
+  "preop-assessment": [
+   "10.1016/j.bjae.2022.02.007",
+   "10.1016/j.bjae.2022.03.003"
+  ],
+  "renal-tubule": [
+   "10.1016/j.bjae.2022.08.001"
+  ],
+  "resp-altitude": [
+   "10.1016/j.bjae.2021.05.003"
+  ],
+  "resp-ippv": [
+   "10.1016/j.bjae.2021.01.002"
+  ],
+  "resp-o2-transport": [
+   "10.1093/bjaed/mkw012",
+   "10.1016/j.bjae.2018.11.005"
+  ],
+  "resp-pulmonary-circulation": [
+   "10.1093/bjaed/mkw076"
+  ],
+  "resp-vq": [
+   "10.1016/j.bjae.2018.11.005"
+  ],
+  "resuscitation-als": [
+   "10.1016/j.bjae.2022.02.004"
+  ],
+  "safety-human-factors": [
+   "10.1016/j.bjae.2023.06.002",
+   "10.1016/j.bjae.2023.11.003"
+  ],
+  "sepsis-critical-illness": [
+   "10.1016/j.bjae.2026.04.003"
+  ],
+  "stats-data-descriptive": [
+   "10.1016/j.bjae.2024.09.001",
+   "10.1016/j.bjae.2024.11.006"
+  ],
+  "stats-hypothesis-tests": [
+   "10.1016/j.bjae.2025.10.001",
+   "10.1016/j.bjae.2019.03.006",
+   "10.1016/j.bjae.2026.02.002"
+  ],
+  "stats-study-design": [
+   "10.1016/j.bjae.2026.07.001",
+   "10.1016/j.bjae.2025.10.002",
+   "10.1016/j.bjae.2018.01.004"
+  ],
+  "thermoregulation": [
+   "10.1016/j.bjae.2018.05.003"
+  ],
+  "temperature-measurement": [
+   "10.1016/j.bjae.2022.06.002"
+  ],
+  "vapours-humidity": [
+   "10.1016/j.bjae.2022.06.002"
+  ],
+  "trauma-transfer": [
+   "10.1016/j.bjae.2017.11.008"
+  ],
+  "ultrasound-doppler": [
+   "10.1016/j.bjae.2020.01.003"
+  ],
+  "ventilators": [
+   "10.1016/j.bjae.2019.12.001",
+   "10.1016/j.bjae.2024.11.004"
+  ],
+  "acute-pain-complex": [
+   "10.1016/j.bjae.2021.11.008"
+  ],
+  "aki-rrt-icu": [
+   "10.1093/bjaed/mkw070",
+   "10.1016/j.bjae.2020.11.006"
+  ],
+  "anticoag-anaemia-pom": [
+   "10.1093/bjaed/mkw061",
+   "10.1016/j.bjae.2018.05.007",
+   "10.1016/j.bjae.2025.10.003"
+  ],
+  "aortic-surgery": [
+   "10.1016/j.bjae.2022.02.001"
+  ],
+  "ards-ventilation": [
+   "10.1093/bjaed/mkx002",
+   "10.1016/j.bjae.2024.01.001"
+  ],
+  "burns-environmental": [
+   "10.1016/j.bjae.2021.10.001",
+   "10.1016/j.bjae.2022.01.001"
+  ],
+  "cardiac-monitoring-devices": [
+   "10.1093/bjaed/mkv039",
+   "10.1016/j.bjae.2018.08.001"
+  ],
+  "cardiac-risk-assessment": [
+   "10.1016/j.bjae.2024.02.003",
+   "10.1016/j.bjae.2025.07.003"
+  ],
+  "cardiac-surgery-cpb": [
+   "10.1016/j.bjae.2022.12.003",
+   "10.1016/j.bjae.2023.05.003"
+  ],
+  "chest-wall-blocks": [
+   "10.1016/j.bjae.2018.07.002",
+   "10.1016/j.bjae.2020.01.006",
+   "10.1016/j.bjae.2026.06.004"
+  ],
+  "chronic-pain": [
+   "10.1016/j.bjae.2025.06.005",
+   "10.1016/j.bjae.2023.05.005"
+  ],
+  "complex-airway-ati": [
+   "10.1016/j.bjae.2022.03.006",
+   "10.1093/bjaed/mkv045"
+  ],
+  "cpet-risk": [
+   "10.1016/j.bjae.2021.03.006",
+   "10.1016/j.bjae.2022.03.003"
+  ],
+  "ecmo-advanced": [
+   "10.1016/j.bjae.2024.01.001",
+   "10.1016/j.bjae.2026.03.003"
+  ],
+  "elderly-cognition": [
+   "10.1016/j.bjae.2020.10.004",
+   "10.1016/j.bjae.2026.08.001"
+  ],
+  "emergency-laparotomy": [
+   "10.1016/j.bjae.2021.03.006",
+   "10.1093/bjaed/mkx003"
+  ],
+  "end-of-life-donation": [
+   "10.1093/bjaed/mkx031",
+   "10.1016/j.bjae.2021.01.001",
+   "10.1016/j.bjae.2021.03.003"
+  ],
+  "endocrine-disease-pom": [
+   "10.1093/bjaed/mkx023",
+   "10.1016/j.bjae.2024.04.004",
+   "10.1016/j.bjae.2024.07.006"
+  ],
+  "ent-laser-jet": [
+   "10.1093/bjaed/mkx028",
+   "10.1016/j.bjae.2024.11.004",
+   "10.1016/j.bjae.2021.11.007"
+  ],
+  "haematology-pom": [
+   "10.1016/j.bjae.2018.08.003",
+   "10.1016/j.bjae.2021.11.005"
+  ],
+  "icm-neuro-haem-endocrine": [
+   "10.1093/bjaed/mkx023",
+   "10.1093/bjaed/mkx024"
+  ],
+  "lung-resection-assessment": [
+   "10.1016/j.bjae.2022.03.003",
+   "10.1016/j.bjae.2019.02.001"
+  ],
+  "major-abdominal-surgery": [
+   "10.1016/j.bjae.2021.12.007",
+   "10.1016/j.bjae.2024.10.001",
+   "10.1016/j.bjae.2020.06.002"
+  ],
+  "neonatal-anaesthesia": [
+   "10.1016/j.bjae.2018.04.004",
+   "10.1016/j.bjae.2018.03.006",
+   "10.1016/j.bjae.2021.07.008"
+  ],
+  "neuroanaesthesia-principles": [
+   "10.1016/j.bjae.2022.02.005",
+   "10.1016/j.bjae.2024.02.002"
+  ],
+  "neuroendocrine-tumours": [
+   "10.1093/bjaed/mkv033"
+  ],
+  "neuropathic-cancer-pain": [
+   "10.1016/j.bjae.2026.01.001",
+   "10.1016/j.bjae.2026.02.003"
+  ],
+  "neurosurgical-procedures": [
+   "10.1016/j.bjae.2025.04.005",
+   "10.1016/j.bjae.2024.07.006"
+  ],
+  "obstetric-analgesia-complications": [
+   "10.1016/j.bjae.2019.11.006",
+   "10.1016/j.bjae.2019.07.002",
+   "10.1016/j.bjae.2019.09.006"
+  ],
+  "obstetric-emergencies": [
+   "10.1016/j.bjae.2020.03.007",
+   "10.1016/j.bjae.2018.05.002",
+   "10.1016/j.bjae.2024.06.004"
+  ],
+  "obstetric-ga-haemorrhage": [
+   "10.1016/j.bjae.2022.01.002",
+   "10.1016/j.bjae.2024.06.005",
+   "10.1016/j.bjae.2025.10.005"
+  ],
+  "obstructed-airway-infections": [
+   "10.1016/j.bjae.2017.11.006",
+   "10.1016/j.bjae.2018.10.001",
+   "10.1093/bjaed/mkx006"
+  ],
+  "ophthalmic-anaesthesia": [
+   "10.1093/bjaed/mkw078",
+   "10.1016/j.bjae.2020.09.002"
+  ],
+  "paeds-common-surgery": [
+   "10.1016/j.bjae.2023.03.006",
+   "10.1016/j.bjae.2023.01.009"
+  ],
+  "paeds-complex": [
+   "10.1016/j.bjae.2024.08.004",
+   "10.1016/j.bjae.2023.07.004"
+  ],
+  "paeds-consent-safeguarding": [
+   "10.1016/j.bjae.2020.06.003"
+  ],
+  "periarrest-resuscitation": [
+   "10.1016/j.bjae.2018.01.002",
+   "10.1016/j.bjae.2022.02.004"
+  ],
+  "pre-eclampsia-hellp": [
+   "10.1016/j.bjae.2020.07.007",
+   "10.1016/j.bjae.2020.02.002"
+  ],
+  "professional-leadership": [
+   "10.1093/bjaed/mkv041",
+   "10.1093/bjaed/mkv042"
+  ],
+  "qi-safety-stage2": [
+   "10.1016/j.bjae.2017.12.002",
+   "10.1016/j.bjae.2026.06.002",
+   "10.1016/j.bjae.2021.03.004"
+  ],
+  "ra-safety": [
+   "10.1016/j.bjae.2020.04.007",
+   "10.1016/j.bjae.2020.11.004"
+  ],
+  "regional-lower-limb": [
+   "10.1016/j.bjae.2024.02.005"
+  ],
+  "regional-upper-limb": [
+   "10.1016/j.bjae.2021.07.007"
+  ],
+  "remote-ect-mri": [
+   "10.1093/bjaed/mkw055",
+   "10.1016/j.bjae.2022.04.002"
+  ],
+  "renal-liver-pom": [
+   "10.1016/j.bjae.2021.11.006",
+   "10.1016/j.bjae.2022.03.005"
+  ],
+  "research-appraisal": [
+   "10.1016/j.bjae.2025.10.002",
+   "10.1016/j.bjae.2026.07.001"
+  ],
+  "sedation-advanced": [
+   "10.1016/j.bjae.2022.02.006",
+   "10.1016/j.bjae.2022.04.002"
+  ],
+  "sepsis-organ-support": [
+   "10.1016/j.bjae.2025.01.003",
+   "10.1016/j.bjae.2026.07.006",
+   "10.1016/j.bjae.2026.04.003"
+  ],
+  "spinal-injury": [
+   "10.1093/bjaed/mkv073",
+   "10.1016/j.bjae.2026.04.002"
+  ],
+  "sustainability-medication": [
+   "10.1016/j.bjae.2019.01.001",
+   "10.1016/j.bjae.2022.08.005"
+  ],
+  "tbi-neurocritical": [
+   "10.1016/j.bjae.2026.06.008",
+   "10.1016/j.bjae.2025.11.002"
+  ],
+  "thoracic-olv": [
+   "10.1016/j.bjae.2017.11.007",
+   "10.1016/j.bjae.2023.05.006",
+   "10.1016/j.bjae.2023.07.001"
+  ],
+  "tiva-positioning": [
+   "10.1093/bjaed/mkw052",
+   "10.1016/j.bjae.2020.12.001"
+  ],
+  "tracheostomy-laryngectomy": [
+   "10.1016/j.bjae.2021.02.005"
+  ],
+  "transfer-advanced": [
+   "10.1016/j.bjae.2017.11.008",
+   "10.1093/bjaed/mkv050"
+  ],
+  "trauma-haemorrhage": [
+   "10.1016/j.bjae.2024.10.003",
+   "10.1016/j.bjae.2024.08.005",
+   "10.1016/j.bjae.2021.05.005"
+  ],
+  "specialty-ortho-plastics-urology": [
+   "10.1016/j.bjae.2024.03.002"
+  ]
+ },
+ "articles": {
+  "10.1016/j.bjae.2017.11.006": {
+   "t": "Management of airway obstruction",
+   "a": "Lynch et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "2",
+   "p": "46-51",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2017.11.007": {
+   "t": "A practical approach to adult one-lung ventilation",
+   "a": "Ashok et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "3",
+   "p": "69-74",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2017.11.008": {
+   "t": "Transfer of the critically ill adult patient",
+   "a": "Bourn et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "3",
+   "p": "63-68",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2017.12.002": {
+   "t": "Quality improvement; part 1: introduction and overview",
+   "a": "Adams",
+   "y": 2018,
+   "v": "18",
+   "i": "3",
+   "p": "89-94",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.01.002": {
+   "t": "Prognostication of patients after cardiopulmonary resuscitation",
+   "a": "Jackson et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "4",
+   "p": "109-115",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.01.003": {
+   "t": "Current recommendations for paediatric resuscitation",
+   "a": "Ali et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "4",
+   "p": "116-121",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.01.004": {
+   "t": "How to start a quality improvement project",
+   "a": "Weekes et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "4",
+   "p": "122-127",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.03.006": {
+   "t": "Management of fluids in neonatal surgery",
+   "a": "Arumainathan et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "7",
+   "p": "199-203",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.04.004": {
+   "t": "Anaesthesia for inguinal hernia repair in the newborn or ex-premature infant",
+   "a": "Ahmad et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "7",
+   "p": "211-217",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.05.002": {
+   "t": "Amniotic fluid embolism",
+   "a": "Metodiev et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "8",
+   "p": "234-238",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.05.003": {
+   "t": "Inadvertent perioperative hypothermia",
+   "a": "Riley et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "8",
+   "p": "227-233",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.05.007": {
+   "t": "Perioperative management of oral anticoagulation",
+   "a": "McIlmoyle et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "9",
+   "p": "259-264",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.07.002": {
+   "t": "Abdominal wall blocks for intra-abdominal surgery",
+   "a": "Onwochei et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "10",
+   "p": "317-322",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.08.001": {
+   "t": "Advances in management of electrophysiology and atrial fibrillation in the cardiac catheter laboratory: implications for anaesthesia",
+   "a": "Dooley et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "11",
+   "p": "349-356",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.08.003": {
+   "t": "Anaesthetic management of children with sickle cell disease",
+   "a": "Akrimi et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "11",
+   "p": "331-336",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.09.001": {
+   "t": "Pharmacokinetics of anaesthetic drugs at extremes of body weight",
+   "a": "Hebbes et al.",
+   "y": 2018,
+   "v": "18",
+   "i": "12",
+   "p": "364-370",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.10.001": {
+   "t": "Anterior mediastinal masses in children",
+   "a": "McLeod et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "1",
+   "p": "21-26",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.11.005": {
+   "t": "Why do patients need extra oxygen during a general anaesthetic?",
+   "a": "Lumb",
+   "y": 2019,
+   "v": "19",
+   "i": "2",
+   "p": "37-39",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2018.11.007": {
+   "t": "Nutrition in critical care",
+   "a": "Chowdhury et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "3",
+   "p": "90-95",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.01.001": {
+   "t": "Medicines safety in anaesthetic practice",
+   "a": "Mackay et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "5",
+   "p": "151-157",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.02.001": {
+   "t": "Pulmonary function tests in anaesthetic practice",
+   "a": "Ntima et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "7",
+   "p": "206-211",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.02.002": {
+   "t": "Physiology and conduct of pulmonary function tests",
+   "a": "Ntima et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "6",
+   "p": "198-204",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.03.006": {
+   "t": "Hypothesis tests",
+   "a": "Walker",
+   "y": 2019,
+   "v": "19",
+   "i": "7",
+   "p": "227-231",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.03.007": {
+   "t": "Prevention of and response to surgical fires",
+   "a": "Cowles et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "8",
+   "p": "261-266",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.04.002": {
+   "t": "Emergency front of neck access in airway management",
+   "a": "Price et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "8",
+   "p": "246-253",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.06.002": {
+   "t": "Perioperative anaphylaxis: pathophysiology, clinical presentation and management",
+   "a": "Dewachter et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "10",
+   "p": "313-320",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.07.002": {
+   "t": "Non-regional analgesia for labour: remifentanil in obstetrics",
+   "a": "Ronel et al.",
+   "y": 2019,
+   "v": "19",
+   "i": "11",
+   "p": "357-361",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.09.001": {
+   "t": "Suxamethonium or rocuronium for rapid sequence induction of anaesthesia?",
+   "a": "Fawcett",
+   "y": 2019,
+   "v": "19",
+   "i": "12",
+   "p": "380-382",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.09.006": {
+   "t": "Conversion of labour epidural analgesia to surgical anaesthesia for emergency intrapartum Caesarean section",
+   "a": "Desai et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "1",
+   "p": "26-31",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.10.002": {
+   "t": "Basic pharmacology of local anaesthetics",
+   "a": "Taylor et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "2",
+   "p": "34-41",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.11.006": {
+   "t": "Neuraxial analgesia for labour",
+   "a": "Shatil et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "3",
+   "p": "96-102",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2019.12.001": {
+   "t": "Airway pressure release ventilation",
+   "a": "Swindin et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "3",
+   "p": "80-88",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.01.003": {
+   "t": "Essential notes on the physics of Doppler ultrasound",
+   "a": "Magee",
+   "y": 2020,
+   "v": "20",
+   "i": "4",
+   "p": "112-113",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.01.006": {
+   "t": "Paravertebral blocks and novel alternatives",
+   "a": "Nair et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "5",
+   "p": "158-165",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.01.007": {
+   "t": "Delayed recovery of consciousness after general anaesthesia",
+   "a": "Thomas et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "5",
+   "p": "173-179",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.02.002": {
+   "t": "Haemostatic disorders in pregnancy",
+   "a": "Agarwala et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "5",
+   "p": "150-157",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.02.003": {
+   "t": "Anaesthesia for hip fracture repair",
+   "a": "Shelton et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "5",
+   "p": "142-149",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.03.007": {
+   "t": "Cardiopulmonary resuscitation in the pregnant patient",
+   "a": "Madden et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "8",
+   "p": "252-258",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.03.008": {
+   "t": "Reversal of neuromuscular block",
+   "a": "Hunter",
+   "y": 2020,
+   "v": "20",
+   "i": "8",
+   "p": "259-265",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.04.006": {
+   "t": "Anaesthesia, analgesia, and the surgical stress response",
+   "a": "Cusack et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "9",
+   "p": "321-328",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.04.007": {
+   "t": "Best practices for safety and quality in peripheral regional anaesthesia",
+   "a": "Topor et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "10",
+   "p": "341-347",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.06.002": {
+   "t": "Identifying a correctly positioned thoracic epidural catheter for major open surgery",
+   "a": "Robson et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "10",
+   "p": "330-331",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.06.003": {
+   "t": "Consent and capacity: issues for paediatric anaesthesia",
+   "a": "McCombe et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "11",
+   "p": "377-381",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.07.007": {
+   "t": "Update on hypertensive disorders in pregnancy",
+   "a": "Goddard et al.",
+   "y": 2020,
+   "v": "20",
+   "i": "12",
+   "p": "411-416",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.09.002": {
+   "t": "Update on anaesthesia for paediatric ophthalmic surgery",
+   "a": "Lewis et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "1",
+   "p": "32-38",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.10.004": {
+   "t": "Postoperative cognitive dysfunction in clinical practice",
+   "a": "Brodier et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "2",
+   "p": "75-82",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.11.004": {
+   "t": "Regional anaesthesia in patients at risk of bleeding",
+   "a": "Ashken et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "3",
+   "p": "84-94",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.11.006": {
+   "t": "Management of acute liver failure in intensive care",
+   "a": "Aziz et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "3",
+   "p": "110-116",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2020.12.001": {
+   "t": "Accidental awareness under general anaesthesia: Incidence, risk factors, and psychological management",
+   "a": "Kim et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "4",
+   "p": "154-161",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.01.001": {
+   "t": "Perioperative management of the organ donor after diagnosis of death using neurological criteria",
+   "a": "Corbett et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "5",
+   "p": "194-200",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.01.002": {
+   "t": "The cardiovascular effects of positive pressure ventilation",
+   "a": "Corp et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "6",
+   "p": "202-209",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.01.003": {
+   "t": "Anaesthetic management of a known or suspected malignant hyperthermia susceptible patient",
+   "a": "Gupta et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "6",
+   "p": "218-224",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.02.005": {
+   "t": "Laryngeal complications after tracheal intubation and tracheostomy",
+   "a": "Wallace et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "7",
+   "p": "250-257",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.03.003": {
+   "t": "Two fundamental ethical and legal rules for deceased organ donation",
+   "a": "Gardiner et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "8",
+   "p": "292-299",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.03.004": {
+   "t": "Systems-based models for investigating patient safety incidents",
+   "a": "Sampson et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "8",
+   "p": "307-313",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.03.005": {
+   "t": "Preoperative assessment of the older patient",
+   "a": "Pang et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "8",
+   "p": "314-320",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.03.006": {
+   "t": "Shared decision making for high-risk surgery",
+   "a": "Barnett et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "8",
+   "p": "300-306",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.04.004": {
+   "t": "Advanced airway assessment techniques",
+   "a": "O'Carroll et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "9",
+   "p": "336-342",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.05.003": {
+   "t": "The pathophysiologies of diving diseases",
+   "a": "Edge et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "9",
+   "p": "343-348",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.05.004": {
+   "t": "Cerebral circulation 1: anatomy",
+   "a": "Tan et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "10",
+   "p": "390-395",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.05.005": {
+   "t": "Fluids in traumatic haemorrhage",
+   "a": "Sen et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "10",
+   "p": "366-368",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.07.003": {
+   "t": "Safe tracheal extubation after general anaesthesia",
+   "a": "Benham-Hermetz et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "12",
+   "p": "446-454",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.07.007": {
+   "t": "Clinical anatomy of the nerve supply to the upper limb",
+   "a": "Betteridge et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "12",
+   "p": "462-471",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.07.008": {
+   "t": "Neonatal resuscitation: current evidence and guidelines",
+   "a": "Kariuki et al.",
+   "y": 2021,
+   "v": "21",
+   "i": "12",
+   "p": "479-485",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.07.009": {
+   "t": "Drug–receptor interactions in anaesthesia",
+   "a": "McDonald et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "1",
+   "p": "20-25",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.10.001": {
+   "t": "Major burns: Part 1. Epidemiology, pathophysiology and initial management",
+   "a": "McCann et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "3",
+   "p": "94-103",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.11.005": {
+   "t": "Anaesthetic management of patients with sickle cell disease in obstetrics",
+   "a": "Stoddard et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "3",
+   "p": "87-93",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.11.006": {
+   "t": "Perioperative management of patients with liver disease",
+   "a": "Gilbert-Kawai et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "3",
+   "p": "111-117",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.11.007": {
+   "t": "Anaesthesia for transoral robotic surgery",
+   "a": "Hawkins et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "3",
+   "p": "118-123",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.11.008": {
+   "t": "Chronic post-surgical pain – update on incidence, risk factors and preventive treatment options",
+   "a": "Rosenberger et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "5",
+   "p": "190-196",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.12.006": {
+   "t": "Update on applied epidural anatomy",
+   "a": "Macpherson et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "5",
+   "p": "182-189",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2021.12.007": {
+   "t": "Anaesthesia for bariatric surgery",
+   "a": "Reeve et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "6",
+   "p": "231-237",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.01.001": {
+   "t": "Major burns: part 2. Anaesthesia, intensive care and pain management",
+   "a": "McGovern et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "4",
+   "p": "138-145",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.01.002": {
+   "t": "Major obstetric haemorrhage",
+   "a": "Drew et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "6",
+   "p": "238-244",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.02.001": {
+   "t": "Anaesthesia for endovascular repair of ruptured abdominal aortic aneurysms",
+   "a": "Berry et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "6",
+   "p": "208-215",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.02.003": {
+   "t": "Diuretics and the kidney",
+   "a": "Bell et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "6",
+   "p": "216-223",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.02.004": {
+   "t": "Changes to the European Resuscitation Council guidelines for adult resuscitation",
+   "a": "Kane et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "7",
+   "p": "265-272",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.02.005": {
+   "t": "Cerebral circulation II: pathophysiology and monitoring",
+   "a": "Lavinio",
+   "y": 2022,
+   "v": "22",
+   "i": "7",
+   "p": "282-288",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.02.006": {
+   "t": "Developments in procedural sedation for adults",
+   "a": "Sneyd",
+   "y": 2022,
+   "v": "22",
+   "i": "7",
+   "p": "258-264",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.02.007": {
+   "t": "Subjective methods for preoperative assessment of functional capacity",
+   "a": "Silvapulle et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "7",
+   "p": "249-257",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.03.003": {
+   "t": "Objective methods for preoperative assessment of functional capacity",
+   "a": "Silvapulle et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "8",
+   "p": "312-320",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.03.005": {
+   "t": "Chronic kidney disease and anaesthesia",
+   "a": "Chowdhury et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "8",
+   "p": "321-328",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.03.006": {
+   "t": "Awake tracheal intubation",
+   "a": "Vora et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "8",
+   "p": "298-305",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.04.002": {
+   "t": "Anaesthesia and sedation for endoscopic retrograde cholangiopancreatography",
+   "a": "Henriksson et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "10",
+   "p": "372-375",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.06.002": {
+   "t": "Heat and temperature",
+   "a": "Sullivan et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "9",
+   "p": "350-356",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.06.003": {
+   "t": "Acid–base balance: a review of normal physiology",
+   "a": "Shaw et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "10",
+   "p": "396-401",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.07.003": {
+   "t": "Point-of-care viscoelastic testing",
+   "a": "Wells et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "11",
+   "p": "416-423",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.08.001": {
+   "t": "Sodium disorders in neuroanaesthesia and neurocritical care",
+   "a": "Bhat et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "12",
+   "p": "466-473",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.08.005": {
+   "t": "Sustainability in anaesthesia and critical care: beyond carbon",
+   "a": "Fang et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "12",
+   "p": "456-465",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.09.001": {
+   "t": "Rapid sequence induction and intubation",
+   "a": "Collins et al.",
+   "y": 2022,
+   "v": "22",
+   "i": "12",
+   "p": "484-490",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.10.002": {
+   "t": "Inhalational induction in paediatric anaesthesia",
+   "a": "Sellers et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "1",
+   "p": "32-38",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.11.001": {
+   "t": "Antiarrhythmic drugs and anaesthesia: part 1. mechanisms of cardiac arrhythmias",
+   "a": "Kim et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "1",
+   "p": "8-16",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.11.005": {
+   "t": "Antiarrhythmic drugs and anaesthesia. Part 2: pharmacotherapy",
+   "a": "Kim et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "2",
+   "p": "52-60",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.11.006": {
+   "t": "Electrical safety, defibrillation and diathermy",
+   "a": "Tooley",
+   "y": 2023,
+   "v": "23",
+   "i": "3",
+   "p": "84-91",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.12.002": {
+   "t": "The failed peripheral nerve block",
+   "a": "Bottomley et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "3",
+   "p": "92-100",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2022.12.003": {
+   "t": "Anticoagulation for cardiopulmonary bypass: part one",
+   "a": "Cartwright et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "3",
+   "p": "110-116",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.01.009": {
+   "t": "Paediatric preoperative assessment",
+   "a": "Lewis et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "6",
+   "p": "238-244",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.03.002": {
+   "t": "The respiratory system and acid–base disorders",
+   "a": "Pippalapalli et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "6",
+   "p": "221-228",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.03.006": {
+   "t": "Perioperative management of fluids and electrolytes in children",
+   "a": "Eaddy et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "7",
+   "p": "273-278",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.05.003": {
+   "t": "Temporary epicardial pacing after cardiac surgery",
+   "a": "Gillham et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "9",
+   "p": "337-349",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.05.004": {
+   "t": "Cardiac muscle physiology",
+   "a": "Szedlak et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "9",
+   "p": "350-357",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.05.005": {
+   "t": "Suicidality in chronic pain: assessment and management",
+   "a": "Chincholkar et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "8",
+   "p": "320-326",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.05.006": {
+   "t": "Hypoxaemia during one lung ventilation",
+   "a": "Shum et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "9",
+   "p": "328-336",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.05.007": {
+   "t": "Opioid stewardship",
+   "a": "Simpson et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "10",
+   "p": "389-397",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.06.001": {
+   "t": "Perioperative iron deficiency anaemia",
+   "a": "Shah et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "10",
+   "p": "372-381",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.06.002": {
+   "t": "Human factors in anaesthetic practice part I: facts and fallacies",
+   "a": "Macallan et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "10",
+   "p": "398-405",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.07.001": {
+   "t": "Double-lumen tubes and bronchial blockers",
+   "a": "Patel et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "11",
+   "p": "416-424",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.07.004": {
+   "t": "Interpretation of sleep studies and perioperative considerations in children with sleep-disordered breathing",
+   "a": "Lopes Vieira et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "11",
+   "p": "448-454",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.08.001": {
+   "t": "Non-steroidal anti-inflammatory drugs in the perioperative period",
+   "a": "Halvey et al.",
+   "y": 2023,
+   "v": "23",
+   "i": "11",
+   "p": "440-447",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.10.005": {
+   "t": "Neuromuscular block management: evidence-based principles and practice",
+   "a": "Rodney et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "1",
+   "p": "13-22",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.11.003": {
+   "t": "Human factors in anaesthetic practice. Part 2: clinical implications",
+   "a": "Lomax et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "2",
+   "p": "68-74",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.12.003": {
+   "t": "Recent advances in skeletal muscle physiology",
+   "a": "Kaura et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "3",
+   "p": "84-90",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2023.12.007": {
+   "t": "Opioid-induced respiratory depression",
+   "a": "Jansen et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "3",
+   "p": "100-106",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.01.001": {
+   "t": "Veno-venous extracorporeal membrane oxygenation in severe acute respiratory failure",
+   "a": "Offer et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "4",
+   "p": "138-144",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.01.003": {
+   "t": "Neuraxial anaesthesia-induced hypotension during Caesarean section",
+   "a": "Bhat et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "4",
+   "p": "113-120",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.02.002": {
+   "t": "Intraoperative neuromonitoring in intracranial surgery",
+   "a": "Adkins et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "5",
+   "p": "173-182",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.02.003": {
+   "t": "Heart failure with preserved ejection fraction: implications for anaesthesia",
+   "a": "Shah et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "5",
+   "p": "155-163",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.02.005": {
+   "t": "Innervation of the hip joint: implications for regional anaesthesia and image-guided interventional pain procedures",
+   "a": "Pun et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "6",
+   "p": "191-202",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.03.002": {
+   "t": "Perioperative care of patients undergoing total hip arthroplasty",
+   "a": "Haslam et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "6",
+   "p": "183-190",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.03.003": {
+   "t": "The coronary circulation in healthy and diseased states",
+   "a": "Pathania et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "6",
+   "p": "210-216",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.04.004": {
+   "t": "Anaesthesia for thyroid and parathyroid surgery",
+   "a": "Guzzetti et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "8",
+   "p": "270-276",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.04.007": {
+   "t": "Update on the perioperative management of diabetes mellitus",
+   "a": "Polderman et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "8",
+   "p": "261-269",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.06.004": {
+   "t": "Maternal sepsis: background, diagnosis and management",
+   "a": "Manigrasso et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "11",
+   "p": "389-398",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.06.005": {
+   "t": "Haemostatic agents in the management of obstetric haemorrhage",
+   "a": "Conwell et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "11",
+   "p": "426-432",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.07.006": {
+   "t": "Anaesthesia for pituitary surgery",
+   "a": "Raveendran et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "12",
+   "p": "433-439",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.08.004": {
+   "t": "Anaesthesia for children with congenital heart disease undergoing non-cardiac surgery",
+   "a": "Spiro et al.",
+   "y": 2024,
+   "v": "24",
+   "i": "12",
+   "p": "458-467",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.08.005": {
+   "t": "Early intensive care management of major trauma in adults: part 2",
+   "a": "Gordon et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "3",
+   "p": "115-121",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.09.001": {
+   "t": "Core concepts in statistics and research methods. Part I: statistical inference",
+   "a": "Sidebotham et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "1",
+   "p": "29-37",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.09.002": {
+   "t": "Airway ultrasound",
+   "a": "Lohse et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "1",
+   "p": "1-9",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.09.006": {
+   "t": "Prevention and management of intraoperative pain during Caesarean section",
+   "a": "Orbach-Zinger et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "2",
+   "p": "50-56",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.10.001": {
+   "t": "Anaesthesia for pancreatic resection surgery: part 1",
+   "a": "Jarvis et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "2",
+   "p": "57-64",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.10.003": {
+   "t": "Early intensive care management of major trauma in adults: part 1",
+   "a": "Gordon et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "2",
+   "p": "74-79",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.11.004": {
+   "t": "Jet ventilation",
+   "a": "Lyons et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "4",
+   "p": "131-138",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2024.11.006": {
+   "t": "Core concepts in statistics and research methods. Part 2: clinical research principles and observational studies",
+   "a": "Hewson et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "4",
+   "p": "146-154",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.01.003": {
+   "t": "Novel therapies and interventions in sepsis and septic shock",
+   "a": "Pisano et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "5",
+   "p": "206-217",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.02.003": {
+   "t": "Pathophysiology and risk factors for postoperative nausea and vomiting in adults and children",
+   "a": "Kovac",
+   "y": 2025,
+   "v": "25",
+   "i": "6",
+   "p": "234-239",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.04.005": {
+   "t": "Anaesthesia for clipping of intracranial aneurysms",
+   "a": "Ng et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "8",
+   "p": "317-325",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.04.008": {
+   "t": "Neurophysiology of acute and chronic pain: from genes to pain symptoms",
+   "a": "Poisbeau et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "9",
+   "p": "357-366",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.06.005": {
+   "t": "Neurobiological mechanisms of central sensitisation underlying chronic pain states",
+   "a": "Poisbeau et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "10",
+   "p": "411-418",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.06.007": {
+   "t": "Peripheral nerve catheters for regional anaesthesia",
+   "a": "Maghami et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "11",
+   "p": "446-454",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.07.003": {
+   "t": "Anaesthesia for non-cardiac surgery in patients with adult congenital heart disease",
+   "a": "Wild et al.",
+   "y": 2025,
+   "v": "25",
+   "i": "10",
+   "p": "400-410",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.10.001": {
+   "t": "Core concepts in statistics and research methods. Part 4: null hypothesis significance testing",
+   "a": "Jones et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "1",
+   "p": "10-19",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.10.002": {
+   "t": "Core concepts in statistics and research methods. Part 5: systematic review and meta-analysis",
+   "a": "Doleman et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "2",
+   "p": "63-73",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.10.003": {
+   "t": "Perioperative care of patients who decline blood products",
+   "a": "Prabhu et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "1",
+   "p": "30-37",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.10.005": {
+   "t": "Management of uterine atony in obstetric anaesthesia",
+   "a": "Ansari et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "1",
+   "p": "38-47",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2025.11.002": {
+   "t": "Management of aneurysmal subarachnoid haemorrhage in critical care",
+   "a": "Carden et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "2",
+   "p": "74-82",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.01.001": {
+   "t": "Common interventional techniques for cancer-related pain",
+   "a": "Kalaiyarasan et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "4",
+   "p": "163-170",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.02.001": {
+   "t": "Prophylaxis and treatment of postoperative nausea and vomiting",
+   "a": "Kovac et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "5",
+   "p": "189-196",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.02.002": {
+   "t": "Core concepts in statistics and research methods. Part 6: Sample size calculations",
+   "a": "Bould et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "5",
+   "p": "212-221",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.02.003": {
+   "t": "Specialised invasive techniques for cancer-related pain",
+   "a": "Kalaiyarasan et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "5",
+   "p": "206-211",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.03.002": {
+   "t": "Consent and assessing capacity in perioperative and intensive care",
+   "a": "Plummer et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "6",
+   "p": "223-231",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.03.003": {
+   "t": "Physiology of venovenous extracorporeal membrane oxygenation. Part 1: terminology, circuits and gas exchange",
+   "a": "Noori et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "7",
+   "p": "305-314",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.04.002": {
+   "t": "Anaesthesia for cervical spine surgery. Part 2: emergency surgery",
+   "a": "Summers et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "7",
+   "p": "295-304",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.04.003": {
+   "t": "Fluids in sepsis",
+   "a": "McMullan et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "8",
+   "p": "334-343",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.06.002": {
+   "t": "Collecting, analysing and presenting data for quality improvement projects: a practical guide",
+   "a": "Needham et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "9",
+   "p": "382-392",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.06.004": {
+   "t": "Erector spinae plane block",
+   "a": "De Cassai et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "9",
+   "p": "373-381",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.06.008": {
+   "t": "Update on the intensive care management of traumatic brain injury",
+   "a": "Plummer et al.",
+   "y": 2026,
+   "v": "26",
+   "i": "10",
+   "p": "418-426",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.07.001": {
+   "t": "Core concepts in statistics and research methods. Part 8: randomised trials",
+   "a": "Hewson et al.",
+   "y": 2026,
+   "v": "",
+   "i": "",
+   "p": "",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.07.002": {
+   "t": "The physiology of labour",
+   "a": "Lloyd et al.",
+   "y": 2026,
+   "v": "",
+   "i": "",
+   "p": "",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.07.006": {
+   "t": "Point-of-care ultrasound in shock",
+   "a": "Flower et al.",
+   "y": 2026,
+   "v": "",
+   "i": "",
+   "p": "",
+   "j": "BJA Education"
+  },
+  "10.1016/j.bjae.2026.08.001": {
+   "t": "Frailty in anaesthesia and intensive care",
+   "a": "Renette et al.",
+   "y": 2026,
+   "v": "",
+   "i": "",
+   "p": "",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaceaccp/mkv019": {
+   "t": "Nitrous oxide in modern anaesthetic practice",
+   "a": "Brown et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "3",
+   "p": "87-91",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaceaccp/mkv021": {
+   "t": "Principles of total intravenous anaesthesia: basic pharmacokinetics and model descriptions",
+   "a": "Al-Rifai et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "3",
+   "p": "92-97",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkv033": {
+   "t": "Perioperative care of phaeochromocytoma",
+   "a": "Connor et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "5",
+   "p": "153-158",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkv039": {
+   "t": "The place of goal-directed haemodynamic therapy in the 21st century",
+   "a": "Dunn et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "6",
+   "p": "179-185",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkv041": {
+   "t": "Medical leadership in perioperative practice: I",
+   "a": "Johnston et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "6",
+   "p": "203-208",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkv042": {
+   "t": "Medical leadership in perioperative practice: II",
+   "a": "Fielden et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "6",
+   "p": "209-212",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkv045": {
+   "t": "Human factors in complex airway management",
+   "a": "Gleeson et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "6",
+   "p": "191-197",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkv050": {
+   "t": "Referral and transfer of the critically ill child",
+   "a": "Gilpin et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "8",
+   "p": "253-257",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkv073": {
+   "t": "Spinal cord injury and chronic pain",
+   "a": "Hadjipavlou et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "8",
+   "p": "264-268",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw008": {
+   "t": "Intravenous lidocaine for acute pain: an evidence-based clinical update",
+   "a": "Eipe et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "9",
+   "p": "292-298",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw011": {
+   "t": "Autonomic nervous system: anatomy, physiology, and relevance in anaesthesia and critical care medicine",
+   "a": "Bankenahally et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "11",
+   "p": "381-387",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw012": {
+   "t": "Physiology of oxygen transport",
+   "a": "Dunn et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "10",
+   "p": "341-348",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw020": {
+   "t": "Perioperative management of patients with cardiac implantable electronic devices",
+   "a": "Bryant et al.",
+   "y": 2016,
+   "v": "16",
+   "i": "11",
+   "p": "388-396",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw035": {
+   "t": "Plasma volume, tissue oedema, and the steady-state Starling principle",
+   "a": "Woodcock",
+   "y": 2017,
+   "v": "17",
+   "i": "2",
+   "p": "74-78",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw041": {
+   "t": "High-flow nasal oxygen therapy",
+   "a": "Ashraf-Kashani et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "2",
+   "p": "63-67",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw042": {
+   "t": "Hypothalamic–pituitary–adrenal function during health, major surgery, and critical illness",
+   "a": "Miller et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "1",
+   "p": "16-21",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw049": {
+   "t": "Perioperative management of opioid-tolerant patients",
+   "a": "Simpson et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "4",
+   "p": "124-128",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw052": {
+   "t": "Principles of total intravenous anaesthesia: practical aspects of using total intravenous anaesthesia",
+   "a": "",
+   "y": 2017,
+   "v": "17",
+   "i": "1",
+   "p": "41",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw055": {
+   "t": "Anaesthesia for cardioversion",
+   "a": "Knowles et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "5",
+   "p": "166-171",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw056": {
+   "t": "Perioperative management of the patient with diabetes requiring emergency surgery",
+   "a": "Levy et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "4",
+   "p": "129-136",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw061": {
+   "t": "Patient blood management and perioperative anaemia",
+   "a": "Thakrar et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "1",
+   "p": "28-34",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw062": {
+   "t": "Uses of capnography in the critical care unit",
+   "a": "Kerslake et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "5",
+   "p": "178-183",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw070": {
+   "t": "Renal replacement therapy in critical care",
+   "a": "Gemmell et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "3",
+   "p": "88-93",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw076": {
+   "t": "Hypoxic pulmonary vasoconstriction",
+   "a": "Tarry et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "6",
+   "p": "208-213",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw077": {
+   "t": "Postoperative management of the difficult airway",
+   "a": "Batuwitage et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "7",
+   "p": "235-241",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw078": {
+   "t": "Regional anaesthesia for ophthalmic surgery",
+   "a": "Anker et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "7",
+   "p": "221-227",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkw079": {
+   "t": "Diagnosis and management of malignant hyperthermia",
+   "a": "Gupta et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "7",
+   "p": "249-254",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx002": {
+   "t": "Acute respiratory distress syndrome",
+   "a": "McCormack et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "5",
+   "p": "161-165",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx003": {
+   "t": "The multidisciplinary team approach for high-risk and major cancer surgery",
+   "a": "Ziabari et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "8",
+   "p": "255-261",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx006": {
+   "t": "Paediatric airway infections",
+   "a": "Davies et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "10",
+   "p": "341-345",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx013": {
+   "t": "Circle systems and low-flow anaesthesia",
+   "a": "Herbert et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "9",
+   "p": "301-305",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx015": {
+   "t": "Starvation, carbohydrate loading, and outcome after major surgery",
+   "a": "Fawcett et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "9",
+   "p": "312-316",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx023": {
+   "t": "Endocrine problems in the critically ill 2: endocrine emergencies",
+   "a": "Kerr et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "11",
+   "p": "377-382",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx024": {
+   "t": "Endocrine problems in the critically ill 1: diabetes and glycaemic control",
+   "a": "Elizabeth Kerr et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "11",
+   "p": "370-376",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx028": {
+   "t": "Anaesthesia for head and neck cancer surgery",
+   "a": "Ahmed-Nusrath",
+   "y": 2017,
+   "v": "17",
+   "i": "12",
+   "p": "383-389",
+   "j": "BJA Education"
+  },
+  "10.1093/bjaed/mkx031": {
+   "t": "Treatment withdrawal and end-of-life care in the intensive care unit",
+   "a": "Braganza et al.",
+   "y": 2017,
+   "v": "17",
+   "i": "12",
+   "p": "396-400",
+   "j": "BJA Education"
+  }
+ }
+}

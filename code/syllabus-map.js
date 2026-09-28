@@ -42,6 +42,7 @@
         el('span', { class: 'map-topic-meta' },
           `${n.codes.length} syllabus code${n.codes.length === 1 ? '' : 's'}`,
           q ? el('a', { href: `#questions/note/${id}` }, `${q} question${q === 1 ? '' : 's'}`) : null,
+          (n.bjaed || []).length ? el('a', { href: `#notes/${id}`, title: n.bjaed.map(b => b.t).join('\n') }, `BJA Ed ×${n.bjaed.length}`) : null,
           read ? el('span', { class: 'read-tick' }, '✓ read') : null)));
   }
 

@@ -35,6 +35,14 @@
       const list = C.stations.filter(s => !exam || s.exam === exam);
       return el('div', { class: 'chip-list' }, list.map(s => el('a', { class: 'topic-chip', href: `#stations/${s.id}` }, s.title)));
     },
+    gpas() {
+      // {{gpas}}: every GPAS chapter with its link.
+      const g = C.gpas;
+      return el('div', { class: 'table-wrap' }, el('table', null,
+        el('thead', null, el('tr', null, el('th', null, 'Chapter'), el('th', null, 'Covers'), el('th', null, 'Edition'))),
+        el('tbody', null, Object.entries(g.chapters).map(([n, c]) => el('tr', null,
+          el('td', null, n), el('td', null, el('a', { class: 'ext', href: c.u, target: '_blank', rel: 'noopener' }, c.t)), el('td', null, String(c.y)))))));
+    },
     stats() {
       const q = C.questions.primary.total + C.questions.final.total;
       return el('div', { class: 'stat-row' },
