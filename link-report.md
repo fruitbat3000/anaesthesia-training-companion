@@ -1,6 +1,6 @@
 ## Link check 2026-09-28
 
-188 links OK, 0 problem(s), 135 to check by hand.
+197 links OK, 0 problem(s), 139 to check by hand.
 
 ### Problems
 
@@ -66,6 +66,7 @@ None.
 - ref steroids2020: https://doi.org/10.1111/anae.14963
 - ref htn2016: https://doi.org/10.1111/anae.13348
 - ref diabetes2025: https://doi.org/10.1093/bjs/znaf291
+- ref bjaed: https://academic.oup.com/bjaed
 - page exams-banks: https://www.rcoa.ac.uk/sites/default/files/documents/2025-11/Primary%20AKT%20Sample%20SBAs.pdf
 - page exams-banks: https://www.rcoa.ac.uk/sites/default/files/documents/2025-11/Final%20AKT%20Sample%20SBAs.pdf
 - page exams-trainers: https://www.rcoa.ac.uk/examinations/2027-launch-new-frca-exams/resources-trainers
@@ -75,6 +76,9 @@ None.
 - page resources-more: https://www.apagbi.org.uk/trainee-hub/overview
 - page stage-3: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/introduction
 - page wellbeing: https://www.rcoa.ac.uk/training-careers/training-hub/flexibility-training
+- textbook fundamentals: https://www.cambridge.org/9781107612389
+- textbook peck: https://www.cambridge.org/gb/universitypress/subjects/medicine/anesthesia-intensive-care-pain-management/pharmacology-anaesthesia-and-intensive-care-5th-edition
+- textbook cross: https://www.cambridge.org/core/books/physics-pharmacology-and-physiology-for-anaesthetists/938476F6B895BD7A7F1DAE1188E56C43
 - capabilities sias/pain-medicine: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/pain-medicine
 - capabilities sias/acute-inpatient-pain: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/acute-inpatient-pain
 - capabilities sias/additional-intensive-care: https://www.rcoa.ac.uk/documents/2021-curriculum-learning-syllabus-stage-3-special-interest-areas/additional-intensive

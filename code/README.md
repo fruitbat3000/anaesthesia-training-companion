@@ -23,6 +23,7 @@ Then go to http://localhost:8000.
 - `notes.js` — revision notes library, note reader, syllabus coverage map
 - `qbank.js` — question bank: practice sessions, timed mock papers to the AKT blueprint, results, progress
 - `stations.js` — CASE/FCPE station list and runner (candidate/examiner views, timer, mark sheet, summary)
+- `syllabus-map.js` — readable Primary and Final syllabus maps: topics by paper and subject with red/amber/green self-rating, core textbooks and free resources, and the RCoA section view
 - `stages.js` — Stages 1–3: key capability checklists, unit guides, Special Interest Areas, printable checklists, the stage hub and sidebar progress
 - `styles.css` — light theme by default with a dark theme; print styles
 - `content/` — generated; do not edit
@@ -34,9 +35,10 @@ Then go to http://localhost:8000.
 - **Station:** Markdown with front matter (`exam: case|fcpe`, `arena`, `domain`, `group`, `science`, `skills`) and sections `## Candidate instructions`, `## Scenario`, `## Examiner prompts`, `## Key features` (a bullet list: becomes the checklist), `## Domains assessed`, `## What good looks like`, `## Learning points`.
 - **Capabilities:** `content/capabilities/stage-N.md` and `sias.md`. Each `## id | generic|clinical|sia | Name` block has `rcoa:` (link), `outcome:`, optional `### Group` headings, capability lines `- A [2b]: text` (RCoA letter, optional supervision level), and optional `evidence:` (items separated by " · "), `notes:`, `stations:`, `ela:` (module codes such as `05b`, or `icm`). SIAs also take `group:` and `length:`. Paraphrase the RCoA text; do not copy it.
 - **Unit guide:** `content/units/*.md` with front matter `stage, order, title, short, lede, updated`. `{{caps stage-1 ga Q,R}}` embeds those capabilities as live tick boxes (omit the letters for the whole domain). The build checks every widget and every `#notes/…` and `#stations/…` link.
+- **Syllabus map:** `content/syllabus/map.json` groups every note into papers, subjects and topic groups, and names the core texts (ids in `content/texts.json`, with edition, year, publisher and ISBN), free resources (`refs.json` ids) and e-LA modules for each subject. The build fails if a note is missing or listed twice.
 - **Review status:** set `status: reviewed` (notes and stations in front matter; questions as a field) once a clinician has checked the item, and add the reviewer's name to the About page credits.
 - The build fails on unknown codes, unknown references, malformed questions or missing station sections.
 
 ## Progress storage
 
-Everything is saved only in the viewer's browser (`localStorage`): novice ticks (`nas-progress-v1`), notes read (`atc-notes-v1`), question history (`atc-qbank-v1`), sessions (`atc-sessions-v1`), station records (`atc-stations-v1`), capability ticks (`atc-caps-v1`). The About page exports and imports all of them.
+Everything is saved only in the viewer's browser (`localStorage`): novice ticks (`nas-progress-v1`), notes read (`atc-notes-v1`), question history (`atc-qbank-v1`), sessions (`atc-sessions-v1`), station records (`atc-stations-v1`), capability ticks (`atc-caps-v1`), syllabus map ratings (`atc-rag-v1`). The About page exports and imports all of them.

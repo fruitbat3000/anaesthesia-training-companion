@@ -26,7 +26,7 @@ const CONTENT = contentCtx.window.CONTENT;
 const PARTS = contentCtx.window.CONTENT_PARTS || {};
 
 const UA = 'Mozilla/5.0 (compatible; anaesthesia-training-companion-link-check; +https://github.com/fruitbat3000/anaesthesia-training-companion)';
-const BOT_BLOCKED = [/(^|\.)rcoa\.ac\.uk$/, /yorksandhumberdeanery\.nhs\.uk$/, /^doi\.org$/, /onlinelibrary\.wiley\.com$/, /journals\.lww\.com$/, /(^|\.)bnf\.nice\.org\.uk$/, /(^|\.)apagbi\.org\.uk$/, /(^|\.)ficm\.ac\.uk$/, /(^|\.)das\.uk\.com$/, /(^|\.)cpoc\.org\.uk$/];
+const BOT_BLOCKED = [/(^|\.)rcoa\.ac\.uk$/, /yorksandhumberdeanery\.nhs\.uk$/, /^doi\.org$/, /onlinelibrary\.wiley\.com$/, /journals\.lww\.com$/, /(^|\.)bnf\.nice\.org\.uk$/, /(^|\.)apagbi\.org\.uk$/, /(^|\.)ficm\.ac\.uk$/, /(^|\.)das\.uk\.com$/, /(^|\.)cpoc\.org\.uk$/, /(^|\.)cambridge\.org$/, /^academic\.oup\.com$/];
 // e-LfH sessions whose page titles carry no session code
 const NO_CODE = { '01_12_01': 'Airway Maintenance: Facemask', '01_13_01': 'Venous Access' };
 
@@ -99,6 +99,7 @@ const htmlBlobs = [
   ...Object.entries(PARTS['notes-final'] || {}).map(([k, v]) => [`note ${k}`, v]),
   ...Object.entries(PARTS.stations || {}).map(([k, v]) => [`station ${k}`, Object.values(v).join(' ')]),
   ...(CONTENT.units || []).map(u => [`unit ${u.id}`, u.html]),
+  ...Object.entries(CONTENT.texts || {}).map(([k, t]) => [`textbook ${k}`, `href="${t.u}"`]),
   ...Object.values(CONTENT.capabilities || {}).flatMap(c => c.domains.map(d => [`capabilities ${c.key}/${d.id}`,
     [`href="${d.rcoa}"`, ...d.ela.map(([, url]) => `href="${url}"`)].join(' ')])),
 ];

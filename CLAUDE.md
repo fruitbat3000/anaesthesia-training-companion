@@ -10,6 +10,11 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-28 (afternoon) — Working group emails; syllabus maps
+- Mark shared the working-group email thread (Dr Brooks, the LTHT College Tutor, a Mid Yorkshire resident with web experience). Gap analysis recorded in TODO. Names and roles are in Claude memory only; the repo refers to people by role.
+- Built readable Primary and Final syllabus maps (`#map/primary`, `#map/final`, `code/syllabus-map.js`, `content/syllabus/map.json`): topics by paper and subject, red/amber/green ratings, a "revise next" list, core textbooks (verified editions, `content/texts.json`, S29) and free resources per subject, plus an RCoA-section view labelled with the paraphrased capability wording.
+- Mark: sync is tbc; licence to be explained; hosting probably with YAIRN, which would allow a progress database (DECISIONS 2026-09-28, hosting).
+
 ### 2026-09-28 (day) — Stages 1–3 brought up to Novice depth
 - Mark: stage menus should expand like Novice, stage colours should run through the menu, the e-LA modules weren't links, and Stages 1–3 felt "tacked on". Then: "make the whole thing as comprehensive, yet clear and easy to navigate as possible."
 - Stage colours (amber/blue/teal/violet) now run through the sidebar and stage pages. Stage menus have subheadings and progress (capabilities, and notes and questions for the stage's exam).

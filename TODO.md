@@ -8,12 +8,13 @@ Outstanding work and open questions. Completed items move out. Scope is fixed in
 - [ ] Priority checks for accuracy: every numerical dose and threshold (LA maxima, lipid regimen, caudal volumes, obstetric and paediatric doses, anticoagulant timings, transfusion targets), and the DAS 2025 wording (written from principles; the DAS website was down on 2026-09-28 so the guideline text itself was not read).
 
 ## From the working group emails (25–26 Sep 2026)
-- [ ] **Readable syllabus map for revision tracking:** the coverage map shows RCoA codes only (descriptors are RCoA copyright). Add plain-English topic headings per syllabus section, with notes, questions and a self-rated confidence (red/amber/green) per area. Ask the RCoA whether descriptors may be reproduced.
+- [ ] Ask the RCoA whether the Primary and Stage 2 syllabus descriptors may be shown on the syllabus maps (the maps currently use our own topic names and paraphrased capability wording).
+- [ ] Recheck textbook editions each year (West 12th edition due January 2027).
 - [ ] **Installable app:** add a web app manifest and service worker (offline use, home-screen install). No backend.
-- [ ] **Decide:** cross-device sync. It needs accounts and would store trainee data, which breaks security class 0. Recommend: keep browser-only storage plus export/import.
+- [ ] **Decide (tbc):** cross-device sync. Possible if hosted with YAIRN (see DECISIONS 2026-09-28, hosting); needs a DPIA and a new security classification before any trainee data is stored.
 - [ ] **Licence** for the public repo (for example MIT for code, CC BY-NC-SA for content). Mark and Dr Brooks to decide.
 - [ ] **Contributor guide** (CONTRIBUTING.md): how to run it, how to add notes and questions, how review status works, for a web-developer contributor.
-- [ ] **Regional hosting:** agree with the school/regional educators (via the LTHT College Tutor) whether to link, embed or host a copy; custom domain; remove `noindex` after sign-off.
+- [ ] **Regional hosting:** ask the LTHT College Tutor whether YAIRN would host it (Mark's preferred route); agree domain, ownership and support; remove `noindex` after sign-off.
 - [ ] **Dr Brooks's historical Primary/Final navigation material** and his visual/navigation ideas: get them and compare with the site.
 - [ ] **Local Yorkshire layer** from the College Tutor: IAC and IACOA programmes, teaching, contacts.
 

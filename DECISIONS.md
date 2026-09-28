@@ -4,6 +4,18 @@ Accepted decisions, newest first. One entry per decision. A decision here **over
 
 ---
 
+## 2026-09-28 — Syllabus maps with reading pointers; hosting direction (proposed)
+
+**Decision (Mark):** build a readable syllabus map with pointers to core textbooks and other resources. Cross-device sync is "tbc". Hosting "can probably" be with YAIRN if the LTHT College Tutor agrees, which would allow a database for user progress.
+
+**What was built:** Primary and Final syllabus maps (topics by paper and subject, red/amber/green self-rating, core texts and free resources per subject, and an RCoA-section view). Progress stays in the browser for now.
+
+**Consequences if YAIRN hosting with a database goes ahead:** storing trainee progress against accounts is personal data. It needs a data protection impact assessment, a named data controller (probably YAIRN or the school), a lawful basis and privacy notice, and a new security classification for the project (it is class 0 because it holds no trainee data). The static site can stay as it is, with an optional sign-in and sync layer added, so nothing is lost if hosting takes time.
+
+**Status:** hosting proposed, pending the College Tutor and YAIRN; syllabus maps accepted
+
+---
+
 ## 2026-09-28 — Stages 1–3 get the same depth as the Novice section
 
 **Decision (Mark):** "go and make the whole thing as comprehensive, yet clear and easy to navigate as possible." Stages 1–3 should not feel like afterthoughts next to the Novice section, and each stage keeps its home-page colour through the menu and its pages.

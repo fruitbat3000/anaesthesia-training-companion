@@ -1,0 +1,107 @@
+{
+  "_note": "Readable syllabus map: how notes are grouped for revision, plus core texts (content/texts.json) and free resources (refs.json ids, e-LA module codes) for each subject. Every note must appear exactly once per exam; the build checks this.",
+  "primary": {
+    "intro": "The Primary FRCA syllabus (v2.2) arranged the way you revise: by AKT paper and subject, then by topic. Rate each topic as you go. Your ratings are saved in this browser.",
+    "papers": [
+      { "name": "AKT Paper A", "subjects": ["physiology", "pharmacology"] },
+      { "name": "AKT Paper B", "subjects": ["physics", "measurement", "anatomy", "statistics"] },
+      { "name": "CASE (clinical)", "subjects": ["clinical"] }
+    ],
+    "subjects": {
+      "physiology": {
+        "groups": [
+          ["Cells, nerve and muscle", ["cell-physiology", "neuro-membrane-ap", "neuro-nmj-muscle"]],
+          ["Respiratory", ["resp-lung-volumes", "resp-mechanics", "resp-vq", "resp-o2-transport", "resp-co2-transport", "resp-control", "resp-pulmonary-circulation", "resp-ippv", "resp-altitude"]],
+          ["Cardiovascular", ["cvs-cardiac-cycle", "cvs-cardiac-output", "cvs-cardiac-ap", "cvs-bp-control", "cvs-microcirculation", "cvs-special-circulations", "cvs-fetal-circulation"]],
+          ["Nervous system and pain", ["neuro-icp-cbf", "neuro-ans", "neuro-pain-physiology"]],
+          ["Renal, fluids and acid–base", ["renal-gfr", "renal-tubule", "acid-base", "fluids-osmolality"]],
+          ["Blood and immunity", ["blood-rbc-hb", "blood-haemostasis", "blood-transfusion", "immunity-anaphylaxis"]],
+          ["Endocrine, metabolism and temperature", ["endocrine-stress-glucose", "endocrine-glands", "nutrition-metabolism", "thermoregulation", "liver-gi"]],
+          ["Special populations", ["pregnancy-physiology", "paeds-physiology", "ageing-obesity"]]
+        ],
+        "texts": ["kam", "west", "fundamentals", "cross"],
+        "refs": ["deranged", "atotw", "bjaed"],
+        "ela": ["07b"]
+      },
+      "pharmacology": {
+        "groups": [
+          ["Principles", ["pk-basics", "pk-absorption", "pk-metabolism", "pd-receptors", "drug-chemistry", "pk-csht-tci", "drug-interactions"]],
+          ["Anaesthetic agents", ["inhalational-uptake", "inhalational-agents", "anaesthesia-mechanisms", "iv-induction-agents", "benzodiazepines-sedation"]],
+          ["Analgesics and local anaesthetics", ["opioids", "paracetamol-nsaids", "local-anaesthetics"]],
+          ["Neuromuscular block", ["nmb-suxamethonium", "nmb-nondepolarising", "nmb-reversal"]],
+          ["Autonomic and cardiovascular drugs", ["anticholinergics-cholinergics", "sympathomimetics", "antihypertensives", "antiarrhythmics", "cardiac-drugs"]],
+          ["Blood, fluids and haemostasis", ["anticoagulants", "procoagulants-blood-products", "iv-fluids"]],
+          ["Other systems", ["antiemetics", "gi-drugs", "respiratory-drugs", "diuretics", "cns-drugs", "diabetes-drugs", "steroids-thyroid-drugs", "antimicrobials", "mh-dantrolene"]]
+        ],
+        "texts": ["peck", "fundamentals", "cross"],
+        "refs": ["atotw", "bjaed"],
+        "ela": ["07c"]
+      },
+      "physics": {
+        "groups": [
+          ["Basic physics", ["si-units-mechanics", "gas-laws", "vapours-humidity", "flow-physics", "ultrasound-doppler"]],
+          ["The machine and gas delivery", ["gas-supply", "anaesthetic-machine", "vaporisers", "breathing-systems", "ventilators", "oxygen-delivery-devices"]],
+          ["Electrical safety and devices", ["electricity-safety", "diathermy-lasers-fires", "defibrillation-pacing", "infusion-decontamination"]]
+        ],
+        "texts": ["alshaikh", "magee", "davis", "cross"],
+        "refs": ["aoa-guidelines"],
+        "ela": ["07d", "07e"]
+      },
+      "measurement": {
+        "groups": [
+          ["Principles and physiological monitoring", ["measurement-principles", "monitoring-standards", "pressure-measurement", "pulse-oximetry", "capnography", "gas-analysis", "temperature-measurement", "cardiac-output-measurement", "flow-volume-pft", "nm-monitoring"]],
+          ["Data interpretation", ["abg-interpretation", "ecg-interpretation", "imaging-interpretation"]]
+        ],
+        "texts": ["magee", "alshaikh", "davis"],
+        "refs": ["litfl-ecg", "deranged"],
+        "ela": ["07d", "07e"]
+      },
+      "anatomy": {
+        "groups": [["Anatomy", ["anat-airway", "anat-trachea-lungs", "anat-heart-vessels", "anat-spine-neuraxis", "anat-plexuses", "anat-head-neck-eye"]]],
+        "texts": ["ellis", "fundamentals"],
+        "refs": ["nysora", "raUK"],
+        "ela": ["07a"]
+      },
+      "statistics": {
+        "groups": [["Statistics and evidence", ["stats-data-descriptive", "stats-hypothesis-tests", "stats-study-design"]]],
+        "texts": ["cross", "fundamentals"],
+        "refs": ["bjaed"],
+        "ela": ["07f"]
+      },
+      "clinical": {
+        "groups": [
+          ["Assessment and airway", ["preop-assessment", "airway-assessment", "rsi-aspiration", "difficult-airway-cico", "extubation-recovery", "ent-shared-airway"]],
+          ["Emergencies", ["critical-incidents", "anaphylaxis-management", "last-management", "resuscitation-als", "trauma-transfer", "sepsis-critical-illness"]],
+          ["Regional, obstetrics and paediatrics", ["neuraxial-basics", "peripheral-blocks", "obstetric-basics", "paeds-basics"]],
+          ["Perioperative care and professional practice", ["diabetes-perioperative", "elderly-hip-day-remote", "acute-pain-management", "consent-capacity-safeguarding", "safety-human-factors"]]
+        ],
+        "texts": ["ohanaes", "fundamentals", "yentis"],
+        "refs": ["aoa-guidelines", "das2025", "rcuk2025", "atotw"],
+        "ela": ["01"]
+      }
+    }
+  },
+  "final": {
+    "intro": "The Stage 2 examination syllabus arranged by the Final AKT's clinical areas, then by topic. Rate each topic as you go. Your ratings are saved in this browser.",
+    "papers": [
+      { "name": "General anaesthesia (about half the AKT)", "subjects": ["airway", "obstetrics", "paediatrics", "neuro", "cardiothoracic", "vascular", "specialties"] },
+      { "name": "Perioperative medicine and regional", "subjects": ["pom", "regional"] },
+      { "name": "Other domains", "subjects": ["trauma", "pain", "icm", "professional"] }
+    ],
+    "subjects": {
+      "airway": { "texts": ["ohanaes", "yentis"], "refs": ["das2025", "dasobs", "icuintub", "bjaed"], "ela": [] },
+      "obstetrics": { "texts": ["ohanaes", "stoelting"], "refs": ["oaa", "dasobs", "ng133", "bjaed"], "ela": ["08"] },
+      "paediatrics": { "texts": ["ohanaes"], "refs": ["ng29", "rcuk2025", "bjaed"], "ela": ["04b"] },
+      "neuro": { "texts": ["ohanaes"], "refs": ["ng232", "ng41", "bjaed"], "ela": ["14"] },
+      "cardiothoracic": { "texts": ["ohanaes", "stoelting"], "refs": ["bjaed"], "ela": ["12", "13"] },
+      "vascular": { "texts": ["ohanaes", "stoelting"], "refs": ["ng180", "bjaed"], "ela": ["11"] },
+      "specialties": { "texts": ["ohanaes"], "refs": ["bads", "cg124", "bjaed"], "ela": ["09"] },
+      "trauma": { "texts": ["ohanaes"], "refs": ["ng39", "rcuk2025", "bjaed"], "ela": [] },
+      "pom": { "texts": ["stoelting", "ohanaes"], "refs": ["ng45", "ng180", "ng24", "bjaed"], "ela": ["04c"] },
+      "regional": { "texts": ["ohanaes", "ellis"], "refs": ["nysora", "raUK", "bjaed"], "ela": ["05b"] },
+      "pain": { "texts": ["ohanaes"], "refs": ["bjaed"], "ela": ["05a"] },
+      "icm": { "texts": ["ohanaes"], "refs": ["deranged", "ng51", "ng148", "bjaed"], "ela": ["icm"] },
+      "professional": { "texts": ["yentis"], "refs": ["rcoa-naps", "bjaed"], "ela": [] }
+    }
+  }
+}

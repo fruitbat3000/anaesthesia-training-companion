@@ -39,7 +39,7 @@
     set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* ignore */ } },
     remove(key) { try { localStorage.removeItem(key); } catch (e) { /* ignore */ } },
   };
-  const KEYS = { novice: 'nas-progress-v1', notes: 'atc-notes-v1', qbank: 'atc-qbank-v1', sessions: 'atc-sessions-v1', stations: 'atc-stations-v1', caps: 'atc-caps-v1' };
+  const KEYS = { novice: 'nas-progress-v1', notes: 'atc-notes-v1', qbank: 'atc-qbank-v1', sessions: 'atc-sessions-v1', stations: 'atc-stations-v1', caps: 'atc-caps-v1', rag: 'atc-rag-v1' };
 
   /* ---------- lazy content loading (script injection works on file://) ---------- */
   const loading = {};
@@ -116,12 +116,12 @@
     stage1: ['This stage', ['#stage/1', 'Overview'], ['#stage/1/year-by-year', 'Year by year and ARCP'], ['#stage/1/the-stage-1-certificate', 'The Stage 1 certificate'],
       'Curriculum', ['#stage/1/capabilities', 'Key capabilities'], ['#stage/1/checklist', 'Printable checklist'],
       'Clinical training', ['#stage/1/units', 'Unit guides'], ['#stage/1/clinical-blocks-in-stage-1', 'Blocks and e-learning'],
-      'Primary FRCA', ['#stage/1/the-primary-frca', 'The exam'], ['#stage/1/revision-notes-by-paper', 'Revision notes by paper'],
+      'Primary FRCA', ['#stage/1/the-primary-frca', 'The exam'], ['#map/primary', 'Syllabus map'], ['#stage/1/revision-notes-by-paper', 'Revision notes by paper'],
       'Local', ['#stage/1/in-yorkshire-and-humber', 'Yorkshire and Humber']],
     stage2: ['This stage', ['#stage/2', 'Overview'], ['#stage/2/year-by-year', 'Year by year and ARCP'], ['#stage/2/the-stage-2-certificate', 'The Stage 2 certificate'],
       'Curriculum', ['#stage/2/capabilities', 'Key capabilities'], ['#stage/2/checklist', 'Printable checklist'],
       'Clinical training', ['#stage/2/units', 'Unit guides'], ['#stage/2/the-units-of-stage-2', 'Units and e-learning'],
-      'Final FRCA', ['#stage/2/the-final-frca', 'The exam'], ['#stage/2/revision-notes-by-topic', 'Revision notes by topic'],
+      'Final FRCA', ['#stage/2/the-final-frca', 'The exam'], ['#map/final', 'Syllabus map'], ['#stage/2/revision-notes-by-topic', 'Revision notes by topic'],
       'Local', ['#stage/2/in-yorkshire-and-humber', 'Yorkshire and Humber']],
     stage3: ['This stage', ['#stage/3', 'Overview'], ['#stage/3/year-by-year', 'Year by year and ARCP'], ['#stage/3/from-certificate-to-cct', 'Certificate to CCT'],
       'Curriculum', ['#stage/3/capabilities', 'Key capabilities'], ['#stage/3/checklist', 'Printable checklist'],
@@ -129,7 +129,7 @@
       'Beyond the core', ['#stage/3/subspecialties', 'Subspecialties'], ['#stage/3/dual-training-and-acting-up', 'Dual training and acting up'], ['#stage/3/preparing-for-consultant-practice', 'Consultant practice'],
       'Local', ['#stage/3/in-yorkshire-and-humber', 'Yorkshire and Humber']],
     exams: [['#exams', 'Overview'], ['#exams/primary', 'Primary FRCA'], ['#exams/final', 'Final FRCA'], ['#exams/transition', 'Which format will I sit?'], ['#exams/plan', 'Study plan'], ['#exams/banks', 'Question banks'], ['#exams/trainers', 'For trainers']],
-    notes: [['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#notes/coverage', 'Syllabus coverage']],
+    notes: ['Syllabus maps', ['#map/primary', 'Primary syllabus map'], ['#map/final', 'Final syllabus map'], 'Notes', ['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#notes/coverage', 'Code coverage']],
     questions: [['#questions', 'Practise'], ['#questions/mock', 'Mock papers'], ['#questions/stats', 'My progress']],
     stations: [['#stations', 'All stations'], ['#stations/how', 'How to use them']],
     resources: [['#resources', 'Key resources'], ['#resources/guidelines', 'Guidelines library'], ['#resources/portfolio', 'Portfolio & ARCP'], ['#resources/wellbeing', 'Wellbeing & flexibility']],
@@ -268,6 +268,7 @@
       index.push({ type: sia ? 'SIA' : `Stage ${set.stage} domain`, title: d.name, sub: strip(d.outcome).slice(0, 90), href: sia ? `#stage/3/sia/${d.id}` : `#stage/${set.stage}/capabilities/${d.id}`,
         hay: `${d.name} ${strip(d.outcome)} ${d.groups.map(g => g.name + ' ' + g.caps.map(c => strip(c.text)).join(' ')).join(' ')}`.toLowerCase() });
     }));
+    ['primary', 'final'].forEach(ex => index.push({ type: 'Syllabus map', title: `${ex === 'primary' ? 'Primary' : 'Final'} FRCA syllabus map`, sub: 'Topics, confidence ratings, textbooks and resources', href: `#map/${ex}`, hay: `${ex} syllabus map revision tracker textbooks resources rag confidence`.toLowerCase() }));
     S.glossary.forEach(g => index.push({ type: 'Glossary', title: g.term, sub: g.def.slice(0, 80), href: '#glossary', hay: `${g.term} ${g.def}`.toLowerCase() }));
     return index;
   }
@@ -303,7 +304,7 @@
     if (q.trim().length < 2) {
       pop.replaceChildren(el('div', { class: 'palette-hint' },
         el('p', { class: 'palette-hint-title' }, 'Jump to'),
-        el('div', { class: 'palette-quick' }, [['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#questions/mock', 'Mock papers'], ['#stations', 'Station practice'], ['#exams', 'FRCA 2027 changes'], ['#start', 'Novice start'], ['#stage/1/capabilities', 'Stage 1 capabilities'], ['#stage/2/units', 'Stage 2 unit guides'], ['#stage/3/sias', 'SIAs']].map(([h, l]) => el('a', { href: h }, l)))));
+        el('div', { class: 'palette-quick' }, [['#map/primary', 'Primary syllabus map'], ['#map/final', 'Final syllabus map'], ['#notes/primary', 'Primary notes'], ['#notes/final', 'Final notes'], ['#questions/mock', 'Mock papers'], ['#stations', 'Station practice'], ['#exams', 'FRCA 2027 changes'], ['#start', 'Novice start'], ['#stage/1/capabilities', 'Stage 1 capabilities'], ['#stage/2/units', 'Stage 2 unit guides'], ['#stage/3/sias', 'SIAs']].map(([h, l]) => el('a', { href: h }, l)))));
       return;
     }
     const res = search(q, 10);

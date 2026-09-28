@@ -302,6 +302,60 @@ const coveredCodes = ex => [...CODES[ex]].filter(c => {
   return Object.keys(coverage.final).some(k => k.startsWith(c + '_') && coverage.final[k].n.length);
 }).length;
 
+/* ---------- readable syllabus map (content/syllabus/map.json, content/texts.json) ---------- */
+const texts = JSON.parse(readFileSync(C('texts.json'), 'utf8'));
+delete texts._note;
+const mapSrc = JSON.parse(readFileSync(C('syllabus/map.json'), 'utf8'));
+const DOMAIN_KEY = { PBC: 'pbc', MPR: 'mprr', TW: 'tw', SQI: 'sqi', SG: 'sg', RD: 'rmd', RMD: 'rmd', POM: 'pom', GA: 'ga', RA: 'ra', RT: 'rt', PS: 'ps', PA: 'pain', ICM: 'icm', IC: 'icm' };
+// Exam-syllabus sections whose capability letter changed in curriculum v1.5.
+const SECTION_LABEL = {
+  '1_ICM_D': 'Recognises the acutely ill child and starts managing paediatric emergencies (moved to Resuscitation and transfer in curriculum v1.5).',
+  '2_IC_D': 'Recognises the acutely ill child and starts managing paediatric emergencies (moved to Resuscitation and transfer in curriculum v1.5).',
+};
+const syllabusMap = {};
+for (const exam of ['primary', 'final']) {
+  const src = mapSrc[exam];
+  const f = `syllabus/map.json (${exam})`;
+  const examNotes = notes.filter(n => n.exam === exam);
+  const seen = new Map();
+  const papers = src.papers.map(pp => ({ name: pp.name, subjects: pp.subjects.map(sid => {
+    const sj = src.subjects[sid];
+    if (!sj || !SUBJECTS[exam][sid]) { err(f, `unknown subject ${sid}`); return null; }
+    const byOrder = examNotes.filter(n => n.subject === sid).sort((a, b) => a.order - b.order || a.title.localeCompare(b.title)).map(n => n.id);
+    const groups = (sj.groups || [[SUBJECTS[exam][sid].name, byOrder]]).map(([name, ids]) => ({ name, notes: ids }));
+    for (const g of groups) for (const id of g.notes) {
+      if (!noteIds.has(id)) err(f, `unknown note ${id}`);
+      if (seen.has(id)) err(f, `note ${id} listed twice`);
+      seen.set(id, sid);
+    }
+    for (const t of sj.texts || []) if (!texts[t]) err(f, `unknown text ${t}`);
+    for (const r of sj.refs || []) if (!refs[r]) err(f, `unknown reference ${r}`);
+    for (const e of sj.ela || []) if (!ELA[e]) err(f, `unknown e-LA module ${e}`);
+    return { id: sid, name: SUBJECTS[exam][sid].name, groups, texts: sj.texts || [], refs: sj.refs || [], ela: (sj.ela || []).map(e => ELA[e]).filter(Boolean) };
+  }).filter(Boolean) }));
+  for (const n of examNotes) if (!seen.has(n.id)) err(f, `note ${n.id} is not on the map`);
+  // Official structure: code groups (stage_domain_letter) labelled with our paraphrase of that key capability.
+  const capSet = capabilities[exam === 'primary' ? 'stage-1' : 'stage-2'];
+  const groups = new Map();
+  for (const code of CODES[exam]) {
+    const parts = code.split('_');
+    const g = parts.slice(0, 3).join('_');
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g).push(code);
+  }
+  const sections = [];
+  for (const [g, codes] of groups) {
+    const [, dom, letterPart] = g.split('_');
+    const letter = letterPart.replace(/\d+$/, '');
+    const part = letterPart.slice(letter.length);
+    const d = capSet && capSet.domains.find(x => x.id === DOMAIN_KEY[dom]);
+    const cap = d && d.groups.flatMap(x => x.caps).find(c => c.k === letter);
+    const covering = [...new Set(notes.filter(n => n.codes.some(c => c === g || c.startsWith(g + '_'))).map(n => n.id))];
+    sections.push({ g, domain: d ? d.name : dom, letter, part, label: SECTION_LABEL[g] || (cap ? cap.text : ''), codes: codes.length, notes: covering });
+  }
+  syllabusMap[exam] = { intro: src.intro, papers, sections };
+}
+
 /* ---------- report ---------- */
 const summary = [
   `pages ${Object.keys(pages).length}`,
@@ -348,6 +402,8 @@ writeFileSync(join(OUT, 'index.js'), js('window.CONTENT', {
   stations,
   capabilities,
   units,
+  syllabusMap,
+  texts,
   questions: { primary: qMeta('primary'), final: qMeta('final') },
   refs,
   coverage,
