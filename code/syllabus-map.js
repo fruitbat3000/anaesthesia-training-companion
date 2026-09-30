@@ -157,8 +157,7 @@
   });
 
   /* ---------- four-part overview (#map) ----------
-   * Landing page: the four boxes of the source novice guide as coloured tiles (laid out 4 | 1 over 3 | 2 as in
-   * the original diagram), each listing its sections. Each section has its own page (#map/<box>/<section>) with
+   * Landing page: the four boxes of the source novice guide as coloured tiles (laid out 1 | 2 over 3 | 4, reading order), each listing its sections. Each section has its own page (#map/<box>/<section>) with
    * every novice topic, note, unit guide and SIA in it. The level filter travels in the URL as ?level=. */
   const LEVELS = [['all', 'Everything'], ['novice', 'Novice'], ['primary', 'Primary'], ['final', 'Final']];
   const LEVEL_NAME = { novice: 'Novice', primary: 'Primary', final: 'Final', stage3: 'Stage 3' };
@@ -218,10 +217,11 @@
 
   // The rows differ in height, so centre the hub on the real junction of the four boxes (midway through the gaps).
   function placeHub(grid) {
-    const hub = $('.ovq-hub', grid), top = $('.ovq-1', grid), bottom = $('.ovq-2', grid), left = $('.ovq-4', grid);
-    if (!hub || !top || !bottom || !left) return;
-    hub.style.top = `${(top.offsetTop + top.offsetHeight + bottom.offsetTop) / 2}px`;
-    hub.style.left = `${(left.offsetLeft + left.offsetWidth + top.offsetLeft) / 2}px`;
+    // Boxes read 1 | 2 over 3 | 4.
+    const hub = $('.ovq-hub', grid), a = $('.ovq-1', grid), b = $('.ovq-2', grid), c = $('.ovq-3', grid);
+    if (!hub || !a || !b || !c) return;
+    hub.style.top = `${(a.offsetTop + a.offsetHeight + c.offsetTop) / 2}px`;
+    hub.style.left = `${(a.offsetLeft + a.offsetWidth + b.offsetLeft) / 2}px`;
   }
   const hubObservers = [];
   // The four boxes and hub, as used on this page and the home page.
