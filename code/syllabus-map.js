@@ -157,101 +157,152 @@
   });
 
   /* ---------- four-part overview (#map) ----------
-   * The whole syllabus in the four boxes of the source novice guide, each box linking to novice topics,
-   * Primary and Final notes, unit guides and SIAs, filtered by level (kept in the URL as ?level=). */
-  const LEVELS = [['all', 'Everything'], ['novice', 'Novice (IAC)'], ['primary', 'Primary · Stage 1'], ['final', 'Final · Stage 2']];
+   * Landing page: the four boxes of the source novice guide as coloured tiles (laid out 4 | 1 over 3 | 2 as in
+   * the original diagram), each listing its sections. Each section has its own page (#map/<box>/<section>) with
+   * every novice topic, note, unit guide and SIA in it. The level filter travels in the URL as ?level=. */
+  const LEVELS = [['all', 'Everything'], ['novice', 'Novice'], ['primary', 'Primary'], ['final', 'Final']];
   const LEVEL_NAME = { novice: 'Novice', primary: 'Primary', final: 'Final', stage3: 'Stage 3' };
-  const KIND_NAME = { unit: 'unit guide', sia: 'SIA' };
+  const LEVEL_BLOCK = {
+    novice: ['Novice topics', 'The first months and the IAC, each with e-LA sessions to work through.'],
+    primary: ['Primary FRCA and Stage 1', 'Revision notes for the Primary, and Stage 1 unit guides.'],
+    final: ['Final FRCA and Stage 2', 'Revision notes for the Final, and Stage 2 unit guides.'],
+    stage3: ['Stage 3 Special Interest Areas', 'Where this area goes in your final years of training.'],
+  };
+  const KIND_NAME = { unit: 'Unit guide', sia: 'SIA' };
+  const QICON = {
+    'basic-sciences': '<path d="M9 3h6M10 3v6.5L4.8 18.2A2 2 0 0 0 6.5 21h11a2 2 0 0 0 1.7-2.8L14 9.5V3"/><path d="M7.5 14h9"/>',
+    'medicine-surgery': '<path d="M3 12h4l2-6 4 12 2-6h6"/>',
+    'generic-anaesthesia': '<path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5 6.8 15M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="4"/>',
+    'anaesthetic-specialities': '<path d="M12 3 4 7l8 4 8-4z"/><path d="m4 12 8 4 8-4M4 17l8 4 8-4"/>',
+  };
+  const qIcon = id => el('span', { class: 'ovq-icon', 'aria-hidden': 'true', html: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${QICON[id] || ''}</svg>` });
+  const slugify = t => t.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const shows = (level, lv) => level === 'all' || level === lv;
+  const withLevel = (href, level) => level === 'all' ? href : `${href}?level=${level}`;
   const isDone = ([lv, , href]) => {
     const id = href.split('/').pop();
     if (lv === 'novice') return !!(App.novice && App.novice.progress.topics[id]);
     return href.startsWith('#notes/') && !!(readMap()[id] && readMap()[id].done);
   };
-  const levelCounts = (items, level) => {
-    const t = {};
-    items.forEach(([lv]) => { if (shows(level, lv)) t[lv] = (t[lv] || 0) + 1; });
-    return ['novice', 'primary', 'final', 'stage3'].filter(k => t[k]).map(k =>
-      el('span', { class: `ov-count lv-${k}`, title: `${t[k]} ${LEVEL_NAME[k]} item${t[k] === 1 ? '' : 's'}` }, el('span', { class: 'ov-dot' }), String(t[k])));
-  };
+  const sectionsOf = q => q.groups.flatMap(g => g.sections.map(s => ({ ...s, group: g.name, slug: slugify(s.name) })));
+  const count = (items, level) => items.filter(([lv]) => shows(level, lv)).length;
 
-  function ovItem(it) {
-    const [lv, title, href, kind] = it;
-    const done = isDone(it);
-    return el('li', null, el('a', { class: `ov-item lv-${lv}${done ? ' is-done' : ''}`, href, title: `${LEVEL_NAME[lv]}${kind ? ' ' + KIND_NAME[kind] : lv === 'novice' ? ' topic' : ' note'}${done ? ' · done' : ''}` },
-      el('span', { class: 'ov-dot', 'aria-hidden': 'true' }),
-      el('span', { class: 'sr-only' }, `${LEVEL_NAME[lv]}: `),
-      title,
-      kind ? el('span', { class: 'ov-kind' }, KIND_NAME[kind]) : null));
+  function levelSeg(level, hrefFor) {
+    return el('nav', { class: 'seg ov-filter', 'aria-label': 'Show topics for' },
+      LEVELS.map(([k, label]) => el('a', { href: hrefFor(k), 'aria-current': level === k ? 'true' : null }, label)));
   }
 
-  // Sections start closed so the four boxes read as a diagram; open ones stay open across filter changes.
-  const openSections = new Set();
-  function ovSection(s, level, key) {
-    const items = s.items.filter(([lv]) => shows(level, lv));
-    const maps = s.maps.filter(([exam]) => level === 'all' || level === exam);
-    const d = el('details', { class: `ov-section${items.length ? '' : ' is-empty'}`, open: openSections.has(key) || null, 'data-key': key },
-      el('summary', { class: 'ov-section-head' },
-        el('h4', null, s.name),
-        el('span', { class: 'ov-counts' }, items.length ? levelCounts(s.items, level) : el('span', null, `none at ${LEVEL_NAME[level] || ''} level`))),
-      items.length ? el('ul', { class: 'ov-items' }, items.map(ovItem)) : null,
-      items.length && maps.length ? el('p', { class: 'ov-res' }, 'Texts and resources: ', maps.map(([exam, sid, name], i) => [i ? ' · ' : '',
-        el('a', { href: `#map/${exam}/${sid}` }, `${EXAM[exam].replace(' FRCA', '')}: ${name} ›`)])) : null);
-    if (!items.length) d.addEventListener('click', e => { if (e.target.closest('summary')) e.preventDefault(); });
-    d.addEventListener('toggle', () => { if (d.open) openSections.add(key); else openSections.delete(key); });
-    return d;
-  }
-
-  function ovQuadrant(q, level) {
-    const all = q.groups.flatMap(g => g.sections.flatMap(s => s.items));
-    return el('section', { class: `ov-quad q${q.n}`, id: `q-${q.id}`, 'aria-labelledby': `qh-${q.id}` },
-      el('span', { class: 'ov-num', 'aria-hidden': 'true' }, String(q.n)),
-      el('header', { class: 'ov-quad-head' },
-        el('h2', { id: `qh-${q.id}` }, el('span', { class: 'sr-only' }, `${q.n}. `), q.name),
-        el('p', { class: 'ov-blurb' }, q.blurb),
-        el('p', { class: 'ov-counts' }, levelCounts(all, level),
-          q.novice && shows(level, 'novice') ? el('a', { class: 'ov-quad-link', href: `#syllabus/${q.novice}` }, 'Novice syllabus with e-LA links ›') : null)),
-      q.groups.map(g => el('div', { class: 'ov-group' },
-        g.name ? el('h3', null, g.name) : null,
-        g.sections.map(s => ovSection(s, level, `${q.id}/${s.name}`)))));
+  function ovTile(q, level) {
+    const secs = sectionsOf(q);
+    const total = secs.reduce((a, s) => a + count(s.items, level), 0);
+    const groups = q.groups.map(g => el('div', { class: 'ovq-group' },
+      g.name ? el('p', { class: 'ovq-group-name' }, g.name) : null,
+      el('ul', { class: 'ovq-links' }, g.sections.map(s => {
+        const n = count(s.items, level);
+        const href = withLevel(`#map/${q.id}/${slugify(s.name)}`, level);
+        return el('li', null, n
+          ? el('a', { href }, el('span', null, s.name), el('span', { class: 'ovq-n' }, String(n)))
+          : el('span', { class: 'ovq-empty', title: `Nothing at ${LEVEL_NAME[level]} level` }, s.name));
+      }))));
+    return el('section', { class: `ovq ovq-${q.n}`, 'aria-labelledby': `qh-${q.id}` },
+      el('span', { class: 'ovq-num', 'aria-hidden': 'true' }, String(q.n)),
+      el('header', { class: 'ovq-head' },
+        qIcon(q.id),
+        el('div', null,
+          el('h2', { id: `qh-${q.id}` }, q.name),
+          el('p', { class: 'ovq-blurb' }, q.blurb))),
+      el('p', { class: 'ovq-total' }, el('strong', null, String(total)), ` topic${total === 1 ? '' : 's'}`, level === 'all' ? '' : ` at ${LEVEL_NAME[level]} level`),
+      groups);
   }
 
   function renderOverview(level) {
     const O = C.overview;
-    const view = $('#view-map');
-    const body = el('div');
-    const draw = () => {
-      body.replaceChildren(
-        el('div', { class: 'ov-grid' }, O.quadrants.map(q => ovQuadrant(q, level))),
-        (() => { const items = O.across.items.filter(([lv]) => shows(level, lv));
-          return items.length ? el('section', { class: 'ov-across' }, el('div', { class: 'ov-section-head' }, el('h3', null, O.across.name), el('span', { class: 'ov-counts' }, levelCounts(O.across.items, level))), el('ul', { class: 'ov-items' }, items.map(ovItem))) : null; })());
-    };
-    const pick = k => {
-      level = k;
-      try { history.replaceState(null, '', k === 'all' ? '#map' : `#map?level=${k}`); } catch (e) { /* file:// in some browsers */ }
-      $$('.ov-filter button', view).forEach(b => b.setAttribute('aria-checked', String(b.dataset.level === k)));
-      draw();
-    };
-    view.replaceChildren(el('div', { class: 'doc-main' },
-      el('header', { class: 'page-head' },
-        el('p', { class: 'eyebrow' }, 'Syllabus · overview'),
-        el('h1', null, 'The syllabus in four parts'),
-        el('p', { class: 'lede' }, 'Everything you will learn, from the first day to the Final, fits into four boxes: basic sciences, medicine and surgery, generic anaesthesia, and the anaesthetic specialities. Start in any box and follow a link to the topic, revision note or unit guide.'),
-        el('p', { class: 'small' }, 'The four-part structure is adapted from the novice guide credited on the ', el('a', { href: '#about' }, 'About page'), '. Detailed views: ', el('a', { href: '#syllabus' }, 'Novice syllabus'), ' · ', el('a', { href: '#map/primary' }, 'Primary map'), ' · ', el('a', { href: '#map/final' }, 'Final map'), '.')),
-      el('div', { class: 'card ov-controls no-print' },
-        el('div', { class: 'seg ov-filter', role: 'radiogroup', 'aria-label': 'Show topics for' },
-          LEVELS.map(([k, label]) => el('button', { type: 'button', role: 'radio', 'data-level': k, 'aria-checked': String(level === k), onclick: () => pick(k) }, label))),
-        el('p', { class: 'ov-legend small' },
-          ['novice', 'primary', 'final', 'stage3'].map(k => el('span', { class: `ov-count lv-${k}` }, el('span', { class: 'ov-dot' }), k === 'stage3' ? 'Stage 3 SIA' : LEVEL_NAME[k])),
-          el('span', null, '✓ read or ticked')),
-        el('button', { type: 'button', class: 'btn small ghost ov-expand', onclick: e => {
-          const secs = $$('details.ov-section', view);
-          const open = !secs.every(x => x.open);
-          secs.forEach(x => { x.open = open; });
-          e.currentTarget.textContent = open ? 'Collapse all' : 'Expand all';
-        } }, 'Expand all')),
-      body));
-    draw();
+    const everything = O.quadrants.flatMap(q => sectionsOf(q).flatMap(s => s.items)).concat(O.across.items);
+    const uniq = lv => new Set(everything.filter(([l]) => l === lv).map(it => it[2])).size;
+    const acrossN = count(O.across.items, level);
+    $('#view-map').replaceChildren(el('div', { class: 'ov-page' },
+      el('header', { class: 'ov-hero' },
+        el('p', { class: 'eyebrow' }, 'The syllabus'),
+        el('h1', null, 'Everything you need to know, ', el('em', null, 'in four boxes')),
+        el('p', { class: 'lede' }, 'From your first list to the Final, every topic sits in one of four parts. Pick a box, open a section, and follow the links to topics, revision notes and unit guides.'),
+        el('div', { class: 'ov-stats' },
+          [['novice', uniq('novice'), 'novice topics'], ['primary', uniq('primary'), 'Primary and Stage 1'], ['final', uniq('final'), 'Final and Stage 2'], ['stage3', uniq('stage3'), 'Stage 3 SIAs']].map(([lv, n, label]) =>
+            el('span', { class: `ov-stat lv-${lv}` }, el('strong', null, String(n)), label)))),
+      el('div', { class: 'ov-bar no-print' }, el('span', { class: 'small' }, 'Show:'), levelSeg(level, k => withLevel('#map', k))),
+      el('div', { class: 'ovq-grid' },
+        O.quadrants.map(q => ovTile(q, level)),
+        el('div', { class: 'ovq-hub', 'aria-hidden': 'true' }, el('span', null, 'Syllabus'))),
+      acrossN ? el('a', { class: 'ov-across', href: withLevel('#map/across', level) },
+        el('span', null, el('strong', null, O.across.name), el('span', { class: 'small' }, ` · ${acrossN} topic${acrossN === 1 ? '' : 's'}`)), el('span', { class: 'ov-arrow' }, '→')) : null,
+      el('p', { class: 'small ov-foot' }, 'The four-part structure is adapted from the novice guide credited on the ', el('a', { href: '#about' }, 'About page'), '. For confidence ratings and textbooks, use the ', el('a', { href: '#map/primary' }, 'Primary'), ' and ', el('a', { href: '#map/final' }, 'Final'), ' syllabus maps.')));
+  }
+
+  // Which topic group a note sits in on its exam's syllabus map, for sub-headings on big sections.
+  let noteGroup = null;
+  const groupOf = id => {
+    if (!noteGroup) { noteGroup = {}; ['primary', 'final'].forEach(ex => C.syllabusMap[ex].papers.forEach(p => p.subjects.forEach(sj => sj.groups.forEach(g => g.notes.forEach(n => { noteGroup[n] = g.name; }))))); }
+    return noteGroup[id];
+  };
+  const mapSubject = (exam, sid) => C.syllabusMap[exam].papers.flatMap(p => p.subjects).find(x => x.id === sid);
+
+  function itemCard(it) {
+    const [lv, title, href, kind] = it;
+    const done = isDone(it);
+    const n = href.startsWith('#notes/') ? noteById(href.slice(7)) : null;
+    const q = n ? qFor(n) : 0;
+    return el('li', null, el('a', { class: `ovs-card lv-${lv}${done ? ' is-done' : ''}`, href },
+      el('span', { class: 'ovs-card-title' }, title),
+      el('span', { class: 'ovs-card-meta' },
+        el('span', { class: 'ovs-kind' }, kind ? KIND_NAME[kind] : lv === 'novice' ? 'Topic · e-LA' : 'Revision note'),
+        q ? el('span', null, `${q} question${q === 1 ? '' : 's'}`) : null,
+        done ? el('span', { class: 'ovs-done' }, '✓ done') : null)));
+  }
+
+  function levelBlock(lv, items) {
+    const [h, sub] = LEVEL_BLOCK[lv];
+    const notesOnly = items.filter(it => it[2].startsWith('#notes/'));
+    const others = items.filter(it => !it[2].startsWith('#notes/'));
+    let lists;
+    if (notesOnly.length > 8) {
+      const byGroup = new Map();
+      notesOnly.forEach(it => { const g = groupOf(it[2].slice(7)) || 'Other'; if (!byGroup.has(g)) byGroup.set(g, []); byGroup.get(g).push(it); });
+      lists = [...byGroup].map(([g, list]) => el('div', { class: 'ovs-sub' }, el('h3', null, g), el('ul', { class: 'ovs-cards' }, list.map(itemCard))));
+      if (others.length) lists.push(el('div', { class: 'ovs-sub' }, el('h3', null, 'Guides'), el('ul', { class: 'ovs-cards' }, others.map(itemCard))));
+    } else lists = [el('ul', { class: 'ovs-cards' }, items.map(itemCard))];
+    return el('section', { class: `ovs-block lv-${lv}` },
+      el('header', { class: 'ovs-block-head' }, el('h2', { id: `lv-${lv}` }, h), el('span', { class: 'ovs-block-n' }, String(items.length)), el('p', { class: 'small' }, sub)),
+      lists);
+  }
+
+  function renderSection(qid, slug, level) {
+    const O = C.overview;
+    const across = qid === 'across';
+    const q = across ? null : O.quadrants.find(x => x.id === qid);
+    const secs = q ? sectionsOf(q) : [];
+    const s = across ? { name: 'Professional practice, safety and quality', items: O.across.items, maps: [] } : secs.find(x => x.slug === slug) || secs[0];
+    if (!s) { location.replace('#map'); return 'Syllabus'; }
+    const i = secs.indexOf(s);
+    const items = s.items.filter(([lv]) => shows(level, lv));
+    const blocks = ['novice', 'primary', 'final', 'stage3'].map(lv => [lv, items.filter(it => it[0] === lv)]).filter(([, l]) => l.length);
+    const maps = (s.maps || []).filter(([exam]) => level === 'all' || level === exam).map(([exam, sid]) => [exam, mapSubject(exam, sid)]).filter(([, sj]) => sj);
+    const here = k => withLevel(across ? '#map/across' : `#map/${q.id}/${s.slug}`, k);
+    $('#view-map').replaceChildren(el('div', { class: `ovs-page ${q ? 'ovq-' + q.n : 'ovq-0'}` },
+      el('header', { class: 'ovs-hero' },
+        el('p', { class: 'crumbs' }, el('a', { href: withLevel('#map', level) }, 'The syllabus'), ' / ', q ? `${q.n} · ${q.name}` : 'Across all four'),
+        el('div', { class: 'ovs-title' }, q ? qIcon(q.id) : null, el('div', null,
+          s.group ? el('p', { class: 'ovs-eyebrow' }, s.group) : null,
+          el('h1', null, s.name))),
+        el('div', { class: 'ov-stats' }, ['novice', 'primary', 'final', 'stage3'].map(lv => { const n = s.items.filter(it => it[0] === lv).length; return n ? el('a', { class: `ov-stat lv-${lv}`, href: `#lv-${lv}`, onclick: e => { e.preventDefault(); const t = document.getElementById(`lv-${lv}`); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }, el('strong', null, String(n)), LEVEL_NAME[lv]) : null; }))),
+      q && secs.length > 1 ? el('nav', { class: 'ovs-siblings no-print', 'aria-label': `Sections of ${q.name}` }, secs.map(x => el('a', { href: withLevel(`#map/${q.id}/${x.slug}`, level), 'aria-current': x === s ? 'page' : null, class: count(x.items, level) ? null : 'is-empty' }, x.name))) : null,
+      el('div', { class: 'ov-bar no-print' }, el('span', { class: 'small' }, 'Show:'), levelSeg(level, here)),
+      blocks.length ? blocks.map(([lv, list]) => levelBlock(lv, list)) : el('p', { class: 'ovs-empty' }, `Nothing in ${s.name} at ${LEVEL_NAME[level]} level. `, el('a', { href: here('all') }, 'Show everything')),
+      maps.length ? el('section', { class: 'ovs-block ovs-reading' },
+        el('header', { class: 'ovs-block-head' }, el('h2', null, 'Textbooks and free resources')),
+        maps.map(([exam, sj]) => el('div', { class: 'ovs-sub' }, el('h3', null, el('a', { href: `#map/${exam}/${sj.id}` }, `${EXAM[exam]} map: ${sj.name} ›`)), readingStrip(sj)))) : null,
+      q ? el('nav', { class: 'pager no-print' },
+        secs[i - 1] ? el('a', { class: 'pager-prev', href: withLevel(`#map/${q.id}/${secs[i - 1].slug}`, level) }, el('span', { class: 'small' }, '← Previous'), secs[i - 1].name) : el('a', { class: 'pager-prev', href: withLevel('#map', level) }, el('span', { class: 'small' }, '← Back to'), 'All four boxes'),
+        secs[i + 1] ? el('a', { class: 'pager-next', href: withLevel(`#map/${q.id}/${secs[i + 1].slug}`, level) }, el('span', { class: 'small' }, 'Next →'), secs[i + 1].name) : el('a', { class: 'pager-next', href: withLevel('#map', level) }, el('span', { class: 'small' }, 'Back to →'), 'All four boxes')) : null));
+    return s.name;
   }
 
   App.on('map', (args, params) => {
@@ -263,9 +314,15 @@
         after: sid ? () => { const n = document.getElementById(`map-${sid}`); if (n) n.scrollIntoView({ block: 'start' }); } : null };
     }
     const level = LEVELS.some(([k]) => k === params.get('level')) ? params.get('level') : 'all';
-    renderOverview(level);
-    // Opened from a stage's menu, the page stays in that stage's menu and colour.
+    // Opened with a level, the page sits in that stage's menu and colour.
     const tab = { novice: 'novice', primary: 'stage1', final: 'stage2' }[level] || 'notes';
-    return { view: 'map', tab, current: level === 'all' ? '#map' : `#map?level=${level}`, title: 'The syllabus in four parts' };
+    const current = level === 'all' ? '#map' : `#map?level=${level}`;
+    if (args[0]) {
+      const title = renderSection(args[0], args[1], level);
+      const after = () => { const a = $('.ovs-siblings [aria-current]'); if (a) a.parentNode.scrollLeft = a.offsetLeft - a.parentNode.offsetLeft - 16; };
+      return { view: 'map', tab, current, title, after };
+    }
+    renderOverview(level);
+    return { view: 'map', tab, current, title: 'The syllabus in four parts' };
   });
 })();

@@ -23,7 +23,7 @@ Then go to http://localhost:8000.
 - `notes.js` — revision notes library, note reader, syllabus coverage map
 - `qbank.js` — question bank: practice sessions, timed mock papers to the AKT blueprint, results, progress
 - `stations.js` — CASE/FCPE station list and runner (candidate/examiner views, timer, mark sheet, summary)
-- `syllabus-map.js` — the four-part syllabus overview (`#map`, filterable with `?level=novice|primary|final`) and the readable Primary and Final syllabus maps: topics by paper and subject with red/amber/green self-rating, core textbooks and free resources, and the RCoA section view
+- `syllabus-map.js` — the four-part syllabus overview (`#map`: four coloured boxes listing their sections; each section has its own page at `#map/<box>/<section>`; all filterable with `?level=novice|primary|final`) and the readable Primary and Final syllabus maps: topics by paper and subject with red/amber/green self-rating, core textbooks and free resources, and the RCoA section view
 - `stages.js` — Stages 1–3: key capability checklists, unit guides, Special Interest Areas, printable checklists, the stage hub and sidebar progress
 - `styles.css` — light theme by default with a dark theme; print styles
 - `content/` — generated; do not edit
