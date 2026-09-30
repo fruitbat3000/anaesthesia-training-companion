@@ -187,6 +187,7 @@
   const sectionsOf = q => q.groups.flatMap(g => g.sections.map(s => ({ ...s, group: g.name, slug: slugify(s.name) })));
   const count = (items, level) => items.filter(([lv]) => shows(level, lv)).length;
 
+  App.syllabusLevels = LEVELS;
   function levelSeg(level, hrefFor) {
     return el('nav', { class: 'seg ov-filter', 'aria-label': 'Show topics for' },
       LEVELS.map(([k, label]) => el('a', { href: hrefFor(k), 'aria-current': level === k ? 'true' : null }, label)));
@@ -216,13 +217,28 @@
   }
 
   // The rows differ in height, so centre the hub on the real junction of the four boxes (midway through the gaps).
-  let hubObserver = null;
   function placeHub(grid) {
-    const hub = $('.ovq-hub', grid), top = $('.ovq-1', grid), bottom = $('.ovq-2', grid), left = $('.ovq-4', grid), right = $('.ovq-1', grid);
-    if (!hub || !top || !bottom) return;
+    const hub = $('.ovq-hub', grid), top = $('.ovq-1', grid), bottom = $('.ovq-2', grid), left = $('.ovq-4', grid);
+    if (!hub || !top || !bottom || !left) return;
     hub.style.top = `${(top.offsetTop + top.offsetHeight + bottom.offsetTop) / 2}px`;
-    hub.style.left = `${(left.offsetLeft + left.offsetWidth + right.offsetLeft) / 2}px`;
+    hub.style.left = `${(left.offsetLeft + left.offsetWidth + top.offsetLeft) / 2}px`;
   }
+  const hubObservers = [];
+  // The four boxes and hub, as used on this page and the home page.
+  function boxGrid(level) {
+    const grid = el('div', { class: 'ovq-grid' },
+      C.overview.quadrants.map(q => ovTile(q, level)),
+      el('div', { class: 'ovq-hub', 'aria-hidden': 'true' }, el('span', null, 'Syllabus')));
+    for (let i = hubObservers.length - 1; i >= 0; i--) if (!hubObservers[i][0].isConnected) { hubObservers[i][1].disconnect(); hubObservers.splice(i, 1); }
+    if ('ResizeObserver' in window) {
+      const obs = new ResizeObserver(() => placeHub(grid));
+      $$('.ovq', grid).forEach(q => obs.observe(q));
+      hubObservers.push([grid, obs]);
+    }
+    requestAnimationFrame(() => placeHub(grid));
+    return grid;
+  }
+  App.syllabusBoxes = boxGrid;
 
   function renderOverview(level) {
     const O = C.overview;
@@ -238,16 +254,10 @@
           [['novice', uniq('novice'), 'novice topics'], ['primary', uniq('primary'), 'Primary and Stage 1'], ['final', uniq('final'), 'Final and Stage 2'], ['stage3', uniq('stage3'), 'Stage 3 SIAs']].map(([lv, n, label]) =>
             el('span', { class: `ov-stat lv-${lv}` }, el('strong', null, String(n)), label)))),
       el('div', { class: 'ov-bar no-print' }, el('span', { class: 'small' }, 'Show:'), levelSeg(level, k => withLevel('#map', k))),
-      el('div', { class: 'ovq-grid' },
-        O.quadrants.map(q => ovTile(q, level)),
-        el('div', { class: 'ovq-hub', 'aria-hidden': 'true' }, el('span', null, 'Syllabus'))),
+      boxGrid(level),
       acrossN ? el('a', { class: 'ov-across', href: withLevel('#map/across', level) },
         el('span', null, el('strong', null, O.across.name), el('span', { class: 'small' }, ` · ${acrossN} topic${acrossN === 1 ? '' : 's'}`)), el('span', { class: 'ov-arrow' }, '→')) : null,
       el('p', { class: 'small ov-foot' }, 'The four-part structure is adapted from the novice guide credited on the ', el('a', { href: '#about' }, 'About page'), '. For confidence ratings and textbooks, use the ', el('a', { href: '#map/primary' }, 'Primary'), ' and ', el('a', { href: '#map/final' }, 'Final'), ' syllabus maps.')));
-    const grid = $('#view-map .ovq-grid');
-    if (hubObserver) hubObserver.disconnect();
-    if ('ResizeObserver' in window) { hubObserver = new ResizeObserver(() => placeHub(grid)); $$('.ovq', grid).forEach(q => hubObserver.observe(q)); }
-    requestAnimationFrame(() => placeHub(grid));
   }
 
   // Which topic group a note sits in on its exam's syllabus map, for sub-headings on big sections.

@@ -16,6 +16,7 @@ Claude-specific working instructions **and** the running session history. Durabl
 - Placement is Claude's judgement where the 2010-era boxes don't match modern notes (e.g. Final POM disease notes under co-morbidities, vascular added under general duties, a "professional practice" strip across all four). Worth Dr Brooks checking.
 - Credit stays on the About page only (DECISIONS "Tone and credits"); the page says the structure is adapted from the guide credited there.
 - Pushed; then Mark asked for a less fussy landing page with more colour and design. Redesigned: each box has its own colour and icon, sections are pill links with counts, and a "Syllabus" hub sits where the four boxes meet. Each section (e.g. Physiology) is now its own page (`#map/<box>/<section>`) with cards grouped by level and by syllabus-map topic group, sibling-section tabs, textbooks and resources, and previous/next.
+- The "Syllabus" hub is now placed by JS on the real junction of the four boxes (rows differ in height). The box grid is shared (`App.syllabusBoxes`) and also sits on the home page after "Where are you in training?", with its own level filter.
 
 ### 2026-09-28 (evening) — BJA Education pointers, GPAS, IACOA
 - Mark asked whether to signpost BJA Education from topics (yes) and added GPAS chapters and the IAC/IACOA workbooks to `docs/`.

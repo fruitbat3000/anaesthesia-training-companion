@@ -188,6 +188,8 @@
         stageCard('Stage 2', 'ST4–ST5', 'Specialist units at intermediate level, the Final FRCA and the Stage 2 certificate.', '#stage/2', 's2'),
         stageCard('Stage 3', 'ST6–ST7', 'The 14 domains, Special Interest Areas, subspecialties and the road to a consultant post.', '#stage/3', 's3')),
 
+      homeSyllabus(),
+
       el('div', { class: 'callout-box exam home-exam' },
         el('p', { class: 'callout-title' }, 'The FRCA changes format from July 2027'),
         el('p', null, 'The Primary becomes an Applied Knowledge Test (2 × 80 SBA) plus CASE, a 13-station clinical exam. The Final becomes a 100-question AKT plus FCPE, a 12-station clinical exam. The curriculum and syllabus are unchanged. ', el('a', { href: '#exams' }, 'What it means for you →'))),
@@ -211,6 +213,26 @@
           el('p', null, 'Regional teaching runs through ', el('a', { href: S.links.yairn, target: '_blank', rel: 'noopener', class: 'ext' }, 'YAIRN'), ': Core (CT1–3), Advanced (ST4–7), ICM and Exam Preparation branches. Each stage page lists the relevant branch.'),
           el('p', { class: 'small' }, 'Ask your College Tutor about your hospital\'s IAC programme, teaching and exam practice.'))),
       el('p', { class: 'home-foot small' }, 'Educational material only, not medical advice. Content is in draft and awaiting clinical review. ', el('a', { href: '#disclaimer' }, 'Read the disclaimer.')));
+  }
+  // The four-box syllabus (built by syllabus-map.js), with a level filter that redraws in place.
+  function homeSyllabus() {
+    if (!App.syllabusBoxes || !C.overview) return null;
+    let level = 'all';
+    const slot = el('div');
+    const seg = el('div', { class: 'seg', role: 'radiogroup', 'aria-label': 'Show topics for' }, App.syllabusLevels.map(([k, label]) =>
+      el('button', { type: 'button', role: 'radio', 'aria-checked': String(k === level), onclick: e => {
+        level = k;
+        $$('button', seg).forEach(b => b.setAttribute('aria-checked', String(b === e.currentTarget)));
+        slot.replaceChildren(App.syllabusBoxes(level));
+      } }, label)));
+    slot.append(App.syllabusBoxes(level));
+    return el('section', { class: 'home-syllabus' },
+      el('div', { class: 'home-syllabus-head' },
+        el('div', null,
+          el('h2', { class: 'section-h' }, 'The syllabus in four boxes'),
+          el('p', { class: 'small' }, 'Every topic from your first list to the Final. Open a section to see its topics, notes and guides. ', el('a', { href: '#map' }, 'Full overview →'))),
+        seg),
+      slot);
   }
   App.on('home', () => { renderHome(); return { view: 'home', tab: 'home', title: '' }; });
 

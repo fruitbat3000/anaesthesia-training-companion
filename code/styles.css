@@ -1063,3 +1063,9 @@ a.ov-stat:hover { border-color: var(--lv); }
   .ovs-hero { padding: 1.2rem 1.1rem; border-radius: 20px; }
 }
 @media print { .ovq, .ovs-card { box-shadow: none; } .ovq-hub { display: none; } }
+
+/* four-box syllabus on the home page */
+.home-syllabus { margin-top: 0; }
+.home-syllabus-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .8rem 1.5rem; margin-bottom: 1rem; }
+.home-syllabus-head .section-h { margin-bottom: .3rem; }
+.home-syllabus-head .small { margin: 0; }
