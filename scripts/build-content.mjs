@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, statSync } from 'node:fs';
 import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { markdown, frontMatter, list, plain, inline } from './lib/md.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -462,6 +463,15 @@ const qMeta = exam => {
   return { total: questions[exam].length, bySubject, byNote };
 };
 
+// Lazy-loaded parts are fingerprinted so browsers never pair a new index with an old cached part.
+const hash = text => createHash('sha256').update(text).digest('hex').slice(0, 10);
+const parts = {
+  'notes-primary': part('notes-primary', noteHtml.primary),
+  'notes-final': part('notes-final', noteHtml.final),
+  'questions-primary': part('questions-primary', questions.primary),
+  'questions-final': part('questions-final', questions.final),
+  stations: part('stations', stationHtml),
+};
 writeFileSync(join(OUT, 'index.js'), js('window.CONTENT', {
   built: new Date().toISOString().slice(0, 10),
   subjects: SUBJECTS,
@@ -481,11 +491,16 @@ writeFileSync(join(OUT, 'index.js'), js('window.CONTENT', {
   refs,
   coverage,
   codes: { primary: [...CODES.primary], final: [...CODES.final] },
+  partVersions: Object.fromEntries(Object.entries(parts).map(([k, v]) => [k, hash(v)])),
 }));
-writeFileSync(join(OUT, 'notes-primary.js'), part('notes-primary', noteHtml.primary));
-writeFileSync(join(OUT, 'notes-final.js'), part('notes-final', noteHtml.final));
-writeFileSync(join(OUT, 'questions-primary.js'), part('questions-primary', questions.primary));
-writeFileSync(join(OUT, 'questions-final.js'), part('questions-final', questions.final));
-writeFileSync(join(OUT, 'stations.js'), part('stations', stationHtml));
+for (const [k, v] of Object.entries(parts)) writeFileSync(join(OUT, `${k}.js`), v);
 const size = f => (statSync(join(OUT, f)).size / 1024).toFixed(0) + ' KB';
 console.log('wrote', ['index.js', 'notes-primary.js', 'notes-final.js', 'questions-primary.js', 'questions-final.js', 'stations.js'].map(f => `${f} ${size(f)}`).join(', '));
+
+// Cache-busting: stamp each local script and stylesheet in index.html with a fingerprint of the file,
+// so a new deploy is picked up at once instead of after the host's 10-minute cache.
+const INDEX = join(ROOT, 'code', 'index.html');
+const indexHtml = readFileSync(INDEX, 'utf8');
+const stamped = indexHtml.replace(/(<(?:script src|link rel="stylesheet" href)=")([a-z0-9/.-]+\.(?:js|css))(?:\?v=[a-f0-9]+)?"/g,
+  (m, pre, file) => existsSync(join(ROOT, 'code', file)) ? `${pre}${file}?v=${hash(readFileSync(join(ROOT, 'code', file), 'utf8'))}"` : m);
+if (stamped !== indexHtml) writeFileSync(INDEX, stamped);

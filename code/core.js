@@ -48,7 +48,8 @@
     if (window.CONTENT_PARTS[key]) return Promise.resolve(window.CONTENT_PARTS[key]);
     if (!loading[key]) loading[key] = new Promise((resolve, reject) => {
       const s = document.createElement('script');
-      s.src = `content/${key}.js`;
+      const v = (C.partVersions || {})[key];
+      s.src = `content/${key}.js${v ? `?v=${v}` : ''}`;
       s.onload = () => resolve(window.CONTENT_PARTS[key]);
       s.onerror = () => reject(new Error(`Could not load ${key}`));
       document.head.append(s);

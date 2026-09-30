@@ -28,6 +28,8 @@ Then go to http://localhost:8000.
 - `styles.css` — light theme by default with a dark theme; print styles
 - `content/` — generated; do not edit
 
+The content build also stamps every local script and the stylesheet in `index.html` with `?v=<fingerprint>` (and lazy-loaded content parts via `CONTENT.partVersions`), so browsers pick up a new deploy at once rather than after GitHub Pages' 10-minute cache. Run `node scripts/build-content.mjs` after editing app files too; the deploy workflow does this anyway.
+
 ## Editing content (in `content/`, then run `node scripts/build-content.mjs`)
 
 - **Note:** a Markdown file with front matter `title, subject, codes, refs, related, summary, order, status`. `codes` must be real RCoA syllabus codes (Primary v2.2 or Stage 2); `refs` must be ids in `content/refs.json`. End with an `> [!exam] In the exam` box.
