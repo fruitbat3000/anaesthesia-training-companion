@@ -382,6 +382,34 @@ for (const exam of ['primary', 'final']) {
   syllabusMap[exam] = { intro: src.intro, papers, sections };
 }
 
+/* ---------- four-part syllabus overview (content/syllabus/overview.json) ---------- */
+// Novice topics live in code/data.js (the app's own data), so evaluate it in a sandbox to check ids.
+const siteData = (() => { const w = {}; new Function('window', readFileSync(join(ROOT, 'code', 'data.js'), 'utf8'))(w); return w.SITE; })();
+const noviceTopics = new Map(siteData.domains.flatMap(d => d.groups.flatMap(g => g.topics.map(t => [t.id, t]))));
+const ovSrc = JSON.parse(readFileSync(C('syllabus/overview.json'), 'utf8'));
+const OV = 'syllabus/overview.json';
+const ovUsed = new Set();
+const siaById = new Map((capabilities.sias ? capabilities.sias.domains : []).map(d => [d.id, d]));
+// Each item compiles to [level, title, href]; level is novice | primary | final | stage3.
+function ovItem(ref) {
+  ovUsed.add(ref);
+  const [kind, id] = ref.includes(':') ? ref.split(':') : ['note', ref];
+  if (kind === 'n') { const t = noviceTopics.get(id); if (!t) return err(OV, `unknown novice topic ${id}`); return ['novice', t.title, `#syllabus/${id}`]; }
+  if (kind === 'u') { const u = units.find(x => x.id === id); if (!u) return err(OV, `unknown unit guide ${id}`); return [u.stage === '1' ? 'primary' : 'final', u.title, `#stage/${u.stage}/unit/${id}`, 'unit']; }
+  if (kind === 's') { const d = siaById.get(id); if (!d) return err(OV, `unknown SIA ${id}`); return ['stage3', d.name, `#stage/3/sia/${id}`, 'sia']; }
+  const n = notes.find(x => x.id === id);
+  if (!n) return err(OV, `unknown note ${id}`);
+  return [n.exam, n.title, `#notes/${id}`];
+}
+const ovMaps = (f, ids) => (ids || []).map(m => { const [exam, sid] = m.split(':'); if (!mapSrc[exam] || !mapSrc[exam].subjects[sid]) err(OV, `${f}: unknown map subject ${m}`); return [exam, sid, SUBJECTS[exam] && SUBJECTS[exam][sid] ? SUBJECTS[exam][sid].name : sid]; });
+const overview = {
+  quadrants: ovSrc.quadrants.map(q => ({ n: q.n, id: q.id, name: q.name, blurb: q.blurb, novice: q.novice,
+    groups: q.groups.map(g => ({ name: g.name, sections: g.sections.map(s => ({ name: s.name, maps: ovMaps(s.name, s.maps), items: s.items.map(ovItem).filter(Boolean) })) })) })),
+  across: { name: ovSrc.across.name, items: ovSrc.across.items.map(ovItem).filter(Boolean) },
+};
+for (const id of noviceTopics.keys()) if (!ovUsed.has(`n:${id}`) && !ovSrc.unmapped.includes(`n:${id}`)) err(OV, `novice topic ${id} is not on the overview`);
+for (const n of notes) if (!ovUsed.has(n.id)) err(OV, `note ${n.id} is not on the overview`);
+
 /* ---------- report ---------- */
 const summary = [
   `pages ${Object.keys(pages).length}`,
@@ -430,6 +458,7 @@ writeFileSync(join(OUT, 'index.js'), js('window.CONTENT', {
   capabilities,
   units,
   syllabusMap,
+  overview,
   texts,
   gpas: { index: gpas.index, chapters: gpas.chapters },
   questions: { primary: qMeta('primary'), final: qMeta('final') },

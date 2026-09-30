@@ -176,7 +176,7 @@
         el('p', { class: 'lede' }, 'The RCoA curriculum by stage, a guide to the FRCA (including the new exam formats from July 2027), revision notes mapped to the syllabus, practice questions and exam-station practice, in one place.'),
         el('div', { class: 'hero-actions' },
           el('a', { class: 'btn', href: '#questions' }, 'Practise questions'),
-          el('a', { class: 'btn ghost', href: '#map/primary' }, 'Syllabus maps'),
+          el('a', { class: 'btn ghost', href: '#map' }, 'Syllabus overview'),
           el('a', { class: 'btn ghost', href: '#notes' }, 'Browse revision notes'),
           el('a', { class: 'btn ghost', href: '#exams' }, 'FRCA 2027 changes')),
         WIDGETS.stats()),

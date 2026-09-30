@@ -10,6 +10,12 @@ Claude-specific working instructions **and** the running session history. Durabl
 
 ## Session log
 
+### 2026-09-30 — Four-part syllabus overview
+- Mark asked for a syllabus landing page keeping the four-box syllabus from Dr Brooks's guide (p. 23 diagram: basic sciences, medicine and surgery, generic anaesthesia, anaesthetic specialities), with each box linking through to content and resources, filterable by Novice / Primary / Final.
+- Built `#map` (old `#map` default of the Primary map now goes to the overview; `#map/primary` and `#map/final` unchanged, and `#map/<exam>/<subject>` now scrolls to that subject). Mapping in `content/syllabus/overview.json`, validated and compiled by the build (every note and novice topic placed; `x-selftest` deliberately unmapped). Boxes are laid out 4 | 1 over 3 | 2 as in the diagram and stack 1 → 4 on phones; sections fold, with "Expand all"; filter kept in the URL (`?level=`), and opening it from a stage menu keeps that stage's colour.
+- Placement is Claude's judgement where the 2010-era boxes don't match modern notes (e.g. Final POM disease notes under co-morbidities, vascular added under general duties, a "professional practice" strip across all four). Worth Dr Brooks checking.
+- Credit stays on the About page only (DECISIONS "Tone and credits"); the page says the structure is adapted from the guide credited there.
+
 ### 2026-09-28 (evening) — BJA Education pointers, GPAS, IACOA
 - Mark asked whether to signpost BJA Education from topics (yes) and added GPAS chapters and the IAC/IACOA workbooks to `docs/`.
 - 197 BJA Education articles chosen by hand for 144 notes from Crossref searches (`content/bjaed.json`, S31). Shown as "Read next in BJA Education" on notes and as a count on the syllabus maps; the link check confirms the DOIs via Crossref in batches (parallel requests hit a 429).
