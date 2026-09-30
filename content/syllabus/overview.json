@@ -1,193 +1,705 @@
 {
-  "_note": "Four-part syllabus overview (#map), following the four-box structure of the source novice guide (SOURCES S2, p. 23): 1 Basic sciences, 2 Medicine and surgery, 3 Generic anaesthesia, 4 Anaesthetic specialities. Items: a plain id is a Primary or Final note; n:<id> a novice topic (code/data.js); u:<id> a unit guide; s:<id> a Stage 3 SIA. 'maps' names syllabus-map subjects (exam:subject) whose texts and resources the section points to. Every note and novice topic (except 'unmapped') must appear at least once; the build checks this. An item may appear in more than one section.",
-  "unmapped": ["n:x-selftest"],
-  "quadrants": [
+ "_note": "Four-part syllabus overview (#map), following the four-box structure of the source novice guide (SOURCES S2, p. 23): 1 Basic sciences, 2 Medicine and surgery, 3 Generic anaesthesia, 4 Anaesthetic specialities. Items: a plain id is a Primary or Final note; n:<id> a novice topic (code/data.js); u:<id> a unit guide; s:<id> a Stage 3 SIA. 'maps' names syllabus-map subjects (exam:subject) whose texts and resources the section points to. Every note and novice topic (except 'unmapped') must appear at least once; the build checks this. An item may appear in more than one section.",
+ "unmapped": [
+  "n:x-selftest"
+ ],
+ "quadrants": [
+  {
+   "n": 1,
+   "id": "basic-sciences",
+   "name": "Basic sciences",
+   "blurb": "The science under every anaesthetic: most of the Primary AKT.",
+   "novice": "d-basic-sciences",
+   "groups": [
     {
-      "n": 1, "id": "basic-sciences", "name": "Basic sciences",
-      "blurb": "The science under every anaesthetic: most of the Primary AKT.",
-      "novice": "d-basic-sciences",
-      "groups": [
-        { "name": null, "sections": [
-          { "name": "Physiology", "maps": ["primary:physiology"], "items": [
-            "n:phys-cvs", "n:phys-o2", "n:phys-resp", "n:phys-nmj", "n:phys-ans", "n:phys-ga",
-            "cell-physiology", "neuro-membrane-ap", "neuro-nmj-muscle",
-            "resp-lung-volumes", "resp-mechanics", "resp-vq", "resp-o2-transport", "resp-co2-transport", "resp-control", "resp-pulmonary-circulation", "resp-ippv", "resp-altitude",
-            "cvs-cardiac-cycle", "cvs-cardiac-output", "cvs-cardiac-ap", "cvs-bp-control", "cvs-microcirculation", "cvs-special-circulations", "cvs-fetal-circulation",
-            "neuro-icp-cbf", "neuro-ans", "neuro-pain-physiology",
-            "renal-gfr", "renal-tubule", "acid-base", "fluids-osmolality",
-            "blood-rbc-hb", "blood-haemostasis", "blood-transfusion", "immunity-anaphylaxis",
-            "endocrine-stress-glucose", "endocrine-glands", "nutrition-metabolism", "thermoregulation", "liver-gi",
-            "pregnancy-physiology", "paeds-physiology", "ageing-obesity"] },
-          { "name": "Pharmacology", "maps": ["primary:pharmacology"], "items": [
-            "n:ph-induction", "n:ph-volatile", "n:ph-analgesia", "n:ph-nmb", "n:ph-vaso", "n:ph-antiemetic", "n:ph-la", "n:ph-fluids", "n:ph-safety",
-            "pk-basics", "pk-absorption", "pk-metabolism", "pd-receptors", "drug-chemistry", "pk-csht-tci", "drug-interactions",
-            "inhalational-uptake", "inhalational-agents", "anaesthesia-mechanisms", "iv-induction-agents", "benzodiazepines-sedation",
-            "opioids", "paracetamol-nsaids", "local-anaesthetics",
-            "nmb-suxamethonium", "nmb-nondepolarising", "nmb-reversal",
-            "anticholinergics-cholinergics", "sympathomimetics", "antihypertensives", "antiarrhythmics", "cardiac-drugs",
-            "anticoagulants", "procoagulants-blood-products", "iv-fluids",
-            "antiemetics", "gi-drugs", "respiratory-drugs", "diuretics", "cns-drugs", "diabetes-drugs", "steroids-thyroid-drugs", "antimicrobials", "mh-dantrolene"] },
-          { "name": "Anatomy", "maps": ["primary:anatomy"], "items": [
-            "n:anat-airway", "n:anat-resp", "n:anat-heart",
-            "anat-airway", "anat-trachea-lungs", "anat-heart-vessels", "anat-spine-neuraxis", "anat-plexuses", "anat-head-neck-eye"] },
-          { "name": "Physics and measurement", "maps": ["primary:physics", "primary:measurement"], "items": [
-            "n:eq-check", "n:eq-gases", "n:eq-controls", "n:eq-breathing", "n:eq-ippv", "n:eq-monitoring", "n:eq-gasmon", "n:eq-nmt", "n:eq-electrical",
-            "si-units-mechanics", "gas-laws", "vapours-humidity", "flow-physics", "ultrasound-doppler",
-            "gas-supply", "anaesthetic-machine", "vaporisers", "breathing-systems", "ventilators", "oxygen-delivery-devices",
-            "electricity-safety", "diathermy-lasers-fires", "defibrillation-pacing", "infusion-decontamination",
-            "measurement-principles", "monitoring-standards", "pressure-measurement", "pulse-oximetry", "capnography", "gas-analysis", "temperature-measurement", "cardiac-output-measurement", "flow-volume-pft", "nm-monitoring"] },
-          { "name": "Statistics, study design and audit", "maps": ["primary:statistics", "final:professional"], "items": [
-            "stats-data-descriptive", "stats-hypothesis-tests", "stats-study-design",
-            "research-appraisal", "qi-safety-stage2",
-            "s:research", "s:quality"] }
-        ]}
-      ]
-    },
-    {
-      "n": 2, "id": "medicine-surgery", "name": "Medicine and surgery",
-      "blurb": "The patient in front of you: investigations, co-morbidity and acute illness.",
-      "novice": "d-medicine-and-surgery",
-      "groups": [
-        { "name": null, "sections": [
-          { "name": "Data interpretation", "maps": ["primary:measurement"], "items": [
-            "n:ms-data",
-            "abg-interpretation", "ecg-interpretation", "imaging-interpretation"] },
-          { "name": "Medical and surgical co-morbidities", "maps": ["final:pom"], "items": [
-            "n:ms-cvsresp", "n:ms-other", "n:ms-highrisk",
-            "diabetes-perioperative", "ageing-obesity",
-            "respiratory-neuro-pom", "renal-liver-pom", "endocrine-disease-pom", "haematology-pom", "neuroendocrine-tumours"] },
-          { "name": "Acute disturbance in physiology", "maps": ["final:icm"], "items": [
-            "n:ms-critical",
-            "sepsis-critical-illness",
-            "sepsis-organ-support"] }
-        ]}
-      ]
-    },
-    {
-      "n": 3, "id": "generic-anaesthesia", "name": "Generic anaesthesia",
-      "blurb": "What every anaesthetic has in common, and what goes wrong.",
-      "novice": "d-generic-anaesthesia",
-      "groups": [
-        { "name": "Generic anaesthetic techniques", "sections": [
-          { "name": "Principles", "items": [
-            "n:g-aims", "n:g-team", "n:g-prep", "n:g-techniques", "n:g-scope"] },
-          { "name": "Pre-op assessment", "maps": ["primary:clinical"], "items": [
-            "n:g-visit", "n:g-history", "n:g-airway", "n:g-fasting", "n:g-asa", "n:g-consent",
-            "preop-assessment", "airway-assessment", "consent-capacity-safeguarding"] },
-          { "name": "Induction", "items": [
-            "n:g-iv", "n:g-preox", "n:g-ivind", "n:g-stages", "n:g-rsi", "n:g-position",
-            "rsi-aspiration"] },
-          { "name": "Airway management", "maps": ["final:airway"], "items": [
-            "n:a-mask", "n:a-sad", "n:a-tube", "n:a-obstruction", "n:a-failed",
-            "difficult-airway-cico",
-            "complex-airway-ati"] },
-          { "name": "Maintenance", "items": [
-            "n:m-maint", "n:m-drugs", "n:m-vent", "n:m-vigilance", "n:m-fluids", "n:m-bleeding",
-            "tiva-positioning"] },
-          { "name": "Emergence and post-op care", "items": [
-            "n:e-extubation", "n:e-transfer", "n:e-oxygen", "n:e-ward",
-            "extubation-recovery"] },
-          { "name": "Acute pain", "maps": ["final:pain"], "items": [
-            "n:e-pain",
-            "acute-pain-management",
-            "acute-pain-complex"] },
-          { "name": "Blood transfusion", "items": [
-            "blood-transfusion", "procoagulants-blood-products",
-            "anticoag-anaemia-pom"] },
-          { "name": "Sedation", "items": [
-            "n:o-sedation",
-            "benzodiazepines-sedation",
-            "sedation-advanced"] },
-          { "name": "Infection control", "items": [
-            "n:m-infection",
-            "infusion-decontamination", "antimicrobials"] }
-        ]},
-        { "name": "Anaesthetic complications", "sections": [
-          { "name": "Peri-op disturbance in physiology", "items": [
-            "n:m-bleeding",
-            "thermoregulation", "mh-dantrolene",
-            "trauma-haemorrhage"] },
-          { "name": "Critical incidents", "items": [
-            "n:c-resp", "n:c-cvs", "n:c-anaphylaxis", "n:c-qrh", "n:c-nts", "n:c-als",
-            "critical-incidents", "anaphylaxis-management", "last-management", "resuscitation-als", "safety-human-factors",
-            "periarrest-resuscitation"] },
-          { "name": "Post-op complications", "items": [
-            "n:e-slow", "n:e-pain",
-            "antiemetics",
-            "elderly-cognition"] }
-        ]}
-      ]
-    },
-    {
-      "n": 4, "id": "anaesthetic-specialities", "name": "Anaesthetic specialities",
-      "blurb": "The specialist units of Stages 1 and 2, the Final, and the Stage 3 SIAs.",
-      "novice": null,
-      "groups": [
-        { "name": "Key units", "sections": [
-          { "name": "Cardiothoracics", "maps": ["final:cardiothoracic"], "items": [
-            "cardiac-surgery-cpb", "valve-disease", "thoracic-olv", "lung-resection-assessment", "cardiac-monitoring-devices",
-            "u:s2-cardiothoracic", "s:cardiac", "s:thoracic"] },
-          { "name": "ICU", "maps": ["final:icm"], "items": [
-            "ards-ventilation", "sepsis-organ-support", "aki-rrt-icu", "icm-neuro-haem-endocrine", "ecmo-advanced", "end-of-life-donation",
-            "u:s1-intensive-care", "u:s2-intensive-care", "s:additional-intensive-care"] },
-          { "name": "Neuroanaesthesia and neurocritical care", "maps": ["final:neuro"], "items": [
-            "neuroanaesthesia-principles", "tbi-neurocritical", "neurosurgical-procedures", "spinal-injury",
-            "u:s2-neuro", "s:neurosurgery"] },
-          { "name": "Obstetrics", "maps": ["final:obstetrics"], "items": [
-            "obstetric-basics",
-            "obstetric-ga-haemorrhage", "pre-eclampsia-hellp", "obstetric-emergencies", "obstetric-analgesia-complications",
-            "u:s1-obstetrics", "u:s2-obstetrics", "s:obstetric"] },
-          { "name": "Paediatrics", "maps": ["final:paediatrics"], "items": [
-            "paeds-basics",
-            "neonatal-anaesthesia", "paeds-common-surgery", "paeds-complex", "paeds-consent-safeguarding",
-            "u:s1-paediatrics", "u:s2-paediatrics", "s:paediatric"] },
-          { "name": "Pain medicine", "maps": ["final:pain"], "items": [
-            "chronic-pain", "neuropathic-cancer-pain",
-            "u:s1-pain", "u:s2-pain", "s:pain-medicine", "s:acute-inpatient-pain"] }
-        ]},
-        { "name": "General duties", "sections": [
-          { "name": "Day surgery", "maps": ["final:specialties"], "items": [
-            "elderly-hip-day-remote"] },
-          { "name": "General, urology and gynaecology", "maps": ["final:vascular"], "items": [
-            "major-abdominal-surgery", "emergency-laparotomy", "specialty-ortho-plastics-urology",
-            "u:s2-vascular-major", "s:major-general", "s:hpb", "s:bariatric"] },
-          { "name": "Vascular", "maps": ["final:vascular"], "items": [
-            "aortic-surgery", "carotid-surgery",
-            "u:s2-vascular-major", "s:vascular"] },
-          { "name": "Head and neck, ENT, max-fax, dental and eyes", "maps": ["final:airway", "final:specialties"], "items": [
-            "ent-shared-airway",
-            "tracheostomy-laryngectomy", "ent-laser-jet", "obstructed-airway-infections", "ophthalmic-anaesthesia",
-            "u:s2-airway-ent", "u:s2-ophthalmic", "s:complex-airway", "s:ophthalmic"] },
-          { "name": "Orthopaedics, trauma and burns", "maps": ["final:trauma"], "items": [
-            "elderly-hip-day-remote",
-            "specialty-ortho-plastics-urology", "trauma-haemorrhage", "burns-environmental",
-            "u:s2-trauma", "s:complex-orthopaedic", "s:trauma", "s:plastics-burns"] },
-          { "name": "Regional", "maps": ["final:regional"], "items": [
-            "n:o-regional",
-            "neuraxial-basics", "peripheral-blocks",
-            "regional-upper-limb", "chest-wall-blocks", "regional-lower-limb", "ra-safety",
-            "u:s1-regional", "u:s2-regional", "s:regional"] },
-          { "name": "Transfer medicine", "maps": ["final:trauma"], "items": [
-            "trauma-transfer",
-            "transfer-advanced",
-            "s:transfer"] },
-          { "name": "Peri-op medicine", "maps": ["final:pom"], "items": [
-            "cpet-risk", "cardiac-risk-assessment",
-            "u:s1-perioperative", "u:s2-perioperative", "s:perioperative-medicine"] },
-          { "name": "Non-theatre anaesthesia", "maps": ["final:specialties"], "items": [
-            "elderly-hip-day-remote",
-            "remote-ect-mri",
-            "u:s1-sedation-remote", "u:s2-sedation-remote", "s:resource-poor", "s:military"] }
-        ]}
-      ]
+     "name": null,
+     "sections": [
+      {
+       "name": "Physiology",
+       "maps": [
+        "primary:physiology"
+       ],
+       "items": [
+        "n:phys-cvs",
+        "n:phys-o2",
+        "n:phys-resp",
+        "n:phys-nmj",
+        "n:phys-ans",
+        "n:phys-ga",
+        "cell-physiology",
+        "neuro-membrane-ap",
+        "neuro-nmj-muscle",
+        "resp-lung-volumes",
+        "resp-mechanics",
+        "resp-vq",
+        "resp-o2-transport",
+        "resp-co2-transport",
+        "resp-control",
+        "resp-pulmonary-circulation",
+        "resp-ippv",
+        "resp-altitude",
+        "cvs-cardiac-cycle",
+        "cvs-cardiac-output",
+        "cvs-cardiac-ap",
+        "cvs-bp-control",
+        "cvs-microcirculation",
+        "cvs-special-circulations",
+        "cvs-fetal-circulation",
+        "neuro-icp-cbf",
+        "neuro-ans",
+        "neuro-pain-physiology",
+        "renal-gfr",
+        "renal-tubule",
+        "acid-base",
+        "fluids-osmolality",
+        "blood-rbc-hb",
+        "blood-haemostasis",
+        "blood-transfusion",
+        "immunity-anaphylaxis",
+        "endocrine-stress-glucose",
+        "endocrine-glands",
+        "nutrition-metabolism",
+        "thermoregulation",
+        "liver-gi",
+        "pregnancy-physiology",
+        "paeds-physiology",
+        "ageing-obesity"
+       ]
+      },
+      {
+       "name": "Pharmacology",
+       "maps": [
+        "primary:pharmacology"
+       ],
+       "items": [
+        "n:ph-induction",
+        "n:ph-volatile",
+        "n:ph-analgesia",
+        "n:ph-nmb",
+        "n:ph-vaso",
+        "n:ph-antiemetic",
+        "n:ph-la",
+        "n:ph-fluids",
+        "n:ph-safety",
+        "pk-basics",
+        "pk-absorption",
+        "pk-metabolism",
+        "pd-receptors",
+        "drug-chemistry",
+        "pk-csht-tci",
+        "drug-interactions",
+        "inhalational-uptake",
+        "inhalational-agents",
+        "anaesthesia-mechanisms",
+        "iv-induction-agents",
+        "benzodiazepines-sedation",
+        "opioids",
+        "paracetamol-nsaids",
+        "local-anaesthetics",
+        "nmb-suxamethonium",
+        "nmb-nondepolarising",
+        "nmb-reversal",
+        "anticholinergics-cholinergics",
+        "sympathomimetics",
+        "antihypertensives",
+        "antiarrhythmics",
+        "cardiac-drugs",
+        "anticoagulants",
+        "procoagulants-blood-products",
+        "iv-fluids",
+        "antiemetics",
+        "gi-drugs",
+        "respiratory-drugs",
+        "diuretics",
+        "cns-drugs",
+        "diabetes-drugs",
+        "steroids-thyroid-drugs",
+        "antimicrobials",
+        "mh-dantrolene"
+       ]
+      },
+      {
+       "name": "Anatomy",
+       "maps": [
+        "primary:anatomy"
+       ],
+       "items": [
+        "n:anat-airway",
+        "n:anat-resp",
+        "n:anat-heart",
+        "anat-airway",
+        "anat-trachea-lungs",
+        "anat-heart-vessels",
+        "anat-spine-neuraxis",
+        "anat-plexuses",
+        "anat-head-neck-eye"
+       ]
+      },
+      {
+       "name": "Physics and measurement",
+       "maps": [
+        "primary:physics",
+        "primary:measurement"
+       ],
+       "items": [
+        "n:eq-check",
+        "n:eq-gases",
+        "n:eq-controls",
+        "n:eq-breathing",
+        "n:eq-ippv",
+        "n:eq-monitoring",
+        "n:eq-gasmon",
+        "n:eq-nmt",
+        "n:eq-electrical",
+        "si-units-mechanics",
+        "gas-laws",
+        "vapours-humidity",
+        "flow-physics",
+        "ultrasound-doppler",
+        "gas-supply",
+        "anaesthetic-machine",
+        "vaporisers",
+        "breathing-systems",
+        "ventilators",
+        "oxygen-delivery-devices",
+        "electricity-safety",
+        "diathermy-lasers-fires",
+        "defibrillation-pacing",
+        "infusion-decontamination",
+        "measurement-principles",
+        "monitoring-standards",
+        "pressure-measurement",
+        "pulse-oximetry",
+        "capnography",
+        "gas-analysis",
+        "temperature-measurement",
+        "cardiac-output-measurement",
+        "flow-volume-pft",
+        "nm-monitoring"
+       ]
+      },
+      {
+       "name": "Statistics, study design and audit",
+       "maps": [
+        "primary:statistics",
+        "final:professional"
+       ],
+       "items": [
+        "stats-data-descriptive",
+        "stats-hypothesis-tests",
+        "stats-study-design",
+        "research-appraisal",
+        "qi-safety-stage2",
+        "s:research",
+        "s:quality"
+       ]
+      }
+     ]
     }
-  ],
-  "across": {
-    "name": "Running through all four: professional practice, safety and quality",
-    "items": [
-      "n:g-scope",
-      "consent-capacity-safeguarding", "safety-human-factors",
-      "professional-leadership", "sustainability-medication", "qi-safety-stage2",
-      "s:education", "s:management"]
+   ]
+  },
+  {
+   "n": 2,
+   "id": "medicine-surgery",
+   "name": "Medicine and surgery",
+   "blurb": "The patient in front of you: investigations, co-morbidity and acute illness.",
+   "novice": "d-medicine-and-surgery",
+   "groups": [
+    {
+     "name": null,
+     "sections": [
+      {
+       "name": "Data interpretation",
+       "maps": [
+        "primary:measurement",
+        "final:pom"
+       ],
+       "items": [
+        "n:ms-data",
+        "abg-interpretation",
+        "ecg-interpretation",
+        "imaging-interpretation",
+        "acid-base",
+        "fluids-osmolality",
+        "flow-volume-pft",
+        "blood-haemostasis",
+        "cpet-risk",
+        "cardiac-risk-assessment",
+        "valve-disease",
+        "tbi-neurocritical"
+       ]
+      },
+      {
+       "name": "Medical and surgical co-morbidities",
+       "maps": [
+        "final:pom"
+       ],
+       "items": [
+        "n:ms-cvsresp",
+        "n:ms-other",
+        "n:ms-highrisk",
+        "diabetes-perioperative",
+        "ageing-obesity",
+        "respiratory-neuro-pom",
+        "renal-liver-pom",
+        "endocrine-disease-pom",
+        "haematology-pom",
+        "neuroendocrine-tumours",
+        "cardiac-risk-assessment",
+        "valve-disease",
+        "anticoag-anaemia-pom",
+        "elderly-cognition",
+        "elderly-hip-day-remote",
+        "diabetes-drugs",
+        "steroids-thyroid-drugs",
+        "anticoagulants",
+        "antihypertensives",
+        "cardiac-drugs",
+        "cns-drugs",
+        "respiratory-drugs",
+        "preop-assessment"
+       ]
+      },
+      {
+       "name": "Acute disturbance in physiology",
+       "maps": [
+        "final:icm",
+        "final:trauma"
+       ],
+       "items": [
+        "n:ms-critical",
+        "sepsis-critical-illness",
+        "sepsis-organ-support",
+        "n:m-bleeding",
+        "n:ms-highrisk",
+        "fluids-osmolality",
+        "iv-fluids",
+        "acid-base",
+        "emergency-laparotomy",
+        "trauma-haemorrhage",
+        "aki-rrt-icu",
+        "burns-environmental"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "id": "generic-anaesthesia",
+   "name": "Generic anaesthesia",
+   "blurb": "What every anaesthetic has in common, and what goes wrong.",
+   "novice": "d-generic-anaesthesia",
+   "groups": [
+    {
+     "name": "Generic anaesthetic techniques",
+     "sections": [
+      {
+       "name": "Principles",
+       "items": [
+        "n:g-aims",
+        "n:g-team",
+        "n:g-prep",
+        "n:g-techniques",
+        "n:g-scope"
+       ]
+      },
+      {
+       "name": "Pre-op assessment",
+       "maps": [
+        "primary:clinical"
+       ],
+       "items": [
+        "n:g-visit",
+        "n:g-history",
+        "n:g-airway",
+        "n:g-fasting",
+        "n:g-asa",
+        "n:g-consent",
+        "preop-assessment",
+        "airway-assessment",
+        "consent-capacity-safeguarding"
+       ]
+      },
+      {
+       "name": "Induction",
+       "items": [
+        "n:g-iv",
+        "n:g-preox",
+        "n:g-ivind",
+        "n:g-stages",
+        "n:g-rsi",
+        "n:g-position",
+        "rsi-aspiration"
+       ]
+      },
+      {
+       "name": "Airway management",
+       "maps": [
+        "final:airway"
+       ],
+       "items": [
+        "n:a-mask",
+        "n:a-sad",
+        "n:a-tube",
+        "n:a-obstruction",
+        "n:a-failed",
+        "difficult-airway-cico",
+        "complex-airway-ati"
+       ]
+      },
+      {
+       "name": "Maintenance",
+       "items": [
+        "n:m-maint",
+        "n:m-drugs",
+        "n:m-vent",
+        "n:m-vigilance",
+        "n:m-fluids",
+        "n:m-bleeding",
+        "tiva-positioning"
+       ]
+      },
+      {
+       "name": "Emergence and post-op care",
+       "items": [
+        "n:e-extubation",
+        "n:e-transfer",
+        "n:e-oxygen",
+        "n:e-ward",
+        "extubation-recovery"
+       ]
+      },
+      {
+       "name": "Acute pain",
+       "maps": [
+        "final:pain"
+       ],
+       "items": [
+        "n:e-pain",
+        "acute-pain-management",
+        "acute-pain-complex"
+       ]
+      },
+      {
+       "name": "Blood transfusion",
+       "items": [
+        "blood-transfusion",
+        "procoagulants-blood-products",
+        "anticoag-anaemia-pom"
+       ]
+      },
+      {
+       "name": "Sedation",
+       "items": [
+        "n:o-sedation",
+        "benzodiazepines-sedation",
+        "sedation-advanced"
+       ]
+      },
+      {
+       "name": "Infection control",
+       "items": [
+        "n:m-infection",
+        "infusion-decontamination",
+        "antimicrobials"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Anaesthetic complications",
+     "sections": [
+      {
+       "name": "Peri-op disturbance in physiology",
+       "items": [
+        "n:m-bleeding",
+        "thermoregulation",
+        "mh-dantrolene",
+        "trauma-haemorrhage"
+       ]
+      },
+      {
+       "name": "Critical incidents",
+       "items": [
+        "n:c-resp",
+        "n:c-cvs",
+        "n:c-anaphylaxis",
+        "n:c-qrh",
+        "n:c-nts",
+        "n:c-als",
+        "critical-incidents",
+        "anaphylaxis-management",
+        "last-management",
+        "resuscitation-als",
+        "safety-human-factors",
+        "periarrest-resuscitation"
+       ]
+      },
+      {
+       "name": "Post-op complications",
+       "items": [
+        "n:e-slow",
+        "n:e-pain",
+        "antiemetics",
+        "elderly-cognition"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "id": "anaesthetic-specialities",
+   "name": "Anaesthetic specialities",
+   "blurb": "The specialist units of Stages 1 and 2, the Final, and the Stage 3 SIAs.",
+   "novice": null,
+   "groups": [
+    {
+     "name": "Key units",
+     "sections": [
+      {
+       "name": "Cardiothoracics",
+       "maps": [
+        "final:cardiothoracic"
+       ],
+       "items": [
+        "cardiac-surgery-cpb",
+        "valve-disease",
+        "thoracic-olv",
+        "lung-resection-assessment",
+        "cardiac-monitoring-devices",
+        "u:s2-cardiothoracic",
+        "s:cardiac",
+        "s:thoracic"
+       ]
+      },
+      {
+       "name": "ICU",
+       "maps": [
+        "final:icm"
+       ],
+       "items": [
+        "ards-ventilation",
+        "sepsis-organ-support",
+        "aki-rrt-icu",
+        "icm-neuro-haem-endocrine",
+        "ecmo-advanced",
+        "end-of-life-donation",
+        "u:s1-intensive-care",
+        "u:s2-intensive-care",
+        "s:additional-intensive-care"
+       ]
+      },
+      {
+       "name": "Neuroanaesthesia and neurocritical care",
+       "maps": [
+        "final:neuro"
+       ],
+       "items": [
+        "neuroanaesthesia-principles",
+        "tbi-neurocritical",
+        "neurosurgical-procedures",
+        "spinal-injury",
+        "u:s2-neuro",
+        "s:neurosurgery"
+       ]
+      },
+      {
+       "name": "Obstetrics",
+       "maps": [
+        "final:obstetrics"
+       ],
+       "items": [
+        "obstetric-basics",
+        "obstetric-ga-haemorrhage",
+        "pre-eclampsia-hellp",
+        "obstetric-emergencies",
+        "obstetric-analgesia-complications",
+        "u:s1-obstetrics",
+        "u:s2-obstetrics",
+        "s:obstetric"
+       ]
+      },
+      {
+       "name": "Paediatrics",
+       "maps": [
+        "final:paediatrics"
+       ],
+       "items": [
+        "paeds-basics",
+        "neonatal-anaesthesia",
+        "paeds-common-surgery",
+        "paeds-complex",
+        "paeds-consent-safeguarding",
+        "u:s1-paediatrics",
+        "u:s2-paediatrics",
+        "s:paediatric"
+       ]
+      },
+      {
+       "name": "Pain medicine",
+       "maps": [
+        "final:pain"
+       ],
+       "items": [
+        "chronic-pain",
+        "neuropathic-cancer-pain",
+        "u:s1-pain",
+        "u:s2-pain",
+        "s:pain-medicine",
+        "s:acute-inpatient-pain"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "General duties",
+     "sections": [
+      {
+       "name": "Day surgery",
+       "maps": [
+        "final:specialties"
+       ],
+       "items": [
+        "elderly-hip-day-remote"
+       ]
+      },
+      {
+       "name": "General, urology and gynaecology",
+       "maps": [
+        "final:vascular"
+       ],
+       "items": [
+        "major-abdominal-surgery",
+        "emergency-laparotomy",
+        "specialty-ortho-plastics-urology",
+        "u:s2-vascular-major",
+        "s:major-general",
+        "s:hpb",
+        "s:bariatric"
+       ]
+      },
+      {
+       "name": "Vascular",
+       "maps": [
+        "final:vascular"
+       ],
+       "items": [
+        "aortic-surgery",
+        "carotid-surgery",
+        "u:s2-vascular-major",
+        "s:vascular"
+       ]
+      },
+      {
+       "name": "Head and neck, ENT, max-fax, dental and eyes",
+       "maps": [
+        "final:airway",
+        "final:specialties"
+       ],
+       "items": [
+        "ent-shared-airway",
+        "tracheostomy-laryngectomy",
+        "ent-laser-jet",
+        "obstructed-airway-infections",
+        "ophthalmic-anaesthesia",
+        "u:s2-airway-ent",
+        "u:s2-ophthalmic",
+        "s:complex-airway",
+        "s:ophthalmic"
+       ]
+      },
+      {
+       "name": "Orthopaedics, trauma and burns",
+       "maps": [
+        "final:trauma"
+       ],
+       "items": [
+        "elderly-hip-day-remote",
+        "specialty-ortho-plastics-urology",
+        "trauma-haemorrhage",
+        "burns-environmental",
+        "u:s2-trauma",
+        "s:complex-orthopaedic",
+        "s:trauma",
+        "s:plastics-burns"
+       ]
+      },
+      {
+       "name": "Regional",
+       "maps": [
+        "final:regional"
+       ],
+       "items": [
+        "n:o-regional",
+        "neuraxial-basics",
+        "peripheral-blocks",
+        "regional-upper-limb",
+        "chest-wall-blocks",
+        "regional-lower-limb",
+        "ra-safety",
+        "u:s1-regional",
+        "u:s2-regional",
+        "s:regional"
+       ]
+      },
+      {
+       "name": "Transfer medicine",
+       "maps": [
+        "final:trauma"
+       ],
+       "items": [
+        "trauma-transfer",
+        "transfer-advanced",
+        "s:transfer"
+       ]
+      },
+      {
+       "name": "Peri-op medicine",
+       "maps": [
+        "final:pom"
+       ],
+       "items": [
+        "cpet-risk",
+        "cardiac-risk-assessment",
+        "u:s1-perioperative",
+        "u:s2-perioperative",
+        "s:perioperative-medicine"
+       ]
+      },
+      {
+       "name": "Non-theatre anaesthesia",
+       "maps": [
+        "final:specialties"
+       ],
+       "items": [
+        "elderly-hip-day-remote",
+        "remote-ect-mri",
+        "u:s1-sedation-remote",
+        "u:s2-sedation-remote",
+        "s:resource-poor",
+        "s:military"
+       ]
+      }
+     ]
+    }
+   ]
   }
+ ],
+ "across": {
+  "name": "Running through all four: professional practice, safety and quality",
+  "items": [
+   "n:g-scope",
+   "consent-capacity-safeguarding",
+   "safety-human-factors",
+   "professional-leadership",
+   "sustainability-medication",
+   "qi-safety-stage2",
+   "s:education",
+   "s:management"
+  ]
+ }
 }
