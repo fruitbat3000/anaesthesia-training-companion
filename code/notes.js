@@ -108,6 +108,11 @@
       n.related.length ? el('div', { class: 'card' }, el('h3', null, 'Related notes'),
         el('ul', { class: 'linklist' }, n.related.map(r => C.notes.find(x => x.id === r)).filter(Boolean).map(r => el('li', null, el('a', { href: `#notes/${r.id}` }, r.title))))) : null,
       n.ela.length ? el('div', { class: 'card' }, el('h3', null, 'e-Learning Anaesthesia'), App.elaList(n.ela)) : null,
+      (n.elaGuide || []).length ? el('div', { class: 'card ela-guide' }, el('h3', null, 'e-LA Revision Guide'),
+        el('ul', { class: 'linklist' }, n.elaGuide.map(t => { const g = C.elaGuides[t.g];
+          return el('li', null, App.ext(g.u, `${g.t.replace('e-LA Revision Guide: ', '')} guide`), el('span', { class: 'small' }, `, p. ${t.p}: `), t.t,
+            el('span', { class: 'ela-guide-sessions' }, t.s.map(([code, url]) => App.ext(url, code, 'ext code-link')))); })),
+        el('p', { class: 'small' }, 'Free with an e-LfH login. The guide sections are built from these e-LA sessions.')) : null,
       (n.bjaed || []).length ? el('div', { class: 'card' }, el('h3', null, 'BJA Education'), el('p', { class: 'small' }, el('a', { href: '#', onclick: e => { e.preventDefault(); document.getElementById('bjaed').scrollIntoView({ behavior: 'smooth' }); } }, `${n.bjaed.length} review article${n.bjaed.length === 1 ? '' : 's'} for this topic →`))) : null);
 
     box.replaceChildren(

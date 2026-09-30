@@ -315,6 +315,20 @@ for (const [id, dois] of Object.entries(bjaedSrc.notes)) {
 }
 const bjaedCount = Object.keys(bjaedSrc.articles).length;
 
+/* ---------- e-LA Revision Guide pointers for notes (content/elaguides.json) ---------- */
+const elaGuideSrc = JSON.parse(readFileSync(C('elaguides.json'), 'utf8'));
+const ELFH = id => `https://portal.e-lfh.org.uk/Component/Details/${id}`;
+const elaGuides = Object.fromEntries(Object.entries(elaGuideSrc.guides).map(([k, g]) => [k, { t: g.t, v: g.v, u: ELFH(g.id) }]));
+for (const t of elaGuideSrc.topics) {
+  if (!elaGuides[t.g]) err('elaguides.json', `unknown guide ${t.g}`);
+  const sessions = t.s.map(c => { const id = elaGuideSrc.sessions[c]; if (!id) err('elaguides.json', `no e-LfH id for ${c}`); return [(elaGuideSrc.renamed || {})[c] || c, ELFH(id)]; });
+  for (const id of t.notes) {
+    const n = notes.find(x => x.id === id);
+    if (!n) { err('elaguides.json', `unknown note ${id}`); continue; }
+    (n.elaGuide = n.elaGuide || []).push({ g: t.g, t: t.t, p: t.p, s: sessions });
+  }
+}
+
 /* ---------- GPAS chapters linked from unit guides and SIAs (content/gpas.json) ---------- */
 const gpas = JSON.parse(readFileSync(C('gpas.json'), 'utf8'));
 delete gpas._note;
@@ -420,6 +434,7 @@ const summary = [
   `units ${units.length}`,
   `refs ${Object.keys(refs).length}`,
   `BJA Education ${bjaedCount} articles on ${Object.keys(bjaedSrc.notes).length} notes`,
+  `e-LA Revision Guides ${elaGuideSrc.topics.length} topics on ${notes.filter(n => n.elaGuide).length} notes`,
   `coverage primary ${coveredCodes('primary')}/${CODES.primary.size}, stage 2 ${coveredCodes('final')}/${CODES.final.size}`,
 ].join(' · ');
 
@@ -459,6 +474,7 @@ writeFileSync(join(OUT, 'index.js'), js('window.CONTENT', {
   units,
   syllabusMap,
   overview,
+  elaGuides,
   texts,
   gpas: { index: gpas.index, chapters: gpas.chapters },
   questions: { primary: qMeta('primary'), final: qMeta('final') },

@@ -484,5 +484,23 @@
   "s": "Oxford Academic",
   "u": "https://academic.oup.com/bjaed",
   "v": "2026-09-28"
+ },
+ "ela-rg-physiology": {
+  "t": "e-LA Revision Guide: Physiology",
+  "s": "e-Learning Anaesthesia (RCoA and e-LfH), v1.00, July 2020. Free PDF with an e-LfH login",
+  "u": "https://portal.e-lfh.org.uk/Component/Details/652513",
+  "v": "2026-09-30"
+ },
+ "ela-rg-pharmacology": {
+  "t": "e-LA Revision Guide: Pharmacology",
+  "s": "e-Learning Anaesthesia (RCoA and e-LfH), v1.00, July 2020 (principles only; no systemic pharmacology). Free PDF with an e-LfH login",
+  "u": "https://portal.e-lfh.org.uk/Component/Details/650265",
+  "v": "2026-09-30"
+ },
+ "ela-rg-physics": {
+  "t": "e-LA Revision Guide: Physics",
+  "s": "e-Learning Anaesthesia (RCoA and e-LfH), v1.00, August 2020. Free PDF with an e-LfH login",
+  "u": "https://portal.e-lfh.org.uk/Component/Details/659157",
+  "v": "2026-09-30"
  }
 }

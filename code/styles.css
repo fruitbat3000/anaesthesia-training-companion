@@ -1069,3 +1069,9 @@ a.ov-stat:hover { border-color: var(--lv); }
 .home-syllabus-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .8rem 1.5rem; margin-bottom: 1rem; }
 .home-syllabus-head .section-h { margin-bottom: .3rem; }
 .home-syllabus-head .small { margin: 0; }
+
+/* e-LA Revision Guide pointers on notes */
+.ela-guide .linklist li { margin: .5rem 0; line-height: 1.45; }
+.ela-guide-sessions { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .25rem; }
+.ela-guide-sessions .code-link { font: 500 .74rem/1 var(--mono); padding: .22rem .45rem; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--line); text-decoration: none; }
+.ela-guide-sessions .code-link:hover { border-color: var(--brand-line); }

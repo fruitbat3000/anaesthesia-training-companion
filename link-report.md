@@ -1,6 +1,6 @@
-## Link check 2026-09-28
+## Link check 2026-09-30
 
-394 links OK, 0 problem(s), 157 to check by hand.
+518 links OK, 0 problem(s), 157 to check by hand.
 
 ### Problems
 

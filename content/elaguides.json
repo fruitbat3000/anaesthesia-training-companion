@@ -1,0 +1,1557 @@
+{
+ "_note": "e-LA Revision Guides (SOURCES S34): each guide topic with its page, the e-LA sessions it is built from, and the site notes it matches. Sessions map to public e-LfH Component/Details ids, verified live 2026-09-30. Only titles, page numbers and links are used; guide text is not reproduced.",
+ "guides": {
+  "physiology": {
+   "t": "e-LA Revision Guide: Physiology",
+   "v": "v1.00, July 2020",
+   "id": 652513
+  },
+  "pharmacology": {
+   "t": "e-LA Revision Guide: Pharmacology",
+   "v": "v1.00, July 2020 (principles only; no systemic pharmacology)",
+   "id": 650265
+  },
+  "physics": {
+   "t": "e-LA Revision Guide: Physics",
+   "v": "v1.00, August 2020",
+   "id": 659157
+  }
+ },
+ "sessions": {
+  "07b_01_01": 561684,
+  "07b_01_02": 561369,
+  "07b_01_03": 561647,
+  "07b_01_04": 561483,
+  "07b_01_05": 561399,
+  "07b_01_07": 561694,
+  "07b_01_08": 561429,
+  "07b_01_09": 561841,
+  "07b_02_01": 561384,
+  "07b_02_02": 561611,
+  "07b_02_03": 561933,
+  "07b_02_04": 561348,
+  "07b_02_05": 561328,
+  "07b_02_06": 561742,
+  "07b_02_07": 561606,
+  "07b_02_08": 561827,
+  "07b_02_09": 561790,
+  "07b_02_10": 561591,
+  "07b_02_11": 561586,
+  "07b_02_12": 561556,
+  "07b_02_13": 561551,
+  "07b_02_14": 561546,
+  "07b_03_01": 561455,
+  "07b_03_02": 561626,
+  "07b_03_03": 561601,
+  "07b_03_04": 561631,
+  "07b_03_05": 561673,
+  "07b_03_06": 561364,
+  "07b_03_07": 561374,
+  "07b_03_08": 561851,
+  "07b_03_09": 561318,
+  "07b_03_10": 562478,
+  "07b_03_11": 561822,
+  "07b_04_01": 561333,
+  "07b_04_02": 561404,
+  "07b_04_04": 561506,
+  "07b_04_05": 561511,
+  "07b_04_06": 561516,
+  "07b_04_07": 561521,
+  "07b_04_08": 561526,
+  "07b_04_09": 561531,
+  "07b_04_11": 561536,
+  "07b_05_01": 561596,
+  "07b_05_02": 561465,
+  "07b_05_03": 561747,
+  "07b_05_04": 561777,
+  "07b_05_05": 561782,
+  "07b_06_01": 561958,
+  "07b_06_02": 561963,
+  "07b_06_03": 561979,
+  "07b_06_04": 562535,
+  "07b_06_05": 561953,
+  "07b_06_07": 561491,
+  "07b_07_01": 561703,
+  "07b_07_02": 561722,
+  "07b_07_03": 561737,
+  "07b_07_04": 561353,
+  "07b_07_05": 561642,
+  "07b_07_06": 561752,
+  "07b_08_01": 562540,
+  "07b_08_02": 561994,
+  "07b_08_03": 562615,
+  "07b_08_04": 562620,
+  "07b_08_05": 562646,
+  "07b_08_07": 561652,
+  "07b_09_01": 561496,
+  "07b_09_02": 561757,
+  "07b_09_03": 561938,
+  "07b_09_04": 561943,
+  "07c_01_01": 692068,
+  "07c_01_02": 692172,
+  "07c_01_03": 692103,
+  "07c_01_04": 692651,
+  "07c_01_06": 692756,
+  "07c_01_12": 693268,
+  "07c_01_13": 693303,
+  "07c_01_15": 692742,
+  "07c_02_01": 692186,
+  "07c_02_03": 692375,
+  "07c_02_06": 692147,
+  "07c_02_07": 692098,
+  "07c_02_08": 692495,
+  "07c_02_09": 692162,
+  "07c_02_10": 692383,
+  "07c_02_11": 693522,
+  "07c_02_13": 693514,
+  "07c_10_01": 692557,
+  "07c_10_02": 692607,
+  "07d_01_01": 521491,
+  "07d_01_02": 418003,
+  "07d_01_03": 417967,
+  "07d_01_04": 417988,
+  "07d_01_05": 417977,
+  "07d_01_06": 417972,
+  "07d_01_07": 418613,
+  "07d_01_08": 418628,
+  "07d_01_09": 417962,
+  "07d_01_10": 417468,
+  "07d_01_11": 417993,
+  "07d_01_12": 417998,
+  "07d_01_13": 417479,
+  "07d_01_14": 417519,
+  "07d_01_15": 417952,
+  "07d_02_01": 502245,
+  "07d_02_02": 502254,
+  "07d_02_03": 502280,
+  "07d_02_04": 502228,
+  "07d_03_01": 417885,
+  "07d_03_02": 417880,
+  "07d_03_03": 417838,
+  "07d_03_04": 417890,
+  "07d_03_05": 417917,
+  "07d_03_07": 417927,
+  "07d_03_08": 417895,
+  "07d_03_09": 614382,
+  "07d_04_01": 502193,
+  "07d_04_02": 502188,
+  "07d_04_03": 502198,
+  "07d_04_04": 502307,
+  "07d_04_05": 502312,
+  "07d_04_06": 502264
+ },
+ "renamed": {
+  "07d_03_09": "07d_04_09"
+ },
+ "topics": [
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Gene Transcription and Translation and Protein Formation",
+   "p": 6,
+   "s": [
+    "07b_01_01"
+   ],
+   "notes": [
+    "cell-physiology"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Cell Membrane Characteristics and Receptors",
+   "p": 11,
+   "s": [
+    "07b_01_02"
+   ],
+   "notes": [
+    "cell-physiology",
+    "pd-receptors"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Acid Base Balance and Buffers",
+   "p": 15,
+   "s": [
+    "07b_01_03"
+   ],
+   "notes": [
+    "acid-base"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Cellular Metabolism and Enzymes",
+   "p": 20,
+   "s": [
+    "07b_01_04"
+   ],
+   "notes": [
+    "nutrition-metabolism"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Body Water and Compartments",
+   "p": 24,
+   "s": [
+    "07b_01_05"
+   ],
+   "notes": [
+    "fluids-osmolality"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Osmolarity: Partition of Fluids Across Membranes",
+   "p": 27,
+   "s": [
+    "07b_01_07"
+   ],
+   "notes": [
+    "fluids-osmolality"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Physiology of Obesity and Effects on Organ Systems",
+   "p": 32,
+   "s": [
+    "07b_01_08"
+   ],
+   "notes": [
+    "ageing-obesity"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "General Physiology",
+   "t": "Body Temperature and its Regulation",
+   "p": 36,
+   "s": [
+    "07b_01_09"
+   ],
+   "notes": [
+    "thermoregulation"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Capillary Dynamics and Interstitial Fluid",
+   "p": 41,
+   "s": [
+    "07b_02_01"
+   ],
+   "notes": [
+    "cvs-microcirculation"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Lymphatic System and Other Circulatory Fluids",
+   "p": 45,
+   "s": [
+    "07b_02_02"
+   ],
+   "notes": [
+    "cvs-microcirculation"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Cardiac Muscle Contraction",
+   "p": 49,
+   "s": [
+    "07b_02_03"
+   ],
+   "notes": [
+    "cvs-cardiac-ap"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "The Cardiac Cycle",
+   "p": 54,
+   "s": [
+    "07b_02_04"
+   ],
+   "notes": [
+    "cvs-cardiac-cycle"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Cardiac Electrophysiology",
+   "p": 59,
+   "s": [
+    "07b_02_05",
+    "07b_02_06"
+   ],
+   "notes": [
+    "cvs-cardiac-ap",
+    "ecg-interpretation"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Central and Autonomic Regulation of Cardiac Function",
+   "p": 64,
+   "s": [
+    "07b_02_07"
+   ],
+   "notes": [
+    "cvs-cardiac-output",
+    "neuro-ans"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Hormonal and Metabolic Regulation of Cardiac Function",
+   "p": 69,
+   "s": [
+    "07b_02_08"
+   ],
+   "notes": [
+    "cvs-cardiac-output"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Control of Cardiac Output",
+   "p": 72,
+   "s": [
+    "07b_02_09"
+   ],
+   "notes": [
+    "cvs-cardiac-output"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Control of Systemic Blood Pressure",
+   "p": 78,
+   "s": [
+    "07b_02_10"
+   ],
+   "notes": [
+    "cvs-bp-control"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Peripheral Circulation",
+   "p": 81,
+   "s": [
+    "07b_02_11"
+   ],
+   "notes": [
+    "cvs-special-circulations",
+    "cvs-microcirculation"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Coronary Circulation",
+   "p": 90,
+   "s": [
+    "07b_02_12"
+   ],
+   "notes": [
+    "cvs-special-circulations"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Pulmonary Circulation",
+   "p": 93,
+   "s": [
+    "07b_02_13"
+   ],
+   "notes": [
+    "resp-pulmonary-circulation"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Cardiovascular Physiology",
+   "t": "Physiology of Exercise and CPEX Testing",
+   "p": 96,
+   "s": [
+    "07b_02_14"
+   ],
+   "notes": [
+    "cvs-cardiac-output",
+    "cpet-risk"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Gaseous Exchange: Oxygen",
+   "p": 101,
+   "s": [
+    "07b_03_01"
+   ],
+   "notes": [
+    "resp-o2-transport"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Gaseous Exchange: Hypoxia & Hypo-/Hypercapnia",
+   "p": 106,
+   "s": [
+    "07b_03_02"
+   ],
+   "notes": [
+    "resp-o2-transport",
+    "resp-control"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Gaseous Exchange: Hyper-/Hypobaric Pressures",
+   "p": 113,
+   "s": [
+    "07b_03_03"
+   ],
+   "notes": [
+    "resp-altitude"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Haemoglobin and Oxygen Carriage",
+   "p": 117,
+   "s": [
+    "07b_03_04"
+   ],
+   "notes": [
+    "resp-o2-transport",
+    "blood-rbc-hb"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "CO2 Carriage in Blood and Acid-Base Equilibrium",
+   "p": 122,
+   "s": [
+    "07b_03_05"
+   ],
+   "notes": [
+    "resp-co2-transport"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Pulmonary Ventilation: Volumes, Flows, Dead Space and Preoxygenation",
+   "p": 126,
+   "s": [
+    "07b_03_06"
+   ],
+   "notes": [
+    "resp-lung-volumes",
+    "resp-vq"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Ventilation / Perfusion Abnormalities",
+   "p": 133,
+   "s": [
+    "07b_03_07"
+   ],
+   "notes": [
+    "resp-vq"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Mechanics of Ventilation and the Effect of IPPV on the Lungs",
+   "p": 136,
+   "s": [
+    "07b_03_08"
+   ],
+   "notes": [
+    "resp-mechanics",
+    "resp-ippv"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Control of Breathing",
+   "p": 139,
+   "s": [
+    "07b_03_09"
+   ],
+   "notes": [
+    "resp-control"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Ventilatory Failure and Oxygen Therapy",
+   "p": 145,
+   "s": [
+    "07b_03_10"
+   ],
+   "notes": [
+    "resp-control",
+    "oxygen-delivery-devices"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Respiratory Physiology",
+   "t": "Non-respiratory functions of the Lungs.",
+   "p": 149,
+   "s": [
+    "07b_03_11"
+   ],
+   "notes": [
+    "resp-pulmonary-circulation"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "The Neuromuscular Junction (NMJ)",
+   "p": 156,
+   "s": [
+    "07b_04_01"
+   ],
+   "notes": [
+    "neuro-nmj-muscle"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "Smooth Muscle",
+   "p": 159,
+   "s": [
+    "07b_04_02"
+   ],
+   "notes": [
+    "neuro-nmj-muscle"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "Function of Nerve Cells",
+   "p": 162,
+   "s": [
+    "07b_04_04",
+    "07b_04_05"
+   ],
+   "notes": [
+    "neuro-membrane-ap"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "The Brain",
+   "p": 167,
+   "s": [
+    "07b_04_06"
+   ],
+   "notes": [
+    "neuro-icp-cbf"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "Autonomic Nervous System",
+   "p": 172,
+   "s": [
+    "07b_04_07"
+   ],
+   "notes": [
+    "neuro-ans"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "Neurological Reflexes",
+   "p": 175,
+   "s": [
+    "07b_04_08"
+   ],
+   "notes": [
+    "neuro-membrane-ap"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "Pain Pathways and Mechanisms",
+   "p": 181,
+   "s": [
+    "07b_04_09"
+   ],
+   "notes": [
+    "neuro-pain-physiology"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Nervous System Physiology",
+   "t": "Visceral and Neuropathic Pain",
+   "p": 186,
+   "s": [
+    "07b_04_11"
+   ],
+   "notes": [
+    "neuro-pain-physiology"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Renal Physiology",
+   "t": "Renal Morphology, Blood Supply and Glomerular Filtration",
+   "p": 193,
+   "s": [
+    "07b_05_01"
+   ],
+   "notes": [
+    "renal-gfr"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Renal Physiology",
+   "t": "Tubular Transport and the Proximal Tubule",
+   "p": 197,
+   "s": [
+    "07b_05_02"
+   ],
+   "notes": [
+    "renal-tubule"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Renal Physiology",
+   "t": "Loop of Henle, Distal Tubule and Collecting Tubule",
+   "p": 203,
+   "s": [
+    "07b_05_03"
+   ],
+   "notes": [
+    "renal-tubule"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Renal Physiology",
+   "t": "Regulation of Electrolyte and Acid-Base Balance",
+   "p": 208,
+   "s": [
+    "07b_05_04"
+   ],
+   "notes": [
+    "renal-tubule",
+    "fluids-osmolality"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Renal Physiology",
+   "t": "Renal Regulation of pH",
+   "p": 212,
+   "s": [
+    "07b_05_05"
+   ],
+   "notes": [
+    "acid-base"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Gastrointestinal Physiology",
+   "t": "Functional Liver Anatomy and Blood Supply",
+   "p": 215,
+   "s": [
+    "07b_06_01"
+   ],
+   "notes": [
+    "liver-gi"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Gastrointestinal Physiology",
+   "t": "Metabolic and Synthetic Functions of the Liver (part 1)",
+   "p": 219,
+   "s": [
+    "07b_06_02"
+   ],
+   "notes": [
+    "liver-gi"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Gastrointestinal Physiology",
+   "t": "Metabolic and Synthetic Functions of the Liver (part 2)",
+   "p": 223,
+   "s": [
+    "07b_06_03"
+   ],
+   "notes": [
+    "liver-gi"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Gastrointestinal Physiology",
+   "t": "Gastric Function",
+   "p": 227,
+   "s": [
+    "07b_06_04"
+   ],
+   "notes": [
+    "liver-gi"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Gastrointestinal Physiology",
+   "t": "Physiology of Nausea and Vomiting",
+   "p": 233,
+   "s": [
+    "07b_06_05"
+   ],
+   "notes": [
+    "liver-gi",
+    "antiemetics"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Gastrointestinal Physiology",
+   "t": "Metabolic Pathways",
+   "p": 237,
+   "s": [
+    "07b_06_07"
+   ],
+   "notes": [
+    "nutrition-metabolism"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Haematology And Immunology",
+   "t": "Red Blood Cells",
+   "p": 243,
+   "s": [
+    "07b_07_01"
+   ],
+   "notes": [
+    "blood-rbc-hb"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Haematology And Immunology",
+   "t": "Transfusion Physiology",
+   "p": 249,
+   "s": [
+    "07b_07_02"
+   ],
+   "notes": [
+    "blood-transfusion"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Haematology And Immunology",
+   "t": "Transfusion Complications",
+   "p": 252,
+   "s": [
+    "07b_07_03"
+   ],
+   "notes": [
+    "blood-transfusion"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Haematology And Immunology",
+   "t": "Haemostasis and Coagulation",
+   "p": 255,
+   "s": [
+    "07b_07_04"
+   ],
+   "notes": [
+    "blood-haemostasis"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Haematology And Immunology",
+   "t": "Immunity",
+   "p": 259,
+   "s": [
+    "07b_07_05"
+   ],
+   "notes": [
+    "immunity-anaphylaxis"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Haematology And Immunology",
+   "t": "Allergy and Inflammatory Response",
+   "p": 268,
+   "s": [
+    "07b_07_06"
+   ],
+   "notes": [
+    "immunity-anaphylaxis"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Endocrinology",
+   "t": "Hormonal, Metabolic and Inflammatory Responses to Surgery",
+   "p": 273,
+   "s": [
+    "07b_08_01"
+   ],
+   "notes": [
+    "endocrine-stress-glucose"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Endocrinology",
+   "t": "Physiology of Hormones",
+   "p": 276,
+   "s": [
+    "07b_08_02"
+   ],
+   "notes": [
+    "endocrine-glands"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Endocrinology",
+   "t": "Hypothalamic and Pituitary Function",
+   "p": 280,
+   "s": [
+    "07b_08_03"
+   ],
+   "notes": [
+    "endocrine-glands"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Endocrinology",
+   "t": "Adrenal Hormones",
+   "p": 287,
+   "s": [
+    "07b_08_04",
+    "07b_08_05"
+   ],
+   "notes": [
+    "endocrine-glands"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Endocrinology",
+   "t": "Thyroid and Parathyroid Hormone and Calcium Homeostasis",
+   "p": 295,
+   "s": [
+    "07b_08_07"
+   ],
+   "notes": [
+    "endocrine-glands"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Pregnancy",
+   "t": "Physiology of Pregnancy and Labour",
+   "p": 299,
+   "s": [
+    "07b_09_01",
+    "07b_09_02"
+   ],
+   "notes": [
+    "pregnancy-physiology"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Pregnancy",
+   "t": "Functions of the Placenta",
+   "p": 305,
+   "s": [
+    "07b_09_03"
+   ],
+   "notes": [
+    "pregnancy-physiology"
+   ]
+  },
+  {
+   "g": "physiology",
+   "section": "Pregnancy",
+   "t": "Maternofoetal Circulation Changes at Birth",
+   "p": 309,
+   "s": [
+    "07b_09_04"
+   ],
+   "notes": [
+    "cvs-fetal-circulation"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "SI Units",
+   "p": 5,
+   "s": [
+    "07d_01_01"
+   ],
+   "notes": [
+    "si-units-mechanics"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Kinetic Theory of Gases",
+   "p": 6,
+   "s": [
+    "07d_01_02"
+   ],
+   "notes": [
+    "gas-laws"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Newtonian Mechanics",
+   "p": 9,
+   "s": [
+    "07d_01_03"
+   ],
+   "notes": [
+    "si-units-mechanics"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Pressure",
+   "p": 11,
+   "s": [
+    "07d_01_04"
+   ],
+   "notes": [
+    "si-units-mechanics"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Gas Laws",
+   "p": 14,
+   "s": [
+    "07d_01_05"
+   ],
+   "notes": [
+    "gas-laws"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Gases in Solution",
+   "p": 17,
+   "s": [
+    "07d_01_06"
+   ],
+   "notes": [
+    "gas-laws",
+    "inhalational-uptake"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Density and Viscosity",
+   "p": 19,
+   "s": [
+    "07d_01_07"
+   ],
+   "notes": [
+    "flow-physics"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Gas Storage",
+   "p": 22,
+   "s": [
+    "07d_01_08"
+   ],
+   "notes": [
+    "gas-supply",
+    "gas-laws"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Gases and Vapours",
+   "p": 25,
+   "s": [
+    "07d_01_09"
+   ],
+   "notes": [
+    "vapours-humidity"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Humidity",
+   "p": 30,
+   "s": [
+    "07d_01_10"
+   ],
+   "notes": [
+    "vapours-humidity"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Solvents and Solutes",
+   "p": 34,
+   "s": [
+    "07d_01_11"
+   ],
+   "notes": [
+    "fluids-osmolality"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Osmosis",
+   "p": 39,
+   "s": [
+    "07d_01_12"
+   ],
+   "notes": [
+    "fluids-osmolality"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Heat Transfer and Temperature",
+   "p": 42,
+   "s": [
+    "07d_01_13",
+    "07d_01_14"
+   ],
+   "notes": [
+    "thermoregulation",
+    "temperature-measurement"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Atoms And Molecules In Motion",
+   "t": "Hydrostatics",
+   "p": 48,
+   "s": [
+    "07d_01_15"
+   ],
+   "notes": [
+    "pressure-measurement"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Physiological Models",
+   "t": "Fick Principle & Input-Output Principle (IOP)",
+   "p": 54,
+   "s": [
+    "07d_02_01"
+   ],
+   "notes": [
+    "cardiac-output-measurement"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Physiological Models",
+   "t": "Alveolar Gas Equation",
+   "p": 59,
+   "s": [
+    "07d_02_02"
+   ],
+   "notes": [
+    "resp-o2-transport"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Physiological Models",
+   "t": "Apnoeic Oxygenation and Differential Equations",
+   "p": 62,
+   "s": [
+    "07d_02_03"
+   ],
+   "notes": [
+    "resp-lung-volumes"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Physiological Models",
+   "t": "Pre-Oxygenation and e",
+   "p": 64,
+   "s": [
+    "07d_02_04"
+   ],
+   "notes": [
+    "resp-lung-volumes",
+    "pk-basics"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "Atomic Structure",
+   "p": 67,
+   "s": [
+    "07d_03_01"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "Chemical Bonds and Reactions",
+   "p": 69,
+   "s": [
+    "07d_03_02"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "Molecular Structure and Isomerism",
+   "p": 72,
+   "s": [
+    "07d_03_03"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "Reaction Rates and Thermodynamics",
+   "p": 76,
+   "s": [
+    "07d_03_04"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "Acids and Bases",
+   "p": 78,
+   "s": [
+    "07d_03_05"
+   ],
+   "notes": [
+    "acid-base"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "Electromagnetic Spectrum",
+   "p": 82,
+   "s": [
+    "07d_03_07"
+   ],
+   "notes": [
+    "gas-analysis",
+    "pulse-oximetry"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "Light",
+   "p": 85,
+   "s": [
+    "07d_03_08"
+   ],
+   "notes": [
+    "pulse-oximetry"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Subatomic Processes",
+   "t": "LASERs",
+   "p": 90,
+   "s": [
+    "07d_03_09"
+   ],
+   "notes": [
+    "diathermy-lasers-fires"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Electricity And Magnetism",
+   "t": "Definitions and Simple Circuits",
+   "p": 94,
+   "s": [
+    "07d_04_01"
+   ],
+   "notes": [
+    "electricity-safety"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Electricity And Magnetism",
+   "t": "Electronic Circuits",
+   "p": 99,
+   "s": [
+    "07d_04_02"
+   ],
+   "notes": [
+    "electricity-safety",
+    "measurement-principles"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Electricity And Magnetism",
+   "t": "Amplifiers and Interference",
+   "p": 104,
+   "s": [
+    "07d_04_03"
+   ],
+   "notes": [
+    "measurement-principles",
+    "ecg-interpretation"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Electricity And Magnetism",
+   "t": "Excitable Tissues and Biological Potentials",
+   "p": 106,
+   "s": [
+    "07d_04_04"
+   ],
+   "notes": [
+    "neuro-membrane-ap",
+    "ecg-interpretation"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Electricity And Magnetism",
+   "t": "Magnetism and Current",
+   "p": 109,
+   "s": [
+    "07d_04_05"
+   ],
+   "notes": [
+    "electricity-safety"
+   ]
+  },
+  {
+   "g": "physics",
+   "section": "Electricity And Magnetism",
+   "t": "Nuclear Magnetism and MRI",
+   "p": 115,
+   "s": [
+    "07d_04_06"
+   ],
+   "notes": [
+    "imaging-interpretation",
+    "remote-ect-mri"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Applied Chemistry",
+   "t": "Drugs as Organic Molecules",
+   "p": 5,
+   "s": [
+    "07c_01_01"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Applied Chemistry",
+   "t": "Interactions Between Molecules",
+   "p": 9,
+   "s": [
+    "07c_01_02"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Applied Chemistry",
+   "t": "Ionisation",
+   "p": 13,
+   "s": [
+    "07c_01_03"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Applied Chemistry",
+   "t": "Isomers",
+   "p": 17,
+   "s": [
+    "07c_01_04"
+   ],
+   "notes": [
+    "drug-chemistry"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacodynamics",
+   "t": "Agonists and Receptors",
+   "p": 21,
+   "s": [
+    "07c_01_06"
+   ],
+   "notes": [
+    "pd-receptors"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacodynamics",
+   "t": "Enzyme Induction and Inhibition",
+   "p": 25,
+   "s": [
+    "07c_01_12"
+   ],
+   "notes": [
+    "pk-metabolism",
+    "drug-interactions"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacodynamics",
+   "t": "Unwanted Drug Effects",
+   "p": 31,
+   "s": [
+    "07c_01_13"
+   ],
+   "notes": [
+    "drug-interactions"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacodynamics",
+   "t": "Drug Interactions",
+   "p": 33,
+   "s": [
+    "07c_01_15"
+   ],
+   "notes": [
+    "drug-interactions"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Absorption and Bioavailability",
+   "p": 37,
+   "s": [
+    "07c_02_01"
+   ],
+   "notes": [
+    "pk-absorption"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Inhalational Drug Administration",
+   "p": 40,
+   "s": [
+    "07c_02_03"
+   ],
+   "notes": [
+    "inhalational-uptake"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Cytochrome P450 System",
+   "p": 48,
+   "s": [
+    "07c_02_06"
+   ],
+   "notes": [
+    "pk-metabolism"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Introduction to Pharmacokinetic Modelling",
+   "p": 53,
+   "s": [
+    "07c_02_07"
+   ],
+   "notes": [
+    "pk-basics"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Two and Three Compartment Models",
+   "p": 58,
+   "s": [
+    "07c_02_08"
+   ],
+   "notes": [
+    "pk-basics",
+    "pk-csht-tci"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Clearance and Volume of Distribution",
+   "p": 62,
+   "s": [
+    "07c_02_09"
+   ],
+   "notes": [
+    "pk-basics"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Target Controlled Infusions",
+   "p": 66,
+   "s": [
+    "07c_02_10"
+   ],
+   "notes": [
+    "pk-csht-tci"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Pharmacokinetic Principles in Different Patient Groups",
+   "p": 71,
+   "s": [
+    "07c_02_11"
+   ],
+   "notes": [
+    "pk-metabolism"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Interindividual Variation in Drug Response",
+   "p": 77,
+   "s": [
+    "07c_02_13"
+   ],
+   "notes": [
+    "pk-metabolism"
+   ]
+  },
+  {
+   "g": "pharmacology",
+   "section": "Pharmacokinetics",
+   "t": "Antimicrobials",
+   "p": 83,
+   "s": [
+    "07c_10_01",
+    "07c_10_02"
+   ],
+   "notes": [
+    "antimicrobials"
+   ]
+  }
+ ]
+}

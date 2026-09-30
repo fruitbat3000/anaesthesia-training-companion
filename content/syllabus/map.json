@@ -20,7 +20,7 @@
           ["Special populations", ["pregnancy-physiology", "paeds-physiology", "ageing-obesity"]]
         ],
         "texts": ["kam", "west", "fundamentals", "cross"],
-        "refs": ["deranged", "atotw", "bjaed"],
+        "refs": ["ela-rg-physiology", "deranged", "atotw", "bjaed"],
         "ela": ["07b"]
       },
       "pharmacology": {
@@ -34,7 +34,7 @@
           ["Other systems", ["antiemetics", "gi-drugs", "respiratory-drugs", "diuretics", "cns-drugs", "diabetes-drugs", "steroids-thyroid-drugs", "antimicrobials", "mh-dantrolene"]]
         ],
         "texts": ["peck", "fundamentals", "cross"],
-        "refs": ["atotw", "bjaed"],
+        "refs": ["ela-rg-pharmacology", "atotw", "bjaed"],
         "ela": ["07c"]
       },
       "physics": {
@@ -44,7 +44,7 @@
           ["Electrical safety and devices", ["electricity-safety", "diathermy-lasers-fires", "defibrillation-pacing", "infusion-decontamination"]]
         ],
         "texts": ["alshaikh", "magee", "davis", "cross"],
-        "refs": ["aoa-guidelines"],
+        "refs": ["ela-rg-physics", "aoa-guidelines"],
         "ela": ["07d", "07e"]
       },
       "measurement": {
@@ -53,7 +53,7 @@
           ["Data interpretation", ["abg-interpretation", "ecg-interpretation", "imaging-interpretation"]]
         ],
         "texts": ["magee", "alshaikh", "davis"],
-        "refs": ["litfl-ecg", "deranged"],
+        "refs": ["ela-rg-physics", "litfl-ecg", "deranged"],
         "ela": ["07d", "07e"]
       },
       "anatomy": {

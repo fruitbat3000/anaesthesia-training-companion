@@ -117,6 +117,14 @@ for (const [url, where] of contentLinks) {
   tasks.push(() => checkPlain(where, url));
 }
 
+// e-LA sessions behind the Revision Guide pointers on notes: same checks as the novice sessions (live, not retired, code shown)
+const guideSessions = new Map(CONTENT.notes.flatMap(n => (n.elaGuide || []).flatMap(t => t.s)));
+for (const [code, url] of guideSessions) {
+  if (seen.has(url)) continue;
+  seen.add(url);
+  tasks.push(() => checkSession(code, [`e-LA Revision Guide session`, url]));
+}
+
 await pool(tasks);
 
 // BJA Education DOIs: doi.org blocks bots, so confirm each DOI is still registered with Crossref,
