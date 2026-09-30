@@ -39,7 +39,8 @@ Permanently charged (N^+^ with four carbon groups) regardless of pH: **do not cr
   - **Levobupivacaine** (S) and **ropivacaine** (S) are less cardiotoxic than racemic bupivacaine.
   - **S-ketamine** (esketamine) is about twice as potent as R-ketamine.
   - **Cisatracurium** is one of ten atracurium stereoisomers: more potent, less histamine release.
-- **Tautomerism:** dynamic structural isomers that change with the environment (**midazolam** has an open ring at pH < 4, water-soluble in the ampoule, and closes at physiological pH, becoming lipid-soluble).
+- **Tautomerism:** dynamic structural isomers that change with the environment (**midazolam** has an open ring at pH < 4, water-soluble in the ampoule, and closes at physiological pH, becoming lipid-soluble). Strictly this is a pH-dependent ring opening with loss of water, not true tautomerism, but it is usually taught under this heading.
+- **Geometric (cis–trans) isomers** arise around a double bond or ring: **mivacurium** is a mixture of cis–trans and trans–trans isomers (the cis–cis isomer is weak).
 
 > [!exam] In the exam
 > - **AKT:** calculate the ionised fraction; predict onset from pKa; examples of each isomer type; quaternary compounds.

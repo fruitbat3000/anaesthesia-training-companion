@@ -9,7 +9,8 @@ order: 1
 ---
 ## Core definitions
 
-- **Volume of distribution (Vd)** = amount of drug in the body / plasma concentration. An apparent volume: lipophilic, tissue-bound drugs have huge Vd (fentanyl about 4 L/kg); highly protein-bound or ionised drugs have small Vd (neuromuscular blockers about 0.2 L/kg; warfarin about 0.1 L/kg).
+- **Volume of distribution (Vd)** = amount of drug in the body / plasma concentration. An apparent volume: lipophilic, tissue-bound drugs have huge Vd (fentanyl about 4 L/kg); ionised drugs, and drugs bound more to plasma proteins than to tissues, have a small Vd (neuromuscular blockers about 0.2 L/kg; warfarin about 0.1 L/kg). High plasma protein binding alone does not guarantee a small Vd: propofol is about 98% bound yet has a very large Vd because tissue binding is greater still.
+- **Bioavailability (F):** the fraction of a dose reaching the systemic circulation unchanged (IV = 1), reduced by incomplete absorption and first-pass metabolism in gut wall and liver.
 - **Loading dose** = target concentration × Vd.
 - **Clearance (CL)**: volume of plasma cleared of drug per unit time. **Rate of elimination = CL × concentration.** Clearances add: CL~total~ = CL~hepatic~ + CL~renal~ + others.
 - **Maintenance rate** = target concentration × CL.

@@ -22,7 +22,7 @@ order: 11
 - Examples: **CO~2~** (10,600 nm, infrared; absorbed by water; superficial precise cutting, e.g. airway surgery); **Nd:YAG** (1064 nm; deeper penetration; coagulation); argon, KTP, diode.
 - **Classes 1–4** by hazard; surgical lasers are **class 4** (hazard to eyes, skin and fire risk).
 - **Safety:** designated laser protection supervisor, warning signs, restricted access, **wavelength-specific eye protection** for staff and patient, covered windows, matt instruments, damp swabs.
-- **Airway surgery:** use **laser-resistant tracheal tubes** (metal or foil-wrapped) with cuffs filled with **saline (± dye)**; keep FiO~2~ as low as possible (ideally ≤ 0.3) and avoid N~2~O; or use tubeless techniques (jet ventilation, apnoea). If an **airway fire** occurs: stop the laser, stop gas flow, remove the tube, pour saline, then ventilate with air, re-intubate and bronchoscopy.
+- **Airway surgery:** use **laser-resistant tracheal tubes** (metal or foil-wrapped) with cuffs filled with **saline (± dye)**; keep FiO~2~ as low as possible (ideally 0.25–0.3 or less) and avoid N~2~O; or use tubeless techniques (jet ventilation, apnoea). If an **airway fire** occurs: stop the laser, stop gas flow, remove the tube, pour saline, then ventilate with air, re-intubate and bronchoscopy.
 
 ## Fires and explosions
 

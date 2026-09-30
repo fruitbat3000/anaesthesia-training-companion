@@ -10,7 +10,7 @@ order: 40
 ## Renal blood flow
 
 - About **1.2 L/min (20–25% of cardiac output)**; plasma flow about 650 mL/min.
-- **Autoregulation** keeps flow and GFR fairly constant between a MAP of about **75–160 mmHg**, by:
+- **Autoregulation** keeps flow and GFR fairly constant between a MAP of about **80–180 mmHg** (quoted ranges vary), by:
   - the **myogenic response** of the afferent arteriole (stretch → constriction);
   - **tubuloglomerular feedback**: the **macula densa** senses NaCl delivery to the distal tubule; increased delivery → afferent vasoconstriction (adenosine) and less renin.
 - Sympathetic stimulation, catecholamines and angiotensin II reduce flow. Angiotensin II constricts the **efferent** arteriole preferentially, supporting GFR when perfusion is low; this is why ACE inhibitors and ARBs can precipitate AKI in hypovolaemia or renal artery stenosis. NSAIDs remove prostaglandin-mediated afferent dilatation.
@@ -19,7 +19,7 @@ order: 40
 ## Glomerular filtration
 
 - **GFR ≈ 125 mL/min (180 L/day)** in a young adult; **filtration fraction** (GFR / renal plasma flow) ≈ **20%**.
-- Starling forces across the glomerular capillary: **GFR = Kf [(P~GC~ − P~BS~) − (π~GC~ − π~BS~)]**. Glomerular capillary pressure is high (about 55 mmHg) because the efferent arteriole provides downstream resistance.
+- Starling forces across the glomerular capillary: **GFR = Kf [(P~GC~ − P~BS~) − (π~GC~ − π~BS~)]**. Glomerular capillary pressure is high (about 45–60 mmHg; figures vary between sources) because the efferent arteriole provides downstream resistance.
 - The filtration barrier (fenestrated endothelium, negatively charged basement membrane, podocyte slit diaphragms) excludes molecules above about 70 kDa; albumin (~69 kDa, negatively charged) is largely retained.
 
 ## Clearance

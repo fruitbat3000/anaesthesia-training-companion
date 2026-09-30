@@ -38,6 +38,7 @@ Metre (length), kilogram (mass), second (time), ampere (current), kelvin (temper
 | psi | 14.7 |
 
 - Useful conversions: **1 kPa ≈ 7.5 mmHg ≈ 10.2 cmH~2~O**; **1 mmHg ≈ 1.36 cmH~2~O**.
+- **Bourdon gauge:** a coiled, flattened tube that straightens as pressure rises, moving a pointer; used for high pressures such as cylinder contents (and, filled with liquid, in dial thermometers).
 - **Gauge pressure** is measured relative to atmospheric pressure (what cylinder gauges and most clinical monitors read). **Absolute pressure = gauge + atmospheric.** A "full" oxygen cylinder at 137 bar gauge is 138 bar absolute.
 - Pressure in a column of liquid: **P = ρ g h** (hence a transducer must be zeroed and levelled; every 10 cm of height difference in blood produces about 7.5 mmHg).
 - **Syringe pressure:** the same force on a smaller syringe gives a higher pressure (P = F/A) — why a 2 mL syringe can generate very high pressures (relevant to injection pressure during nerve blocks and to ruptured cuffs).

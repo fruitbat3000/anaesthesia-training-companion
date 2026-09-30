@@ -24,7 +24,7 @@ order: 55
 | Metabolic | Catabolism: protein breakdown, lipolysis, negative nitrogen balance | Muscle loss, delayed recovery |
 | Inflammatory | IL-6 (peaks at about 24 h), acute phase proteins (CRP), fever | |
 
-- The response is proportional to the size of surgery. It is reduced by **neuraxial blockade** (especially for lower body surgery, blocking afferent input), high-dose opioids, minimally invasive surgery and avoiding hypothermia; **etomidate** blocks cortisol synthesis. Enhanced recovery aims to limit it.
+- The response is proportional to the size of surgery. It is reduced by **neuraxial blockade** (especially for lower body surgery, blocking afferent input), high-dose opioids and avoiding hypothermia; **minimally invasive surgery** mainly reduces the inflammatory and acute-phase response rather than the cortisol and catecholamine surge; **etomidate** blocks cortisol synthesis. Enhanced recovery aims to limit it.
 
 ## Starvation
 

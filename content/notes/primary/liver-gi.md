@@ -18,7 +18,7 @@ order: 58
 
 - Parietal cells secrete **HCl** (proton pump; stimulated by **gastrin**, histamine via H~2~ receptors and ACh via M~3~) and intrinsic factor; chief cells secrete pepsinogen. About 2 L of gastric juice a day.
 - **Gastric emptying:** clear fluids leave with a half-time of about 10–20 minutes; solids take hours, fatty meals longest. Emptying is delayed by opioids, pain, anxiety, labour, diabetes (autonomic neuropathy), trauma, bowel obstruction and pregnancy near term.
-- **Lower oesophageal sphincter** tone protects against reflux (barrier pressure = LOS pressure − gastric pressure). Reduced by pregnancy, opioids, anticholinergics, propofol and volatiles; increased by metoclopramide and suxamethonium (which also raises gastric pressure, so barrier pressure is maintained).
+- **Lower oesophageal sphincter** tone protects against reflux (barrier pressure = LOS pressure − gastric pressure). Reduced by pregnancy, opioids, anticholinergics and volatile agents (propofol has little effect); increased by metoclopramide and suxamethonium (which also raises gastric pressure, so barrier pressure is maintained).
 - **Aspiration risk** is increased by a full stomach, delayed emptying, reflux, obesity, pregnancy, obstruction and reduced consciousness. Strategies include fasting, antacids and H~2~ blockers or PPIs, nasogastric drainage, RSI, and extubation awake.
 
 ## Nausea and vomiting

@@ -11,7 +11,7 @@ order: 41
 
 | Segment | Key functions | Transporters / notes |
 |---|---|---|
-| **Proximal convoluted tubule** | Reabsorbs **~65%** of filtered Na^+^ and water (isotonically), nearly all glucose and amino acids, ~80% of HCO~3~^−^; secretes organic acids and bases (many drugs) | Na^+^/H^+^ exchanger; carbonic anhydrase (acetazolamide acts here); SGLT2 (glucose; SGLT2 inhibitors) |
+| **Proximal convoluted tubule** | Reabsorbs **~65%** of filtered Na^+^ and water (isotonically), nearly all glucose and amino acids, ~80–90% of HCO~3~^−^; secretes organic acids and bases (many drugs) | Na^+^/H^+^ exchanger; carbonic anhydrase (acetazolamide acts here); SGLT2 (glucose; SGLT2 inhibitors) |
 | **Thin descending limb** | Permeable to water, not solutes | Water leaves into the hypertonic medulla |
 | **Thick ascending limb** | Reabsorbs **~25%** of Na^+^; **impermeable to water** ("diluting segment") | **Na^+^/K^+^/2Cl^−^ co-transporter** (loop diuretics) |
 | **Distal convoluted tubule** | ~5–8% of Na^+^; Ca^2+^ reabsorption (PTH) | **Na^+^/Cl^−^ co-transporter** (thiazides) |
@@ -19,7 +19,7 @@ order: 41
 
 ## Concentrating urine: the countercurrent multiplier
 
-- The thick ascending limb pumps NaCl into the interstitium without water, creating a gradient that increases towards the papilla (to about **1200 mOsm/kg**). **Urea** recycling from the medullary collecting duct adds to it; the **vasa recta** act as countercurrent exchangers that preserve the gradient.
+- The thick ascending limb pumps NaCl into the interstitium without water, creating a gradient that increases towards the papilla (to about **1200–1400 mOsm/kg** in humans). **Urea** recycling from the medullary collecting duct adds to it; the **vasa recta** act as countercurrent exchangers that preserve the gradient.
 - With **ADH**, aquaporin-2 channels are inserted into the collecting duct, water follows the gradient, and urine can be concentrated to about 1200 mOsm/kg; without ADH it can be diluted to about 50 mOsm/kg.
 - Minimum obligatory urine volume ≈ solute load / maximal concentration (about 600 mOsm/day ÷ 1200 ≈ **0.5 L/day**).
 
@@ -29,6 +29,11 @@ order: 41
 - Released for **raised plasma osmolality** (osmoreceptors respond to changes of 1–2%) and for **hypovolaemia/hypotension** (less sensitive, but can override osmolality when large). Also by pain, nausea, surgery (stress), opioids, positive pressure ventilation.
 - V~2~ receptors (collecting duct, cAMP → aquaporin-2): water retention. V~1~ receptors: vasoconstriction.
 - **SIADH** (surgery, pneumonia, intracranial pathology, drugs) → hyponatraemia with inappropriately concentrated urine. **Diabetes insipidus** (pituitary surgery, head injury, brainstem death) → dilute polyuria and hypernatraemia.
+
+## Renal prostaglandins and NSAIDs
+
+- Prostaglandins (PGE~2~, PGI~2~) dilate the afferent arteriole and protect renal blood flow when it is threatened (hypovolaemia, heart failure, cirrhosis, high angiotensin II or noradrenaline). They also oppose ADH in the medulla.
+- **NSAIDs** remove this protection: in a hypovolaemic or "triple whammy" patient (NSAID + ACE inhibitor/ARB + diuretic) they can precipitate acute kidney injury, and they cause sodium and water retention and hyperkalaemia.
 
 ## Sodium balance
 

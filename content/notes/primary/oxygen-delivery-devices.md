@@ -21,6 +21,12 @@ order: 14
 - **Fixed performance** requires the total gas flow to exceed the patient's peak inspiratory flow (about 30 L/min at rest, more when distressed).
 - **HFNO** delivers warmed, humidified gas: washes out anatomical dead space, provides a little PEEP (a few cmH~2~O with the mouth closed), improves comfort, and is used for pre-oxygenation and apnoeic oxygenation (THRIVE) and in respiratory failure.
 
+## Hazards of oxygen
+
+- **Absorption atelectasis:** high FiO~2~ washes out nitrogen, and alveoli behind closed or narrow airways collapse as their oxygen is absorbed. This is why FiO~2~ is often reduced below 1.0 after pre-oxygenation and for emergence where safe.
+- **Oxygen-induced hypercapnia** in some patients with chronic hypercapnic respiratory failure: aim for SpO~2~ 88–92% (see [control of breathing](#notes/resp-control)).
+- **Toxicity:** pulmonary (prolonged high FiO~2~), CNS (hyperbaric), retinopathy of prematurity; fire risk.
+
 ## Suction
 
 - A vacuum source (pipeline at about −53 kPa or more negative, or a portable pump) with a **reservoir jar**, **bacterial filter** and **overflow protection** (a float valve), and a regulator to set negative pressure (lower settings for airway suction in children and for chest drains).

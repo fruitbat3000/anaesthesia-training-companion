@@ -12,9 +12,9 @@ order: 60
 | Change | Size (by term) | Implication |
 |---|---|---|
 | Cardiac output | ↑ **~40–50%** (rate and stroke volume); further ↑ in labour and immediately after delivery (autotransfusion) | Risk for women with cardiac disease, especially at delivery |
-| SVR | ↓ ~20% (progesterone, prostacyclin, low-resistance placenta) | BP falls in the second trimester |
+| SVR | ↓ ~20–30% (progesterone, prostacyclin, low-resistance placenta) | BP falls in the second trimester |
 | Blood volume | ↑ **~40–50%** (plasma more than red cells) | Physiological (dilutional) anaemia |
-| **Aortocaval compression** | From about 20 weeks when supine | Hypotension, reduced uteroplacental flow: use **left lateral tilt** or uterine displacement |
+| **Aortocaval compression** | Clinically important from about 20 weeks when supine (can begin earlier) | Hypotension, reduced uteroplacental flow: use **left lateral tilt** or uterine displacement |
 
 ## Respiratory
 
@@ -27,6 +27,8 @@ order: 60
 - **Hypercoagulable:** ↑ fibrinogen (often 4–6 g/L at term) and factors VII, VIII, X and vWF; ↓ protein S; reduced fibrinolysis → **VTE risk** (a leading direct cause of maternal death).
 - Fibrinogen below about 2 g/L in obstetric haemorrhage predicts severe bleeding.
 - Mild gestational thrombocytopenia is common.
+
+**Oxygen carriage:** the respiratory alkalosis would shift the maternal curve left, but a rise in 2,3-DPG (about 30%) produces a net **right shift**, helping oxygen unloading to the placenta. Uterine blood flow rises to about 10–12% of cardiac output at term.
 
 ## Gastrointestinal
 

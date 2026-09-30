@@ -13,6 +13,8 @@ order: 6
 - **UK colour coding** (body white for medical gases, identified by shoulder colour): **oxygen white**; **nitrous oxide blue**; **Entonox blue and white** quarters; **air black and white** quarters; **carbon dioxide grey**; **heliox brown and white**.
 - **Pin index safety system** on smaller cylinders (specific pin positions for each gas: oxygen 2–5, N~2~O 3–5, air 1–5, Entonox 7) prevents fitting the wrong cylinder to a yoke. Larger cylinders have bull-nose or handwheel valves. The Bodok seal makes the joint gas-tight.
 - **Full pressures:** O~2~ about **137 bar** (newer integral-valve cylinders up to 230 bar); N~2~O about **44–52 bar** (SVP; liquid in cylinder); Entonox 137 bar; air 137 bar.
+- **Filling ratio** (mass of N~2~O in the cylinder ÷ mass of water it could hold) is **0.75** in the UK (0.67 in hot climates), leaving room for expansion. Cylinder pressure does not reflect N~2~O contents until all the liquid has gone: weigh it.
+- **Entonox** separates below its pseudo-critical temperature. A standard cylinder then gives off the oxygen-rich gas above the liquid first and a **hypoxic, N~2~O-rich mixture last**; a cylinder with a **dip tube** (drawing from the bottom) delivers the hypoxic mixture first; store cylinders horizontally above 10°C and invert them several times if they may have been cold.
 - **Contents:** an O~2~ cylinder's contents are proportional to pressure. A size E O~2~ cylinder holds about 680 L; a size F about 1360 L (check the label, as newer cylinders vary). At 10 L/min a 680 L cylinder lasts about an hour.
 
 ## Measuring pressure: the Bourdon gauge

@@ -39,7 +39,7 @@ Age (neonates and elderly), hepatic and renal disease, cardiac output (flow-limi
 |---|---|
 | **Plasma cholinesterase variants** (e.g. atypical, silent genes; dibucaine number) | Prolonged apnoea after suxamethonium or mivacurium |
 | **CYP2D6 poor metabolisers** (~7–10% of white Europeans) | Little analgesia from codeine/tramadol |
-| **CYP2D6 ultra-rapid metabolisers** (common in some North African and Middle Eastern populations) | Morphine toxicity from codeine (deaths in children after tonsillectomy) |
+| **CYP2D6 ultra-rapid metabolisers** (up to about 30% in parts of East Africa such as Ethiopia; also common in North African and Middle Eastern populations) | Morphine toxicity from codeine (deaths in children after tonsillectomy) |
 | **Slow acetylators** (NAT2; about half of Europeans) | Toxicity with hydralazine, isoniazid, procainamide |
 | **Malignant hyperthermia susceptibility** (RYR1, CACNA1S) | MH with volatiles or suxamethonium |
 | **G6PD deficiency** | Haemolysis with oxidant drugs |

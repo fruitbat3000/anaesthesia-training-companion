@@ -20,7 +20,7 @@ order: 6
 | **Resistance thermometer (platinum wire)** | Resistance **rises linearly** with temperature | Accurate, stable; used in Wheatstone bridges |
 | **Thermistor** | Semiconductor bead whose resistance usually **falls non-linearly** with temperature (negative temperature coefficient) | Small, fast, sensitive; used in probes and pulmonary artery catheters |
 | **Thermocouple** | **Seebeck effect**: a voltage is generated at the junction of two dissimilar metals (e.g. copper and constantan), proportional to the temperature difference between measuring and reference junctions | Small, fast; needs a reference junction |
-| **Infrared (tympanic, forehead)** | All bodies emit infrared radiation proportional to temperature | Very fast; tympanic reflects hypothalamic blood supply but depends on technique; forehead readings are less reliable |
+| **Infrared (tympanic, forehead)** | Emitted infrared power rises with the **fourth power of absolute temperature** (Stefan–Boltzmann: E = σT^4^) | Very fast; tympanic reflects hypothalamic blood supply but depends on technique; forehead readings are less reliable |
 | Liquid crystal (skin strips) | Colour change | Skin, not core, temperature |
 | Zero-heat-flux sensors | A heated forehead sensor creates an isothermal tunnel to deeper tissue | Continuous non-invasive core estimate |
 

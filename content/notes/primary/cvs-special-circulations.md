@@ -34,7 +34,7 @@ order: 25
 ## Renal
 
 - High flow serves filtration, not oxygen need: extraction is low overall, but the **medulla** is relatively hypoxic and vulnerable.
-- Autoregulation (MAP ~ 75–160 mmHg) by the **myogenic response** and **tubuloglomerular feedback**.
+- Autoregulation (MAP about 80–180 mmHg) by the **myogenic response** and **tubuloglomerular feedback**.
 
 ## Hepatic
 

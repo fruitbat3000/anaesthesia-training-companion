@@ -10,7 +10,7 @@ order: 31
 ## The neuromuscular junction
 
 1. The motor nerve action potential opens **voltage-gated Ca^2+^ channels** in the terminal.
-2. Ca^2+^ entry triggers **exocytosis of acetylcholine** (quanta of about 5,000–10,000 molecules per vesicle).
+2. Ca^2+^ entry triggers **exocytosis of acetylcholine** (quanta of about 5,000–10,000 molecules per vesicle) through **SNARE proteins** that fuse the vesicle with the membrane; **botulinum toxin** cleaves SNARE proteins and prevents release.
 3. ACh crosses the cleft and binds the **nicotinic receptor** (a ligand-gated ion channel of five subunits: **2α, β, δ, ε** in adults; γ replaces ε in fetal and extrajunctional receptors). **Both α subunits** must be occupied to open the channel.
 4. Na^+^ in and K^+^ out produce the **end-plate potential**; if it reaches threshold, a muscle action potential spreads.
 5. **Acetylcholinesterase** in the cleft hydrolyses ACh within about 1 ms.

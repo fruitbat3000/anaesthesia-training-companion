@@ -4,7 +4,6 @@ Outstanding work and open questions. Completed items move out. Scope is fixed in
 
 ## Now
 - [ ] New notes for gaps found against BJA Education (2026-09-30), in priority order: day-case anaesthesia; rheumatological disease (RA, ankylosing spondylitis, systemic sclerosis); postoperative organ injury (MINS, perioperative stroke, pulmonary complications); anaesthesia for bariatric surgery; transplantation and the organ donor; point-of-care ultrasound (lung, gastric, focused echo); children with congenital heart disease and trisomy 21; placenta praevia and accreta; chest trauma and rib fractures; chronic pain interventions (CRPS, spinal cord stimulation). Each needs verified references and syllabus codes.
-- [ ] Review the e-LA Revision Guide cross-check (`docs/qc/qc-results.jsonl`) for the 65 mapped Primary notes: confirm each flag against the guide text, fix errors, add examinable gaps in our own words, summarise for Mark.
 - [ ] Dr Brooks to check the four-box placements (`content/syllabus/overview.json`), especially where 2010-era boxes don't fit modern notes.
 - [ ] Mark to share the new site link with Dr Brooks and other potential reviewers.
 - [ ] **Clinical QC:** recruit reviewers (e.g. recent FRCA passers for first checks, consultants for sign-off, possibly via YAIRN Exam Resources). Suggested order: disclaimer and exams hub → the most-used Primary notes and questions → Final → stations. Mark each checked item `status: reviewed` and credit reviewers on the About page.

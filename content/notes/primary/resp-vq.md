@@ -24,6 +24,8 @@ order: 12
 
 - The **alveolar gas equation**: **P~A~O~2~ = F~I~O~2~ (P~B~ − P~H2O~) − P~a~CO~2~ / RQ**. Breathing air at sea level: 0.21 × (101 − 6.3) − 5.3/0.8 ≈ 13.3 kPa.
 - A normal A–a gradient is under about 2 kPa in young adults, rising with age.
+- **Shunt lowers PaO~2~ but barely raises PaCO~2~:** chemoreceptors increase ventilation, and because the CO~2~ dissociation curve is nearly linear, over-ventilated units can shed the extra CO~2~. They cannot add much extra oxygen, because blood leaving them is already almost saturated.
+- **High V/Q units** (hypotension, PE, high airway pressure) add to alveolar dead space and widen the arterial–end-tidal CO~2~ gap.
 
 ## Shunt
 

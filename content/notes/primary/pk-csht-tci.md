@@ -21,6 +21,7 @@ order: 30
 - Three-compartment model: central volume V1 (plasma and highly perfused tissue), a fast peripheral compartment V2 (muscle) and a slow peripheral compartment V3 (fat), linked by rate constants k12, k21, k13, k31, with elimination k10 from V1.
 - A **target-controlled infusion (TCI)** pump uses a population PK model to calculate the bolus and the decreasing infusion rates needed to reach and hold a chosen **plasma (Cp)** or **effect-site (Ce)** target. Effect-site targeting adds an equilibration constant, **ke0**.
 - Propofol models: **Marsh** (weight only; plasma targeting) and **Schnider** (age, weight, height and lean body mass; usually effect-site targeting). **Eleveld** is a newer general-purpose model covering a wide range of ages and weights. Remifentanil: **Minto**.
+- TCI is **open-loop**: the pump never measures the actual concentration. With propofol and remifentanil together, start the propofol first, as remifentanil reaches effect much faster.
 - Predicted concentrations are population estimates. Real concentrations vary considerably between patients, so titrate to clinical effect and depth-of-anaesthesia monitoring where appropriate.
 
 ## Clinical relevance

@@ -16,7 +16,7 @@ order: 46
 | **D~2~ antagonists** | Droperidol, haloperidol; metoclopramide (also prokinetic); domperidone | CTZ | **Extrapyramidal effects** (dystonia, especially in young women; treat with procyclidine), sedation, QT prolongation, neuroleptic malignant syndrome (rare); avoid metoclopramide in bowel obstruction and Parkinson's disease |
 | **Antihistamines (H~1~)** | Cyclizine, promethazine | Vomiting centre, vestibular | Sedation, dry mouth, **tachycardia**, injection pain |
 | **Antimuscarinics** | Hyoscine (transdermal patch) | Vestibular, vomiting centre | Dry mouth, blurred vision, confusion in the elderly |
-| **NK~1~ antagonists** | Aprepitant, fosaprepitant | Vomiting centre | Long-acting; interactions (CYP3A4, oral contraceptives) |
+| **NK~1~ antagonists** | Aprepitant, fosaprepitant | Substance P receptors in the nucleus tractus solitarius and CTZ | Long-acting; interactions (CYP3A4, oral contraceptives) |
 | **Others** | Propofol (TIVA), dexmedetomidine, ondansetron + dexamethasone combinations | | |
 
 ## Risk and prophylaxis (Fourth consensus guidelines)
