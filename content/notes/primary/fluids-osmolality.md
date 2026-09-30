@@ -19,6 +19,8 @@ order: 43
 - **Osmolarity:** osmoles per litre of solution. **Osmolality:** osmoles per kg of solvent (measured by freezing point depression). Normal plasma osmolality **275–295 mOsm/kg**.
 - **Calculated osmolality ≈ 2Na^+^ + glucose + urea.** An **osmolar gap** above about 10 suggests an unmeasured osmole (ethanol, methanol, ethylene glycol, mannitol).
 - **Tonicity** is the effective osmolality: only solutes that cannot cross the membrane move water. Urea is an ineffective osmole; glucose is effective when insulin is lacking. **5% dextrose is iso-osmolar in the bag but hypotonic in the body** once the glucose is metabolised.
+- **Water distribution:** ICF osmolality is held nearly constant, so water moves between ICF and ECF according to **ECF osmolality, which is mainly sodium**. Movement between plasma and interstitium follows the [Starling forces](#notes/cvs-microcirculation).
+- **Regulation:** hypothalamic **osmoreceptors** detect changes of about 1–2% in osmolality and drive **thirst** and **ADH** release (water reabsorption via aquaporin-2 in the collecting ducts).
 - The **colligative properties** (osmotic pressure, freezing point depression, boiling point elevation, vapour pressure depression) depend on the number of particles, not their nature.
 
 ## Electrolytes

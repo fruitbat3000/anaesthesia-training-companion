@@ -18,6 +18,9 @@ order: 42
 - Although its pKa (6.1) is far from 7.4, it is the most important extracellular buffer because it is an **open system**: CO~2~ is regulated by the lungs and HCO~3~^−^ by the kidneys.
 - Other buffers: **haemoglobin** (histidine imidazole groups; the most important non-bicarbonate buffer in blood), plasma proteins, phosphate (important intracellularly and in urine), bone.
 
+- **Isohydric principle:** all the buffer pairs in a solution share the same [H^+^], so they are in equilibrium with one another; measuring one pair (bicarbonate) describes them all.
+- **Renal handling:** the kidney reclaims filtered bicarbonate (proximal tubule, carbonic anhydrase) and excretes H^+^ bound to **phosphate** (titratable acid) and **ammonia** (as NH~4~^+^), generating new bicarbonate. The liver also contributes, through lactate metabolism and the balance between ureagenesis and glutamine production.
+
 ## Derived variables
 
 - **Standard bicarbonate:** HCO~3~^−^ after equilibration at PCO~2~ 5.3 kPa and 37°C: removes the respiratory component.

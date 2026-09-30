@@ -29,11 +29,11 @@ order: 22
 
 ## Conduction
 
-SA node → atria → **AV node** (slow conduction, about 0.1 s delay, allowing ventricular filling) → bundle of His → bundle branches → Purkinje fibres (fastest conduction, about 4 m/s).
+SA node → atria → **AV node** (slow conduction, about 0.1 s delay, allowing ventricular filling; the delay comes from small cells with few gap junctions and a Ca^2+^-dependent upstroke. Elsewhere the atria and ventricles are electrically insulated by the fibrous skeleton, so the AV node is the only normal route) → bundle of His → bundle branches → Purkinje fibres (fastest conduction, about 4 m/s).
 
 ## Excitation–contraction coupling
 
-- The action potential spreads down **T-tubules**; L-type channels (dihydropyridine receptors) let in a small amount of Ca^2+^, which triggers a much larger release from the **sarcoplasmic reticulum via ryanodine receptors (RyR2)**: **calcium-induced calcium release**.
+- The action potential spreads down **T-tubules** (in cardiac muscle short, wide and at the Z-lines, each meeting one SR cisterna as a *diad*; skeletal muscle has *triads*); L-type channels (dihydropyridine receptors) let in a small amount of Ca^2+^, which triggers a much larger release from the **sarcoplasmic reticulum via ryanodine receptors (RyR2)**: **calcium-induced calcium release**.
 - Ca^2+^ binds **troponin C**, moving tropomyosin to expose myosin-binding sites on actin; cross-bridges cycle using ATP.
 - Relaxation: Ca^2+^ is pumped back into the SR by **SERCA** (regulated by phospholamban) and expelled by the **Na^+^/Ca^2+^ exchanger**.
 - **Digoxin** inhibits Na^+^/K^+^-ATPase, raising intracellular Na^+^ and hence Ca^2+^ (reduced exchange) → positive inotropy.

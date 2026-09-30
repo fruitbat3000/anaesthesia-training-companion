@@ -35,8 +35,10 @@ PR 0.12–0.20 s; QRS < 0.12 s; **QTc** < about 0.44 s (men) / 0.46 s (women) (B
 | **Tachyarrhythmias** | Narrow regular (sinus tachycardia, SVT, flutter with 2:1 block at ~150/min), narrow irregular (**AF**), broad regular (**VT** until proven otherwise), broad irregular (AF with BBB, polymorphic VT) |
 | **Pre-excitation (WPW)** | Short PR, delta wave; risk of fast AF down the accessory pathway (avoid AV nodal blockers in pre-excited AF) |
 
+**Territories:** inferior (II, III, aVF) — usually the **right coronary artery**; anterior and septal (V1–V4) — the **left anterior descending**; lateral (I, aVL, V5–V6) — the **circumflex** (or diagonal branches). The left ventricle, having the greatest muscle mass, dominates the QRS. Posterior and far-lateral territory is poorly seen on the standard 12 leads: posterior infarction shows as **ST depression with tall R waves in V1–V3** (confirm with posterior leads V7–V9).
+
 Management of peri-arrest arrhythmias follows the **RCUK** bradycardia and tachycardia algorithms, based on **adverse features** (shock, syncope, myocardial ischaemia, heart failure).
 
 > [!exam] In the exam
-> - **AKT:** monitoring versus diagnostic filters; electrode principles; intervals; recognising the patterns in the table.
+> - **AKT:** monitoring versus diagnostic filters; electrode principles; intervals; coronary territories; recognising the patterns in the table.
 > - **CASE:** interpreting a 12-lead ECG at preassessment and deciding whether surgery can proceed.

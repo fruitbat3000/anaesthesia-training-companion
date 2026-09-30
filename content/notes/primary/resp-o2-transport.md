@@ -32,6 +32,7 @@ Inspired (dry air) ≈ 21 kPa → humidified tracheal ≈ 19.8 kPa → alveolar 
 | Pregnancy (maternal curve) | Fetal haemoglobin, carboxyhaemoglobin, methaemoglobin |
 
 - **Carbon monoxide** binds haemoglobin with over 200 times the affinity of oxygen: it reduces content **and** shifts the curve left. Standard pulse oximetry reads COHb as oxyhaemoglobin.
+- **Placental exchange:** fetal haemoglobin has a P50 of about 2.4–2.7 kPa. As fetal CO~2~ passes to the mother, the maternal curve shifts right (unloading) and the fetal curve left (loading): the **double Bohr effect** (with a double Haldane effect for CO~2~).
 - **Myoglobin** has a hyperbolic curve with a very low P50 (≈ 0.3 kPa); it stores oxygen in muscle.
 
 > [!exam] In the exam

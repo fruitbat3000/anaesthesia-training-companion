@@ -21,6 +21,7 @@ order: 18
 - **Boyle's law:** gas volumes in closed spaces shrink on descent and expand on ascent → barotrauma of ears, sinuses and lungs; arterial gas embolism if a diver ascends holding their breath.
 - **Henry's law:** more nitrogen dissolves at depth; if ascent is too fast it comes out of solution → **decompression sickness**.
 - **Nitrogen narcosis** (below about 30 m) and **oxygen toxicity** (CNS toxicity with seizures at high PO~2~; pulmonary toxicity with prolonged exposure).
+- **Gas density** rises with pressure (air at 4 atmospheres is four times as dense), increasing the work of breathing. Deep divers breathe **helium–oxygen** mixtures, which are less dense and avoid nitrogen narcosis.
 
 ## Hyperbaric oxygen
 

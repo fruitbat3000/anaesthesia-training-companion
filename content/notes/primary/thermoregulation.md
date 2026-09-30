@@ -10,17 +10,19 @@ order: 57
 ## Normal regulation
 
 - **Core temperature** is about 37°C (range about 36.5–37.5°C), with a circadian variation. The **hypothalamus** integrates input from peripheral and central thermoreceptors (cold via Aδ, warmth via C fibres).
+- The **anterior hypothalamus** (preoptic area) drives heat loss (sweating, vasodilation); the **posterior hypothalamus** drives heat conservation and production (vasoconstriction, shivering).
+- **Countercurrent exchange** between parallel arteries and veins in the limbs returns heat to the core; skin vasoconstriction greatly reduces heat loss.
 - The **interthreshold range** (between the thresholds for sweating and vasoconstriction) is normally only about **0.2–0.4°C**.
 - **Heat loss responses:** cutaneous vasodilation, sweating. **Heat conservation and gain:** vasoconstriction, behavioural changes, **shivering** (can double or triple heat production and oxygen consumption), and **non-shivering thermogenesis** in **brown fat** (important in neonates; uncoupling protein, stimulated by noradrenaline).
 
 ## How anaesthesia causes hypothermia
 
 1. **Redistribution (first hour):** anaesthetic-induced vasodilation lets heat flow from the core to the cooler periphery. Core temperature typically falls by **about 1–1.5°C in the first hour**. Pre-warming reduces this.
-2. **Linear phase (2–3 hours):** heat loss exceeds metabolic heat production (reduced by about 20–30% under anaesthesia).
+2. **Linear phase (2–3 hours):** heat loss exceeds metabolic heat production, which falls by about 20–30% under anaesthesia (no muscle tone or shivering, less work of breathing, no behavioural responses).
 3. **Plateau:** core temperature stabilises when vasoconstriction returns at a lower threshold (not with neuraxial block, which prevents it in the blocked area).
 
 - General anaesthesia **widens the interthreshold range to about 2–4°C** (the vasoconstriction threshold falls, the sweating threshold rises).
-- **Mechanisms of heat loss:** **radiation** (the largest, about 40%), **convection** (~30%), **evaporation** (~15%, more with open body cavities and respiratory tract), **conduction** (~5%).
+- **Mechanisms of heat loss:** **radiation** (the largest, about 40%), **convection** (~30%), **evaporation** (~15–20%, more with open body cavities), **respiration** (~10%: humidifying and warming inspired gas) and **conduction** (small, ~5%).
 
 ## Consequences of hypothermia (core < 36°C)
 

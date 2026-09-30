@@ -30,6 +30,19 @@ order: 64
 
 - **Fick's law:** rate of diffusion ∝ (area × concentration gradient × solubility) / (thickness × √molecular weight) — the square-root term is Graham's law.
 
+## Receptors
+
+Drugs and hormones act through four main receptor families (detail in [Pharmacodynamics](#notes/pd-receptors)):
+
+| Family | Speed | Examples |
+|---|---|---|
+| **Ligand-gated ion channels** (ionotropic) | Milliseconds | Nicotinic ACh, GABA~A~, NMDA, 5-HT~3~ |
+| **G-protein coupled receptors** (seven transmembrane domains) | Seconds | Adrenoceptors, muscarinic, opioid. G~s~ ↑ cAMP; G~i~ ↓ cAMP; G~q~ → phospholipase C → IP~3~ and DAG |
+| **Enzyme-linked** (tyrosine kinase) | Minutes | Insulin, growth factors |
+| **Intracellular (nuclear)** | Hours | Steroid and thyroid hormones: alter gene transcription |
+
+- Second-messenger cascades **amplify** the signal: one occupied receptor can activate many G-proteins and generate many cAMP molecules.
+
 ## Enzymes
 
 - Biological catalysts that lower activation energy; activity depends on temperature, pH and cofactors.
@@ -41,5 +54,5 @@ order: 64
 Skin and mucosal barriers, mucociliary clearance, gastric acid, inflammation, the immune system, coagulation, and pain as a warning signal.
 
 > [!exam] In the exam
-> - **AKT:** transport types with examples; Fick's law; Michaelis–Menten and zero-order kinetics.
+> - **AKT:** transport types with examples; Fick's law; receptor families and their second messengers; Michaelis–Menten and zero-order kinetics.
 > - **CASE:** explaining why phenytoin levels can rise disproportionately with a small dose increase.

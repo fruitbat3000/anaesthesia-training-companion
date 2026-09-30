@@ -14,6 +14,23 @@ order: 16
 - PVR **falls as cardiac output rises**, by **recruitment** of closed capillaries and **distension** of open ones, so pressure rises little with exercise.
 - PVR is lowest at **FRC**: at low lung volumes extra-alveolar vessels narrow; at high lung volumes alveolar vessels are compressed.
 
+## West zones (upright lung)
+
+Gravity makes perfusion greatest at the base. Comparing alveolar (P~A~), arterial (P~a~) and venous (P~v~) pressures:
+
+| Zone | Pressures | Flow |
+|---|---|---|
+| 1 (apex) | P~A~ > P~a~ > P~v~ | None: alveolar dead space. Not seen normally; appears with hypotension or high airway pressure (PEEP, IPPV) |
+| 2 | P~a~ > P~A~ > P~v~ | Intermittent; driven by arterial minus alveolar pressure (the "waterfall") |
+| 3 (base) | P~a~ > P~v~ > P~A~ | Continuous; driven by the arteriovenous difference |
+
+A pulmonary artery catheter tip should sit in zone 3 for the wedge pressure to reflect left atrial pressure.
+
+## Bronchial circulation
+
+- **Bronchial arteries** (from the thoracic aorta) supply the airways down to the terminal bronchioles at systemic pressure.
+- Part of their venous return drains into the **pulmonary veins**: deoxygenated blood joins oxygenated blood, forming part of the normal **anatomical shunt** (with the Thebesian veins). This is why left ventricular output slightly exceeds right.
+
 ## Hypoxic pulmonary vasoconstriction (HPV)
 
 - Pulmonary arterioles constrict in response to **low alveolar PO~2~** (and to a lesser extent low mixed venous PO~2~), diverting blood to better-ventilated lung and reducing shunt.
@@ -31,5 +48,5 @@ order: 16
 - Surfactant production; heat and water loss; acid–base regulation via CO~2~.
 
 > [!exam] In the exam
-> - **AKT:** calculate PVR; which substances are metabolised in the lung; factors affecting HPV.
+> - **AKT:** calculate PVR; West zones; the bronchial circulation and physiological shunt; which substances are metabolised in the lung; factors affecting HPV.
 > - **CASE:** explaining the management of hypoxaemia during one-lung ventilation, including why HPV matters.

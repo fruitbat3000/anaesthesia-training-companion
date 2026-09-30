@@ -22,7 +22,8 @@ order: 62
 
 ## Obesity
 
-- **BMI = weight (kg) / height (m)^2^.** Obese ≥ 30; class III ≥ 40.
+- **BMI = weight (kg) / height (m)^2^.** Obese ≥ 30; class III ≥ 40. **Central (android, visceral) fat** carries more cardiovascular and metabolic risk than peripheral (gynaecoid) fat, so waist circumference predicts morbidity better than BMI.
+- **Energy balance:** **leptin** from adipose tissue acts on the hypothalamus to reduce appetite and raise energy expenditure; obesity is usually a leptin-resistant state.
 - **Respiratory:** ↓ FRC and ERV (especially supine), atelectasis, ↑ oxygen consumption and CO~2~ production, ↑ work of breathing, **obstructive sleep apnoea** (screen with STOP-BANG) and obesity hypoventilation syndrome. Rapid desaturation; potential difficult mask ventilation.
 - **Cardiovascular:** ↑ blood volume and cardiac output, hypertension, LV hypertrophy, pulmonary hypertension (OSA), arrhythmias.
 - **Other:** diabetes, reflux, fatty liver, VTE risk, difficult venous access, pressure injuries.

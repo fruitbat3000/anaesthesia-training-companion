@@ -11,9 +11,11 @@ order: 63
 
 - **Glycolysis** (cytoplasm): glucose → 2 pyruvate, net **2 ATP**, no oxygen needed.
 - **Aerobic:** pyruvate → acetyl-CoA → **Krebs cycle** (mitochondrial matrix) → NADH and FADH~2~ → **oxidative phosphorylation** (electron transport chain, inner mitochondrial membrane) → about **30–32 ATP** per glucose in total.
+- **Cyanide** (smoke inhalation, sodium nitroprusside toxicity) blocks **cytochrome c oxidase (cytochrome a~3~)**, the last step of the electron transport chain: cells cannot use oxygen, so venous PO~2~ stays high and lactate rises.
 - **Anaerobic:** pyruvate → **lactate** (regenerating NAD^+^ so glycolysis can continue): only 2 ATP per glucose.
 - **Lactate** is cleared mainly by the liver (Cori cycle) and kidneys. Raised lactate: **type A** (tissue hypoxia: shock, hypoperfusion) and **type B** (no hypoxia: adrenaline via β~2~ stimulation of glycolysis, liver failure, metformin, drugs, malignancy). In sepsis, raised lactate reflects both.
 - Fats (β-oxidation) yield the most energy per gram; ketone bodies supply the brain in starvation.
+- **Glycogen** is stored in muscle (about three quarters of the total, for local use only) and liver (released as glucose; about 24 hours' supply). **Gluconeogenesis** in the liver (and kidney) makes glucose from lactate, amino acids (mainly alanine and glutamine) and glycerol; fatty acids cannot be converted to glucose.
 
 ## Energy requirements
 

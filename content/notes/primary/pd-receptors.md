@@ -21,7 +21,8 @@ Other targets: **voltage-gated ion channels** (Na^+^: local anaesthetics; Ca^2+^
 ## Dose–response relationships
 
 - Plotting response against **log(dose)** gives a sigmoid curve with a linear central portion.
-- **Affinity:** how strongly a drug binds (K~D~, the concentration occupying 50% of receptors).
+- **Affinity:** how strongly a drug binds (K~D~, the concentration occupying 50% of receptors; the affinity constant K~A~ = 1/K~D~).
+- **Occupancy theory:** response ∝ fractional occupancy × intrinsic activity. Signal amplification through second messengers means a maximal response can occur with only a fraction of receptors occupied (**spare receptors**, as at the neuromuscular junction).
 - **Efficacy (intrinsic activity):** the ability to produce a response once bound: the **maximum** of the curve.
 - **Potency:** the dose needed for a given effect, reflected by **EC~50~ / ED~50~** (position along the x-axis). Potency is not the same as efficacy.
 - **Full agonist:** maximal efficacy. **Partial agonist:** submaximal efficacy even at full occupancy, and can antagonise a full agonist (buprenorphine at the μ receptor). **Inverse agonist:** reduces constitutive receptor activity (e.g. some benzodiazepine-site ligands).

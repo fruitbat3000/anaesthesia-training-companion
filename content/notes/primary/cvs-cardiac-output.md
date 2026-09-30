@@ -22,6 +22,10 @@ order: 21
 - Starling curves: stroke volume against preload. Sympathetic stimulation and inotropes shift the curve up and left; heart failure shifts it down and right.
 - On the steep part, a fluid bolus raises stroke volume (**fluid responsive**); on the flat part it only raises filling pressures and causes oedema.
 
+- **Anrep effect:** a sudden rise in afterload first reduces stroke volume, but contractility then increases over a few minutes, partly restoring it (homeometric autoregulation).
+- **Ventriculo-arterial coupling:** stroke volume depends on the match between ventricular elastance (E~es~) and arterial elastance (E~a~); mechanical efficiency is best at roughly E~es~ ≈ 2 × E~a~. See the [pressure–volume loop](#notes/cvs-cardiac-cycle).
+- Moment-to-moment control of rate and resistance is by the [baroreceptor reflex](#notes/cvs-bp-control).
+
 ## Venous return (Guyton)
 
 - **Venous return = (mean systemic filling pressure − right atrial pressure) / resistance to venous return.** Mean systemic filling pressure is about 7 mmHg; about 70% of blood volume is in the veins.

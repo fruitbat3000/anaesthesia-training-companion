@@ -20,7 +20,10 @@ order: 33
 
 - The **adrenal medulla** is a modified sympathetic ganglion: preganglionic fibres release ACh onto chromaffin cells, which secrete mainly **adrenaline** (about 80%) into the blood.
 - The **stellate ganglion** (fused inferior cervical and first thoracic ganglia) lies anterior to the neck of the first rib at C7; blocking it causes **Horner's syndrome** (ptosis, miosis, anhidrosis) and can treat upper limb sympathetic pain.
-- Cardiac sympathetic fibres come from **T1–T4**: a high neuraxial block above T4 removes cardiac accelerator fibres, allowing bradycardia.
+- Cardiac sympathetic fibres come from **T1–T4** (some texts include T5): a high neuraxial block above T4 removes cardiac accelerator fibres, allowing bradycardia.
+
+- **Lateralisation at the heart:** the right vagus mainly supplies the SA node (rate) and the left vagus the AV node (conduction); right-sided sympathetic fibres mainly affect rate and left-sided fibres contractility.
+- Sympathetic stimulation is also **lusitropic**: faster relaxation, which protects diastolic filling time at high rates.
 
 ## Receptors
 

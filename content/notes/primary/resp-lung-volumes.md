@@ -20,6 +20,7 @@ order: 10
 | Total lung capacity | ~6 L | |
 
 - **FRC** is the volume at the end of a normal expiration, where the inward recoil of the lung balances the outward recoil of the chest wall.
+- FRC matters for four reasons: it is the **oxygen store** during apnoea; keeping it above closing capacity **prevents airway closure**; lung **compliance** is greatest near FRC; and **PVR** is lowest at FRC.
 - **RV, FRC and TLC** cannot be measured by simple spirometry: use **helium dilution** (measures communicating gas only), **nitrogen washout**, or **body plethysmography** (measures all intrathoracic gas, including trapped gas).
 - **Closing capacity (CC)** is the lung volume at which small airways in dependent zones begin to close. It **rises with age**; it equals FRC when supine at about 44 years and when upright at about 66 years. When CC exceeds FRC, airway closure occurs during normal breathing, causing V/Q mismatch and shunt.
 

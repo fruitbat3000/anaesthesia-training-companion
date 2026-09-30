@@ -20,7 +20,7 @@ order: 25
 ## Coronary
 
 - **LV perfusion occurs mainly in diastole** because systolic intramyocardial pressure compresses subendocardial vessels. **Coronary perfusion pressure ≈ aortic diastolic pressure − LVEDP.** The RV is perfused through systole and diastole.
-- Myocardial **oxygen extraction is already ~70% at rest**, so extra demand must be met by **increased flow** (metabolic autoregulation: adenosine, NO, low PO~2~, K^+^, CO~2~).
+- Myocardial **oxygen extraction is already ~70% at rest**, so extra demand must be met by **increased flow** (metabolic autoregulation: adenosine, NO, low PO~2~, K^+^, CO~2~; opening of **ATP-sensitive K^+^ channels** as ATP falls is a key vasodilator mechanism). Sympathetic α-constriction is normally overridden by this metabolic dilation.
 - Tachycardia shortens diastole (reduces supply) while increasing demand; the subendocardium is most vulnerable.
 - Anatomy: left main → LAD and circumflex; RCA supplies the SA node in about 60% and the AV node in about 80–90% (right dominance).
 

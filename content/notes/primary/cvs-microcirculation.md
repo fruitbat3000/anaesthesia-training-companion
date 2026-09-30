@@ -20,7 +20,7 @@ Arterioles (the main site of **resistance**, under neural, humoral and local con
 - πc and πi: plasma and interstitial oncotic pressures (plasma about 25 mmHg, mainly **albumin**).
 - σ: the reflection coefficient for protein (1 = impermeable, 0 = freely permeable).
 
-**The revised Starling principle:** the endothelial **glycocalyx** (a gel layer of glycoproteins and proteoglycans on the luminal surface) means the relevant oncotic gradient is between plasma and the small space just beneath the glycocalyx, not the whole interstitium. In most capillaries there is **net filtration along the whole length, with little or no reabsorption**; the filtrate returns via **lymph** (about 8 L/day enters lymphatics, most of which is returned to the circulation via lymph nodes and the thoracic duct). The glycocalyx is damaged by sepsis, surgery, hyperglycaemia and rapid volume loading.
+**The revised Starling principle:** the endothelial **glycocalyx** (a gel layer of glycoproteins and proteoglycans on the luminal surface) means the relevant oncotic gradient is between plasma and the small space just beneath the glycocalyx, not the whole interstitium. In most capillaries there is **net filtration along the whole length, with little or no reabsorption**; the filtrate returns via **lymph** (about 8 L/day enters the lymphatics; roughly half is reabsorbed in lymph nodes, so about 4 L/day returns to the circulation via the thoracic and right lymphatic ducts). The glycocalyx is damaged by sepsis, surgery, hyperglycaemia and rapid volume loading.
 
 ## Causes of oedema
 

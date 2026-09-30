@@ -18,6 +18,9 @@ order: 23
 - The reflex **resets** within days in chronic hypertension. It is blunted by volatile agents, propofol, age, diabetic autonomic neuropathy and β-blockers.
 - **Low-pressure receptors** in the atria and great veins respond to volume: stretch releases **ANP** and reduces ADH and sympathetic output. The **Bainbridge reflex** is a rise in heart rate with atrial stretch.
 
+- **Other short-term inputs:** peripheral **chemoreceptors** (carotid and aortic bodies) raise blood pressure in hypoxia and hypercapnia; pain raises it through the **somatosympathetic reflex**.
+- **Local endothelial control:** **nitric oxide** (from L-arginine by NO synthase; the main tonic vasodilator) and prostacyclin dilate; **endothelin-1** is the most potent endogenous vasoconstrictor.
+
 ## Medium and long term (minutes to days)
 
 - **Renin–angiotensin–aldosterone system:** renal hypoperfusion, sympathetic β~1~ stimulation and low distal tubular sodium release renin → angiotensin II (vasoconstriction, thirst, ADH and aldosterone release) → sodium and water retention.
@@ -28,7 +31,7 @@ order: 23
 
 | Phase | Blood pressure | Heart rate |
 |---|---|---|
-| I (onset) | Brief **rise** (intrathoracic pressure squeezes blood out of the aorta) | Reflex slight fall |
+| I (onset) | Brief **rise** (raised intrathoracic pressure is transmitted to the aorta and pushes pulmonary venous blood into the left heart) | Reflex slight fall |
 | II (strain) | **Falls** as venous return drops, then partly recovers with sympathetic vasoconstriction | **Rises** |
 | III (release) | Brief further fall (sudden drop in intrathoracic pressure) | — |
 | IV (recovery) | **Overshoot** as restored cardiac output meets constricted vessels | Reflex **bradycardia** |

@@ -17,8 +17,9 @@ order: 15
 | | Central chemoreceptors | Peripheral chemoreceptors |
 |---|---|---|
 | Site | Ventrolateral surface of the medulla | **Carotid bodies** (main; glossopharyngeal nerve) and aortic bodies (vagus) |
-| Stimulus | **H^+^ in CSF**, generated from CO~2~ diffusing across the blood–brain barrier | **Falling PaO~2~** (steeply below about 8 kPa), rising PaCO~2~ and H^+^ |
+| Stimulus | **H^+^ in CSF**, generated from CO~2~ diffusing across the blood–brain barrier | **Falling PaO~2~** (steeply below about 8 kPa), rising PaCO~2~, and H^+^ (carotid bodies; the aortic bodies respond little to pH) |
 | Share of CO~2~ response | ~80% | ~20%, but faster |
+| Acid–base | Much more sensitive to a **respiratory** than a metabolic acidosis: CO~2~ crosses the blood–brain barrier freely, H^+^ does not | Respond to metabolic acidosis (carotid bodies) |
 | Adaptation | CSF bicarbonate is adjusted over 24–48 h, resetting the response in chronic hypercapnia | Rapid |
 
 Other inputs: stretch receptors (Hering–Breuer reflex, weak in adult humans), irritant and J receptors, joint and muscle receptors during exercise.
@@ -28,6 +29,8 @@ Other inputs: stretch receptors (Hering–Breuer reflex, weak in adult humans), 
 - **CO~2~ response:** ventilation rises roughly linearly with PaCO~2~ (about 2–3 L/min per mmHg, or 15–20 L/min per kPa, in healthy adults). Hypoxia steepens the slope.
 - **Hypoxic response:** little change until PaO~2~ falls below about 8 kPa, then a steep rise. The carotid bodies respond to **PaO~2~, not oxygen content**, so anaemia and CO poisoning do not stimulate them.
 - **Apnoeic threshold:** the PaCO~2~ below which spontaneous breathing stops. After hyperventilation under anaesthesia, breathing will not resume until PaCO~2~ rises above it.
+
+**Oxygen in chronic hypercapnia:** giving high-flow oxygen to some patients with COPD raises PaCO~2~. A loss of "hypoxic drive" is only a small part of it; worsening V/Q mismatch (release of hypoxic pulmonary vasoconstriction) and the Haldane effect matter more. Titrate oxygen to a target saturation of 88–92% in those at risk.
 
 ## Effects of drugs
 

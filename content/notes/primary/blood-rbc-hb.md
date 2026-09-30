@@ -9,7 +9,7 @@ order: 50
 ---
 ## Red cells
 
-- Produced in bone marrow under the control of **erythropoietin** (from peritubular cells of the kidney, released in response to hypoxia); lifespan about **120 days**; removed by the spleen.
+- Produced in bone marrow under the control of **erythropoietin** (about 90% from peritubular interstitial cells of the kidney and 10% from the liver, released in response to reduced oxygen delivery); lifespan about **120 days**; removed by the spleen.
 - No nucleus or mitochondria: energy from **anaerobic glycolysis** (Embden–Meyerhof). The **Rapoport–Luebering shunt** produces **2,3-DPG**; the **pentose phosphate pathway** produces NADPH to protect against oxidative damage (**G6PD deficiency** → haemolysis with oxidant drugs and infection). **Methaemoglobin reductase** keeps iron in the ferrous (Fe^2+^) state.
 - Haematinics: **iron, vitamin B~12~ and folate** (B~12~ and folate deficiency → macrocytic anaemia; nitrous oxide inactivates B~12~-dependent methionine synthase).
 
