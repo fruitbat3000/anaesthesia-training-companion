@@ -129,7 +129,8 @@ await pool(tasks);
 
 // BJA Education DOIs: doi.org blocks bots, so confirm each DOI is still registered with Crossref,
 // 20 at a time and one request after another (Crossref rate-limits parallel requests).
-const bjaedDois = [...new Set(CONTENT.notes.flatMap(n => (n.bjaed || []).map(b => b.doi)))];
+const overviewSections = CONTENT.overview ? [...CONTENT.overview.quadrants.flatMap(q => q.groups.flatMap(g => g.sections)), CONTENT.overview.across] : [];
+const bjaedDois = [...new Set([...CONTENT.notes.flatMap(n => (n.bjaed || []).map(b => b.doi)), ...overviewSections.flatMap(s => (s.bjaed || []).map(b => b[2]))])];
 for (let i = 0; i < bjaedDois.length; i += 20) {
   const batch = bjaedDois.slice(i, i + 20);
   const url = `https://api.crossref.org/works?rows=20&select=DOI&filter=${batch.map(d => 'doi:' + d).join(',')}`;

@@ -701,5 +701,697 @@
    "s:education",
    "s:management"
   ]
+ },
+ "syllabus": {
+  "_note": "RCoA syllabus section (code group) → box sections. The build adds every note tagged with a code in the group to those sections, and fails if a section is missing. \"across\" is the professional-practice strip. The broad basic-science sections are placed by note subject instead.",
+  "science": [
+   "1_GA_F1",
+   "1_GA_F2",
+   "1_GA_F3",
+   "1_GA_G1",
+   "1_GA_G2",
+   "1_GA_G3",
+   "2_GA_H",
+   "2_POM_H"
+  ],
+  "map": {
+   "1_PBC_A": [
+    "across"
+   ],
+   "1_PBC_B": [
+    "across"
+   ],
+   "1_PBC_C": [
+    "across"
+   ],
+   "1_MPR_B": [
+    "across"
+   ],
+   "1_MPR_C": [
+    "across"
+   ],
+   "1_MPR_F": [
+    "across"
+   ],
+   "1_TW_B": [
+    "across"
+   ],
+   "1_SQI_K": [
+    "across"
+   ],
+   "1_SQI_L": [
+    "across"
+   ],
+   "1_SG_A": [
+    "across"
+   ],
+   "1_SG_B": [
+    "across"
+   ],
+   "1_PBC_F": [
+    "across",
+    "Pre-op assessment"
+   ],
+   "1_SG_F": [
+    "across",
+    "Pre-op assessment"
+   ],
+   "1_TW_C": [
+    "across",
+    "Critical incidents"
+   ],
+   "1_SQI_E": [
+    "across",
+    "Critical incidents"
+   ],
+   "1_SQI_H": [
+    "across",
+    "Critical incidents"
+   ],
+   "1_SQI_A": [
+    "Statistics, study design and audit"
+   ],
+   "1_SQI_C": [
+    "Statistics, study design and audit"
+   ],
+   "1_RD_E": [
+    "Statistics, study design and audit"
+   ],
+   "1_SQI_M": [
+    "across",
+    "Principles"
+   ],
+   "1_POM_A": [
+    "Peri-op medicine"
+   ],
+   "1_POM_H": [
+    "Peri-op medicine"
+   ],
+   "1_POM_L": [
+    "Peri-op medicine"
+   ],
+   "1_POM_B": [
+    "Pre-op assessment"
+   ],
+   "1_POM_D": [
+    "Pre-op assessment"
+   ],
+   "1_POM_E": [
+    "Pre-op assessment"
+   ],
+   "1_POM_G": [
+    "Pre-op assessment"
+   ],
+   "1_POM_C": [
+    "Medical and surgical co-morbidities"
+   ],
+   "1_POM_F": [
+    "Medical and surgical co-morbidities"
+   ],
+   "1_POM_J": [
+    "Infection control"
+   ],
+   "1_POM_K": [
+    "across"
+   ],
+   "1_POM_M": [
+    "Paediatrics"
+   ],
+   "1_POM_N": [
+    "Obstetrics"
+   ],
+   "1_POM_P": [
+    "Day surgery"
+   ],
+   "1_POM_Q": [
+    "Blood transfusion"
+   ],
+   "1_GA_A": [
+    "Principles"
+   ],
+   "1_GA_B": [
+    "Induction",
+    "Maintenance",
+    "Emergence and post-op care"
+   ],
+   "1_GA_C": [
+    "Emergence and post-op care"
+   ],
+   "1_GA_D": [
+    "Post-op complications",
+    "Peri-op disturbance in physiology"
+   ],
+   "1_GA_E": [
+    "Critical incidents"
+   ],
+   "1_GA_H": [
+    "Principles",
+    "General, urology and gynaecology"
+   ],
+   "1_GA_I": [
+    "Medical and surgical co-morbidities"
+   ],
+   "1_GA_J": [
+    "Maintenance"
+   ],
+   "1_GA_K": [
+    "Airway management"
+   ],
+   "1_GA_L": [
+    "Head and neck, ENT, max-fax, dental and eyes"
+   ],
+   "1_GA_M": [
+    "Non-theatre anaesthesia"
+   ],
+   "1_GA_N": [
+    "Orthopaedics, trauma and burns"
+   ],
+   "1_GA_O": [
+    "Paediatrics"
+   ],
+   "1_GA_P": [
+    "Paediatrics"
+   ],
+   "1_GA_Q": [
+    "Obstetrics"
+   ],
+   "1_GA_R": [
+    "Obstetrics"
+   ],
+   "1_GA_S": [
+    "Maintenance"
+   ],
+   "1_RA_A": [
+    "Regional"
+   ],
+   "1_RA_B": [
+    "Regional"
+   ],
+   "1_RA_C": [
+    "Regional"
+   ],
+   "1_RA_D": [
+    "Regional"
+   ],
+   "1_RA_E": [
+    "Regional"
+   ],
+   "1_RA_F": [
+    "Regional"
+   ],
+   "1_RA_G": [
+    "Regional"
+   ],
+   "1_RA_J": [
+    "Regional"
+   ],
+   "1_RA_K": [
+    "Regional"
+   ],
+   "1_RA_H": [
+    "Obstetrics",
+    "Regional"
+   ],
+   "1_RA_I": [
+    "Obstetrics",
+    "Regional"
+   ],
+   "1_RT_A": [
+    "Critical incidents"
+   ],
+   "1_RT_B": [
+    "Critical incidents"
+   ],
+   "1_RT_C": [
+    "Critical incidents"
+   ],
+   "1_RT_D": [
+    "Critical incidents"
+   ],
+   "1_RT_E": [
+    "Transfer medicine"
+   ],
+   "1_RT_F": [
+    "Transfer medicine"
+   ],
+   "1_RT_G": [
+    "Transfer medicine"
+   ],
+   "1_RT_H": [
+    "Acute disturbance in physiology"
+   ],
+   "1_PS_A": [
+    "Sedation"
+   ],
+   "1_PS_B": [
+    "Sedation"
+   ],
+   "1_PS_C": [
+    "Sedation"
+   ],
+   "1_PS_D": [
+    "Sedation"
+   ],
+   "1_PS_E": [
+    "Sedation"
+   ],
+   "1_PS_F": [
+    "Sedation"
+   ],
+   "1_PS_G": [
+    "Sedation"
+   ],
+   "1_PA_A": [
+    "Acute pain"
+   ],
+   "1_PA_B": [
+    "Acute pain"
+   ],
+   "1_PA_C": [
+    "Acute pain"
+   ],
+   "1_PA_F": [
+    "Acute pain"
+   ],
+   "1_PA_G": [
+    "Acute pain"
+   ],
+   "1_PA_D": [
+    "Pain medicine"
+   ],
+   "1_PA_E": [
+    "Pain medicine"
+   ],
+   "1_ICM_A": [
+    "ICU"
+   ],
+   "1_ICM_B": [
+    "ICU"
+   ],
+   "1_ICM_G": [
+    "ICU"
+   ],
+   "1_ICM_H": [
+    "ICU"
+   ],
+   "1_ICM_I": [
+    "ICU"
+   ],
+   "1_ICM_J": [
+    "ICU"
+   ],
+   "1_ICM_K": [
+    "ICU"
+   ],
+   "1_ICM_C": [
+    "ICU",
+    "Acute disturbance in physiology"
+   ],
+   "1_ICM_E": [
+    "ICU",
+    "Acute disturbance in physiology"
+   ],
+   "1_ICM_F": [
+    "ICU",
+    "Data interpretation"
+   ],
+   "1_ICM_D": [
+    "Paediatrics",
+    "Acute disturbance in physiology"
+   ],
+   "2_PBC_A": [
+    "across"
+   ],
+   "2_PBC_B": [
+    "across"
+   ],
+   "2_PBC_C": [
+    "across"
+   ],
+   "2_PBC_D": [
+    "across"
+   ],
+   "2_PBC_E": [
+    "across"
+   ],
+   "2_PBC_F": [
+    "across"
+   ],
+   "2_PBC_G": [
+    "across"
+   ],
+   "2_MPR_A": [
+    "across"
+   ],
+   "2_MPR_B": [
+    "across"
+   ],
+   "2_MPR_C": [
+    "across"
+   ],
+   "2_MPR_D": [
+    "across"
+   ],
+   "2_SG_A": [
+    "across"
+   ],
+   "2_SG_B": [
+    "across"
+   ],
+   "2_SG_C": [
+    "across"
+   ],
+   "2_SG_D": [
+    "across"
+   ],
+   "2_SG_E": [
+    "across"
+   ],
+   "2_SQI_F": [
+    "across"
+   ],
+   "2_SQI_G": [
+    "across"
+   ],
+   "2_SQI_H": [
+    "across"
+   ],
+   "2_SQI_I": [
+    "across"
+   ],
+   "2_POM_J": [
+    "across"
+   ],
+   "2_SQI_A": [
+    "Statistics, study design and audit"
+   ],
+   "2_SQI_B": [
+    "Statistics, study design and audit"
+   ],
+   "2_SQI_C": [
+    "Statistics, study design and audit"
+   ],
+   "2_SQI_D": [
+    "Statistics, study design and audit"
+   ],
+   "2_SQI_E": [
+    "Statistics, study design and audit"
+   ],
+   "2_RMD_A": [
+    "Statistics, study design and audit"
+   ],
+   "2_RMD_B": [
+    "Statistics, study design and audit"
+   ],
+   "2_RMD_C": [
+    "Statistics, study design and audit"
+   ],
+   "2_RMD_D": [
+    "Statistics, study design and audit"
+   ],
+   "2_RMD_E": [
+    "Statistics, study design and audit"
+   ],
+   "2_RMD_F": [
+    "Statistics, study design and audit"
+   ],
+   "2_RMD_G": [
+    "Statistics, study design and audit"
+   ],
+   "2_SQI_J": [
+    "Critical incidents",
+    "across"
+   ],
+   "2_POM_A": [
+    "Peri-op medicine"
+   ],
+   "2_POM_B": [
+    "Peri-op medicine"
+   ],
+   "2_POM_C": [
+    "Peri-op medicine"
+   ],
+   "2_POM_E": [
+    "Peri-op medicine"
+   ],
+   "2_POM_I": [
+    "Peri-op medicine"
+   ],
+   "2_POM_L": [
+    "Peri-op medicine"
+   ],
+   "2_POM_P": [
+    "Peri-op medicine"
+   ],
+   "2_POM_D": [
+    "Medical and surgical co-morbidities"
+   ],
+   "2_POM_Q": [
+    "Medical and surgical co-morbidities"
+   ],
+   "2_POM_F": [
+    "Peri-op medicine",
+    "Data interpretation"
+   ],
+   "2_POM_G": [
+    "Peri-op medicine",
+    "Data interpretation"
+   ],
+   "2_POM_K": [
+    "Blood transfusion"
+   ],
+   "2_POM_M": [
+    "ICU"
+   ],
+   "2_POM_N": [
+    "ICU"
+   ],
+   "2_POM_O": [
+    "Blood transfusion",
+    "Medical and surgical co-morbidities"
+   ],
+   "2_POM_R": [
+    "Paediatrics"
+   ],
+   "2_POM_S": [
+    "Obstetrics"
+   ],
+   "2_POM_T": [
+    "Obstetrics"
+   ],
+   "2_GA_A": [
+    "Paediatrics",
+    "Medical and surgical co-morbidities"
+   ],
+   "2_GA_B": [
+    "Day surgery"
+   ],
+   "2_GA_C": [
+    "Blood transfusion",
+    "Acute disturbance in physiology"
+   ],
+   "2_GA_D": [
+    "Orthopaedics, trauma and burns"
+   ],
+   "2_GA_E": [
+    "Orthopaedics, trauma and burns"
+   ],
+   "2_GA_F": [
+    "Neuroanaesthesia and neurocritical care"
+   ],
+   "2_GA_M": [
+    "Neuroanaesthesia and neurocritical care"
+   ],
+   "2_GA_N": [
+    "Neuroanaesthesia and neurocritical care"
+   ],
+   "2_GA_G": [
+    "Maintenance"
+   ],
+   "2_GA_I": [
+    "Airway management"
+   ],
+   "2_GA_J": [
+    "Head and neck, ENT, max-fax, dental and eyes"
+   ],
+   "2_GA_K": [
+    "General, urology and gynaecology",
+    "Vascular"
+   ],
+   "2_GA_L": [
+    "Non-theatre anaesthesia"
+   ],
+   "2_GA_O": [
+    "Cardiothoracics"
+   ],
+   "2_GA_P": [
+    "Cardiothoracics"
+   ],
+   "2_GA_Q": [
+    "Cardiothoracics"
+   ],
+   "2_GA_R": [
+    "Cardiothoracics"
+   ],
+   "2_GA_S": [
+    "Head and neck, ENT, max-fax, dental and eyes"
+   ],
+   "2_GA_T": [
+    "Obstetrics"
+   ],
+   "2_GA_U": [
+    "Paediatrics"
+   ],
+   "2_GA_V": [
+    "Paediatrics"
+   ],
+   "2_GA_W": [
+    "Paediatrics"
+   ],
+   "2_GA_X": [
+    "Maintenance"
+   ],
+   "2_RA_A": [
+    "Regional"
+   ],
+   "2_RA_B": [
+    "Regional"
+   ],
+   "2_RA_C": [
+    "Regional"
+   ],
+   "2_RA_E": [
+    "Regional"
+   ],
+   "2_RA_D": [
+    "Head and neck, ENT, max-fax, dental and eyes",
+    "Regional"
+   ],
+   "2_RT_A": [
+    "Critical incidents"
+   ],
+   "2_RT_B": [
+    "Critical incidents"
+   ],
+   "2_RT_D": [
+    "Critical incidents"
+   ],
+   "2_RT_C": [
+    "Paediatrics",
+    "Critical incidents"
+   ],
+   "2_RT_E": [
+    "Orthopaedics, trauma and burns"
+   ],
+   "2_RT_F": [
+    "Transfer medicine"
+   ],
+   "2_RT_G": [
+    "Neuroanaesthesia and neurocritical care",
+    "Transfer medicine"
+   ],
+   "2_PS_A": [
+    "Sedation"
+   ],
+   "2_PS_B": [
+    "Sedation"
+   ],
+   "2_PS_C": [
+    "Sedation"
+   ],
+   "2_PS_D": [
+    "Sedation"
+   ],
+   "2_PA_A": [
+    "Pain medicine"
+   ],
+   "2_PA_C": [
+    "Pain medicine"
+   ],
+   "2_PA_D": [
+    "Pain medicine"
+   ],
+   "2_PA_E": [
+    "Pain medicine"
+   ],
+   "2_PA_B": [
+    "Acute pain"
+   ],
+   "2_PA_F": [
+    "Acute pain"
+   ],
+   "2_IC_A": [
+    "ICU"
+   ],
+   "2_IC_B": [
+    "ICU"
+   ],
+   "2_IC_G": [
+    "ICU"
+   ],
+   "2_IC_H": [
+    "ICU"
+   ],
+   "2_IC_I": [
+    "ICU"
+   ],
+   "2_IC_J": [
+    "ICU"
+   ],
+   "2_IC_K": [
+    "ICU"
+   ],
+   "2_IC_C": [
+    "ICU",
+    "Acute disturbance in physiology"
+   ],
+   "2_IC_E": [
+    "ICU",
+    "Acute disturbance in physiology"
+   ],
+   "2_IC_F": [
+    "ICU",
+    "Data interpretation"
+   ],
+   "2_IC_D": [
+    "Paediatrics",
+    "Acute disturbance in physiology"
+   ]
+  },
+  "exclude": {
+   "_note": "Cross-check pairings rejected by review (the note carries a code from a broad RCoA section but does not belong in this box section).",
+   "Induction": [
+    "procoagulants-blood-products",
+    "elderly-hip-day-remote"
+   ],
+   "Maintenance": [
+    "procoagulants-blood-products",
+    "elderly-hip-day-remote",
+    "preop-assessment",
+    "resp-lung-volumes",
+    "airway-assessment"
+   ],
+   "Emergence and post-op care": [
+    "procoagulants-blood-products",
+    "elderly-hip-day-remote",
+    "preop-assessment",
+    "resp-lung-volumes",
+    "airway-assessment",
+    "iv-induction-agents"
+   ],
+   "Paediatrics": [
+    "elderly-cognition"
+   ],
+   "Vascular": [
+    "specialty-ortho-plastics-urology",
+    "major-abdominal-surgery"
+   ],
+   "Critical incidents": [
+    "resp-co2-transport"
+   ],
+   "Non-theatre anaesthesia": [
+    "imaging-interpretation"
+   ]
+  }
  }
 }

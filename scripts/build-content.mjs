@@ -416,11 +416,43 @@ function ovItem(ref) {
   if (!n) return err(OV, `unknown note ${id}`);
   return [n.exam, n.title, `#notes/${id}`];
 }
+// Syllabus cross-check: every RCoA syllabus section (code group) has a home in the boxes, and every note tagged
+// with one of its codes is added to those box sections (on top of the hand-placed items).
+const ovSections = new Map(ovSrc.quadrants.flatMap(q => q.groups.flatMap(g => g.sections.map(s => [s.name, s]))));
+ovSections.set('across', ovSrc.across);
+const ovSyl = ovSrc.syllabus || { map: {}, science: [] };
+const groupOf = code => code.split('_').slice(0, 3).join('_');
+const allGroups = new Set([...CODES.primary, ...CODES.final].map(groupOf));
+for (const g of allGroups) if (!ovSyl.map[g] && !ovSyl.science.includes(g)) err(OV, `RCoA syllabus section ${g} has no home in the four boxes`);
+const ovAdded = {};
+for (const g of Object.keys(ovSyl.map)) if (!allGroups.has(g)) err(OV, `unknown syllabus section ${g}`);
+// A note joins a box section only when a real share of its own codes point there (≥ 25%, or ≥ 3 codes),
+// so a single incidental code in a long list does not pull it into an unrelated section.
+for (const n of notes) {
+  const count = {};
+  for (const c of n.codes) for (const name of ovSyl.map[groupOf(c)] || []) count[name] = (count[name] || 0) + 1;
+  for (const [name, k] of Object.entries(count)) {
+    if (k < 3 && k / n.codes.length < 0.25) continue;
+    if ((ovSyl.exclude || {})[name] && ovSyl.exclude[name].includes(n.id)) continue;
+    const sec = ovSections.get(name);
+    if (!sec) { err(OV, `unknown box section "${name}"`); continue; }
+    if (!sec.items.includes(n.id)) { sec.items.push(n.id); ovAdded[name] = (ovAdded[name] || 0) + 1; }
+  }
+}
+if (process.argv.includes('--overview-report')) console.log('syllabus cross-check added:', JSON.stringify(ovAdded));
 const ovMaps = (f, ids) => (ids || []).map(m => { const [exam, sid] = m.split(':'); if (!mapSrc[exam] || !mapSrc[exam].subjects[sid]) err(OV, `${f}: unknown map subject ${m}`); return [exam, sid, SUBJECTS[exam] && SUBJECTS[exam][sid] ? SUBJECTS[exam][sid].name : sid]; });
+// BJA Education reviews for each box section (content/bjaed-sections.json).
+const bjaedSections = JSON.parse(readFileSync(C('bjaed-sections.json'), 'utf8')).articles;
+const bjaedBySection = {};
+for (const a of bjaedSections) for (const name of a.s) {
+  if (!ovSections.has(name)) { err('bjaed-sections.json', `${a.doi}: unknown box section "${name}"`); continue; }
+  (bjaedBySection[name] = bjaedBySection[name] || []).push([a.t, a.y, a.doi]);
+}
+for (const list of Object.values(bjaedBySection)) list.sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]));
 const overview = {
   quadrants: ovSrc.quadrants.map(q => ({ n: q.n, id: q.id, name: q.name, blurb: q.blurb, novice: q.novice,
-    groups: q.groups.map(g => ({ name: g.name, sections: g.sections.map(s => ({ name: s.name, maps: ovMaps(s.name, s.maps), items: s.items.map(ovItem).filter(Boolean) })) })) })),
-  across: { name: ovSrc.across.name, items: ovSrc.across.items.map(ovItem).filter(Boolean) },
+    groups: q.groups.map(g => ({ name: g.name, sections: g.sections.map(s => ({ name: s.name, maps: ovMaps(s.name, s.maps), items: s.items.map(ovItem).filter(Boolean), bjaed: bjaedBySection[s.name] || [] })) })) })),
+  across: { name: ovSrc.across.name, items: ovSrc.across.items.map(ovItem).filter(Boolean), bjaed: bjaedBySection.across || [] },
 };
 for (const id of noviceTopics.keys()) if (!ovUsed.has(`n:${id}`) && !ovSrc.unmapped.includes(`n:${id}`)) err(OV, `novice topic ${id} is not on the overview`);
 for (const n of notes) if (!ovUsed.has(n.id)) err(OV, `note ${n.id} is not on the overview`);

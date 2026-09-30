@@ -1075,3 +1075,8 @@ a.ov-stat:hover { border-color: var(--lv); }
 .ela-guide-sessions { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .25rem; }
 .ela-guide-sessions .code-link { font: 500 .74rem/1 var(--mono); padding: .22rem .45rem; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--line); text-decoration: none; }
 .ela-guide-sessions .code-link:hover { border-color: var(--brand-line); }
+
+/* BJA Education reviews on syllabus section pages */
+.ovs-bjaed-block, .lv-bjaed { --lv: #8a3ffc; }
+.ovs-bjaed { list-style: none; padding: 0; margin: 0 0 .7rem; columns: 2 340px; column-gap: 2rem; }
+.ovs-bjaed li { break-inside: avoid; margin: 0 0 .5rem; font-size: .9rem; line-height: 1.4; }

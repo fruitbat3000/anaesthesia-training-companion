@@ -297,12 +297,24 @@
       lists);
   }
 
+  // Every BJA Education review classified to this section: newest first, the first ten shown.
+  function bjaedBlock(list) {
+    const row = ([t, y, doi]) => el('li', null, App.ext(`https://doi.org/${doi}`, t), el('span', { class: 'small' }, ` · ${y}`));
+    const more = list.length > 10 ? el('ul', { class: 'ovs-bjaed', hidden: true }, list.slice(10).map(row)) : null;
+    return el('section', { class: 'ovs-block ovs-bjaed-block' },
+      el('header', { class: 'ovs-block-head' }, el('h2', { id: 'bjaed' }, 'BJA Education reviews'), el('span', { class: 'ovs-block-n' }, String(list.length)),
+        el('p', { class: 'small' }, 'Free, peer-reviewed CPD reviews on this area, newest first.')),
+      el('ul', { class: 'ovs-bjaed' }, list.slice(0, 10).map(row)),
+      more,
+      more ? el('button', { type: 'button', class: 'btn small ghost', onclick: e => { more.hidden = !more.hidden; e.currentTarget.textContent = more.hidden ? `Show all ${list.length}` : 'Show fewer'; } }, `Show all ${list.length}`) : null);
+  }
+
   function renderSection(qid, slug, level) {
     const O = C.overview;
     const across = qid === 'across';
     const q = across ? null : O.quadrants.find(x => x.id === qid);
     const secs = q ? sectionsOf(q) : [];
-    const s = across ? { name: 'Professional practice, safety and quality', items: O.across.items, maps: [] } : secs.find(x => x.slug === slug) || secs[0];
+    const s = across ? { name: 'Professional practice, safety and quality', items: O.across.items, maps: [], bjaed: O.across.bjaed } : secs.find(x => x.slug === slug) || secs[0];
     if (!s) { location.replace('#map'); return 'Syllabus'; }
     const i = secs.indexOf(s);
     const items = s.items.filter(([lv]) => shows(level, lv));
@@ -315,10 +327,12 @@
         el('div', { class: 'ovs-title' }, q ? qIcon(q.id) : null, el('div', null,
           s.group ? el('p', { class: 'ovs-eyebrow' }, s.group) : null,
           el('h1', null, s.name))),
-        el('div', { class: 'ov-stats' }, ['novice', 'primary', 'final', 'stage3'].map(lv => { const n = s.items.filter(it => it[0] === lv).length; return n ? el('a', { class: `ov-stat lv-${lv}`, href: `#lv-${lv}`, onclick: e => { e.preventDefault(); const t = document.getElementById(`lv-${lv}`); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }, el('strong', null, String(n)), LEVEL_NAME[lv]) : null; }))),
+        el('div', { class: 'ov-stats' }, ['novice', 'primary', 'final', 'stage3'].map(lv => { const n = s.items.filter(it => it[0] === lv).length; return n ? el('a', { class: `ov-stat lv-${lv}`, href: `#lv-${lv}`, onclick: e => { e.preventDefault(); const t = document.getElementById(`lv-${lv}`); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }, el('strong', null, String(n)), LEVEL_NAME[lv]) : null; }),
+          (s.bjaed || []).length ? el('a', { class: 'ov-stat lv-bjaed', href: '#bjaed', onclick: e => { e.preventDefault(); const t = document.getElementById('bjaed'); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }, el('strong', null, String(s.bjaed.length)), 'BJA Education reviews') : null)),
       q && secs.length > 1 ? el('nav', { class: 'ovs-siblings no-print', 'aria-label': `Sections of ${q.name}` }, secs.map(x => el('a', { href: withLevel(`#map/${q.id}/${x.slug}`, level), 'aria-current': x === s ? 'page' : null, class: count(x.items, level) ? null : 'is-empty' }, x.name))) : null,
       el('div', { class: 'ov-bar no-print' }, el('span', { class: 'small' }, 'Show:'), levelSeg(level, here)),
       blocks.length ? blocks.map(([lv, list]) => levelBlock(lv, list)) : el('p', { class: 'ovs-empty' }, `Nothing in ${s.name} at ${LEVEL_NAME[level]} level. `, el('a', { href: here('all') }, 'Show everything')),
+      (s.bjaed || []).length ? bjaedBlock(s.bjaed) : null,
       maps.length ? el('section', { class: 'ovs-block ovs-reading' },
         el('header', { class: 'ovs-block-head' }, el('h2', null, 'Textbooks and free resources')),
         maps.map(([exam, sj]) => el('div', { class: 'ovs-sub' }, el('h3', null, el('a', { href: `#map/${exam}/${sj.id}` }, `${EXAM[exam]} map: ${sj.name} ›`)), readingStrip(sj)))) : null,
