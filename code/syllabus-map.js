@@ -215,6 +215,15 @@
       groups);
   }
 
+  // The rows differ in height, so centre the hub on the real junction of the four boxes (midway through the gaps).
+  let hubObserver = null;
+  function placeHub(grid) {
+    const hub = $('.ovq-hub', grid), top = $('.ovq-1', grid), bottom = $('.ovq-2', grid), left = $('.ovq-4', grid), right = $('.ovq-1', grid);
+    if (!hub || !top || !bottom) return;
+    hub.style.top = `${(top.offsetTop + top.offsetHeight + bottom.offsetTop) / 2}px`;
+    hub.style.left = `${(left.offsetLeft + left.offsetWidth + right.offsetLeft) / 2}px`;
+  }
+
   function renderOverview(level) {
     const O = C.overview;
     const everything = O.quadrants.flatMap(q => sectionsOf(q).flatMap(s => s.items)).concat(O.across.items);
@@ -235,6 +244,10 @@
       acrossN ? el('a', { class: 'ov-across', href: withLevel('#map/across', level) },
         el('span', null, el('strong', null, O.across.name), el('span', { class: 'small' }, ` · ${acrossN} topic${acrossN === 1 ? '' : 's'}`)), el('span', { class: 'ov-arrow' }, '→')) : null,
       el('p', { class: 'small ov-foot' }, 'The four-part structure is adapted from the novice guide credited on the ', el('a', { href: '#about' }, 'About page'), '. For confidence ratings and textbooks, use the ', el('a', { href: '#map/primary' }, 'Primary'), ' and ', el('a', { href: '#map/final' }, 'Final'), ' syllabus maps.')));
+    const grid = $('#view-map .ovq-grid');
+    if (hubObserver) hubObserver.disconnect();
+    if ('ResizeObserver' in window) { hubObserver = new ResizeObserver(() => placeHub(grid)); $$('.ovq', grid).forEach(q => hubObserver.observe(q)); }
+    requestAnimationFrame(() => placeHub(grid));
   }
 
   // Which topic group a note sits in on its exam's syllabus map, for sub-headings on big sections.

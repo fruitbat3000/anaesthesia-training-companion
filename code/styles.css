@@ -1012,7 +1012,7 @@ a.ov-stat:hover { border-color: var(--lv); }
 .ovq-empty { color: var(--muted); opacity: .6; padding-right: .8rem; border-style: dashed; }
 .ovq-hub { display: none; }
 @media (min-width: 1000px) {
-  .ovq-hub { display: grid; place-items: center; position: absolute; z-index: 2; left: 50%; top: 50%; width: 104px; height: 104px; margin: -52px 0 0 -52px; border-radius: 50%;
+  .ovq-hub { display: grid; place-items: center; position: absolute; z-index: 2; left: 50%; top: 50%; width: 104px; height: 104px; transform: translate(-50%, -50%); border-radius: 50%;
     background: conic-gradient(from 180deg, #e0591b, #a23fcf 25%, #2f5bea 50%, #0d9467 75%, #e0591b); padding: 4px; box-shadow: 0 10px 30px -12px rgba(13,20,36,.45); pointer-events: none; }
   .ovq-hub span { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%; background: var(--surface);
     font: 400 1.25rem/1 var(--serif); font-style: italic; color: var(--text); }
