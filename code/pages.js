@@ -1,7 +1,7 @@
 /* Home page, long-form guide pages (exams hub, stages, resources), and page widgets. */
 (function () {
   'use strict';
-  const { $, el, C, S, store, KEYS } = App;
+  const { $, $$, el, C, S, store, KEYS } = App;
 
   /* ---------- widgets that pages can embed with {{name args}} ---------- */
   const WIDGETS = {
